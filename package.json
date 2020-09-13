@@ -4,7 +4,7 @@
   "description": "All my personal projects",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint --ext .jsx,.js src/**/**/** --fix"
   },
   "repository": {
     "type": "git",
@@ -42,5 +42,10 @@
   "dependencies": {
     "react": "16.13.1",
     "react-dom": "16.13.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint; git add ."
+    }
   }
 }
