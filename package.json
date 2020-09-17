@@ -7,7 +7,8 @@
     "lint": "eslint --ext .jsx,.js src/**/**/** --fix",
     "build": "webpack --config ./webpack.config.js",
     "dev-all": "webpack-dev-server --config ./webpack.config.dev.js",
-    "dev-main": "webpack-dev-server --config ./webpack.dev.main.js"
+    "dev-main": "webpack-dev-server --config ./webpack.dev.main.js",
+    "dev-blog": "webpack-dev-server --config ./webpack.config.blog.js"
   },
   "repository": {
     "type": "git",

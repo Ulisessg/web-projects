@@ -1,9 +1,9 @@
 const { join } = require('path');
-const HtmlWebpackPlugnin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { HotModuleReplacementPlugin } = require('webpack');
 
 module.exports = {
-  entry: join(__dirname, 'src', 'pages', 'main', 'index.js'),
+  entry: join(__dirname, 'src', 'pages', 'blog', 'index.js'),
   output: {
     path: join(__dirname, 'dist'),
   },
@@ -40,19 +40,18 @@ module.exports = {
 
   plugins: [
     new HotModuleReplacementPlugin(),
-    new HtmlWebpackPlugnin({
-      template: join(__dirname, 'public', 'main.html'),
-      filename: join(__dirname, 'dist', 'index.html'),
+    new HtmlWebpackPlugin({
+      template: join(__dirname, 'public', 'blog.html'),
+      filename: join(__dirname, 'dist', 'blog.html'),
     }),
   ],
-
   devServer: {
-    index: 'index.html',
-    contentBase: join(__dirname, 'src', 'pages', 'main', 'main.js'),
+    index: 'blog.html',
+    contentBase: join(__dirname, 'src', 'pages', 'blog', 'index.js'),
+    watchContentBase: true,
     port: 2001,
     hot: true,
     open: true,
-    watchContentBase: true,
     watchOptions: {
       poll: 420,
     },
