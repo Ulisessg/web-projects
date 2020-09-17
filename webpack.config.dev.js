@@ -61,12 +61,11 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: join(__dirname, 'public', 'main.html'),
       filename: join(__dirname, 'dist', 'index.html'),
-      chunks: ['main'],
     }),
   ],
   devServer: {
     index: 'index.html',
-    contentBase: join(__dirname, 'src'),
+    contentBase: join(__dirname, 'src', 'pages', 'main', 'index.js'),
     hot: true,
     open: true,
     port: 2001,
