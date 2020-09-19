@@ -4,7 +4,7 @@
   "description": "All my personal projects",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint --ext .jsx,.js src/**/**/** --fix",
+    "lint": "eslint --ext .jsx,.js src/**/**/** --ignore-pattern src/styles**/**/* --fix",
     "build": "webpack --config ./webpack.config.js",
     "dev-all": "webpack-dev-server --config ./webpack.config.dev.js",
     "dev-main": "webpack-dev-server --config ./webpack.dev.main.js",
