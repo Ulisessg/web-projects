@@ -28,8 +28,8 @@ module.exports = {
         },
       },
       {
-        test: /\.css$/i,
-        use: ['style-loader', 'css-loader'],
+        test: /\.(styl|css)$/i,
+        use: ['style-loader', 'css-loader', 'stylus-loader'],
       },
       {
         test: /\.(png|gif|jpg|svg|eot|ttf|woff|woff2)$/,
