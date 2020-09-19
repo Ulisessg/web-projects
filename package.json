@@ -8,7 +8,8 @@
     "build": "webpack --config ./webpack.config.js",
     "dev-all": "webpack-dev-server --config ./webpack.config.dev.js",
     "dev-main": "webpack-dev-server --config ./webpack.dev.main.js",
-    "dev-blog": "webpack-dev-server --config ./webpack.config.blog.js"
+    "dev-blog": "webpack-dev-server --config ./webpack.config.blog.js",
+    "dev-design": "webpack-dev-server --config ./webpack.config.design.js"
   },
   "repository": {
     "type": "git",
@@ -24,12 +25,12 @@
     "@babel/core": "7.11.6",
     "@babel/preset-env": "7.11.5",
     "@babel/preset-react": "7.10.4",
-    "babel-eslint": "^10.1.0",
+    "babel-eslint": "10.1.0",
     "babel-loader": "8.1.0",
-    "compression-webpack-plugin": "^5.0.2",
+    "compression-webpack-plugin": "5.0.2",
     "css-loader": "4.3.0",
-    "cssnano": "^4.1.10",
-    "eslint": "^7.9.0",
+    "cssnano": "4.1.10",
+    "eslint": "7.9.0",
     "eslint-config-airbnb": "18.2.0",
     "eslint-plugin-import": "2.22.0",
     "eslint-plugin-jsx-a11y": "6.3.1",
@@ -40,7 +41,7 @@
     "mini-css-extract-plugin": "0.11.2",
     "optimize-css-assets-webpack-plugin": "5.0.4",
     "style-loader": "1.2.1",
-    "terser-webpack-plugin": "^4.2.0",
+    "terser-webpack-plugin": "4.2.0",
     "url-loader": "4.1.0",
     "webpack": "4.44.1",
     "webpack-cli": "3.3.12",
@@ -52,7 +53,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint; git add ."
+      "pre-commit": "npm run lint"
     }
   }
 }
