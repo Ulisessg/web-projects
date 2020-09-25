@@ -7,7 +7,7 @@ module.exports = {
   entry: {
     //Index
     main: join(__dirname, 'src', 'pages', 'main', 'index.js'),
-    design: join(__dirname, 'src', 'pages', 'design-system', 'index.js'),
+    design: join(__dirname, 'src', 'pages', 'designSystem', 'index.js'),
     blog: join(__dirname, 'src', 'pages', 'blog', 'index.js'),
   },
   output: {
@@ -61,6 +61,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: join(__dirname, 'public', 'main.html'),
       filename: join(__dirname, 'dist', 'index.html'),
+      chunks: ['main'],
     }),
   ],
   devServer: {
