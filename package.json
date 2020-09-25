@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint --ext .jsx,.js src/**/**/** --ignore-pattern src/styles**/**/* --fix",
-    "build": "webpack --config ./webpack.config.js",
+    "build": "webpack --config ./webpack.config.production.js",
     "dev-all": "webpack-dev-server --config ./webpack.config.dev.js",
     "dev-main": "webpack-dev-server --config ./webpack.dev.main.js",
     "dev-blog": "webpack-dev-server --config ./webpack.config.blog.js",
