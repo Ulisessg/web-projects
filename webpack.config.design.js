@@ -3,7 +3,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { HotModuleReplacementPlugin } = require('webpack');
 
 module.exports = {
-  entry: join(__dirname, 'src', 'pages', 'designSystem', 'index.js'),
+  entry: {
+    index: join(__dirname, 'src', 'react', 'pages', 'design-index.js'),
+  },
   output: {
     path: join(__dirname, 'dist'),
   },
@@ -47,7 +49,7 @@ module.exports = {
   ],
   devServer: {
     index: 'design-system.html',
-    contentBase: join(__dirname, 'src', 'pages', 'designSystem', 'index.js'),
+    contentBase: join(__dirname, 'src', 'react', 'pages', 'design-index.js'),
     watchContentBase: true,
     port: 2001,
     hot: true,
