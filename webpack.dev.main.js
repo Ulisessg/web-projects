@@ -4,7 +4,9 @@ const { HotModuleReplacementPlugin } = require('webpack');
 
 module.exports = {
   mode: 'development',
-  entry: join(__dirname, 'src', 'pages', 'main', 'index.js'),
+  entry: {
+    index: join(__dirname, 'src', 'react', 'pages', 'main-index.js'),
+  },
   output: {
     path: join(__dirname, 'dist'),
   },
@@ -48,7 +50,7 @@ module.exports = {
   ],
 
   devServer: {
-    contentBase: join(__dirname, 'src', 'pages', 'main', 'main.js'),
+    contentBase: join(__dirname, 'src', 'react', 'pages', 'main-index.js'),
     index: 'index.html',
     watchContentBase: true,
     port: 2001,
