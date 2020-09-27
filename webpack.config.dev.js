@@ -6,9 +6,9 @@ module.exports = {
   mode: 'development',
   entry: {
     //Index
-    main: join(__dirname, 'src', 'pages', 'main', 'index.js'),
-    design: join(__dirname, 'src', 'pages', 'designSystem', 'index.js'),
-    blog: join(__dirname, 'src', 'pages', 'blog', 'index.js'),
+    main: join(__dirname, 'src', 'react', 'pages', 'main-index.js'),
+    design: join(__dirname, 'src', 'react', 'pages', 'design-index.js'),
+    blog: join(__dirname, 'src', 'react', 'pages', 'blog-index.js'),
   },
   output: {
     path: join(__dirname, 'dist'),
