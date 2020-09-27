@@ -10,7 +10,7 @@ module.exports = {
   entry: {
     //Index
     main: join(__dirname, 'src', 'pages', 'main', 'index.js'),
-    design: join(__dirname, 'src', 'pages', 'design-system', 'index.js'),
+    design: join(__dirname, 'src', 'pages', 'designSystem', 'index.js'),
     blog: join(__dirname, 'src', 'pages', 'blog', 'index.js'),
   },
   output: {
@@ -56,8 +56,8 @@ module.exports = {
         },
       },
       {
-        test: /\.css$/i,
-        use: [MiniCSSExtractPlugin.loader, { loader: 'css-loader' }],
+        test: /\.(styl|css)$/i,
+        use: ['style-loader', 'css-loader', 'stylus-loader'],
       },
       {
         test: /\.(png|gif|jpg|svg|eot|ttf|woff|woff2)$/,
