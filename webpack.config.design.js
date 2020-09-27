@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { HotModuleReplacementPlugin } = require('webpack');
 
 module.exports = {
+  mode: 'development',
   entry: {
     index: join(__dirname, 'src', 'react', 'pages', 'design-index.js'),
   },
