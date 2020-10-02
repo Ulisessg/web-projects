@@ -9,7 +9,7 @@ module.exports = {
   mode: 'production',
   entry: {
     //Index
-    main: join(__dirname, 'src', 'react', 'pages', 'main-index.js'),
+    index: join(__dirname, 'src', 'react', 'pages', 'main-index.js'),
     design: join(__dirname, 'src', 'react', 'pages', 'design-index.js'),
     blog: join(__dirname, 'src', 'react', 'pages', 'blog-index.js'),
   },
@@ -88,9 +88,13 @@ module.exports = {
       chunks: ['design'],
     }),
     new HtmlWebpackPlugin({
-      template: join(__dirname, 'public', 'main.html'),
+      template: join(__dirname, 'public', 'index.html'),
       filename: join(__dirname, 'dist', 'index.html'),
-      chunks: ['main'],
+      chunks: ['index'],
+    }),
+    new HtmlWebpackPlugin({
+      template: join(__dirname, 'public', '404.html'),
+      filename: join(__dirname, 'dist', '404.html'),
     }),
   ],
 };
