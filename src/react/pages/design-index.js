@@ -1,6 +1,14 @@
 import React from 'react';
 import ReactDom from 'react-dom';
 
+//Default Styles
 import '../../styles/default-styles.styl';
+//App
+import Design from '../templates/Design';
 
-ReactDom.render(<h1>Hello Desgin</h1>, document.getElementById('root'));
+ReactDom.render(
+  <>
+    <Design />
+  </>,
+  document.getElementById('root'),
+);
