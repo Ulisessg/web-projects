@@ -9,7 +9,8 @@
     "dev-all": "webpack-dev-server --config ./webpack.config.dev.js",
     "dev-main": "webpack-dev-server --config ./webpack.dev.main.js",
     "dev-blog": "webpack-dev-server --config ./webpack.config.blog.js",
-    "dev-design": "webpack-dev-server --config ./webpack.config.design.js"
+    "dev-design": "webpack-dev-server --config ./webpack.config.design.js",
+    "server": "node ./server/index.js"
   },
   "repository": {
     "type": "git",
@@ -36,6 +37,7 @@
     "eslint-plugin-jsx-a11y": "6.3.1",
     "eslint-plugin-react": "7.20.6",
     "eslint-plugin-react-hooks": "4.1.2",
+    "express": "^4.17.1",
     "html-webpack-plugin": "4.4.1",
     "husky": "4.3.0",
     "mini-css-extract-plugin": "0.11.2",
@@ -50,6 +52,7 @@
     "webpack-dev-server": "3.11.0"
   },
   "dependencies": {
+    "chrome-launcher": "^0.13.4",
     "prop-types": "15.7.2",
     "react": "16.13.1",
     "react-dom": "16.13.1",

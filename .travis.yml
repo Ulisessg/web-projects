@@ -2,10 +2,12 @@ language: node_js
 node_js:
   - '12'
 script:
-  - npm install
   - npm run lint
   - npm run build
+  - lhci autorun
 install:
+  - npm install
+  - npm install -g @lhci/cli
   - npm install -g firebase-tools
 after_success:
   - firebase deploy --token $FIREBASE_TOKEN
