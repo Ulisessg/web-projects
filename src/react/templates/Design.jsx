@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 
-import Header from '../organisms/Header';
+const Header = lazy(() => import('../organisms/Header'));
 
 const paths = [
   {
@@ -37,9 +37,9 @@ const paths = [
 
 const Design = () => {
   return (
-    <>
+    <Suspense fallback={<h1>Loading...</h1>}>
       <Header paths={paths} />
-    </>
+    </Suspense>
   );
 };
 

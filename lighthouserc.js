@@ -4,15 +4,15 @@ module.exports = {
   ci: {
     collect: {
       startServerCommand: 'npm run server',
-      url: [`${url}`],
+      url: [`${url}`, `${url}/design-system.html`, `${url}/blog.html`],
     },
     settings: {
       chromeFlags: 'chrome-debug --no-sandbox',
     },
     assert: {
       assertions: {
-        'categories:performance': ['warn', { minScore: 0.95 }],
-        'categories:accessibility': ['error', { minScore: 1 }],
+        'categories:performance': ['error', { minScore: 0.95 }],
+        'categories:accessibility': ['error', { minScore: 0.95 }],
       },
     },
     upload: {
