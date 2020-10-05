@@ -1,6 +1,7 @@
 module.exports = {
   ci: {
     collect: {
+      staticDistDir: './public',
       url: ['/', '/design-system.html', '/blog.html'],
     },
     settings: {
