@@ -2,7 +2,7 @@ module.exports = {
   ci: {
     collect: {
       staticDistDir: './public',
-      url: ['/', '/design-system.html', '/blog.html'],
+      url: ['index.html', 'design-system.html', 'blog.html'],
     },
     settings: {
       chromeFlags: 'chrome-debug --no-sandbox',
