@@ -3,14 +3,13 @@ module.exports = {
     collect: {
       staticDistDir: './dist',
       url: ['index.html', 'design-system.html', 'blog.html'],
-    },
-    settings: {
-      chromeFlags: 'chrome-debug --no-sandbox',
+      numberOfRuns: 10,
     },
     assert: {
       assertions: {
-        'categories:performance': ['error', { minScore: 0.9 }],
-        'categories:accessibility': ['error', { minScore: 0.9 }],
+        'categories:performance': ['error', { minScore: 0.95 }],
+        'categories:accessibility': ['error', { minScore: 0.95 }],
+        'categories:bestpractices': ['error', { minScore: 0.99 }],
       },
     },
     upload: {
