@@ -1,10 +1,7 @@
-const url = 'http://localhost:2001';
-
 module.exports = {
   ci: {
     collect: {
-      startServerCommand: 'npm run server',
-      url: [`${url}`, `${url}/design-system.html`, `${url}/blog.html`],
+      url: ['/', '/design-system.html', '/blog.html'],
     },
     settings: {
       chromeFlags: 'chrome-debug --no-sandbox',
