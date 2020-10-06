@@ -1,5 +1,6 @@
 import React, { lazy, Suspense } from 'react';
 
+import { Helmet } from 'react-helmet';
 const Header = lazy(() => import('../organisms/Header'));
 
 const paths = [
@@ -37,9 +38,18 @@ const paths = [
 
 const Design = () => {
   return (
-    <Suspense fallback={<h1>Loading...</h1>}>
-      <Header paths={paths} />
-    </Suspense>
+    <>
+      <Helmet>
+        <title>Design system</title>
+        <meta
+          name='description'
+          content='Sistema de diseño utilizado para construir mis productos'
+        />
+      </Helmet>
+      <Suspense fallback={<h1>Loading...</h1>}>
+        <Header paths={paths} />
+      </Suspense>
+    </>
   );
 };
 
