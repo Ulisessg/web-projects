@@ -29,7 +29,7 @@ module.exports = {
         use: ['style-loader', 'css-loader', 'stylus-loader'],
       },
       {
-        test: /\.(png|gif|jpg|svg|eot|ttf|woff|woff2)$/,
+        test: /\.(png|gif|jpg|svg|eot|ttf|woff|woff2|ico)$/,
         use: {
           loader: 'url-loader',
           options: {
