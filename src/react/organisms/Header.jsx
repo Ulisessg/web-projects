@@ -6,7 +6,7 @@ import Nav from '../atoms/Nav';
 
 const Header = ({ paths }) => {
   return (
-    <header>
+    <header aria-roledescription='Navegación a las secciones las secciones del sitio'>
       <Nav paths={paths} />
     </header>
   );

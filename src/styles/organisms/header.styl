@@ -22,3 +22,21 @@ header
           font-size: 14px
         @media screen and (min-width: 700px)
           font-size: 20px
+
+.skip-links
+  position: absolute
+  left: -999px
+  width:1px
+  height: 1px
+  top: auto
+  color: black
+  background-color: #ffffff
+  &:focus
+    color: black;
+    display: inline-block;
+    height: auto;
+    width: auto;
+    position: static;
+    margin: auto;
+
+  
