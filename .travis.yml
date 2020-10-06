@@ -1,10 +1,6 @@
 language: node_js
 node_js:
   - '12'
-addons:
-  apt:
-    packages:
-      - libgconf-2-4
 install:
   - npm install
   - npm ci
@@ -13,8 +9,6 @@ install:
 script:
   - npm run lint
   - npm run build
-  - npm install cypress --save-dev
-  - $(npm bin)/cypress run --record
   - lhci autorun
 after_success:
   - firebase deploy --token $FIREBASE_TOKEN
