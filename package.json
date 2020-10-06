@@ -9,7 +9,8 @@
     "dev-all": "webpack-dev-server --config ./webpack.config.dev.js",
     "dev-main": "webpack-dev-server --config ./webpack.dev.main.js",
     "dev-blog": "webpack-dev-server --config ./webpack.config.blog.js",
-    "dev-design": "webpack-dev-server --config ./webpack.config.design.js"
+    "dev-design": "webpack-dev-server --config ./webpack.config.design.js",
+    "dev-404": "webpack-dev-server --config ./webpack.config.404.js"
   },
   "repository": {
     "type": "git",

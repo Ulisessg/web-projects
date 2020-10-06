@@ -12,6 +12,7 @@ module.exports = {
     index: join(__dirname, 'src', 'react', 'pages', 'main-index.js'),
     design: join(__dirname, 'src', 'react', 'pages', 'design-index.js'),
     blog: join(__dirname, 'src', 'react', 'pages', 'blog-index.js'),
+    error: join(__dirname, 'src', 'react', 'pages', '404.js'),
   },
   output: {
     path: join(__dirname, 'dist'),
@@ -95,6 +96,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: join(__dirname, 'public', '404.html'),
       filename: join(__dirname, 'dist', '404.html'),
+      chunks: ['error'],
     }),
   ],
 };
