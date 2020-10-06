@@ -1,6 +1,7 @@
 import React, { lazy, Suspense } from 'react';
 
 import { Helmet } from 'react-helmet';
+
 const Header = lazy(() => import('../organisms/Header'));
 
 const paths = [
