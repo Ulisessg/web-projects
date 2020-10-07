@@ -1,9 +1,11 @@
-const { join } = require('path');
+const { join, resolve } = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCSSExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
+const webpack = require('webpack');
+const AddAssetHtmlPlugin = require('add-asset-html-webpack-plugin');
 
 module.exports = {
   mode: 'production',
@@ -81,22 +83,29 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: join(__dirname, 'public', 'blog.html'),
       filename: join(__dirname, 'dist', 'blog.html'),
-      chunks: ['blog'],
+      chunks: ['blog', 'modules'],
     }),
     new HtmlWebpackPlugin({
       template: join(__dirname, 'public', 'design-system.html'),
       filename: join(__dirname, 'dist', 'design-system.html'),
-      chunks: ['design'],
+      chunks: ['design', 'modules'],
     }),
     new HtmlWebpackPlugin({
       template: join(__dirname, 'public', 'index.html'),
       filename: join(__dirname, 'dist', 'index.html'),
-      chunks: ['index'],
+      chunks: ['index', 'modules'],
     }),
     new HtmlWebpackPlugin({
       template: join(__dirname, 'public', '404.html'),
       filename: join(__dirname, 'dist', '404.html'),
       chunks: ['error'],
+    }),
+    new webpack.DllReferencePlugin({
+      context: join(__dirname),
+      manifest: join(__dirname, 'dist', 'modules-manifest.json'),
+    }),
+    new AddAssetHtmlPlugin({
+      filepath: resolve(__dirname, './dist/js/*.dll.js'),
     }),
   ],
 };
