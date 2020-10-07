@@ -83,17 +83,17 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: join(__dirname, 'public', 'blog.html'),
       filename: join(__dirname, 'dist', 'blog.html'),
-      chunks: ['blog', 'modules'],
+      chunks: ['blog'],
     }),
     new HtmlWebpackPlugin({
       template: join(__dirname, 'public', 'design-system.html'),
       filename: join(__dirname, 'dist', 'design-system.html'),
-      chunks: ['design', 'modules'],
+      chunks: ['design'],
     }),
     new HtmlWebpackPlugin({
       template: join(__dirname, 'public', 'index.html'),
       filename: join(__dirname, 'dist', 'index.html'),
-      chunks: ['index', 'modules'],
+      chunks: ['index'],
     }),
     new HtmlWebpackPlugin({
       template: join(__dirname, 'public', '404.html'),
