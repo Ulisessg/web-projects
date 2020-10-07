@@ -6,7 +6,7 @@ import icon from '../../../public/favicon.ico';
 
 //Styles
 import '../../styles/default-styles.styl';
-import '../../styles/pages/blog.styl';
+import '../../styles/pages/redirect.styl';
 
 ReactDom.render(
   <>
