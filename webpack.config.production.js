@@ -6,6 +6,7 @@ const TerserPlugin = require('terser-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
 const webpack = require('webpack');
 const AddAssetHtmlPlugin = require('add-asset-html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   mode: 'production',
@@ -60,7 +61,7 @@ module.exports = {
       },
       {
         test: /\.(styl|css)$/i,
-        use: ['style-loader', 'css-loader', 'stylus-loader'],
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'stylus-loader'],
       },
       {
         test: /\.(png|gif|jpg|svg|eot|ttf|woff|woff2|ico)$/,
