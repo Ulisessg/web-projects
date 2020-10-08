@@ -1,6 +1,7 @@
 import React, { lazy, Suspense } from 'react';
 import { Helmet } from 'react-helmet';
 import Icon from '../../images/favicon.png';
+import { paths } from '../../localData.json';
 //Loading
 import Loading from '../atoms/Loading';
 
@@ -8,24 +9,6 @@ import Loading from '../atoms/Loading';
 import '../../styles/default-styles.styl';
 
 const Header = lazy(() => import('../organisms/Header'));
-
-const paths = [
-  {
-    id: '1',
-    name: 'Inicio',
-    path: '/',
-  },
-  {
-    id: '2',
-    name: 'Blog',
-    path: '/blog',
-  },
-  {
-    id: '3',
-    name: 'Sistema de diseño',
-    path: '/design',
-  },
-];
 
 const Design = () => {
   return (
