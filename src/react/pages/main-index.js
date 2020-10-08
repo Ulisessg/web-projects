@@ -1,14 +1,12 @@
-import React, { lazy, Suspense } from 'react';
+import React from 'react';
 import ReactDom from 'react-dom';
 
-//Componets
-const Main = lazy(() => import('../templates/Main'));
+//App
+import Main from '../templates/Main';
 
 ReactDom.render(
   <>
-    <Suspense fallback={<h1>Loading...</h1>}>
-      <Main />
-    </Suspense>
+    <Main />
   </>,
   document.getElementById('root'),
 );
