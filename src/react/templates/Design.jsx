@@ -12,28 +12,13 @@ const paths = [
   },
   {
     id: '2',
-    name: 'Principios',
-    path: '/principios',
+    name: 'Sistema de diseño',
+    path: '/design',
   },
   {
     id: '3',
-    name: 'Sistema',
-    path: '/sistema',
-  },
-  {
-    id: '4',
-    name: 'Fundamentos',
-    path: '/fundamentos',
-  },
-  {
-    id: '5',
-    name: 'Componentes',
-    path: '/componentes',
-  },
-  {
-    id: '6',
-    name: 'Iteración',
-    path: '/iteracion',
+    name: 'Blog',
+    path: '/blog',
   },
 ];
 
