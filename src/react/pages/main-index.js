@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDom from 'react-dom';
 //Temporal imports 🤖
 import { Helmet } from 'react-helmet';
-import icon from '../../../public/favicon.ico';
+import icon from '../../images/favicon.png';
 
 //Styles
 import '../../styles/default-styles.styl';
