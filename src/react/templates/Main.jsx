@@ -1,8 +1,12 @@
 import React, { lazy } from 'react';
+import { Helmet } from 'react-helmet';
+import Icon from '../../images/favicon.png';
 
 //Styles
+import '../../styles/default-styles.styl';
 import '../../styles/pages/redirect.styl';
 
+//Componenta
 const Header = lazy(() => import('../organisms/Header'));
 
 const paths = [
@@ -26,6 +30,14 @@ const paths = [
 const Main = () => {
   return (
     <>
+      <Helmet>
+        <title>Ulises Dev</title>
+        <meta
+          name='description'
+          content='Portafolio de @Ulises5G ulisessg Ulises Antonio Samano Galvan'
+        />
+        <link rel='icon' type='image/vnd.microsoft.icon' href={Icon} />
+      </Helmet>
       <Header paths={paths} />
       <h1>
         Work in progress...
