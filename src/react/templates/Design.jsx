@@ -5,10 +5,13 @@ import { paths } from '../../localData.json';
 //Loading
 import Loading from '../atoms/Loading';
 
-//Default styles
+//Styles
 import '../../styles/default-styles.styl';
+import '../../styles/templates/Design.styl';
 
+//Components
 const Header = lazy(() => import('../organisms/Header'));
+const Main = lazy(() => import('../organisms/MainDesign'));
 
 const Design = () => {
   return (
@@ -22,7 +25,14 @@ const Design = () => {
           />
           <link rel='icon' type='image/vnd.microsoft.icon' href={Icon} />
         </Helmet>
+
+        {/* Template */}
         <Header paths={paths} />
+
+        {/* Content */}
+        <div className='wrapper'>
+          <Main />
+        </div>
       </Suspense>
     </>
   );

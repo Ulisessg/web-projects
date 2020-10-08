@@ -15,5 +15,31 @@
       "name": "Sistema de diseño",
       "path": "/design"
     }
+  ],
+  "sectionsDesign": [
+    {
+      "id": 1,
+      "name": "Flujo",
+      "path": "/flujo",
+      "description": "El flujo de trabajo son las metodologias y procedimientos para crear el producto"
+    },
+    {
+      "id": 2,
+      "name": "Reglas",
+      "path": "/reglas",
+      "description": "Las reglas son todas las caracteristicas obligatorias que deeb cumplir el producto"
+    },
+    {
+      "id": 3,
+      "name": "Componentes",
+      "path": "/componentes",
+      "description": "Un listado de todos los componentes que utilizo además de su lógica"
+    },
+    {
+      "id": 4,
+      "name": "Documentación",
+      "path": "/documentacion",
+      "description": "Una descripción detallada de cómo ha sido creado cada producto"
+    }
   ]
 }
