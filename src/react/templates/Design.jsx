@@ -1,6 +1,8 @@
 import React, { lazy, Suspense } from 'react';
 import { Helmet } from 'react-helmet';
 import Icon from '../../images/favicon.png';
+//Default styles
+import '../../styles/default-styles.styl';
 
 const Header = lazy(() => import('../organisms/Header'));
 
