@@ -1,6 +1,9 @@
 import React, { lazy, Suspense } from 'react';
 import { Helmet } from 'react-helmet';
 import Icon from '../../images/favicon.png';
+//Loading
+import Loading from '../atoms/Loading';
+
 //Default styles
 import '../../styles/default-styles.styl';
 
@@ -27,15 +30,15 @@ const paths = [
 const Design = () => {
   return (
     <>
-      <Helmet>
-        <title>Design system</title>
-        <meta
-          name='description'
-          content='Sistema de diseño utilizado para construir mis productos'
-        />
-        <link rel='icon' type='image/vnd.microsoft.icon' href={Icon} />
-      </Helmet>
-      <Suspense fallback={<h1>Loading...</h1>}>
+      <Suspense fallback={<Loading />}>
+        <Helmet>
+          <title>Design system</title>
+          <meta
+            name='description'
+            content='Sistema de diseño utilizado para construir mis productos'
+          />
+          <link rel='icon' type='image/vnd.microsoft.icon' href={Icon} />
+        </Helmet>
         <Header paths={paths} />
       </Suspense>
     </>

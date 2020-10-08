@@ -1,7 +1,8 @@
 import React, { lazy, Suspense } from 'react';
 import { Helmet } from 'react-helmet';
 import Icon from '../../images/favicon.png';
-
+//Loading
+import Loading from '../atoms/Loading';
 //Styles
 import '../../styles/default-styles.styl';
 import '../../styles/pages/redirect.styl';
@@ -30,7 +31,7 @@ const paths = [
 const Main = () => {
   return (
     <>
-      <Suspense fallback={<h1>Loading...</h1>}>
+      <Suspense fallback={<Loading />}>
         <Helmet>
           <title>Ulises Dev</title>
           <meta

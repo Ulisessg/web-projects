@@ -1,6 +1,8 @@
 import React, { lazy, Suspense } from 'react';
 import { Helmet } from 'react-helmet';
 import Icon from '../../images/favicon.png';
+//loading
+import Loading from '../atoms/Loading';
 
 //Styles
 import '../../styles/default-styles.styl';
@@ -30,7 +32,7 @@ const paths = [
 const Blog = () => {
   return (
     <>
-      <Suspense fallback={<h1>Loading...</h1>}>
+      <Suspense fallback={<Loading />}>
         <Helmet>
           <link rel='icon' type='image/vnd.microsoft.icon' href={Icon} />
           <meta name='description' content='Noticias de tecnologia' />

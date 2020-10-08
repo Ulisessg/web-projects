@@ -1,10 +1,8 @@
 import React from 'react';
 import ReactDom from 'react-dom';
 
-//Styles
-
-//Components
-const Blog = lazy(() => import('../templates/Blog'));
+//App
+import Blog from '../templates/Blog';
 
 ReactDom.render(
   <>
