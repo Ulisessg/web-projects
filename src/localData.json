@@ -8,19 +8,19 @@
     {
       "id": 2,
       "name": "Blog",
-      "path": "/blog"
+      "path": "/blog.html"
     },
     {
       "id": 3,
       "name": "Sistema de diseño",
-      "path": "/design"
+      "path": "/design-system.html"
     }
   ],
   "sectionsDesign": [
     {
       "id": 1,
       "name": "Flujo",
-      "path": "/flujo",
+      "path": "/flujo.html",
       "description": "Metodologias y procedimientos para crear el producto"
     },
     {

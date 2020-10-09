@@ -29,7 +29,7 @@ const Blog = () => {
           </span>
         </h1>
         <br />
-        <a href='/design' className='link'>
+        <a href='/design-system.html' className='link'>
           <h1>Actualmente estoy trabajando en un sistema de diseño</h1>
         </a>
       </Suspense>
