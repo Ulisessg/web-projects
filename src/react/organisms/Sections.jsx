@@ -10,9 +10,9 @@ const Section = ({ sections }) => {
       {sections.map((section) => (
         <section className='section' key={section.id}>
           <a href={section.path}>
-            <div>
+            <div className='section__details'>
               <h2 className='title'>{section.name}</h2>
-              <p className='description'>{section.description}</p>
+              <h3 className='description'>{section.description}</h3>
             </div>
           </a>
         </section>
