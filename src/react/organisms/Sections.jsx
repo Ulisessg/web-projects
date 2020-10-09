@@ -7,16 +7,18 @@ import '../../styles/organisms/Sections.styl';
 const Section = ({ sections }) => {
   return (
     <>
-      {sections.map((section) => (
-        <section className='section' key={section.id}>
-          <a href={section.path}>
-            <div className='section__details'>
-              <h2 className='title'>{section.name}</h2>
-              <h3 className='description'>{section.description}</h3>
-            </div>
-          </a>
-        </section>
-      ))}
+      <div className='sections'>
+        {sections.map((section) => (
+          <section className='section' key={section.id}>
+            <a href={section.path}>
+              <div className='section__details'>
+                <h2 className='title'>{section.name}</h2>
+                <h3 className='description'>{section.description}</h3>
+              </div>
+            </a>
+          </section>
+        ))}
+      </div>
     </>
   );
 };

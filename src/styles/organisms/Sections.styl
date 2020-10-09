@@ -1,10 +1,20 @@
 @import '../variables.styl'
+.sections
+  display grid
+  grid-template-columns: 1fr
+  @media screen and (min-width 750px)
+    width: 90vw
+    grid-template-columns: 1fr 1fr
+    justify-items center
 .section
-  margin: 4rem 0
+  margin: 2rem 0
   text-align: center
   background-color: background-light
   height 30vh
   border-radius: 20px
+  @media screen and (min-width 750px)
+    width: 80%
+    margin: 4rem 0
   & .title
     color: color-dark
     padding-top: 10px
