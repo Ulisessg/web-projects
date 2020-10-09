@@ -7,6 +7,7 @@ const CompressionPlugin = require('compression-webpack-plugin');
 const webpack = require('webpack');
 const AddAssetHtmlPlugin = require('add-asset-html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const PreloadWebpackPlugin = require('preload-webpack-plugin');
 
 module.exports = {
   mode: 'production',
@@ -80,6 +81,10 @@ module.exports = {
     new MiniCSSExtractPlugin({
       filename: 'css/[name].[hash].css',
       chunkFilename: 'css/[id].[hash].css',
+    }),
+    new PreloadWebpackPlugin({
+      rel: 'preload',
+      as: 'style',
     }),
     new HtmlWebpackPlugin({
       template: join(__dirname, 'public', 'blog.html'),
