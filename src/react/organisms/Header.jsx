@@ -1,6 +1,6 @@
 import React, { lazy } from 'react';
 
-import '../../styles/organisms/Header.styl';
+import '../../styles/organisms/header.styl';
 
 const Nav = lazy(() => import('../atoms/Nav'));
 
