@@ -3,6 +3,9 @@ import { sectionsDesign } from '../../localData.json';
 
 const Sections = lazy(() => import('./Sections'));
 
+const color = '#258B94';
+// const color = '#5BB6E4';
+
 const MainDesign = () => {
   return (
     <main className='main'>
@@ -26,7 +29,7 @@ const MainDesign = () => {
             href='https://twitter.com/Ulises5G'
             target='_blank'
             rel='noreferrer'
-            style={{ color: '#fabb' }}
+            style={{ color }}
           >
             Twitter
           </a>
@@ -35,7 +38,7 @@ const MainDesign = () => {
             href='https://github.com/Ulisessg/web-projects'
             target='_blank'
             rel='noreferrer'
-            style={{ color: '#fabb' }}
+            style={{ color }}
           >
             repositorio del proyecto
           </a>
