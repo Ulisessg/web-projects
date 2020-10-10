@@ -1,5 +1,4 @@
 import React from 'react';
-import propTypes from 'prop-types';
 
 //Styles
 import '../../styles/organisms/Sections.styl';
@@ -23,10 +22,6 @@ const Section = ({ sections }) => {
       </div>
     </>
   );
-};
-
-Section.propTypes = {
-  sections: propTypes.array.isRequired,
 };
 
 export default Section;
