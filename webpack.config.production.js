@@ -82,10 +82,6 @@ module.exports = {
       filename: 'css/[name].[hash].css',
       chunkFilename: 'css/[id].[hash].css',
     }),
-    new PreloadWebpackPlugin({
-      rel: 'preload',
-      as: 'style',
-    }),
     new HtmlWebpackPlugin({
       template: join(__dirname, 'public', 'blog.html'),
       filename: join(__dirname, 'dist', 'blog.html'),
