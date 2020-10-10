@@ -8,7 +8,7 @@ const Sections = lazy(() => import('./Sections'));
 const MainDesign = () => {
   return (
     <main className='main'>
-      <h1>
+      <h1 className='main__welcome'>
         Hola persona curiosa
         <span role='img' aria-label='emoji'>
           😄
@@ -25,7 +25,7 @@ const MainDesign = () => {
         </p>
         <br />
         <p>
-          <strong>
+          <strong className='main__links'>
             Si hay algún error o deseas colaborar puedes comentarmelo por&nbsp;
             <a
               href='https://twitter.com/Ulises5G'

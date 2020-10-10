@@ -6,7 +6,10 @@ const Nav = lazy(() => import('../atoms/Nav'));
 
 const Header = ({ paths }) => {
   return (
-    <header aria-roledescription='Navegación a las secciones las secciones del sitio'>
+    <header
+      className='header'
+      aria-roledescription='Navegación a las secciones las secciones del sitio'
+    >
       <Nav paths={paths} />
     </header>
   );

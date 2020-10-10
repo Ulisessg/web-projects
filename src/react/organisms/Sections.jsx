@@ -12,8 +12,10 @@ const Section = ({ sections }) => {
           <section className='section' key={section.id}>
             <a href={section.path}>
               <div className='section__details'>
-                <h2 className='title'>{section.name}</h2>
-                <h3 className='description'>{section.description}</h3>
+                <h2 className='section__details--title'>{section.name}</h2>
+                <h3 className='section__details--description'>
+                  {section.description}
+                </h3>
               </div>
             </a>
           </section>
