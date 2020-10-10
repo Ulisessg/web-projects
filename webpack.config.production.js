@@ -7,7 +7,6 @@ const CompressionPlugin = require('compression-webpack-plugin');
 const webpack = require('webpack');
 const AddAssetHtmlPlugin = require('add-asset-html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const PreloadWebpackPlugin = require('preload-webpack-plugin');
 
 module.exports = {
   mode: 'production',
