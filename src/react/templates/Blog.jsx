@@ -25,7 +25,7 @@ const Blog = () => {
         <h1>
           Work in progress...
           <span role='img' aria-label='emoji'>
-            😀
+            😄
           </span>
         </h1>
         <br />

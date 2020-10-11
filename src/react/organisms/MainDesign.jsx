@@ -17,7 +17,7 @@ const MainDesign = () => {
       <div>
         <br />
         <p>
-          <strong>
+          <strong className='main__links'>
             Estas son las reglas, componentes y pruebas que utilizo para crear
             todos mis productos, si hay algo que te interese úsalo con
             confianza.
