@@ -19,7 +19,7 @@ module.exports = {
   },
   output: {
     path: join(__dirname, 'dist'),
-    filename: 'js/[name].[hash].js',
+    filename: 'js/[name].[fullhash].js',
   },
 
   optimization: {
@@ -30,7 +30,9 @@ module.exports = {
     },
     minimize: true,
     minimizer: [
-      new TerserPlugin({ test: /\.js(\?.*)?$/i, exclude: /\/node_modules/ }),
+      new TerserPlugin({
+        exclude: /\/node_modules/,
+      }),
       new OptimizeCSSAssetsPlugin(),
       new CompressionPlugin({
         test: /\.js(\?.*)?$/i,
@@ -68,7 +70,7 @@ module.exports = {
         use: {
           loader: 'url-loader',
           options: {
-            name: 'assets/[hash].[ext]',
+            name: 'assets/[fullhash].[ext]',
             limit: 9000,
           },
         },
@@ -78,8 +80,8 @@ module.exports = {
 
   plugins: [
     new MiniCSSExtractPlugin({
-      filename: 'css/[name].[hash].css',
-      chunkFilename: 'css/[id].[hash].css',
+      filename: 'css/[name].[fullhash].css',
+      chunkFilename: 'css/[id].[fullhash].css',
     }),
     new HtmlWebpackPlugin({
       template: join(__dirname, 'public', 'blog.html'),
@@ -106,7 +108,7 @@ module.exports = {
       manifest: join(__dirname, 'dist', 'modules-manifest.json'),
     }),
     new AddAssetHtmlPlugin({
-      filepath: resolve(__dirname, './dist/js/*.dll.js'),
+      filepath: resolve(__dirname, './dist/auto/modules.dll.js'),
     }),
   ],
 };

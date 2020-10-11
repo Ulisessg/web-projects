@@ -13,7 +13,6 @@ install:
   - npm install -g firebase-tools
 script:
   - npm run lint
-  - npm run dll
   - npm run build
   - lhci autorun
 after_success:

@@ -7,15 +7,16 @@ module.exports = {
     modules: ['react', 'react-dom', 'react-helmet'],
   },
   output: {
-    path: join(__dirname, 'dist', 'js'),
+    path: join(__dirname, 'dist', 'auto'),
     filename: '[name].dll.js',
-    library: '[name]_[hash]',
+    library: '[name]',
   },
 
   plugins: [
     new DllPlugin({
       path: join(__dirname, 'dist', '[name]-manifest.json'),
-      name: '[name]_[hash]',
+      name: '[name]',
+      context: __dirname,
     }),
   ],
 };

@@ -2,16 +2,16 @@
   "name": "web-projects",
   "version": "1.0.0",
   "description": "All my personal projects",
-  "main": "index.js",
   "scripts": {
     "lint": "eslint ./src/react/**/* --fix",
-    "build": "webpack --config ./webpack.config.production.js",
     "dev-all": "webpack-dev-server --config ./webpack.config.dev.js",
     "dev-main": "webpack-dev-server --config ./webpack.dev.main.js",
     "dev-blog": "webpack-dev-server --config ./webpack.config.blog.js",
     "dev-design": "webpack-dev-server --config ./webpack.config.design.js",
     "dev-404": "webpack-dev-server --config ./webpack.config.404.js",
-    "dll": "webpack --config ./webpack.config.dll.js"
+    "production": "webpack --config ./webpack.config.production.js",
+    "dll": "webpack --config ./webpack.config.dll.js",
+    "build": "npm run dll; npm run production"
   },
   "repository": {
     "type": "git",
