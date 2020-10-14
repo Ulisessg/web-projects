@@ -2,27 +2,28 @@
 .sections
   display grid
   justify-items: center
-  margin-top: 10vh
+  margin-top: 2vh
+  @media screen and (min-width: 750px)
+    margin-top: 12vh
 .section
-  margin: 1rem 0
+  margin-top: 10vh
   text-align: center
-  background-color: background-light
+  background-color: background-contrasting
   height 30vh
   border-radius: 20px
-  box-shadow: 0 0 8px 0px #6c8eff
+  box-shadow: 0 3px 8px 0px rgba(2,4,0,0.3)
   @media screen and (min-width 750px)
     width: 80%
-    margin: 1rem 0
-.section__details
+.section__details  
   height 90%
   display flex
   flex-direction: column
   justify-content: space-around
 .section__details--title
-  color: color-dark
+  color: color-ligth
   padding-top: 10px
 .section__details--description
   margin: 13px
   margin-top: 10px
   text-align: center
-  color color-dark
+  color color-ligth
