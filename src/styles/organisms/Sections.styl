@@ -7,6 +7,7 @@
     margin-top: 12vh
 .section
   margin-top: 10vh
+  width: 100%
   text-align: center
   background-color: background-contrasting
   height 30vh
@@ -14,15 +15,20 @@
   box-shadow: 0 3px 8px 0px rgba(2,4,0,0.3)
   @media screen and (min-width 750px)
     width: 80%
-.section__details  
+.section--link
   height 90%
   display flex
   flex-direction: column
   justify-content: space-around
-.section__details--title
+.section--link:focus
+  color: white
+  font-size: 1.5em
+  background-color: background-light
+
+.section--title
   color: color-ligth
   padding-top: 10px
-.section__details--description
+.section--description
   margin: 13px
   margin-top: 10px
   text-align: center

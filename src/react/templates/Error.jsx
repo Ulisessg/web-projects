@@ -4,7 +4,7 @@ import Icon from '../../images/favicon.png';
 import Loading from '../atoms/Loading';
 import { paths } from '../../localData.json';
 
-import '../../styles/templates/Error.styl';
+import '../../styles/templates/error.styl';
 
 const Header = lazy(() => import('../organisms/Header'));
 

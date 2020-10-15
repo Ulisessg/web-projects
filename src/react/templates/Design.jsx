@@ -7,7 +7,7 @@ import Loading from '../atoms/Loading';
 
 //Styles
 import '../../styles/default-styles.styl';
-import '../../styles/templates/Design.styl';
+import '../../styles/templates/design.styl';
 
 //Components
 const Header = lazy(() => import('../organisms/Header'));
@@ -27,6 +27,7 @@ const Design = () => {
         </Helmet>
 
         {/* Template */}
+
         <Header paths={paths} />
 
         {/* Content */}
