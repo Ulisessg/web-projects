@@ -1,7 +1,7 @@
 import React, { lazy } from 'react';
 import { sectionsDesign } from '../../localData.json';
 
-import '../../styles/organisms/mainDesign.styl';
+import '../../styles/organisms/mainDesign-styles.styl';
 
 const Sections = lazy(() => import('./Sections'));
 

@@ -7,7 +7,7 @@ import Loading from '../atoms/Loading';
 
 //Styles
 import '../../styles/default-styles.styl';
-import '../../styles/templates/design.styl';
+import '../../styles/templates/design-styles.styl';
 
 //Components
 const Header = lazy(() => import('../organisms/Header'));

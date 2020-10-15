@@ -1,7 +1,7 @@
 import React from 'react';
 
 //Styles
-import '../../styles/organisms/sections.styl';
+import '../../styles/organisms/sections-styles.styl';
 
 const Section = ({ sections }) => {
   return (
