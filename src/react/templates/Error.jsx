@@ -7,6 +7,7 @@ import { paths } from '../../localData.json';
 import '../../styles/templates/error-styles.styl';
 
 const Header = lazy(() => import('../organisms/Header'));
+const MainError = lazy(() => import('../organisms/MainError'));
 
 const Error = () => {
   return (
@@ -21,12 +22,7 @@ const Error = () => {
           <link rel='icon' type='image/vnd.microsoft.icon' href={Icon} />
         </Helmet>
         <Header paths={paths} />
-        <h1 className='message'>
-          Página no encontrada o en proceso de construcción&nbsp;
-          <span role='img' aria-label='emoji'>
-            👷‍♀️🚧👷‍♂️
-          </span>
-        </h1>
+        <MainError />
       </Suspense>
     </>
   );
