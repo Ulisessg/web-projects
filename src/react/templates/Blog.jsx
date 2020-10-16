@@ -11,6 +11,7 @@ import '../../styles/pages/redirect.styl';
 
 //Components
 const Header = lazy(() => import('../organisms/Header'));
+const MainBlog = lazy(() => import('../organisms/MainBlog'));
 
 const Blog = () => {
   return (
@@ -21,17 +22,7 @@ const Blog = () => {
           <meta name='description' content='Noticias de tecnologia' />
         </Helmet>
         <Header paths={paths} />
-
-        <h1>
-          Work in progress...
-          <span role='img' aria-label='emoji'>
-            😄
-          </span>
-        </h1>
-        <br />
-        <a href='/design-system.html' className='link'>
-          <h1>Actualmente estoy trabajando en un sistema de diseño</h1>
-        </a>
+        <MainBlog />
       </Suspense>
     </>
   );
