@@ -11,12 +11,14 @@ git:
       - main
 install:
   - npm install
-  - npm ci
-  - npm install -g @lhci/cli
   - npm install -g firebase-tools
-script:
-  - npm run lint
-  - npm run build
-  - lhci autorun
+  - npm install -g @lhci/cli@0.5.x
+jobs:
+  lighthouseci:
+    runs-on: ubuntu-latest
+    steps:
+      - run: npm run lint
+      - run: npm run build
+      - run: lhci autorun
 after_success:
   - firebase deploy --token $FIREBASE_TOKEN
