@@ -34,6 +34,7 @@ const MainDesign = () => {
                 target='_blank'
                 rel='noreferrer'
                 className='highlight--link'
+                title='Mi twitter'
               >
                 Twitter
               </a>
@@ -45,6 +46,7 @@ const MainDesign = () => {
                 target='_blank'
                 rel='noreferrer'
                 className='highlight--link'
+                title='Repositorio del proyecto en Github'
               >
                 repositorio del proyecto.
               </a>
