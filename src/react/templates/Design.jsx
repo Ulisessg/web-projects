@@ -1,5 +1,5 @@
 import React, { lazy, Suspense } from 'react';
-import { paths } from '../../localData.json';
+import paths from '../../localData.json';
 //Loading
 import Loading from '../atoms/Loading';
 
@@ -15,7 +15,7 @@ const Design = () => {
   return (
     <>
       <Suspense fallback={<Loading />}>
-        <Header paths={paths} />
+        <Header paths={paths.paths} />
         <div className='wrapper'>
           <Main />
         </div>

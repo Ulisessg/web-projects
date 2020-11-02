@@ -16,13 +16,27 @@
 .ul__li
   align-self: center
 .ul__li--a
-  font-size: 12px
   color: color-ligth
+  display inline-block
+  text-align: center
+  font-size: 2rem
   @media screen and (max-width: 300px)
-    font-size: 10px
+    font-size: 1.5rem
+    width auto
   @media screen and (min-width: 400px)
-    font-size: 14px
+    font-size: 2rem
+    width auto
   @media screen and (min-width: 700px)
-    font-size: 20px
+    font-size: 2rem
+    width 14rem
+.ul__li--a:focus, 
+.ul__li--a:hover
+  background-color: background-contrasting
+  width 14rem
+  @media screen and (max-width: 700px)
+    width: 8rem
+  height 36px
+  font-size: 2rem
+  text-align: center
 
   

@@ -1,5 +1,5 @@
 import React, { lazy } from 'react';
-import { sectionsDesign } from '../../localData.json';
+import sectionsDesign from '../../localData.json';
 
 import '../../styles/organisms/mainDesign-styles.styl';
 
@@ -28,7 +28,7 @@ const MainDesign = () => {
           <strong className='main__links'>
             Si hay algún error, falla en la accesibilidad o deseas colaborar
             puedes comentármelo por&nbsp;
-            <p className='highlight'>
+            <span className='highlight'>
               <a
                 href='https://twitter.com/Ulises5G'
                 target='_blank'
@@ -37,9 +37,9 @@ const MainDesign = () => {
               >
                 Twitter
               </a>
-            </p>
+            </span>
             &nbsp;ó puedes ir al&nbsp;
-            <p className='highlight'>
+            <span className='highlight'>
               <a
                 href='https://github.com/Ulisessg/web-projects'
                 target='_blank'
@@ -48,11 +48,11 @@ const MainDesign = () => {
               >
                 repositorio del proyecto.
               </a>
-            </p>
+            </span>
           </strong>
         </p>
       </section>
-      <Sections sections={sectionsDesign} />
+      <Sections sections={sectionsDesign.sectionsDesign} />
     </main>
   );
 };

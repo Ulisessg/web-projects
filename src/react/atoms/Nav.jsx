@@ -1,7 +1,5 @@
 import React from 'react';
 
-import '../../styles/atoms/nav.styl';
-
 const Nav = ({ paths }) => {
   return (
     <nav className='header__nav'>
