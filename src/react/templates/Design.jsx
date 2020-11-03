@@ -10,7 +10,7 @@ import '../../styles/templates/design-styles.styl';
 //Components
 const Header = lazy(() => import('../organisms/Header'));
 const Main = lazy(() => import('../organisms/MainDesign'));
-
+const Footer = lazy(() => import('../atoms/Footer'));
 const Design = () => {
   return (
     <>
@@ -19,6 +19,7 @@ const Design = () => {
         <div className='wrapper'>
           <Main />
         </div>
+        <Footer />
       </Suspense>
     </>
   );
