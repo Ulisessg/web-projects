@@ -6,6 +6,7 @@ import '../../styles/templates/error-styles.styl';
 
 const Header = lazy(() => import('../organisms/Header'));
 const MainError = lazy(() => import('../organisms/MainError'));
+const Footer = lazy(() => import('../atoms/Footer'));
 
 const Error = () => {
   return (
@@ -13,6 +14,7 @@ const Error = () => {
       <Suspense fallback={<Loading />}>
         <Header paths={paths} />
         <MainError />
+        <Footer />
       </Suspense>
     </>
   );

@@ -10,6 +10,7 @@ import '../../styles/pages/redirect.styl';
 //Components
 const Header = lazy(() => import('../organisms/Header'));
 const MainBlog = lazy(() => import('../organisms/MainBlog'));
+const Footer = lazy(() => import('../atoms/Footer'));
 
 const Blog = () => {
   return (
@@ -17,6 +18,7 @@ const Blog = () => {
       <Suspense fallback={<Loading />}>
         <Header paths={paths} />
         <MainBlog />
+        <Footer />
       </Suspense>
     </>
   );
