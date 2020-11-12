@@ -1,11 +1,11 @@
 import React, { lazy } from 'react';
-import sectionsDesign from '../../localData.json';
+import { connect } from 'react-redux';
 
 import '../../styles/organisms/mainDesign-styles.styl';
 
 const Sections = lazy(() => import('./Sections'));
 
-const MainDesign = () => {
+const MainDesign = ({ sections }) => {
   return (
     <main className='main' id='main'>
       <section>
@@ -54,9 +54,13 @@ const MainDesign = () => {
           </strong>
         </p>
       </section>
-      <Sections sections={sectionsDesign.sectionsDesign} />
+      <Sections sections={sections} />
     </main>
   );
 };
-
-export default MainDesign;
+const mapStateToProps = ({ sections }) => {
+  return {
+    sections,
+  };
+};
+export default connect(mapStateToProps, null)(MainDesign);

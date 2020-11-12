@@ -1,5 +1,6 @@
+//@ts-check
 import React, { lazy, Suspense } from 'react';
-import paths from '../../localData.json';
+
 //Loading
 import Loading from '../atoms/Loading';
 
@@ -11,11 +12,12 @@ import '../../styles/templates/design-styles.styl';
 const Header = lazy(() => import('../organisms/Header'));
 const Main = lazy(() => import('../organisms/MainDesign'));
 const Footer = lazy(() => import('../atoms/Footer'));
+
 const Design = () => {
   return (
     <>
       <Suspense fallback={<Loading />}>
-        <Header paths={paths.paths} />
+        <Header />
         <div className='wrapper'>
           <Main />
         </div>
