@@ -1,5 +1,5 @@
 //@ts-check
-const design = {
+const initialState = {
   headerPaths: [
     {
       id: 1,
@@ -48,6 +48,4 @@ const design = {
   ],
 };
 
-const blog = {};
-
-export { design, blog };
+export default initialState;

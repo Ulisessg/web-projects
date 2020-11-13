@@ -7,15 +7,13 @@ cache:
 node_js:
   - '12'
 git:
-  depth: 3
+  depth: 1
   branches:
     only:
       - main
 install:
   - npm install
   - npm ci
-  - npm install -g firebase-tools@8.x.x
-  - npm install -g @lhci/cli@0.6.x
 script:
   - npm run lint
   - npm run build

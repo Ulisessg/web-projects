@@ -1,6 +1,5 @@
 import React, { lazy, Suspense } from 'react';
 import Loading from '../atoms/Loading';
-import { paths } from '../../localData.json';
 
 import '../../styles/templates/error-styles.styl';
 
@@ -12,7 +11,7 @@ const Error = () => {
   return (
     <>
       <Suspense fallback={<Loading />}>
-        <Header paths={paths} />
+        <Header />
         <MainError />
         <Footer />
       </Suspense>
