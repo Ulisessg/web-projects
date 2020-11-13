@@ -10,6 +10,7 @@ const SectionWithImg = ({ sections, images }) => {
           <section className='section--container' key={section.id}>
             <a className='section--link' href={section.path}>
               <img
+                loading='lazy'
                 className='section--img'
                 src={images[iteration].image}
                 alt={images[iteration].title}

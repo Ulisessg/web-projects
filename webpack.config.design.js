@@ -1,3 +1,4 @@
+//@ts-check
 const { join } = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { HotModuleReplacementPlugin } = require('webpack');
@@ -46,6 +47,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: join(__dirname, 'public', 'design-system.html'),
       filename: join(__dirname, 'dist', 'design-system.html'),
+      favicon: join(__dirname, 'assets', 'icons', 'Logo.png'),
     }),
   ],
   devServer: {

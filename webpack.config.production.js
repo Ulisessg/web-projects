@@ -87,21 +87,25 @@ module.exports = {
       template: join(__dirname, 'public', 'blog.html'),
       filename: join(__dirname, 'dist', 'blog.html'),
       chunks: ['blog'],
+      favicon: join(__dirname, 'assets', 'icons', 'Logo.png'),
     }),
     new HtmlWebpackPlugin({
       template: join(__dirname, 'public', 'design-system.html'),
       filename: join(__dirname, 'dist', 'design-system.html'),
       chunks: ['design'],
+      favicon: join(__dirname, 'assets', 'icons', 'Logo.png'),
     }),
     new HtmlWebpackPlugin({
       template: join(__dirname, 'public', 'index.html'),
       filename: join(__dirname, 'dist', 'index.html'),
       chunks: ['index'],
+      favicon: join(__dirname, 'assets', 'icons', 'Logo.png'),
     }),
     new HtmlWebpackPlugin({
       template: join(__dirname, 'public', '404.html'),
       filename: join(__dirname, 'dist', '404.html'),
       chunks: ['error'],
+      favicon: join(__dirname, 'assets', 'icons', 'Logo.png'),
     }),
     new webpack.DllReferencePlugin({
       context: join(__dirname),

@@ -46,6 +46,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: join(__dirname, 'public', 'index.html'),
       filename: join(__dirname, 'dist', 'index.html'),
+      favicon: join(__dirname, 'assets', 'icons', 'Logo.png'),
     }),
   ],
 
