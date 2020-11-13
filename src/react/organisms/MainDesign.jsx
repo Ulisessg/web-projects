@@ -5,7 +5,7 @@ import '../../styles/organisms/mainDesign-styles.styl';
 
 const Sections = lazy(() => import('./Sections'));
 
-const MainDesign = ({ sections }) => {
+const MainDesign = ({ sections, images }) => {
   return (
     <main className='main' id='main'>
       <section>
@@ -54,13 +54,16 @@ const MainDesign = ({ sections }) => {
           </strong>
         </p>
       </section>
-      <Sections sections={sections} />
+      <Sections images={images} sections={sections} />
     </main>
   );
 };
-const mapStateToProps = ({ sections }) => {
+
+const mapStateToProps = ({ sections, images }) => {
   return {
     sections,
+    images,
   };
 };
+
 export default connect(mapStateToProps, null)(MainDesign);

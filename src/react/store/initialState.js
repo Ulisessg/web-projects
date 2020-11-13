@@ -1,4 +1,9 @@
-//@ts-check
+// @ts-nocheck
+import block from '../../../assets/images/block.svg';
+import book from '../../../assets/images/book.svg';
+import cicle from '../../../assets/images/cicle.svg';
+import check from '../../../assets/images/check.svg';
+
 const initialState = {
   headerPaths: [
     {
@@ -44,6 +49,24 @@ const initialState = {
       path: '/documentacion',
       description:
         'Una descripción detallada de cómo ha sido creado cada producto',
+    },
+  ],
+  images: [
+    {
+      title: 'Flujo',
+      image: cicle,
+    },
+    {
+      title: 'Reglas',
+      image: check,
+    },
+    {
+      title: 'Components',
+      image: block,
+    },
+    {
+      title: 'Documentación',
+      image: book,
     },
   ],
 };

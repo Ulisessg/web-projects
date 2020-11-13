@@ -1,13 +1,13 @@
 import React from 'react';
 //Styles
 import '../../styles/organisms/sections-styles.styl';
-import SectionNoImg from '../atoms/SectionNoImg';
+import SectionWithImg from '../atoms/SectionWithImg';
 
-const Section = ({ sections }) => {
+const Section = ({ sections, images }) => {
   return (
     <>
       <div className='sections'>
-        <SectionNoImg sections={sections} />
+        <SectionWithImg sections={sections} images={images} />
       </div>
     </>
   );
