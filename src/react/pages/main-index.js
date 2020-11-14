@@ -5,13 +5,14 @@ import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import initialState from '../store/initialState';
 import reducers from '../reducers/initialReducer';
+import Loading from '../atoms/Loading';
 //App
 const Main = lazy(() => import('../templates/Main'));
 const store = createStore(reducers, initialState);
 
 ReactDom.render(
   <>
-    <Suspense fallback={<h1>Loading...</h1>}>
+    <Suspense fallback={<Loading />}>
       <Provider store={store}>
         <Main />
       </Provider>

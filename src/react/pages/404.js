@@ -5,6 +5,7 @@ import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import reducers from '../reducers/initialReducer';
 import initialState from '../store/initialState';
+import Loading from '../atoms/Loading';
 
 import '../../styles/default-styles.styl';
 
@@ -14,7 +15,7 @@ const store = createStore(reducers, initialState);
 
 ReactDom.render(
   <>
-    <Suspense fallback={<h1>Loading...</h1>}>
+    <Suspense fallback={<Loading />}>
       <Provider store={store}>
         <Error />
       </Provider>

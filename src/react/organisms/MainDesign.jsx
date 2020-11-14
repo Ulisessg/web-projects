@@ -1,9 +1,9 @@
-import React, { lazy } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 
 import '../../styles/organisms/mainDesign-styles.styl';
 
-const Sections = lazy(() => import('./Sections'));
+import Sections from './Sections';
 
 const MainDesign = ({ sections, images }) => {
   return (

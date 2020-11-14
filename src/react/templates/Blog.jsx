@@ -1,23 +1,19 @@
-import React, { lazy, Suspense } from 'react';
-//loading
-import Loading from '../atoms/Loading';
+import React from 'react';
 
 //Styles
 import '../../styles/default-styles.styl';
 import '../../styles/pages/redirect.styl';
 
 //Components
-const Layout = lazy(() => import('../organisms/Layout.jsx'));
-const MainBlog = lazy(() => import('../organisms/MainBlog'));
+import Layout from '../organisms/Layout';
+import MainBlog from '../organisms/MainBlog';
 
 const Blog = () => {
   return (
     <>
-      <Suspense fallback={<Loading />}>
-        <Layout>
-          <MainBlog />
-        </Layout>
-      </Suspense>
+      <Layout>
+        <MainBlog />
+      </Layout>
     </>
   );
 };

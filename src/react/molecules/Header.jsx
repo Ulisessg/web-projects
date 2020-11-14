@@ -1,9 +1,9 @@
-import React, { lazy } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import '../../styles/organisms/header.styl';
 import SkipLink from '../atoms/SkipLink';
 
-const Nav = lazy(() => import('../atoms/Nav'));
+import Nav from '../atoms/Nav';
 
 const Header = ({ headerPaths }) => {
   return (
