@@ -7,26 +7,25 @@ import '../../styles/default-styles.styl';
 import '../../styles/pages/redirect.styl';
 
 //Componenta
-const Header = lazy(() => import('../organisms/Header'));
-const Footer = lazy(() => import('../atoms/Footer'));
+const Layout = lazy(() => import('../organisms/Layout'));
 const Main = () => {
   return (
     <>
       <Suspense fallback={<Loading />}>
-        <Header />
-        <main>
-          <h1>
-            Work in progress...
-            <span role='img' aria-label='emoji'>
-              😄
-            </span>
-          </h1>
-          <br />
-          <a href='design-system.html' className='link'>
-            <h1>Actualmente estoy trabajando en un sistema de diseño</h1>
-          </a>
-        </main>
-        <Footer />
+        <Layout>
+          <main>
+            <h1>
+              Work in progress...
+              <span role='img' aria-label='emoji'>
+                😄
+              </span>
+            </h1>
+            <br />
+            <a href='design-system.html' className='link'>
+              <h1>Actualmente estoy trabajando en un sistema de diseño</h1>
+            </a>
+          </main>
+        </Layout>
       </Suspense>
     </>
   );

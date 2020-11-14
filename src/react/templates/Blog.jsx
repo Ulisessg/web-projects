@@ -7,17 +7,16 @@ import '../../styles/default-styles.styl';
 import '../../styles/pages/redirect.styl';
 
 //Components
-const Header = lazy(() => import('../organisms/Header'));
+const Layout = lazy(() => import('../organisms/Layout.jsx'));
 const MainBlog = lazy(() => import('../organisms/MainBlog'));
-const Footer = lazy(() => import('../atoms/Footer'));
 
 const Blog = () => {
   return (
     <>
       <Suspense fallback={<Loading />}>
-        <Header />
-        <MainBlog />
-        <Footer />
+        <Layout>
+          <MainBlog />
+        </Layout>
       </Suspense>
     </>
   );

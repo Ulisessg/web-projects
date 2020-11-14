@@ -9,19 +9,18 @@ import '../../styles/default-styles.styl';
 import '../../styles/templates/design-styles.styl';
 
 //Components
-const Header = lazy(() => import('../organisms/Header'));
+const Layout = lazy(() => import('../organisms/Layout'));
 const Main = lazy(() => import('../organisms/MainDesign'));
-const Footer = lazy(() => import('../atoms/Footer'));
 
 const Design = () => {
   return (
     <>
       <Suspense fallback={<Loading />}>
-        <Header />
-        <div className='wrapper'>
-          <Main />
-        </div>
-        <Footer />
+        <Layout>
+          <div className='wrapper'>
+            <Main />
+          </div>
+        </Layout>
       </Suspense>
     </>
   );
