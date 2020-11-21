@@ -11,7 +11,8 @@
     "dev-404": "webpack serve --progress --color --config ./webpack.config.404.js",
     "production": "webpack --config ./webpack.config.production.js",
     "dll": "webpack --config ./webpack.config.dll.js",
-    "build": "npm run dll; npm run production"
+    "build": "npm run dll; npm run production",
+    "develop": "node test.js"
   },
   "repository": {
     "type": "git",

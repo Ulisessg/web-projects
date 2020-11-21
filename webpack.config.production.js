@@ -32,6 +32,9 @@ module.exports = {
     minimizer: [
       new TerserPlugin({
         exclude: /\/node_modules/,
+        terserOptions: {
+          ecma: 2015,
+        },
       }),
       new OptimizeCSSAssetsPlugin(),
       new CompressionPlugin({
