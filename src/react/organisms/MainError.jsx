@@ -21,9 +21,15 @@ const MainError = () => {
             👷‍♂️
           </span>
         </h1>
-        <button className='button-back' type='button' onClick={goBack}>
+        <button
+          title='Regresar a la página anterior'
+          className='button-back'
+          type='button'
+          onClick={goBack}
+        >
           Regresar a la página anterior
         </button>
+        <span />
       </main>
     </>
   );

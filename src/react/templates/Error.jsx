@@ -10,9 +10,7 @@ const Error = () => {
   return (
     <>
       <Layout>
-        <div className='wrapper'>
-          <MainError />
-        </div>
+        <MainError />
       </Layout>
     </>
   );
