@@ -12,9 +12,9 @@ module.exports = {
   mode: 'production',
   entry: {
     //Index
-    index: join(__dirname, 'src', 'react', 'pages', 'main-index.js'),
-    design: join(__dirname, 'src', 'react', 'pages', 'design-index.js'),
-    blog: join(__dirname, 'src', 'react', 'pages', 'blog-index.js'),
+    index: join(__dirname, 'src', 'react', 'pages', 'about.js'),
+    design: join(__dirname, 'src', 'react', 'pages', 'design.js'),
+    blog: join(__dirname, 'src', 'react', 'pages', 'blog.js'),
     error: join(__dirname, 'src', 'react', 'pages', '404.js'),
   },
   output: {
@@ -94,15 +94,15 @@ module.exports = {
       scriptLoading: 'defer',
     }),
     new HtmlWebpackPlugin({
-      template: join(__dirname, 'public', 'design-system.html'),
-      filename: join(__dirname, 'dist', 'design-system.html'),
+      template: join(__dirname, 'public', 'design.html'),
+      filename: join(__dirname, 'dist', 'design.html'),
       chunks: ['design'],
       favicon: join(__dirname, 'assets', 'icons', 'Logo.png'),
       scriptLoading: 'defer',
     }),
     new HtmlWebpackPlugin({
-      template: join(__dirname, 'public', 'index.html'),
-      filename: join(__dirname, 'dist', 'index.html'),
+      template: join(__dirname, 'public', 'about.html'),
+      filename: join(__dirname, 'dist', 'about.html'),
       chunks: ['index'],
       favicon: join(__dirname, 'assets', 'icons', 'Logo.png'),
       scriptLoading: 'defer',

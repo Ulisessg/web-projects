@@ -1,22 +1,23 @@
 {
   "hosting": {
     "public": "dist",
-    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
     "rewrites": [
       {
-        "source": "/design-system",
-        "destination": "/design-system.html"
+        "source": "/",
+        "destination": "about.html"
+      },
+      {
+        "source": "/design",
+        "destination": "/design.html"
       },
       {
         "source": "/blog",
         "destination": "/blog.html"
-      }
-    ],
-    "redirects": [
-      {
-        "source": "design",
-        "destination": "/design-system",
-        "type": 301
       }
     ]
   }

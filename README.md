@@ -43,29 +43,25 @@ Execute in your terminal
 
 ## Scripts 🏃‍♀️
 
-All pages has his own script and config file to work with them individually and one to run all pages.
+_Start the develop server of one page_ (DON'T add the extension file)
 
-## All develop scripts have this structure:
+    npm run dev nameOfPage
 
-    npm run dev-nameOfPage
+_Start the develop server for all pages_
 
-## Actual scripts
+    npm run dev-all
 
-### **Start the local server to develop in all pages 🈵**
+_New pages_
 
-    npm run dev-all:
+(For the moment in production you need to add the new pages in the entries of production file)
 
-### **Start the local server to develop in the portfolio 🕴**
+For add new pages just add the .js file in the folder **./src/react/pages** and the .html file at the folder **./public**
 
-    npm run dev-main
+# Build
 
-### **Start the local server to develop in the blog 🗒**
+_Build all pages_
 
-    npm run dev-blog
-
-### **Start the eslint verification ✔**
-
-    npm run lint
+    npm run build
 
 # Continuous integration 👷‍♂️
 

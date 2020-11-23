@@ -4,15 +4,11 @@
   "description": "All my personal projects",
   "scripts": {
     "lint": "eslint ./src/react/**/* --fix",
+    "dev": "node develop.js",
     "dev-all": "webpack serve --progress --color --config ./webpack.config.dev.js",
-    "dev-main": "webpack serve --progress --color --config ./webpack.dev.main.js",
-    "dev-blog": "webpack serve --progress --color --config ./webpack.config.blog.js",
-    "dev-design": "webpack serve --progress --color --config ./webpack.config.design.js",
-    "dev-404": "webpack serve --progress --color --config ./webpack.config.404.js",
     "production": "webpack --config ./webpack.config.production.js",
     "dll": "webpack --config ./webpack.config.dll.js",
-    "build": "npm run dll; npm run production",
-    "develop": "node test.js"
+    "build": "npm run dll; npm run production"
   },
   "repository": {
     "type": "git",
@@ -33,6 +29,7 @@
     "add-asset-html-webpack-plugin": "3.1.3",
     "babel-eslint": "10.1.0",
     "babel-loader": "8.2.1",
+    "chalk": "^2.4.2",
     "compression-webpack-plugin": "6.1.1",
     "css-loader": "5.0.1",
     "cssnano": "4.1.10",
