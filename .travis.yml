@@ -5,10 +5,12 @@ cache:
   directories:
     - ~/.npm
 node_js:
-  - '14'
+  - '15'
 git:
   depth: 1
   branches:
+    except:
+      - master
     only:
       - main
 install:

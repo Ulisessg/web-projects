@@ -8,16 +8,19 @@
     ],
     "rewrites": [
       {
-        "source": "/",
-        "destination": "about.html"
-      },
-      {
         "source": "/design",
         "destination": "/design.html"
       },
       {
         "source": "/blog",
         "destination": "/blog.html"
+      }
+    ],
+    "redirects": [
+      {
+        "source": "/about.html",
+        "destination": "/",
+        "type": 301
       }
     ]
   }
