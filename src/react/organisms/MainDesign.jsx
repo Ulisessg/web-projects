@@ -17,41 +17,36 @@ const MainDesign = ({ sections, images }) => {
         </h1>
         <br />
         <p>
-          <strong className='main__links'>
-            Estas son las reglas, componentes y pruebas que utilizo para crear
-            todos mis productos, si hay algo que te interese úsalo con
-            confianza.
-          </strong>
+          Estas son las reglas, componentes y pruebas que utilizo para crear
+          todos mis productos, si hay algo que te interese úsalo con confianza.
         </p>
         <br />
         <p>
-          <strong className='main__links'>
-            Si hay algún error, falla en la accesibilidad o deseas colaborar
-            puedes comentármelo por&nbsp;
-            <span className='highlight'>
-              <a
-                href='https://twitter.com/Ulises5G'
-                target='_blank'
-                rel='noreferrer'
-                className='highlight--link'
-                title='Mi twitter'
-              >
-                Twitter
-              </a>
-            </span>
-            &nbsp;ó puedes ir al&nbsp;
-            <span className='highlight'>
-              <a
-                href='https://github.com/Ulisessg/web-projects'
-                target='_blank'
-                rel='noreferrer'
-                className='highlight--link'
-                title='Repositorio del proyecto en Github'
-              >
-                repositorio del proyecto.
-              </a>
-            </span>
-          </strong>
+          Si hay algún error, falla en la accesibilidad o deseas colaborar
+          puedes comentármelo por&nbsp;
+          <span className='highlight'>
+            <a
+              href='https://twitter.com/Ulises5G'
+              target='_blank'
+              rel='noreferrer'
+              className='highlight--link'
+              title='Mi twitter'
+            >
+              Twitter
+            </a>
+          </span>
+          &nbsp;ó puedes ir al&nbsp;
+          <span className='highlight'>
+            <a
+              href='https://github.com/Ulisessg/web-projects'
+              target='_blank'
+              rel='noreferrer'
+              className='highlight--link'
+              title='Repositorio del proyecto en Github'
+            >
+              repositorio del proyecto.
+            </a>
+          </span>
         </p>
       </section>
       <Sections images={images} sections={sections} />

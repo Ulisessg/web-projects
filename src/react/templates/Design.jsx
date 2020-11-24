@@ -7,14 +7,14 @@ import '../../styles/templates/design-styles.styl';
 
 //Components
 import Layout from '../organisms/Layout';
-import Main from '../organisms/MainDesign';
+import MainDesign from '../organisms/MainDesign';
 
 const Design = () => {
   return (
     <>
       <Layout>
         <div className='wrapper'>
-          <Main />
+          <MainDesign />
         </div>
       </Layout>
     </>
