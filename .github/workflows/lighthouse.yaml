@@ -10,6 +10,6 @@ jobs:
         with:
           node-version: 14.x
       - run:  npm install
-      - run:  npm install -g lhci/cli
+      - run:  npm install -g lhci/cli@0.6.x
       - run:  lhci aurorun
 
