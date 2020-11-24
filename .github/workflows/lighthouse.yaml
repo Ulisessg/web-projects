@@ -8,7 +8,6 @@ jobs:
   lighthouseci:
     runs-on: ubuntu-latest
     steps:
-      - name: Check repo
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
       - run: npm install && npm install -g @lhci/cli@0.6.x && npm install -g firebase-tools
