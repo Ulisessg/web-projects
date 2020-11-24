@@ -1,7 +1,20 @@
 @import '../variables.styl'
+
+.blog-wrapper
+  display grid
+  align-content: space-around
+  justify-content: center
+  height 63vh
+  margin: 0 auto
+
+.link-container
+  display flex
+  justify-content: center
+  margin: 0 auto
+
 .link
   color: color-dark
-.link:focus
-  font-size: 1.5em
+  width 100%
+.link:focus, .link:hover
   background-color: background-contrasting
   color: color-ligth

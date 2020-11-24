@@ -6,21 +6,21 @@ const MainBlog = () => {
   return (
     <>
       <main id='main'>
-        <h1>
-          Work in progress...
-          <span role='img' aria-label='emoji'>
-            😄
-          </span>
-        </h1>
-        <br />
+        <section className='blog-wrapper'>
+          <h1>
+            Work in progress...
+            <span role='img' aria-label='emoji'>
+              😄
+            </span>
+          </h1>
+          <br />
 
-        <h1>
-          <p>
+          <div className='link-container'>
             <a href='/design' className='link'>
               Actualmente estoy trabajando en un sistema de diseño
             </a>
-          </p>
-        </h1>
+          </div>
+        </section>
       </main>
     </>
   );
