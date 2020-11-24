@@ -16,7 +16,7 @@ const MainBlog = () => {
 
         <h1>
           <p>
-            <a href='/design-system.html' className='link'>
+            <a href='/design' className='link'>
               Actualmente estoy trabajando en un sistema de diseño
             </a>
           </p>

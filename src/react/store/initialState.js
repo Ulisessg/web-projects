@@ -8,7 +8,7 @@ const initialState = {
   headerPaths: [
     {
       id: 1,
-      name: 'Portafolio',
+      name: 'About',
       path: '/',
     },
     {
@@ -19,7 +19,7 @@ const initialState = {
     {
       id: 3,
       name: 'Sistema',
-      path: '/design-system.html',
+      path: '/design.html',
     },
   ],
   sections: [
