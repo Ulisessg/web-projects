@@ -15,13 +15,6 @@
         "source": "/blog",
         "destination": "/blog.html"
       }
-    ],
-    "redirects": [
-      {
-        "source": "/about.html",
-        "destination": "/",
-        "type": 301
-      }
     ]
   }
 }

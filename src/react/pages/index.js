@@ -7,14 +7,14 @@ import initialState from '../store/initialState';
 import reducers from '../reducers/initialReducer';
 import Loading from '../atoms/Loading';
 //App
-const Main = lazy(() => import('../templates/Main'));
+const BlogTemporal = lazy(() => import('../templates/Blog'));
 const store = createStore(reducers, initialState);
 
 ReactDom.render(
   <>
     <Suspense fallback={<Loading />}>
       <Provider store={store}>
-        <Main />
+        <BlogTemporal />
       </Provider>
     </Suspense>
   </>,

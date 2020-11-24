@@ -12,7 +12,7 @@ module.exports = {
   mode: 'production',
   entry: {
     //Index
-    about: join(__dirname, 'src', 'react', 'pages', 'about.js'),
+    index: join(__dirname, 'src', 'react', 'pages', 'index.js'),
     design: join(__dirname, 'src', 'react', 'pages', 'design.js'),
     blog: join(__dirname, 'src', 'react', 'pages', 'blog.js'),
     error: join(__dirname, 'src', 'react', 'pages', '404.js'),
@@ -101,9 +101,9 @@ module.exports = {
       scriptLoading: 'defer',
     }),
     new HtmlWebpackPlugin({
-      template: join(__dirname, 'public', 'about.html'),
-      filename: join(__dirname, 'dist', 'about.html'),
-      chunks: ['about'],
+      template: join(__dirname, 'public', 'index.html'),
+      filename: join(__dirname, 'dist', 'index.html'),
+      chunks: ['index'],
       favicon: join(__dirname, 'assets', 'icons', 'Logo.png'),
       scriptLoading: 'defer',
     }),
