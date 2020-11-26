@@ -7,8 +7,7 @@
     "dev": "node develop.js",
     "dev-all": "webpack serve --progress --color --config ./webpack.config.dev.js",
     "production": "webpack --config ./webpack.config.production.js",
-    "dll": "webpack --config ./webpack.config.dll.js",
-    "build": "npm run dll; npm run production"
+    "dll": "webpack --config ./webpack.config.dll.js"
   },
   "repository": {
     "type": "git",

@@ -8,15 +8,21 @@ const webpack = require('webpack');
 const AddAssetHtmlPlugin = require('add-asset-html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
+//Get the name of file without extension to add later
+const EnvVarfile = process.env.FILE.split('.')[0];
+
 module.exports = {
   mode: 'production',
   entry: {
-    //Index
-    index: join(__dirname, 'src', 'react', 'pages', 'index.js'),
-    design: join(__dirname, 'src', 'react', 'pages', 'design.js'),
-    blog: join(__dirname, 'src', 'react', 'pages', 'blog.js'),
-    error: join(__dirname, 'src', 'react', 'pages', '404.js'),
+    [EnvVarfile]: join(
+      __dirname,
+      'src',
+      'react',
+      'pages',
+      EnvVarfile.concat('.js'),
+    ),
   },
+
   output: {
     path: join(__dirname, 'dist'),
     filename: 'js/[name].[fullhash].js',
@@ -43,6 +49,7 @@ module.exports = {
       }),
       new OptimizeCSSAssetsPlugin({
         assetNameRegExp: /\.optimize\.css$/g,
+        // eslint-disable-next-line global-require
         cssProcessor: require('cssnano'),
         cssProcessorPluginOptions: {
           preset: ['default', { discardComments: { removeAll: true } }],
@@ -87,31 +94,10 @@ module.exports = {
       chunkFilename: 'css/[id].[fullhash].css',
     }),
     new HtmlWebpackPlugin({
-      template: join(__dirname, 'public', 'blog.html'),
-      filename: join(__dirname, 'dist', 'blog.html'),
-      chunks: ['blog'],
+      template: join(__dirname, 'public', EnvVarfile.concat('.html')),
+      filename: join(__dirname, 'dist', EnvVarfile.concat('.html')),
       favicon: join(__dirname, 'assets', 'icons', 'Logo.png'),
-      scriptLoading: 'defer',
-    }),
-    new HtmlWebpackPlugin({
-      template: join(__dirname, 'public', 'design.html'),
-      filename: join(__dirname, 'dist', 'design.html'),
-      chunks: ['design'],
-      favicon: join(__dirname, 'assets', 'icons', 'Logo.png'),
-      scriptLoading: 'defer',
-    }),
-    new HtmlWebpackPlugin({
-      template: join(__dirname, 'public', 'index.html'),
-      filename: join(__dirname, 'dist', 'index.html'),
-      chunks: ['index'],
-      favicon: join(__dirname, 'assets', 'icons', 'Logo.png'),
-      scriptLoading: 'defer',
-    }),
-    new HtmlWebpackPlugin({
-      template: join(__dirname, 'public', '404.html'),
-      filename: join(__dirname, 'dist', '404.html'),
-      chunks: ['error'],
-      favicon: join(__dirname, 'assets', 'icons', 'Logo.png'),
+      chunks: [EnvVarfile],
       scriptLoading: 'defer',
     }),
     new webpack.DllReferencePlugin({
