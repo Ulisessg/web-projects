@@ -9,16 +9,19 @@ const initialState = {
     {
       id: 1,
       name: 'About',
+      description: 'Sobre mí',
       path: '/',
     },
     {
       id: 2,
       name: 'Blog',
+      description: 'Blog sobre tecnología',
       path: '/blog.html',
     },
     {
       id: 3,
       name: 'Sistema',
+      description: 'Sistema de diseño',
       path: '/design.html',
     },
   ],

@@ -8,7 +8,11 @@ const SectionWithImg = ({ sections, images }) => {
         iteration++;
         return (
           <section className='section--container' key={section.id}>
-            <a className='section--link' href={section.path}>
+            <a
+              aria-label={`${section.name}, ${section.description}`}
+              className='section--link'
+              href={section.path}
+            >
               <img
                 loading='lazy'
                 className='section--img'

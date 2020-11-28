@@ -8,7 +8,8 @@ const Footer = () => {
       <a
         className='footer--link'
         href='mailto:ukisessg@gmail.com'
-        title='Enlace de contacto'
+        aria-label='Email de contacto'
+        title='Email de contacto'
       >
         Contacto
       </a>

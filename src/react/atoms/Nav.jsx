@@ -7,7 +7,11 @@ const Nav = ({ paths }) => {
         {paths.map((path) => (
           <li className='ul__li' key={path.id}>
             <p>
-              <a className='ul__li--a' href={path.path}>
+              <a
+                aria-label={path.description}
+                className='ul__li--a'
+                href={path.path}
+              >
                 {path.name}
               </a>
             </p>

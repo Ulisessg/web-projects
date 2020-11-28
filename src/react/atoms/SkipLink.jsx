@@ -6,13 +6,21 @@ const SkipLink = () => (
   <>
     <div className='skip-link'>
       <span className='skip-link--p'>
-        <a className='skip-link--link' href='#main'>
+        <a
+          aria-label='Contenido principal'
+          className='skip-link--link'
+          href='#main'
+        >
           Contenido principal
         </a>
       </span>
       <span className='skip-link--p'>
-        <a className='skip-link--link' href='#secciones'>
-          Secciones de la página
+        <a
+          aria-label='Otras páginas'
+          className='skip-link--link'
+          href='#secciones'
+        >
+          Otras páginas
         </a>
       </span>
     </div>

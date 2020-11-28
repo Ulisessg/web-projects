@@ -49,6 +49,9 @@ const MainDesign = ({ sections, images }) => {
           </span>
         </p>
       </section>
+
+      <h2 className='main__introduction'>Secciones del sistema de diseño</h2>
+
       <Sections images={images} sections={sections} />
     </main>
   );
