@@ -11,25 +11,24 @@
     margin-top: 12vh
     grid-template-columns: repeat(3, 1fr)
 .section--container
-  box-shadow: 0 3px 8px 0px rgba(2,4,0,0.3)
+  box-shadow: -2px 1px 9px 0px box-shadow
   margin-top: 8vh
   border-radius: 30px 0 30px 0
 .section--link  
   text-align: center
   background-color: background-contrasting
-  // border: 2px solid red
   height 100%
-  @media screen and (min-width 750px)
-    width: 100%
   display flex
   flex-direction: column
   justify-content: space-around
+  @media screen and (min-width 750px)
+    width: 100%
 .section--link:focus,
 .section--link:hover
   cursor pointer
-  color: white
   font-size: 1.5em
-  background-color: #B3122C
+  background-color: background-dark
+
 .section--img
   object-fit: contain
   width 40%
@@ -37,10 +36,10 @@
 .section--title
   color: color-ligth
   padding-top: 10px
-  font-size: 2rem
+  font-size: unity * 2
 .section--description
   margin: 13px
-  font-size: 1.3rem
+  font-size: unity + 0.3
   margin-top: 10px
   text-align: center
   color color-ligth
