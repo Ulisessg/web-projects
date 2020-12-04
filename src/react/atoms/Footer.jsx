@@ -3,16 +3,35 @@ import React from 'react';
 import '../../styles/atoms/footer.styl';
 
 const Footer = () => {
+  const textMailTo = 'Haz click para contactarme';
+  const justTheEmail = 'Email: ukisessg@gmail.com';
+
+  let text;
+
+  text;
+
+  if (navigator.registerProtocolHandler) {
+    text = textMailTo;
+  } else {
+    text = justTheEmail;
+  }
+
   return (
     <footer className='footer'>
-      <a
-        className='footer--link'
-        href='mailto:ukisessg@gmail.com'
-        aria-label='Email de contacto'
-        title='Email de contacto'
-      >
-        Contacto
-      </a>
+      {text === textMailTo ? (
+        <a
+          className='footer--link'
+          href='mailto:ukisessg@gmail.com'
+          aria-label={text}
+          title={text}
+        >
+          {text}
+        </a>
+      ) : (
+        <p className='footer--link' aria-label={text} title={text}>
+          {text}
+        </p>
+      )}
     </footer>
   );
 };
