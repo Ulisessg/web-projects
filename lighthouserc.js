@@ -1,8 +1,19 @@
+//@ts-check
+const { readdir } = require('fs');
+const { join } = require('path');
+
+let directiories;
+
+readdir(join(__dirname, 'public'), { encoding: 'utf-8' }, (err, files) => {
+  if (err) throw err;
+  directiories = files;
+});
+
 module.exports = {
   ci: {
     collect: {
       staticDistDir: './dist',
-      url: ['index.html', 'design.html', 'blog.html'],
+      url: directiories,
       numberOfRuns: 10,
     },
     assert: {
