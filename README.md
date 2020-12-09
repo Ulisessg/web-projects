@@ -33,7 +33,7 @@ Execute in your terminal
 
 # Deploy 🚀
 
-[https://ulisessg.com/design-system](https://ulisessg.com/design-system)
+[https://ulisessg.com/design](https://ulisessg.com/design)
 
 # Methodologies
 
@@ -65,7 +65,7 @@ _Build all pages_
 
 # Continuous integration 👷‍♂️
 
-## The continuous integration process run at [TravisCi](https://travis-ci.org/) following the next steps
+## The continuous integration process runs on Github Actions following the next steps
 
 ### 1. All dependencies are installed.
 
