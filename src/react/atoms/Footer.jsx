@@ -8,8 +8,6 @@ const Footer = () => {
 
   let text;
 
-  text;
-
   if (navigator.registerProtocolHandler) {
     text = textMailTo;
   } else {

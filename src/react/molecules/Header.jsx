@@ -5,7 +5,8 @@ import SkipLink from '../atoms/SkipLink';
 
 import Nav from '../atoms/Nav';
 
-const Header = ({ headerPaths }) => {
+const Header = ({ headerReducer }) => {
+  const { headerPaths } = headerReducer;
   return (
     <>
       <SkipLink />
@@ -16,9 +17,8 @@ const Header = ({ headerPaths }) => {
   );
 };
 
-const mapStateToProps = ({ headerPaths }) => {
-  return {
-    headerPaths,
-  };
+const mapStateToProps = ({ headerReducer }) => {
+  return { headerReducer };
 };
+
 export default connect(mapStateToProps, null)(Header);
