@@ -4,7 +4,7 @@ import ReactDom from 'react-dom';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import Loading from '../atoms/Loading';
-import reducers from '../reducers/errorReducers';
+import reducers from '../reducers/error';
 
 import '../../styles/default-styles.styl';
 
