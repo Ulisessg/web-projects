@@ -5,7 +5,10 @@ import '../../styles/organisms/mainDesign-styles.styl';
 
 import Sections from './Sections';
 
-const MainDesign = ({ sections, images }) => {
+const MainDesign = ({ sectionsReducer, imagesReducer }) => {
+  const { sections } = sectionsReducer;
+  const { images } = imagesReducer;
+
   return (
     <main className='main' id='main'>
       <section>
@@ -57,10 +60,10 @@ const MainDesign = ({ sections, images }) => {
   );
 };
 
-const mapStateToProps = ({ sections, images }) => {
+const mapStateToProps = ({ sectionsReducer, imagesReducer }) => {
   return {
-    sections,
-    images,
+    sectionsReducer,
+    imagesReducer,
   };
 };
 
