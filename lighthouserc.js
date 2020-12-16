@@ -14,7 +14,7 @@ module.exports = {
     collect: {
       staticDistDir: './dist',
       url: directiories,
-      numberOfRuns: 10,
+      numberOfRuns: 5,
     },
     assert: {
       assertions: {
