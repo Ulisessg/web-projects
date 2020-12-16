@@ -1,12 +1,6 @@
-# web-projects
+# 🚀Frontend of UD, website that will be focused on sharing knowledge, mainly about technology and a design system.
 
-Web projects are all my current web projects:
-
-- ### A design system.
-- ### A blog.
-- ### And my portfolio.
-
-### If there is something you like, just use it 😄.
+## If there is something you like, just use it 😄.
 
 # Start with 👩‍🚀
 
