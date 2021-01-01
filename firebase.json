@@ -8,12 +8,12 @@
     ],
     "rewrites": [
       {
-        "source": "/design",
-        "destination": "/design.html"
+        "source": "/blog**",
+        "destination": "/blog.html"
       },
       {
-        "source": "/blog",
-        "destination": "/blog.html"
+        "source": "/design",
+        "destination": "/design.html"
       }
     ]
   }
