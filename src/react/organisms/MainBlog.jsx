@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { connect } from 'react-redux';
 import { Helmet } from 'react-helmet';
 
 import '../../styles/organisms/mainBlog-styles.styl';
@@ -105,4 +104,4 @@ const MainBlog = () => {
   );
 };
 
-export default connect(mapStateToProps, {})(MainBlog);
+export default MainBlog;
