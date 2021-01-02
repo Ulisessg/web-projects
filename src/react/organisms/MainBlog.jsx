@@ -28,14 +28,22 @@ const MainBlog = ({ getBlogReducer }) => {
 
   const printBlog = () => {
     const PARSER = new DOMParser();
-
-    const blogHtml = PARSER.parseFromString(
-      blogInfo.message.content,
-      'text/html',
-    ).getElementById('blog');
-
     const father = document.getElementById('blogWrapper');
-    father.append(blogHtml);
+
+    if (blogInfo.error) {
+      const errorMessage = PARSER.parseFromString(
+        '<h1>Blog not found 🕵️‍♀️</h1>',
+        'text/html',
+      ).querySelector('h1');
+      father.append(errorMessage);
+    } else {
+      const blogHtml = PARSER.parseFromString(
+        blogInfo.message.content,
+        'text/html',
+      ).getElementById('blog');
+
+      father.append(blogHtml);
+    }
   };
 
   return (
