@@ -20,17 +20,23 @@
   color: color-ligth
 
 
-h1
-  margin-bottom: 10vh
-
 #blog
   margin-top: 10vh
   width: 70vw
   text-align: left
+  @media screen and (min-width: 900px)
+    width 50vw
   & li
     margin: 20px 0 20px 30px
   & *
     margin-top 15px
+  & a:focus, & a:hover
+    color: background-contrasting
+
+h1
+  margin-bottom: 10vh
+  font-size: unity * 3
+
 
 //Quotes
 blockquote
@@ -46,7 +52,7 @@ blockquote
   background #EDEDED
   
   @media screen and (min-width: 900px)
-    width 60%
+    width 90%
     padding 1.2em 30px 1.2em 10%
 
 //Code
@@ -72,3 +78,5 @@ pre
   object-fit: contain
   @media screen and (max-width 900px)
     width 100%
+  @media screen and (min-width 900px)
+    margin-left: 10%
