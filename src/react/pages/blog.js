@@ -3,8 +3,8 @@ import React, { lazy, Suspense } from 'react';
 import ReactDom from 'react-dom';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
-import Loading from '../atoms/Loading';
 import reducers from '../reducers/blog';
+import Loading from '../atoms/Loading';
 
 //App
 const Blog = lazy(() => import('../templates/Blog'));

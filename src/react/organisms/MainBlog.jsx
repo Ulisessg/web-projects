@@ -4,14 +4,14 @@ import { Helmet } from 'react-helmet';
 
 import '../../styles/organisms/mainBlog-styles.styl';
 
-const MainBlog = ({ getBlogReducer }) => {
+const MainBlog = () => {
   const [blogContent, setBlogContent] = useState(null);
   const [blogInfo, setBlogInfo] = useState(null);
 
   let blogRequested = false;
   let blogInfoRequested = false;
 
-  const query = getBlogReducer.query.split('=')[1];
+  const query = window.location.search.split('=')[1];
   const urlBlog = `https://web-projects-api.ulisessg.vercel.app/api/blog?name=${query}`;
   const urlBlogInfo = `https://web-projects-api.ulisessg.vercel.app/api/blog/info?name=${query}`;
 
@@ -103,10 +103,6 @@ const MainBlog = ({ getBlogReducer }) => {
       </main>
     </>
   );
-};
-
-const mapStateToProps = ({ getBlogReducer }) => {
-  return { getBlogReducer };
 };
 
 export default connect(mapStateToProps, {})(MainBlog);
