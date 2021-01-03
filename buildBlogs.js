@@ -103,8 +103,14 @@ Promise.all([blogRequest, infoRequest]).then(() => {
 
     <!-- Layout -->
     <header class="header">
-      <nav class="header__nav"><a href="https://www.linkedin.com/in/ulisessg/" aria-label="Mi linkedIn" title="Mi linkedIn">Ulises Dev</a></nav>
-    </header>
+      <nav class="header__nav">
+        <ul class="header__ul">
+          <li class="ul__li">
+            <a class="ul__li--a" href="https://www.linkedin.com/in/ulisessg/" aria-label="Mi linkedin" title="Mi linkedin">UlisesDev</a>
+          </li>
+        </ul>
+      </nav>
+  </header>
     <main id="main">
       <section class='blog-wrapper' id='blogWrapper'>
         ${blog.content}
