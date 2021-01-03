@@ -2,6 +2,7 @@ const { exec } = require('child_process');
 const fs = require('fs');
 const { join } = require('path');
 
+// Create dynamic pages
 fs.readdir(join(__dirname, 'src', 'react', 'pages'), (error, files) => {
   if (error) {
     throw new Error('Error reading file');
@@ -23,6 +24,13 @@ fs.readdir(join(__dirname, 'src', 'react', 'pages'), (error, files) => {
 
   //When comminLibs finish execute a build for every page, the name of page is send on a environment variable
   commonLibs.on('exit', () => {
+    exec('node ./buildBlogs.js', (error, message) => {
+      if (error) throw new Error(error);
+      console.log(message);
+    }).stdout.on('data', (chunk) => {
+      console.log(chunk);
+    });
+
     for (let i = 0; i < files.length; i++) {
       const buildAPage = exec(
         `FILE=${files[i]} npm run production`,
