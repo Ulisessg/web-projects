@@ -91,9 +91,19 @@ Promise.all([blogRequest, infoRequest]).then(() => {
     <title>${infos[i].title}</title>
   </head>
   <body>
+    <! -- Skip link -->
+    <div class="skip-link"><span class="skip-link--p"><a aria-label="Contenido principal" class="skip-link--link" href="#main">Contenido principal</a></span><span class="skip-link--p"><a aria-label="Otras páginas" class="skip-link--link" href="#secciones">Otras páginas</a></span></div>
+
+    <! -- Layout -->
+    <header class="header">
+      <nav class="header__nav"><p>Ulises Dev</p></nav>
+    </header>
     <main>
       ${blog.content}
     </main>
+    <footer>
+      <a class="footer--link" href="mailto:ukisessg@gmail.com" aria-label="Email: ukisessg@gmail.com" title="Email: ukisessg@gmail.com">Email: ukisessg@gmail.com</a>
+    </footer>
   </body>
 </html>`;
 
