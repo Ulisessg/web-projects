@@ -70,7 +70,7 @@ Promise.all([blogRequest, infoRequest]).then(() => {
     <link rel="canonical" href="${infos[i].name}"/>
     <meta name="description" content="${infos[i].metaDescription}" />
 
-    <! -- Twitter SEO  -->
+    <!-- Twitter SEO  -->
     <meta name="twitter:title" content="${infos[i].title}" />
     <meta name="twitter:description" content="${infos[i].metaDescription}" />
     <meta name="twitter:image" content="${infos[i].seoCardUrl}" />
@@ -78,7 +78,7 @@ Promise.all([blogRequest, infoRequest]).then(() => {
     <meta name="twitter:site" content="@Ulises5G">
     <meta name="twitter:creator" content="@Ulises5G">
 
-    <! -- OG SEO -->
+    <!-- OG SEO -->
     <meta property="og:site_name" content="UlisesDev" />
     <meta property="og:locale" content="es_ES" />
     <meta property="og:type" content="article" />
@@ -91,10 +91,10 @@ Promise.all([blogRequest, infoRequest]).then(() => {
     <title>${infos[i].title}</title>
   </head>
   <body>
-    <! -- Skip link -->
+    <!-- Skip link -->
     <div class="skip-link"><span class="skip-link--p"><a aria-label="Contenido principal" class="skip-link--link" href="#main">Contenido principal</a></span><span class="skip-link--p"><a aria-label="Otras páginas" class="skip-link--link" href="#secciones">Otras páginas</a></span></div>
 
-    <! -- Layout -->
+    <!-- Layout -->
     <header class="header">
       <nav class="header__nav"><p>Ulises Dev</p></nav>
     </header>
