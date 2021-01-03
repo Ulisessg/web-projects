@@ -96,12 +96,12 @@ Promise.all([blogRequest, infoRequest]).then(() => {
 
     <!-- Layout -->
     <header class="header">
-      <nav class="header__nav"><p>Ulises Dev</p></nav>
+      <nav class="header__nav"><a href="https://www.linkedin.com/in/ulisessg/" aria-label="Mi linkedIn" title="Mi linkedIn">Ulises Dev</a></nav>
     </header>
     <main>
       ${blog.content}
     </main>
-    <footer>
+    <footer class="footer">
       <a class="footer--link" href="mailto:ukisessg@gmail.com" aria-label="Email: ukisessg@gmail.com" title="Email: ukisessg@gmail.com">Email: ukisessg@gmail.com</a>
     </footer>
   </body>
