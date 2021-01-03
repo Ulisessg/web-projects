@@ -41,6 +41,23 @@ const infoRequest = getInfos().then((res) => {
 });
 
 Promise.all([blogRequest, infoRequest]).then(() => {
+  //CSS hash
+  const min = 205;
+  const max = 1;
+  const hash1 = Math.floor(Math.random() * (max - min)) + min;
+  const hash2 = Math.floor(Math.random() * (max - min)) + min;
+  const cssName = `blog.${hash1}.${hash2}.css`;
+
+  // Write css
+  fs.copyFile(
+    join(__dirname, 'src', 'styles', 'blog.css'),
+    join(__dirname, 'dist', 'css', cssName),
+    () => {
+      console.log('CSS copied');
+    },
+  );
+
+  //Iterator
   let i = 0;
 
   blogs.map((blog) => {
@@ -49,14 +66,28 @@ Promise.all([blogRequest, infoRequest]).then(() => {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="canonical" href="${infos[i].name}"/>
     <meta name="description" content="${infos[i].metaDescription}" />
+
+    <! -- Twitter SEO  -->
     <meta name="twitter:title" content="${infos[i].title}" />
     <meta name="twitter:description" content="${infos[i].metaDescription}" />
     <meta name="twitter:image" content="${infos[i].seoCardUrl}" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@Ulises5G">
+    <meta name="twitter:creator" content="@Ulises5G">
+
+    <! -- OG SEO -->
+    <meta property="og:site_name" content="UlisesDev" />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:type" content="article" />
     <meta property="og:title" content="${infos[i].title}" />
     <meta property="og:description" content="${infos[i].metaDescription}" />
     <meta property="og:image" content="${infos[i].seoCardUrl}" />
     <meta property="og:url" content="https://ulisessg.com/${infos[i].name}" />
+
+    <link rel="stylesheet" type="text/css" href="/css/${cssName}" />
     <title>${infos[i].title}</title>
   </head>
   <body>
