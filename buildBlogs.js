@@ -48,14 +48,19 @@ Promise.all([blogRequest, infoRequest]).then(() => {
   const hash2 = Math.floor(Math.random() * (max - min)) + min;
   const cssName = `blog.${hash1}.${hash2}.css`;
 
-  // Write css
-  fs.copyFile(
-    join(__dirname, 'src', 'styles', 'blog.css'),
-    join(__dirname, 'dist', 'css', cssName),
-    () => {
-      console.log('CSS copied');
-    },
-  );
+  fs.mkdir(join(__dirname, 'dist', 'css'), { recursive: true }, (err) => {
+    if (err) throw new Error(err);
+    process.stdout.push('Copy css', 'utf-8');
+
+    // Write css
+    fs.copyFile(
+      join(__dirname, 'src', 'styles', 'blog.css'),
+      join(__dirname, 'dist', 'css', cssName),
+      () => {
+        console.log('CSS copied');
+      },
+    );
+  });
 
   //Iterator
   let i = 0;
@@ -67,7 +72,7 @@ Promise.all([blogRequest, infoRequest]).then(() => {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="canonical" href="${infos[i].name}"/>
+    <link rel="canonical" href="${infos[i].name}.html"/>
     <meta name="description" content="${infos[i].metaDescription}" />
 
     <!-- Twitter SEO  -->
@@ -85,7 +90,7 @@ Promise.all([blogRequest, infoRequest]).then(() => {
     <meta property="og:title" content="${infos[i].title}" />
     <meta property="og:description" content="${infos[i].metaDescription}" />
     <meta property="og:image" content="${infos[i].seoCardUrl}" />
-    <meta property="og:url" content="https://ulisessg.com/${infos[i].name}" />
+    <meta property="og:url" content="https://ulisessg.com/${infos[i].name}.html" />
 
     <link rel="stylesheet" type="text/css" href="/css/${cssName}" />
     <title>${infos[i].title}</title>
