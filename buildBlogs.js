@@ -50,7 +50,7 @@ Promise.all([blogRequest, infoRequest]).then(() => {
 
   fs.mkdir(join(__dirname, 'dist', 'css'), { recursive: true }, (err) => {
     if (err) throw new Error(err);
-    process.stdout.push('Copy css', 'utf-8');
+    console.log('Css copied');
 
     // Write css
     fs.copyFile(
