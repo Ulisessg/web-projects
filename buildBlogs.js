@@ -72,8 +72,10 @@ Promise.all([blogRequest, infoRequest]).then(() => {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- Basic SEO  -->   
     <link rel="canonical" href="${infos[i].name}.html"/>
     <meta name="description" content="${infos[i].metaDescription}" />
+    <meta name="keywords" content="${infos[i].metaSubjects}" />
 
     <!-- Twitter SEO  -->
     <meta name="twitter:title" content="${infos[i].title}" />
