@@ -73,7 +73,7 @@ Promise.all([blogRequest, infoRequest]).then(() => {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Basic SEO  -->   
-    <link rel="canonical" href="${infos[i].name}.html"/>
+    <link rel="canonical" href="ulisessg.com/${infos[i].name}.html"/>
     <meta name="description" content="${infos[i].metaDescription}" />
     <meta name="keywords" content="${infos[i].metaSubjects}" />
 
