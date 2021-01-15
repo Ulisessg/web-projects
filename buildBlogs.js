@@ -97,7 +97,7 @@ Promise.all([blogRequest, infoRequest]).then(() => {
     <link rel="icon" type="image/png" href="https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2FSEO%2Flogo.png?alt=media&token=65636b9b-0dcd-4845-b66a-56e2c5b762b0" />
 
     <link rel="stylesheet" type="text/css" href="/css/${cssName}" />
-    <title>${infos[i].title}</title>
+    <title>${infos[i].title} | UlisesSG</title>
   </head>
   <body>
     <!-- Skip link -->
