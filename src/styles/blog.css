@@ -141,7 +141,7 @@ a {
 }
 #blog {
   margin-top: 10vh;
-  width: 70vw;
+  width: 90vw;
   text-align: left;
 }
 @media screen and (min-width: 900px) {
@@ -186,15 +186,95 @@ pre {
   border: 1px solid #ddd;
   border-left: 3px solid #007db3;
   color: #666;
-  font-size: 15px;
+  display: inline-block;
+  width: 100%;
   line-height: 1.6;
   margin-bottom: 1.6em;
   max-width: 100%;
   overflow: auto;
   padding: 1em 1.5em;
-  display: block;
+  height: 20vh;
+}
+
+blockquote {
+  color: #666666;
+  margin: 0;
+  padding-left: 3em;
+  border-left: 0.5em #eee solid;
+}
+
+pre,
+code,
+kbd,
+samp {
+  font-size: 0.98em;
+}
+
+pre {
+  height: auto;
+  width: 100%;
+  white-space: pre;
+  white-space: pre-wrap;
   word-wrap: break-word;
 }
+
+b,
+strong {
+  font-weight: bold;
+}
+
+dfn {
+  font-style: italic;
+}
+
+ins {
+  background: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+mark {
+  background: #ff0;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+dd {
+  margin: 0 0 0 2em;
+}
+
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+  vertical-align: middle;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td {
+  vertical-align: top;
+}
+
 @media screen and (max-width: 900px) {
   pre {
     padding: 20px auto;
@@ -226,4 +306,12 @@ h1 {
 }
 main {
   margin-bottom: 10vh;
+}
+
+li {
+  text-align: center;
+}
+
+li > p {
+  text-align: left;
 }
