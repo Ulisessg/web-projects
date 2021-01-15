@@ -6,15 +6,6 @@
       "**/.*",
       "**/node_modules/**"
     ],
-    "rewrites": [
-      {
-        "source": "/blog",
-        "destination": "/blog.html"
-      },
-      {
-        "source": "/design",
-        "destination": "/design.html"
-      }
-    ]
+    "cleanUrls": true
   }
 }
