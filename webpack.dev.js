@@ -55,8 +55,6 @@ module.exports = {
         'dist',
         process.env.FILE.split('.')[0].concat('.html'),
       ),
-      favicon:
-        'https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2FSEO%2Flogo.png?alt=media&token=65636b9b-0dcd-4845-b66a-56e2c5b762b0',
     }),
   ],
   devServer: {
