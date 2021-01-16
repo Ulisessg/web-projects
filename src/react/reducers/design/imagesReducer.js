@@ -1,32 +1,27 @@
 //@ts-check
 
 // @ts-ignore
-import block from '../../../../assets/images/block.svg';
-// @ts-ignore
-import book from '../../../../assets/images/book.svg';
-// @ts-ignore
-import cicle from '../../../../assets/images/cicle.svg';
-// @ts-ignore
-import check from '../../../../assets/images/check.svg';
-
-// @ts-ignore
 const INITIAL_STATE = {
   images: [
     {
       title: 'Flujo',
-      image: cicle,
+      image:
+        'https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2FTEMP%2Fcicle.svg?alt=media&token=9ff20619-06e4-4239-96d8-a05e03dba0f0',
     },
     {
       title: 'Reglas',
-      image: check,
+      image:
+        'https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2FTEMP%2Fcheck.svg?alt=media&token=44d90861-1985-4eb4-8a8f-a277386d39dd',
     },
     {
       title: 'Components',
-      image: block,
+      image:
+        'https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2FTEMP%2Fblock.svg?alt=media&token=31393154-b2ab-4af8-bb65-ae97127ca0b7',
     },
     {
       title: 'Documentación',
-      image: book,
+      image:
+        'https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2FTEMP%2Fbook.svg?alt=media&token=4a94e82c-7e98-4b04-aad1-6204f9269c46',
     },
   ],
 };

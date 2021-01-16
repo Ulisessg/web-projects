@@ -67,4 +67,4 @@ const mapStateToProps = ({ sectionsReducer, imagesReducer }) => {
   };
 };
 
-export default connect(mapStateToProps, null)(MainDesign);
+export default connect(mapStateToProps, {})(MainDesign);
