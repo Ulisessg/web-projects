@@ -73,7 +73,7 @@ Promise.all([blogRequest, infoRequest]).then(() => {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Basic SEO  -->   
-    <link rel="canonical" href="https://ulisessg.com/${infos[i].name}.html"/>
+    <link rel="canonical" href="https://ulisessg.com/${infos[i].name}"/>
     <meta name="description" content="${infos[i].metaDescription}" />
     <meta name="keywords" content="${infos[i].metaSubjects}" />
 
@@ -81,9 +81,9 @@ Promise.all([blogRequest, infoRequest]).then(() => {
     <meta name="twitter:title" content="${infos[i].title}" />
     <meta name="twitter:description" content="${infos[i].metaDescription}" />
     <meta name="twitter:image" content="${infos[i].seoCardUrl}" />
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@Ulises5G">
-    <meta name="twitter:creator" content="@Ulises5G">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@Ulises5G" />
+    <meta name="twitter:creator" content="@Ulises5G" />
 
     <!-- OG SEO -->
     <meta property="og:site_name" content="UlisesDev" />
@@ -92,7 +92,7 @@ Promise.all([blogRequest, infoRequest]).then(() => {
     <meta property="og:title" content="${infos[i].title}" />
     <meta property="og:description" content="${infos[i].metaDescription}" />
     <meta property="og:image" content="${infos[i].seoCardUrl}" />
-    <meta property="og:url" content="https://ulisessg.com/${infos[i].name}.html" />
+    <meta property="og:url" content="https://ulisessg.com/${infos[i].name}" />
 
     <link rel="icon" type="image/png" href="https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2FSEO%2Flogo.png?alt=media&token=65636b9b-0dcd-4845-b66a-56e2c5b762b0" />
 
