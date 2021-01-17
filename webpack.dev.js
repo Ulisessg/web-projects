@@ -1,4 +1,3 @@
-//@ts-check
 const { join } = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { HotModuleReplacementPlugin } = require('webpack');
@@ -6,24 +5,28 @@ const { HotModuleReplacementPlugin } = require('webpack');
 module.exports = {
   mode: 'development',
   entry: {
-    index: join(__dirname, 'src', 'react', 'pages', process.env.FILE),
+    index: join(
+      __dirname,
+      'src',
+      'react',
+      'pages',
+      process.env.FILE.split('.')[0].concat('.tsx'),
+    ),
   },
   output: {
     path: join(__dirname, 'dist'),
   },
 
   resolve: {
-    extensions: ['.js', '.jsx'],
+    extensions: ['.ts', '.tsx', '.js'],
   },
 
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
+        test: /\.(ts|tsx|js)$/,
+        use: 'ts-loader',
         exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-        },
       },
       {
         test: /\.(styl|css)$/i,
