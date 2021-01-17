@@ -1,9 +1,6 @@
 import React from 'react';
 
-function SectionWithImg({
-  sections,
-  images,
-}: {
+interface SectionWithImgProps {
   sections: Array<{
     id: number;
     name: string;
@@ -12,7 +9,12 @@ function SectionWithImg({
   }>;
 
   images: Array<{ title: string; image: string }>;
-}): JSX.Element {
+}
+
+function SectionWithImg({
+  sections,
+  images,
+}: SectionWithImgProps): JSX.Element {
   let iteration: number = -1;
   return (
     <>

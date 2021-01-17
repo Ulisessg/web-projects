@@ -1,10 +1,10 @@
 import React from 'react';
 
-function Nav({
-  paths,
-}: {
+interface NavProps {
   paths: Array<{ id: number; description: string; path: string; name: string }>;
-}): JSX.Element {
+}
+
+function Nav({ paths }: NavProps): JSX.Element {
   return (
     <nav className='header__nav'>
       <ul className='header__ul' id='secciones'>

@@ -1,15 +1,15 @@
 import React from 'react';
 
-function SectionNoImg({
-  sections,
-}: {
+interface SectionNoImgProps {
   sections: Array<{
     id: number;
     description: string;
     path: string;
     name: string;
   }>;
-}): JSX.Element {
+}
+
+function SectionNoImg({ sections }: SectionNoImgProps): JSX.Element {
   return (
     <>
       {sections.map(
