@@ -1,4 +1,3 @@
-//@ts-check
 import React, { lazy, Suspense } from 'react';
 import ReactDom from 'react-dom';
 import { Provider } from 'react-redux';
@@ -6,7 +5,7 @@ import { createStore } from 'redux';
 import reducers from '../reducers/index/index';
 import Loading from '../atoms/Loading';
 
-//App
+//  App
 const BlogTemporal = lazy(() => import('../templates/Blog'));
 const store = createStore(reducers, {});
 

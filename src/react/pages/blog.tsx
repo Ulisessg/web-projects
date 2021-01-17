@@ -1,8 +1,7 @@
-//@ts-check
-import React, { lazy, Suspense, useState, useEffect } from 'react';
+import React, { lazy, Suspense /* useState, useEffect */ } from 'react';
 import ReactDom from 'react-dom';
 import { createStore } from 'redux';
-import { Helmet } from 'react-helmet';
+/*  import { Helmet } from 'react-helmet'; */
 
 import 'regenerator-runtime';
 
@@ -10,11 +9,15 @@ import { Provider } from 'react-redux';
 import reducers from '../reducers/blog';
 import Loading from '../atoms/Loading';
 
-//App
+//  App
 const Blog = lazy(() => import('../templates/Blog'));
 const store = createStore(reducers, {});
 
-const SEO = () => {
+// eslint-disable-next-line no-lone-blocks
+{
+  /*
+
+  const SEO = () => {
   const query = window.location.search.split('=')[1];
   const urlBlogInfo = `https://web-projects-api.ulisessg.vercel.app/api/blog/info?name=${query}`;
   const [blogInfo, setBlogInfo] = useState(null);
@@ -63,9 +66,12 @@ const SEO = () => {
   );
 };
 
+*/
+}
+
 ReactDom.render(
   <>
-    <SEO />
+    {/* <SEO />  Temporally disabled */}
     <Suspense fallback={<Loading />}>
       <Provider store={store}>
         <Blog />

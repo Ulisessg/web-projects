@@ -1,4 +1,3 @@
-//@ts-check
 import React, { lazy, Suspense } from 'react';
 import ReactDom from 'react-dom';
 import { createStore } from 'redux';
