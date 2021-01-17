@@ -1,4 +1,3 @@
-// @ts-check
 import { combineReducers } from 'redux';
 import headerReducer from '../common/headerReducer';
 
