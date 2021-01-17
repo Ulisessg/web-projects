@@ -2,16 +2,16 @@ import React from 'react';
 
 import '../../styles/atoms/footer.styl';
 
-const Footer: React.FC<{}> = () => {
+const Footer: React.FC = () => {
   const textMailTo = 'Haz click para contactarme';
   const justTheEmail = 'Email: ukisessg@gmail.com';
 
   let text;
 
-  if (navigator.registerProtocolHandler) {
-    text = textMailTo;
-  } else {
+  if (!navigator.registerProtocolHandler) {
     text = justTheEmail;
+  } else {
+    text = textMailTo;
   }
 
   return (

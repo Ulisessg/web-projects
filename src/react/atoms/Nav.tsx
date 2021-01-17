@@ -1,10 +1,17 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 
-const Nav = ({ paths }) => {
-  return (
-    <nav className='header__nav'>
-      <ul className='header__ul' id='secciones'>
-        {paths.map((path) => (
+type PathType = {
+  id: number;
+  description: string;
+  path: string;
+  name: string;
+};
+
+const Nav: React.FC<{ paths: Array<PathType> }> = ({ paths }): ReactElement => (
+  <nav className='header__nav'>
+    <ul className='header__ul' id='secciones'>
+      {paths.map(
+        (path): ReactElement => (
           <li className='ul__li' key={path.id}>
             <p>
               <a
@@ -16,10 +23,10 @@ const Nav = ({ paths }) => {
               </a>
             </p>
           </li>
-        ))}
-      </ul>
-    </nav>
-  );
-};
+        ),
+      )}
+    </ul>
+  </nav>
+);
 
 export default Nav;

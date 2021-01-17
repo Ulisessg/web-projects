@@ -2,7 +2,7 @@ import React from 'react';
 
 import '../../styles/atoms/skipLink.styl';
 
-const SkipLink = () => (
+const SkipLink: React.FC = () => (
   <>
     <div className='skip-link'>
       <span className='skip-link--p'>

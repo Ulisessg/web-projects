@@ -1,11 +1,28 @@
 import React from 'react';
 
-const SectionWithImg = ({ sections, images }) => {
-  let iteration = -1;
+type SectionType = {
+  id: number;
+  name: string;
+  path: string;
+  description: string;
+};
+
+type ImageType = {
+  title: string;
+  image: string;
+};
+
+type PropTypes = {
+  sections: Array<SectionType>;
+  images: Array<ImageType>;
+};
+
+const SectionWithImg: React.FC<PropTypes> = ({ sections, images }) => {
+  let iteration: number = -1;
   return (
     <>
       {sections.map((section) => {
-        iteration++;
+        iteration += 1;
         return (
           <section className='section--container' key={section.id}>
             <a
