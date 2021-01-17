@@ -5,8 +5,20 @@ import SkipLink from '../atoms/SkipLink';
 
 import Nav from '../atoms/Nav';
 
-const Header = ({ headerReducer }) => {
+function Header({
+  headerReducer,
+}: {
+  headerReducer: {
+    headerPaths: Array<{
+      description: string;
+      name: string;
+      path: string;
+      id: number;
+    }>;
+  };
+}): JSX.Element {
   const { headerPaths } = headerReducer;
+
   return (
     <>
       <SkipLink />
@@ -15,10 +27,10 @@ const Header = ({ headerReducer }) => {
       </header>
     </>
   );
-};
+}
 
-const mapStateToProps = ({ headerReducer }) => {
+function mapStateToProps({ headerReducer }: { headerReducer: any }) {
   return { headerReducer };
-};
+}
 
 export default connect(mapStateToProps, null)(Header);
