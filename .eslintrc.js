@@ -20,6 +20,9 @@ module.exports = {
     'linebreak-style': ['off', 'CRLF'],
     '@typescript-eslint/semi': 'error',
     'no-use-before-define': 'off',
+    'no-undef': 'off',
+    'import/extensions': 'off',
+    'import/no-unresolved': 'off',
   },
   settings: {
     react: {
