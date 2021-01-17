@@ -1,5 +1,3 @@
-// @ts-check
-
 const INITIAL_STATE = {
   headerPaths: [
     {
@@ -23,7 +21,7 @@ const INITIAL_STATE = {
   ],
 };
 
-export default (state = INITIAL_STATE, action) => {
+export default (state = INITIAL_STATE, action: any): any => {
   switch (action.type) {
     case '':
       return { ...state };
