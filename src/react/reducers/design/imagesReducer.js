@@ -1,4 +1,4 @@
-//@ts-check
+// @ts-check
 
 // @ts-ignore
 const INITIAL_STATE = {

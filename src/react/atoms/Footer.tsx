@@ -2,7 +2,7 @@ import React from 'react';
 
 import '../../styles/atoms/footer.styl';
 
-const Footer = () => {
+const Footer: React.FC<{}> = () => {
   const textMailTo = 'Haz click para contactarme';
   const justTheEmail = 'Email: ukisessg@gmail.com';
 
