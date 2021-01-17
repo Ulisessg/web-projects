@@ -2,10 +2,11 @@ import React from 'react';
 
 import '../../styles/atoms/buttonGoBack.styl';
 
-const MainError = () => {
-  const goBack = () => {
+function MainError() {
+  function goBack() {
     window.history.back();
-  };
+  }
+
   return (
     <>
       <main id='main'>
@@ -33,6 +34,6 @@ const MainError = () => {
       </main>
     </>
   );
-};
+}
 
 export default MainError;

@@ -5,7 +5,12 @@ import '../../styles/organisms/mainDesign-styles.styl';
 
 import Sections from './Sections';
 
-const MainDesign = ({ sectionsReducer, imagesReducer }) => {
+interface MainDesignProps {
+  sectionsReducer: any;
+  imagesReducer: any;
+}
+
+function MainDesign({ sectionsReducer, imagesReducer }: MainDesignProps) {
   const { sections } = sectionsReducer;
   const { images } = imagesReducer;
 
@@ -58,13 +63,15 @@ const MainDesign = ({ sectionsReducer, imagesReducer }) => {
       <Sections images={images} sections={sections} />
     </main>
   );
-};
+}
 
-const mapStateToProps = ({ sectionsReducer, imagesReducer }) => {
-  return {
-    sectionsReducer,
-    imagesReducer,
-  };
-};
+interface StateProps {
+  sectionsReducer: any;
+  imagesReducer: any;
+}
+
+function mapStateToProps({ sectionsReducer, imagesReducer }: StateProps) {
+  return { sectionsReducer, imagesReducer };
+}
 
 export default connect(mapStateToProps, {})(MainDesign);

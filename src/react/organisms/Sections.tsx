@@ -1,9 +1,20 @@
 import React from 'react';
-//Styles
+
+//  Styles
 import '../../styles/organisms/sections-styles.styl';
 import SectionWithImg from '../atoms/SectionWithImg';
 
-const Section = ({ sections, images }) => {
+interface SectionsProps {
+  sections: Array<{
+    id: number;
+    name: string;
+    path: string;
+    description: string;
+  }>;
+  images: Array<{ title: string; image: string }>;
+}
+
+function Section({ sections, images }: SectionsProps): JSX.Element {
   return (
     <>
       <div className='sections'>
@@ -11,6 +22,6 @@ const Section = ({ sections, images }) => {
       </div>
     </>
   );
-};
+}
 
 export default Section;

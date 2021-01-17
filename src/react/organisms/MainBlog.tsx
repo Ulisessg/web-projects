@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import '../../styles/organisms/mainBlog-styles.styl';
 
-const MainBlog = () => {
+function MainBlog(): JSX.Element {
   const [blogContent, setBlogContent] = useState(null);
 
   let blogRequested = false;
@@ -25,8 +25,9 @@ const MainBlog = () => {
       });
   }, [blogRequested]);
 
-  const printBlog = () => {
+  function printBlog(): void {
     const PARSER = new DOMParser();
+
     const father = document.getElementById('blogWrapper');
 
     if (blogContent.error) {
@@ -43,7 +44,7 @@ const MainBlog = () => {
 
       father.append(blogHtml);
     }
-  };
+  }
 
   return (
     <>
@@ -51,11 +52,11 @@ const MainBlog = () => {
 
       <main id='main'>
         <section className='blog-wrapper' id='blogWrapper'>
-          {blogContent ? printBlog() : null}
+          {blogContent && printBlog()}
         </section>
       </main>
     </>
   );
-};
+}
 
 export default MainBlog;
