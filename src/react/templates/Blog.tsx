@@ -1,14 +1,14 @@
 import React from 'react';
 
-//Styles
+//  Styles
 import '../../styles/default-styles.styl';
 import '../../styles/pages/redirect.styl';
 
-//Components
+//  Components
 import Layout from '../organisms/Layout';
 import MainBlog from '../organisms/MainBlog';
 
-const Blog = () => {
+function Blog(): JSX.Element {
   return (
     <>
       <Layout>
@@ -16,6 +16,6 @@ const Blog = () => {
       </Layout>
     </>
   );
-};
+}
 
 export default Blog;

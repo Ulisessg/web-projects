@@ -1,13 +1,13 @@
 import React from 'react';
 
-//Styles
+//  Styles
 import '../../styles/default-styles.styl';
 import '../../styles/pages/redirect.styl';
 
-//Components
+//  Components
 import Layout from '../organisms/Layout';
 
-const Main = () => {
+function Main(): JSX.Element {
   return (
     <>
       <Layout>
@@ -26,6 +26,6 @@ const Main = () => {
       </Layout>
     </>
   );
-};
+}
 
 export default Main;

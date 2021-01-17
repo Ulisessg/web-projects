@@ -1,15 +1,14 @@
-//@ts-check
 import React from 'react';
 
-//Styles
+//  Styles
 import '../../styles/default-styles.styl';
 import '../../styles/templates/design-styles.styl';
 
-//Components
+//  Components
 import Layout from '../organisms/Layout';
 import MainDesign from '../organisms/MainDesign';
 
-const Design = () => {
+function Design(): JSX.Element {
   return (
     <>
       <Layout>
@@ -19,6 +18,6 @@ const Design = () => {
       </Layout>
     </>
   );
-};
+}
 
 export default Design;
