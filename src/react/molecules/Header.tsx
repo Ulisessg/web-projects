@@ -5,20 +5,8 @@ import SkipLink from '../atoms/SkipLink';
 
 import Nav from '../atoms/Nav';
 
-function Header({
-  headerReducer,
-}: {
-  headerReducer: {
-    headerPaths: Array<{
-      description: string;
-      name: string;
-      path: string;
-      id: number;
-    }>;
-  };
-}): JSX.Element {
+function Header({ headerReducer }: any): JSX.Element {
   const { headerPaths } = headerReducer;
-
   return (
     <>
       <SkipLink />
