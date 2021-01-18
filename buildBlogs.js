@@ -41,28 +41,34 @@ const infoRequest = getInfos().then((res) => {
 });
 
 Promise.all([blogRequest, infoRequest]).then(() => {
-  //CSS hash
+  //  CSS hash
   const min = 205;
   const max = 1;
   const hash1 = Math.floor(Math.random() * (max - min)) + min;
   const hash2 = Math.floor(Math.random() * (max - min)) + min;
   const cssName = `blog.${hash1}.${hash2}.css`;
 
-  fs.mkdir(join(__dirname, 'dist', 'css'), { recursive: true }, (err) => {
-    if (err) throw new Error(err);
-    console.log('Css copied');
+  fs.mkdirSync(join(__dirname, 'dist', 'css'), { recursive: true });
 
-    // Write css
-    fs.copyFile(
-      join(__dirname, 'src', 'styles', 'blog.css'),
-      join(__dirname, 'dist', 'css', cssName),
-      () => {
-        console.log('CSS copied');
-      },
-    );
-  });
+  // Write css
+  fs.copyFileSync(
+    join(__dirname, 'src', 'styles', 'blog.css'),
+    join(__dirname, 'dist', 'css', cssName),
+  );
 
-  //Iterator
+  // robots.txt
+
+  fs.writeFileSync(
+    join(__dirname, 'dist', 'robots.txt'),
+    `User-Agent: *
+Allow: /
+Disallow: /css/
+Disallow: /auto/
+Disallow: /js/
+    `,
+  );
+
+  //  Iterator
   let i = 0;
 
   blogs.map((blog) => {
@@ -124,7 +130,7 @@ Promise.all([blogRequest, infoRequest]).then(() => {
   </body>
 </html>`;
 
-    fs.writeFile(
+    fs.writeFileSync(
       join(__dirname, 'dist', `${infos[i].name}.html`),
       basicTemplate,
       () => {
@@ -132,6 +138,6 @@ Promise.all([blogRequest, infoRequest]).then(() => {
       },
     );
 
-    i++;
+    i += 1;
   });
 });
