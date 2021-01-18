@@ -74,16 +74,6 @@ module.exports = {
         test: /\.(styl|css)$/i,
         use: [MiniCssExtractPlugin.loader, 'css-loader', 'stylus-loader'],
       },
-      {
-        test: /\.(png|gif|jpg|svg|eot|ttf|woff|woff2|ico)$/,
-        use: {
-          loader: 'url-loader',
-          options: {
-            name: 'assets/[fullhash].[ext]',
-            limit: 9000,
-          },
-        },
-      },
     ],
   },
 

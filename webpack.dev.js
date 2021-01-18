@@ -34,16 +34,6 @@ module.exports = {
         test: /\.(styl|css)$/i,
         use: ['style-loader', 'css-loader', 'stylus-loader'],
       },
-      {
-        test: /\.(png|gif|jpg|svg|eot|ttf|woff|woff2|ico)$/,
-        use: {
-          loader: 'url-loader',
-          options: {
-            name: 'assets/[hash].[ext]',
-            limit: 9000,
-          },
-        },
-      },
     ],
   },
 
