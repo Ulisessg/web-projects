@@ -19,5 +19,5 @@ ReactDom.render(
       </Provider>
     </Suspense>
   </>,
-  document.getElementById('root'),
+  window.document.getElementById('root'),
 );

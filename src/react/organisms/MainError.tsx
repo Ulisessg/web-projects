@@ -2,7 +2,7 @@ import React from 'react';
 
 import '../../styles/atoms/buttonGoBack.styl';
 
-function MainError() {
+function MainError(): JSX.Element {
   function goBack() {
     window.history.back();
   }
