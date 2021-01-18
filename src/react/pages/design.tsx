@@ -1,20 +1,20 @@
-import React, { lazy, Suspense } from 'react';
+import React from 'react';
 import ReactDom from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import reducers from '../reducers/design';
 import Loading from '../atoms/Loading';
 
-const Design = lazy(() => import('../templates/Design'));
+const Design = React.lazy(() => import('../templates/Design'));
 const store = createStore(reducers, {});
 
 ReactDom.render(
   <>
-    <Suspense fallback={<Loading />}>
+    <React.Suspense fallback={<Loading />}>
       <Provider store={store}>
         <Design />
       </Provider>
-    </Suspense>
+    </React.Suspense>
   </>,
-  document.getElementById('root'),
+  window.document.getElementById('root'),
 );
