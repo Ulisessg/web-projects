@@ -22,6 +22,7 @@ module.exports = {
       EnvVarfile.concat('.tsx'),
     ),
   },
+  target: ['web', 'es5'],
 
   output: {
     path: join(__dirname, 'dist'),
