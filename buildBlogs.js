@@ -62,9 +62,6 @@ Promise.all([blogRequest, infoRequest]).then(() => {
     join(__dirname, 'dist', 'robots.txt'),
     `User-Agent: *
 Allow: /
-Disallow: /css/
-Disallow: /auto/
-Disallow: /js/
     `,
   );
 
