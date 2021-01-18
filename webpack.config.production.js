@@ -8,7 +8,7 @@ const webpack = require('webpack');
 const AddAssetHtmlPlugin = require('add-asset-html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-//Get the name of file without extension to add later
+//  Get the name of file without extension to add later
 const EnvVarfile = process.env.FILE.split('.')[0];
 
 module.exports = {
@@ -19,7 +19,7 @@ module.exports = {
       'src',
       'react',
       'pages',
-      EnvVarfile.concat('.js'),
+      EnvVarfile.concat('.tsx'),
     ),
   },
 
@@ -60,17 +60,15 @@ module.exports = {
     ],
   },
   resolve: {
-    extensions: ['.js', '.jsx'],
+    extensions: ['.tsx', '.ts', '.js'],
   },
 
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
+        test: /\.(ts|tsx)$/,
         exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-        },
+        use: 'ts-loader',
       },
       {
         test: /\.(styl|css)$/i,

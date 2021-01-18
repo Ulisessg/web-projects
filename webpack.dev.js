@@ -18,13 +18,15 @@ module.exports = {
   },
 
   resolve: {
-    extensions: ['.ts', '.tsx', '.js'],
+    extensions: ['.tsx', '.ts', '.js'],
   },
+
+  devtool: 'inline-source-map',
 
   module: {
     rules: [
       {
-        test: /\.(ts|tsx|js)$/,
+        test: /\.(tsx|ts)?$/,
         use: 'ts-loader',
         exclude: /node_modules/,
       },
