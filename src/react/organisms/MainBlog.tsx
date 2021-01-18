@@ -25,7 +25,7 @@ function MainBlog(): JSX.Element {
       });
   }, [blogRequested]);
 
-  function printBlog(): void {
+  function printBlog(): any {
     const PARSER = new DOMParser();
 
     const father = document.getElementById('blogWrapper');
