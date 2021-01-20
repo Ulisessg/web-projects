@@ -90,12 +90,14 @@ Allow: /
 
     <!-- OG SEO -->
     <meta property="og:site_name" content="UlisesDev" />
-    <meta property="og:locale" content="es_ES" />
+    <meta property="og:locale" content="es_MX" />
     <meta property="og:type" content="article" />
     <meta property="og:title" content="${infos[i].title}" />
     <meta property="og:description" content="${infos[i].metaDescription}" />
     <meta property="og:image" content="${infos[i].seoCardUrl}" />
     <meta property="og:url" content="https://ulisessg.com/${infos[i].name}" />
+
+    <!-- SEO end  -->
 
     <link rel="icon" type="image/png" href="https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2FSEO%2Flogo.png?alt=media&token=65636b9b-0dcd-4845-b66a-56e2c5b762b0" />
 
