@@ -1,82 +1,18 @@
 @import '../variables.styl'
-
-* 
-  font-size: unity + .5
-
-.blog-wrapper
-  display grid
-  align-content: space-around
-  justify-content: center
-  margin: 0 auto
-
-
-.link
-  color: color-dark
-  height: auto
-  width: auto
-
-.link:focus, .link:hover
-  background-color: background-contrasting
-  color: color-ligth
-
-
-#blog
+.main
   margin-top: 10vh
-  width: 70vw
-  text-align: left
-  @media screen and (min-width: 900px)
-    width 50vw
-  & li
-    margin: 20px 0 20px 30px
-  & *
-    margin-top 15px
-  & a:focus, & a:hover
-    color: background-contrasting
+  font-size: unity + 0.5
+.highlight--link
+  color background-contrasting
+.highlight--link:focus,
+.highlight--link:hover
+  font-size: auto
+  height auto
+  color: color-ligth
+  background-color: background-contrasting
 
-h1
-  margin-bottom: 10vh
-  font-size: unity * 3
+.main__welcome
+  color: color-dark
 
-
-//Quotes
-blockquote
-  font-size 1.4em
-  width 100%
-  margin 50px auto
-  font-style italic
-  color: #555555
-  padding 1.2em 30px 1.2em 45px
-  border-left 8px solid color-highlight
-  line-height 1.4
-  position relative
-  background #EDEDED
-  
-  @media screen and (min-width: 900px)
-    width 90%
-    padding 1.2em 30px 1.2em 10%
-
-//Code
-pre 
-  background: #f4f4f4;
-  border: 1px solid #ddd;
-  border-left: 3px solid background-contrasting;
-  color: color-less-dark;
-  font-size 15px
-  line-height 1.6
-  margin-bottom 1.6em
-  max-width 100%
-  overflow auto
-  padding 1em 1.5em
-  display block
-  word-wrap break-word
-  @media screen and (max-width: 900px)
-    padding: 20px auto
-
-* > img
-  width: 80%
-  height 40%
-  object-fit: contain
-  @media screen and (max-width 900px)
-    width 100%
-  @media screen and (min-width 900px)
-    margin-left: 10%
+.main__introduction
+  margin-top: unity * 5

@@ -1,5 +1,7 @@
 import React from 'react';
 
+import '../../styles/organisms/sections-styles.styl';
+
 interface SectionWithImgProps {
   sections: Array<{
     id: number;
