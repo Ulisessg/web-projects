@@ -14,33 +14,14 @@ async function getBlogs() {
   }
 }
 
-async function getInfos() {
-  try {
-    const infos = await axios.default.get(
-      'https://web-projects-api.ulisessg.vercel.app/api/blog/all-info',
-    );
-
-    return infos;
-  } catch (error) {
-    return error;
-  }
-}
-
 let blogs;
-let infos;
 
 const blogRequest = getBlogs().then((res) => {
   const { message } = res.data;
   blogs = message;
 });
 
-const infoRequest = getInfos().then((res) => {
-  const { message } = res.data;
-
-  infos = message;
-});
-
-Promise.all([blogRequest, infoRequest]).then(() => {
+Promise.all([blogRequest]).then(() => {
   //  CSS hash
   const min = 205;
   const max = 1;
@@ -76,14 +57,14 @@ Allow: /
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Basic SEO  -->   
-    <link rel="canonical" href="https://ulisessg.com/${infos[i].name}"/>
-    <meta name="description" content="${infos[i].metaDescription}" />
-    <meta name="keywords" content="${infos[i].metaSubjects}" />
+    <link rel="canonical" href="https://ulisessg.com/${blog.name}"/>
+    <meta name="description" content="${blog.metaDescription}" />
+    <meta name="keywords" content="${blog.metaSubjects}" />
 
     <!-- Twitter SEO  -->
-    <meta name="twitter:title" content="${infos[i].title}" />
-    <meta name="twitter:description" content="${infos[i].metaDescription}" />
-    <meta name="twitter:image" content="${infos[i].seoCardUrl}" />
+    <meta name="twitter:title" content="${blog.title}" />
+    <meta name="twitter:description" content="${blog.metaDescription}" />
+    <meta name="twitter:image" content="${blog.seoCardUrl}" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@Ulises5G" />
     <meta name="twitter:creator" content="@Ulises5G" />
@@ -92,17 +73,17 @@ Allow: /
     <meta property="og:site_name" content="UlisesDev" />
     <meta property="og:locale" content="es_MX" />
     <meta property="og:type" content="article" />
-    <meta property="og:title" content="${infos[i].title}" />
-    <meta property="og:description" content="${infos[i].metaDescription}" />
-    <meta property="og:image" content="${infos[i].seoCardUrl}" />
-    <meta property="og:url" content="https://ulisessg.com/${infos[i].name}" />
+    <meta property="og:title" content="${blog.title}" />
+    <meta property="og:description" content="${blog.metaDescription}" />
+    <meta property="og:image" content="${blog.seoCardUrl}" />
+    <meta property="og:url" content="https://ulisessg.com/${blog.name}" />
 
     <!-- SEO end  -->
 
     <link rel="icon" type="image/png" href="https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2FSEO%2Flogo.png?alt=media&token=65636b9b-0dcd-4845-b66a-56e2c5b762b0" />
 
     <link rel="stylesheet" type="text/css" href="/css/${cssName}" />
-    <title>${infos[i].title} | UlisesSG</title>
+    <title>${blog.title} | UlisesSG</title>
   </head>
   <body>
     <!-- Skip link -->
@@ -130,7 +111,7 @@ Allow: /
 </html>`;
 
     fs.writeFileSync(
-      join(__dirname, 'dist', `${infos[i].name}.html`),
+      join(__dirname, 'dist', `${blog.name}.html`),
       basicTemplate,
       () => {
         console.log('Blog created');
