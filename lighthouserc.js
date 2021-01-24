@@ -1,4 +1,5 @@
-//@ts-check
+//  @ts-check
+
 const { readdir } = require('fs');
 const { join } = require('path');
 
@@ -18,7 +19,8 @@ module.exports = {
     },
     assert: {
       assertions: {
-        'categories:performance': ['error', { minScore: 0.9 }],
+        //  Temporally downgraded
+        'categories:performance': ['error', { minScore: 0.8 }],
         'categories:accessibility': ['error', { minScore: 0.9 }],
         'categories:best-practices': ['error', { minScore: 0.9 }],
       },
