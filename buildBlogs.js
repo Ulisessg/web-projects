@@ -83,29 +83,137 @@ Allow: /
     <link rel="icon" type="image/png" href="https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2FSEO%2Flogo.png?alt=media&token=65636b9b-0dcd-4845-b66a-56e2c5b762b0" />
 
     <link rel="stylesheet" type="text/css" href="/css/${cssName}" />
+
+    <!-- LinkedIn badge -->
+    <script
+      type="text/javascript"
+      src="https://platform.linkedin.com/badges/js/profile.js"
+      async
+      defer
+    ></script>
     <title>${blog.title} | UlisesSG</title>
   </head>
   <body>
-    <!-- Skip link -->
-    <div class="skip-link"><span class="skip-link--p"><a aria-label="Contenido principal" class="skip-link--link" href="#main">Contenido principal</a></span><span class="skip-link--p"><a aria-label="Otras páginas" class="skip-link--link" href="#secciones">Otras páginas</a></span></div>
+    <!--Skip Link-->
+    <div class="skip-link">
+      <span class="skip-link--p">
+        <a
+          aria-label="Contenido principal"
+          class="skip-link--link"
+          href="#main"
+        >
+          Contenido principal
+        </a>
+      </span>
+      <span class="skip-link--p">
+        <a aria-label="Otras páginas" class="skip-link--link" href="#secciones">
+          Otras páginas
+        </a>
+      </span>
+    </div>
 
-    <!-- Layout -->
+    <!-- Header -->
     <header class="header">
       <nav class="header__nav">
-        <ul class="header__ul">
+        <ul class="header__ul" id="secciones">
+          <!-- Links -->
           <li class="ul__li">
-            <a class="ul__li--a" href="https://www.linkedin.com/in/ulisessg/" aria-label="Mi linkedin" title="Mi linkedin">UlisesDev</a>
+            <p>
+              <a aria-label="Sobre mí" class="ul__li--a" href="/">About</a>
+            </p>
+          </li>
+          <li class="ul__li">
+            <p>
+              <a
+                aria-label="Blog sobre tecnología"
+                class="ul__li--a"
+                href="/blog"
+                >Blog</a
+              >
+            </p>
+          </li>
+          <li class="ul__li">
+            <p>
+              <a aria-label="Sistema de diseño" class="ul__li--a" href="/design"
+                >Sistema</a
+              >
+            </p>
           </li>
         </ul>
       </nav>
-  </header>
+    </header>
+
     <main id="main">
-      <section class='blog-wrapper' id='blogWrapper'>
+      <section class="blog-wrapper" id="blogWraper">
         ${blog.content}
       </section>
     </main>
+
     <footer class="footer">
-      <a class="footer--link" href="mailto:ukisessg@gmail.com" aria-label="Email: ukisessg@gmail.com" title="Email: ukisessg@gmail.com">Email: ukisessg@gmail.com</a>
+      <div>
+        <nav>
+          <ul class="header__ul" id="secciones">
+            <!-- Links -->
+            <li class="ul__li">
+              <p>
+                <a
+                  aria-label="Mi Twitter"
+                  class="ul__li--a"
+                  href="https://twitter.com/Ulises5G"
+                  >Twitter</a
+                >
+              </p>
+            </li>
+            <li class="ul__li">
+              <p>
+                <a
+                  aria-label="Mi perfil de platzi"
+                  class="ul__li--a"
+                  href="https://platzi.com/p/UlisesSG/"
+                  >Perfil de platzi</a
+                >
+              </p>
+            </li>
+            <li class="ul__li">
+              <p>
+                <a
+                  aria-label="Mi LinkedIn"
+                  class="ul__li--a"
+                  href="https://www.linkedin.com/in/ulisessg/"
+                  >LinkedIn</a
+                >
+              </p>
+            </li>
+            <li class="ul__li">
+              <p>
+                <a
+                  aria-label="Mi repositorio de GitHub"
+                  class="ul__li--a"
+                  href="https://github.com/Ulisessg"
+                  >GitHub</a
+                >
+              </p>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div
+        class="LI-profile-badge"
+        data-version="v1"
+        data-size="medium"
+        data-locale="es_ES"
+        data-type="vertical"
+        data-theme="light"
+        data-vanity="ulisessg"
+      >
+        <a
+          class="LI-simple-link"
+          href="https://mx.linkedin.com/in/ulisessg?trk=profile-badge"
+        >
+          Ulises Antonio Sámano Galván
+        </a>
+      </div>
     </footer>
   </body>
 </html>`;

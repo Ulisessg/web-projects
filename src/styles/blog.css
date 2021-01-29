@@ -21,6 +21,12 @@ body {
 a {
   font-size: 1.5rem;
 }
+* {
+  font-size: 1.5rem;
+}
+
+/* Layout starts*/
+
 .skip-link {
   background-color: #052336;
 }
@@ -44,18 +50,15 @@ a {
   text-align: center;
 }
 .footer {
-  height: 10vh;
+  height: 60vh;
   background-color: #052336;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-auto-flow: column;
 }
-.footer--link {
-  color: #fafafa;
-}
+
 .footer--link:focus,
 .footer--link:hover {
-  border: 2px solid #fafafa;
+  border: 2px solid color-ligth;
   background-color: #176085;
   border-radius: 20px;
   padding: 5px;
@@ -120,9 +123,9 @@ a {
     text-align: center;
   }
 }
-* {
-  font-size: 1.5rem;
-}
+
+/* Latoyt ends */
+
 .blog-wrapper {
   display: grid;
   align-content: space-around;
