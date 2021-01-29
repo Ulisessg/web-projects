@@ -2,34 +2,66 @@ import React from 'react';
 
 import '../../styles/atoms/footer.styl';
 
+import Nav from './Nav';
+
+interface Link {
+  id: number;
+  path: string;
+  name: string;
+  description: string;
+}
+
+const links: Array<Link> = [
+  {
+    id: 1,
+    path: 'https://github.com/Ulisessg',
+    name: 'GitHub',
+    description: 'Mi repositorio de GitHub',
+  },
+  {
+    id: 2,
+    path: 'https://www.linkedin.com/in/ulisessg/',
+    name: 'LinkedIn',
+    description: 'Mi LinkedIn',
+  },
+  {
+    id: 3,
+    path: 'https://twitter.com/Ulises5G',
+    name: 'Twitter',
+    description: 'Mi Twitter',
+  },
+  {
+    id: 4,
+    path: 'https://platzi.com/p/UlisesSG/',
+    name: 'Perfil de platzi',
+    description: 'Mi perfil de platzi',
+  },
+];
+
 function Footer(): JSX.Element {
-  const textMailTo = 'Haz click para contactarme';
-  const justTheEmail = 'Email: ukisessg@gmail.com';
-
-  let text;
-
-  if (!navigator.registerProtocolHandler) {
-    text = justTheEmail;
-  } else {
-    text = textMailTo;
-  }
-
   return (
     <footer className='footer'>
-      {text === textMailTo ? (
+      <div>
+        <Nav paths={links} />
+      </div>
+      {/* LinkedIn profile */}
+
+      <div
+        className='LI-profile-badge'
+        data-version='v1'
+        data-size='medium'
+        data-locale='es_ES'
+        data-type='vertical'
+        data-theme='light'
+        data-vanity='ulisessg'
+      >
         <a
-          className='footer--link'
-          href='mailto:ukisessg@gmail.com'
-          aria-label={text}
-          title={text}
+          className='LI-simple-link'
+          href='https://mx.linkedin.com/in/ulisessg?trk=profile-badge'
         >
-          {text}
+          Ulises Antonio Sámano Galván
         </a>
-      ) : (
-        <p className='footer--link' aria-label={text} title={text}>
-          {text}
-        </p>
-      )}
+      </div>
     </footer>
   );
 }
