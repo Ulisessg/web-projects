@@ -50,19 +50,55 @@ a {
   text-align: center;
 }
 .footer {
-  height: 60vh;
+  height: auto;
   background-color: #052336;
   display: grid;
   grid-auto-flow: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+@media screen and (max-width: 699px) {
+  .footer {
+    grid-auto-flow: row;
+  }
+}
+
+.footer > div {
+  padding: 20px;
+}
+
+.footer > div > nav > ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+@media screen and (max-width: 699px) {
+  .footer > div > nav > ul {
+    grid-template-columns: 1fr;
+  }
+  .header__ul > li > p {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.footer > div > nav > ul > li {
+  margin-top: 5rem;
 }
 
 .footer--link:focus,
 .footer--link:hover {
-  border: 2px solid color-ligth;
+  border: 2px solid#fafafa;
   background-color: #176085;
   border-radius: 20px;
   padding: 5px;
 }
+
+/* Badge image container, setter as important */
+.LI-profile-pic-container {
+  height: 160px !important;
+}
+
 .header {
   width: 100vw;
   display: flex;
