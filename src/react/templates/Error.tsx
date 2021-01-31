@@ -1,15 +1,15 @@
 import React from 'react';
 
 import '../../styles/templates/error-styles.styl';
-import '../../styles/atoms/footer.styl';
-import '../../styles/organisms/header.styl';
-import '../../styles/atoms/skipLink.styl';
 
 import MainError from '../organisms/MainError';
+import Layout from '../organisms/Layout';
 
 const Error = (): JSX.Element => (
   <>
-    <MainError />
+    <Layout>
+      <MainError />
+    </Layout>
   </>
 );
 
