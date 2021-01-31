@@ -39,7 +39,7 @@ function MainBlog(): JSX.Element {
             description: doc.metaDescription,
             image: doc.seoCardUrl,
             id: doc.id,
-            path: `https://ulisessg.com/${doc.name}`,
+            path: `/${doc.name}`,
             title: 'Imagen de portada',
           };
           newData.push(newDocument);
