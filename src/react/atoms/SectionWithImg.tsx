@@ -36,8 +36,8 @@ function SectionWithImg({
                   src={images[iteration].image}
                   alt={images[iteration].title}
                 />
-                <h2 className='section--title'>{section.name}</h2>
-                <h3 className='section--description'>{section.description}</h3>
+                <h3 className='section--title'>{section.name}</h3>
+                <p className='section--description'>{section.description}</p>
               </a>
             </section>
           );
