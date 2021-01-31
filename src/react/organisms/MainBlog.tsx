@@ -54,7 +54,7 @@ function MainBlog(): JSX.Element {
   return (
     <>
       <main className='main' id='main'>
-        <section className='sections-temp'>
+        <section className='sections'>
           <SectionWithImg images={lastEntries} sections={lastEntries} />
         </section>
       </main>
