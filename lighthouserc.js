@@ -1,13 +1,10 @@
 //  @ts-check
 
-const { readdir } = require('fs');
+const { readdirSync } = require('fs');
 const { join } = require('path');
 
-let directiories;
-
-readdir(join(__dirname, 'public'), { encoding: 'utf-8' }, (err, files) => {
-  if (err) throw err;
-  directiories = files;
+const directiories = readdirSync(join(__dirname, 'public'), {
+  encoding: 'utf-8',
 });
 
 module.exports = {
