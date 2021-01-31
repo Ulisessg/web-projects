@@ -4,19 +4,19 @@ import React from 'react';
 import '../../styles/default-styles.styl';
 import '../../styles/organisms/mainBlog-styles.styl';
 import '../../styles/templates/blog-styles.styl';
-import '../../styles/atoms/footer.styl';
-import '../../styles/organisms/header.styl';
-import '../../styles/atoms/skipLink.styl';
 
 //  Components
 import MainBlog from '../organisms/MainBlog';
+import Layout from '../organisms/Layout';
 
 function Blog(): JSX.Element {
   return (
     <>
-      <div className='wrapper'>
-        <MainBlog />
-      </div>
+      <Layout>
+        <div className='wrapper'>
+          <MainBlog />
+        </div>
+      </Layout>
     </>
   );
 }
