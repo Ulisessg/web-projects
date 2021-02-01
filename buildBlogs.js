@@ -28,13 +28,22 @@ Promise.all([blogRequest]).then(() => {
   const hash1 = Math.floor(Math.random() * (max - min)) + min;
   const hash2 = Math.floor(Math.random() * (max - min)) + min;
   const cssName = `blog.${hash1}.${hash2}.css`;
+  const jsName = `blog.${hash1}.${hash2}.js`;
 
   fs.mkdirSync(join(__dirname, 'dist', 'css'), { recursive: true });
+  fs.mkdirSync(join(__dirname, 'dist', 'js'), { recursive: true });
 
   // Write css
   fs.copyFileSync(
     join(__dirname, 'src', 'styles', 'blog.css'),
     join(__dirname, 'dist', 'css', cssName),
+  );
+
+  //  Js file
+
+  fs.copyFileSync(
+    join(__dirname, 'src', 'react', 'atoms', 'add_visit.js'),
+    join(__dirname, 'dist', 'js', jsName),
   );
 
   // robots.txt
@@ -215,6 +224,14 @@ Allow: /
         </a>
       </div>
     </footer>
+
+    <script
+      type="text/javascript"
+      src="/js/${jsName}"
+      async
+      defer
+    ></script>
+
   </body>
 </html>`;
 
