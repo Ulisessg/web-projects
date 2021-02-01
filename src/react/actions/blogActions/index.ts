@@ -10,8 +10,7 @@ interface BlogEntry {
 
 // eslint-disable-next-line import/prefer-default-export
 export const getBlogs = () => async (dispatch) => {
-  const urlBlog: string =
-    'https://web-projects-api.ulisessg.vercel.app/api/blog/last-entries';
+  const urlBlog: string = 'https://web-projects-api.ulisessg.vercel.app/api/blog/last-entries';
 
   window
     .fetch(urlBlog)
