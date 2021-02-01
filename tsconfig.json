@@ -2,7 +2,7 @@
   "compilerOptions": {
     "baseUrl": "./src/react/pages",
     "outDir": "./dist/",
-    "noImplicitAny": true,
+    "noImplicitAny": false,
     "module": "CommonJS",
     "sourceMap": true,
     "target": "es5",
