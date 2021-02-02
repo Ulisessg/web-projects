@@ -69,6 +69,7 @@ Allow: /
     <link rel="canonical" href="https://ulisessg.com/${blog.name}"/>
     <meta name="description" content="${blog.metaDescription}" />
     <meta name="keywords" content="${blog.metaSubjects}" />
+    <meta name="author" content="UliseSG">
 
     <!-- Twitter SEO  -->
     <meta name="twitter:title" content="${blog.title}" />
@@ -77,6 +78,7 @@ Allow: /
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@Ulises5G" />
     <meta name="twitter:creator" content="@Ulises5G" />
+    <meta property="twitter:url" content="https://ulisessg.com/${blog.name}">
 
     <!-- OG SEO -->
     <meta property="og:site_name" content="UlisesDev" />
@@ -154,7 +156,9 @@ Allow: /
 
     <main id="main">
       <section class="blog-wrapper" id="blogWraper">
-        ${blog.content}
+        <div id="blog">
+          ${blog.content}
+        </div>
       </section>
     </main>
 
