@@ -30,12 +30,14 @@ function SectionWithImg({
                 className='section--link'
                 href={section.path}
               >
-                <img
-                  loading='lazy'
-                  className='section--img'
-                  src={images[iteration].image}
-                  alt={images[iteration].title}
-                />
+                <div>
+                  <img
+                    loading='lazy'
+                    className='section--img'
+                    src={images[iteration].image}
+                    alt={images[iteration].title}
+                  />
+                </div>
                 <h3 className='section--title'>{section.name}</h3>
                 <p className='section--description'>{section.description}</p>
               </a>
