@@ -13,9 +13,10 @@ interface BlogEntry {
   title: string;
 }
 
-function MainBlog({ blogs }: { blogs: Array<any> }): JSX.Element {
-  let areError;
+function MainBlog({ blogs }: { blogs: Array<BlogEntry | any> }): JSX.Element {
+  //  Check if request returns a error
 
+  let areError;
   if (blogs.length > 0 && blogs[0].error === true) {
     areError = true;
   } else {
@@ -26,6 +27,16 @@ function MainBlog({ blogs }: { blogs: Array<any> }): JSX.Element {
     <>
       <main className='main' id='main'>
         <section className='sections'>
+          {/* Loading blogs message */}
+          {blogs.length === 0 && (
+            <>
+              <div
+                style={{ width: '100vw', textAlign: 'center', margin: '20vh' }}
+              >
+                <h1>Loading blogs...</h1>
+              </div>
+            </>
+          )}
           {areError === true ? (
             <>
               <h1
