@@ -37,7 +37,7 @@ function Header(): JSX.Element {
     <>
       <SkipLink />
       <header className='header'>
-        <Nav paths={headerPaths} />
+        <Nav paths={headerPaths} backgroundIsLigth={false} />
       </header>
     </>
   );
