@@ -30,7 +30,7 @@ function SectionWithImg({
                 className='section--link'
                 href={section.path}
               >
-                <div>
+                <div className='section--img--cotainer'>
                   <img
                     loading='lazy'
                     className='section--img'
