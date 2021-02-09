@@ -53,14 +53,14 @@ function IndexOrganism(): JSX.Element {
     {
       id: 3,
       name: 'Always update - Proyecto final Platzi Master',
-      path: 'https://github.com/Learningator/learning-200-frontend',
+      path: 'https://github.com/Proyecto-Noticias/Frontend',
       description:
         'Always Update es una plataforma que recopila noticias de México, Argentina, Colombia y Venezuela, recolectando más de 200 noticias todos los días y realizando un análisis sentimental de cada una mostrando el resultado con un siticker en la portada.',
     },
     {
       id: 4,
       name: 'UD',
-      path: 'https://github.com/Learningator/learning-200-frontend',
+      path: 'https://github.com/Ulisessg/web-projects',
       description:
         'UD es un sitio web enfocado principalmente en compartir conocimiento de tecnologia, además de contener mis proyectos personales, este sitio está creado usando el stack MERN y Typescript',
     },
