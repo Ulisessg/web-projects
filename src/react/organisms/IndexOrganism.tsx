@@ -1,13 +1,24 @@
 import React from 'react';
 
+import '../../styles/organisms/IndexOrganism.styl';
 import SectionWithImg from '../atoms/SectionWithImg';
+import Nav from '../atoms/Nav';
 
 function IndexOrganism(): JSX.Element {
-  const tempImg = [
+  interface Path {
+    id: number;
+    name: string;
+    description: string;
+    path: string;
+  }
+
+  const Logo =
+    'https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2FSEO%2Flogo.png?alt=media&token=65636b9b-0dcd-4845-b66a-56e2c5b762b0';
+
+  const projectsImages = [
     {
       title: 'Platzi stack',
-      image:
-        'https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2FSEO%2Flogo.png?alt=media&token=65636b9b-0dcd-4845-b66a-56e2c5b762b0',
+      image: Logo,
     },
     {
       title: 'Learningator image',
@@ -17,15 +28,14 @@ function IndexOrganism(): JSX.Element {
     {
       title: 'Always update',
       image:
-        'https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2Fprojects%2FLearningator.jfif?alt=media&token=937bdd92-1ca4-4f5e-a756-66a40e0fe8f2',
+        'https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2FSEO%2FalwaysUpdate.ico?alt=media&token=d41e23f6-aeec-40d6-ab25-7e698f7b4e19',
     },
     {
       title: 'UD logo',
-      image:
-        'https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2FSEO%2Flogo.png?alt=media&token=65636b9b-0dcd-4845-b66a-56e2c5b762b0',
+      image: Logo,
     },
   ];
-  const tempSect = [
+  const projectsInfo = [
     {
       id: 1,
       name: 'Platzi stack',
@@ -45,7 +55,7 @@ function IndexOrganism(): JSX.Element {
       name: 'Always update - Proyecto final Platzi Master',
       path: 'https://github.com/Learningator/learning-200-frontend',
       description:
-        "Learningator is an automatized learning path generator focused in coaches of Platzi Master who generally pass 6 hours to generate a new learning path or more if the coach don't have knwoldege about the field of the student, besides the learnign path can change durring the programm.",
+        'Always Update es una plataforma que recopila noticias de México, Argentina, Colombia y Venezuela, recolectando más de 200 noticias todos los días y realizando un análisis sentimental de cada una mostrando el resultado con un siticker en la portada.',
     },
     {
       id: 4,
@@ -56,9 +66,52 @@ function IndexOrganism(): JSX.Element {
     },
   ];
 
+  const navPaths: Array<Path> = [
+    {
+      id: 1,
+      description: 'Ir a mis proyectos',
+      name: 'Proyectos',
+      path: '#proyectos',
+    },
+    {
+      id: 2,
+      description: 'Ultimas entradas del blog',
+      name: 'Posts',
+      path: '#posts',
+    },
+    {
+      id: 3,
+      description: 'Enlaces de contacto',
+      name: 'Contacto',
+      path: '#contacto',
+    },
+  ];
+
   return (
     <>
-      <SectionWithImg images={tempImg} sections={tempSect} />
+      <div className='about-me'>
+        <img
+          className='about-me__img'
+          src='https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2FSEO%2Fulises5G.jfif?alt=media&token=bbe0eb8b-ee31-4ef1-a444-452691ca8f67'
+          alt='Foto mía'
+        />
+        <h1 className='about-me__title'>Frontend / Backend</h1>
+        <h2 className='about-me__name'>Ulises Antonio Sámano Galván</h2>
+      </div>
+
+      <div className='about-me__navigation'>
+        <Nav paths={navPaths} backgroundIsLigth />
+      </div>
+
+      {/* Main content */}
+
+      <h2>Proyectos</h2>
+
+      <div className='wrapper'>
+        <section className='sections' id='proyectos'>
+          <SectionWithImg images={projectsImages} sections={projectsInfo} />
+        </section>
+      </div>
     </>
   );
 }

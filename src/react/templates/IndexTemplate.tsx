@@ -22,13 +22,9 @@ function Main({ getBlogs }: { getBlogs: any }): JSX.Element {
   return (
     <>
       <Layout>
-        <main className='main' id='main'>
-          <h2>Proyectos</h2>
-          <div className='wrapper'>
-            <section className='sections'>
-              <IndexOrganism />
-            </section>
-          </div>
+        {/* Move styles in a file */}
+        <main style={{ marginTop: '0' }} className='main' id='main'>
+          <IndexOrganism />
 
           <div style={{ height: '10vh', marginTop: '10vh' }} />
 
@@ -43,9 +39,9 @@ function Main({ getBlogs }: { getBlogs: any }): JSX.Element {
 
           <h2>Ultimos posts</h2>
 
-          <div className='wrapper'>
+          <section className='wrapper' id='posts'>
             <Blogs />
-          </div>
+          </section>
         </main>
       </Layout>
     </>
