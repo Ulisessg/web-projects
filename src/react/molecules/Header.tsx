@@ -23,13 +23,13 @@ function Header(): JSX.Element {
       id: 2,
       name: 'Blog',
       description: 'Blog sobre tecnología',
-      path: '/blog.html',
+      path: '/blog',
     },
     {
       id: 3,
       name: 'Sistema',
       description: 'Sistema de diseño',
-      path: '/design.html',
+      path: '/design',
     },
   ];
 
