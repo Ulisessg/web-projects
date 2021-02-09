@@ -38,7 +38,7 @@ function Footer(): JSX.Element {
     },
   ];
   return (
-    <footer className='footer'>
+    <footer className='footer' id='contacto'>
       <div>
         <Nav paths={footerPaths} backgroundIsLigth={false} />
       </div>
