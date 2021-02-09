@@ -8,6 +8,7 @@ interface SectionWithImgProps {
     name: string;
     path: string;
     description: string;
+    elementId?: string;
   }>;
 
   images: Array<{ title: string; image: string }>;
@@ -24,7 +25,11 @@ function SectionWithImg({
         (section): JSX.Element => {
           iteration += 1;
           return (
-            <section className='section--container' key={section.id}>
+            <section
+              id={section.elementId}
+              className='section--container'
+              key={section.id}
+            >
               <a
                 aria-label={`${section.name}, ${section.description}`}
                 className='section--link'
