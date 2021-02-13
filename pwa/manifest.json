@@ -3,32 +3,38 @@
   "name": "UD",
   "icons": [
     {
-      "src": "https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2FSEO%2Flogo.png?alt=media&token=65636b9b-0dcd-4845-b66a-56e2c5b762b0",
+      "src": "https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2Fpwa%2Flogo512-512.png?alt=media&token=db5e55a2-9959-405c-b079-2212d14ce1cb",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2FSEO%2Flogo.png?alt=media&token=65636b9b-0dcd-4845-b66a-56e2c5b762b0",
+      "src": "https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2Fpwa%2Flogo-192-192.png?alt=media&token=8effd86c-495a-4250-bfef-21726fef51f5",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2FSEO%2Flogo.png?alt=media&token=65636b9b-0dcd-4845-b66a-56e2c5b762b0",
-      "sizes": "52x52",
+      "src": "https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2Fpwa%2Flogo-144-144.png?alt=media&token=8df0b715-d445-4bb3-b846-a44a723b7398",
+      "sizes": "144x144",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2FSEO%2Flogo.png?alt=media&token=65636b9b-0dcd-4845-b66a-56e2c5b762b0",
+      "src": "https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2Fpwa%2Flogo-96-96.png?alt=media&token=3b1e9111-1db8-4674-aef3-38dbe760e32a",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2Fpwa%2Flogo-72-72.png?alt=media&token=be25a56c-ba23-4a16-a3c2-d40970206db3",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2Fpwa%2Flogo-48-48.png?alt=media&token=003e0923-4b06-435c-9902-923ae4f45db7",
       "sizes": "48x48",
-      "type": "image/png",
-      "purpose": "any maskable"
-    },
-    {
-      "src": "https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2FSEO%2Flogo.png?alt=media&token=65636b9b-0dcd-4845-b66a-56e2c5b762b0",
-      "sizes": "72x72 96x96 128x128 256x256",
       "type": "image/png",
       "purpose": "any maskable"
     }
