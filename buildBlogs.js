@@ -65,6 +65,14 @@ Allow: /
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- PWA -->
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#052336" />
+    <link
+      rel="apple-touch-icon"
+      href="https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2FSEO%2Flogo.png?alt=media&token=65636b9b-0dcd-4845-b66a-56e2c5b762b0"
+    />
+
     <!-- Basic SEO  -->   
     <link rel="canonical" href="https://ulisessg.com/${blog.name}"/>
     <meta name="description" content="${blog.metaDescription}" />
@@ -235,6 +243,16 @@ Allow: /
       async
       defer
     ></script>
+
+    <script>
+      // Check that service workers are supported
+      if ('serviceWorker' in navigator) {
+        // Use the window load event to keep the page load performant
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/service-worker.js');
+        });
+      }
+    </script>
 
   </body>
 </html>`;
