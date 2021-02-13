@@ -1,6 +1,8 @@
+//  @ts-check
 const { join } = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { HotModuleReplacementPlugin } = require('webpack');
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   mode: 'development',
@@ -38,6 +40,14 @@ module.exports = {
   },
 
   plugins: [
+    new CopyPlugin({
+      patterns: [
+        {
+          from: join(__dirname, 'pwa', 'manifest.json'),
+          to: join(__dirname, 'dist'),
+        },
+      ],
+    }),
     new HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
       template: join(
