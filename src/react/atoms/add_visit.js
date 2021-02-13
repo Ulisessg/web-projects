@@ -1,4 +1,9 @@
 window.onload = function () {
+  // Check that service workers are supported
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/service-worker.js');
+  }
+
   console.log(window.localStorage.getItem('blog'));
   if (!window.localStorage.getItem('blog')) {
     const myHeaders = new Headers();
