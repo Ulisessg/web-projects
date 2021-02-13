@@ -6,13 +6,6 @@ import { createStore, applyMiddleware } from 'redux';
 import reducers from '../reducers/index/index';
 import Loading from '../atoms/Loading';
 
-//  Redirect to https page in production
-if (process.env.NODE_ENV !== 'development') {
-  if (window.location.protocol !== 'https') {
-    window.location.protocol = 'https';
-  }
-}
-
 const IndexTemplate = lazy(() => import('../templates/IndexTemplate'));
 
 //  App
