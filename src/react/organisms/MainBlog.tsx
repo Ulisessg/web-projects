@@ -26,6 +26,7 @@ function MainBlog({ blogs }: { blogs: Array<BlogEntry | any> }): JSX.Element {
   return (
     <>
       <main className='main' id='main'>
+        <h1>Ultimos posts:</h1>
         <section className='sections'>
           {/* Loading blogs message */}
           {blogs.length === 0 && (
