@@ -41,8 +41,6 @@ function Main({ getBlogs }: { getBlogs: any }): JSX.Element {
             }}
           /> */}
 
-            <h2>Ultimos posts</h2>
-
             <section className='wrapper' id='posts'>
               <Blogs />
             </section>
