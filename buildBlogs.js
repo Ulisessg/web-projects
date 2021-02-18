@@ -257,4 +257,29 @@ Allow: /
 
     i += 1;
   });
+
+  //  Build sitemap.xml
+
+  let XMLSitemap = `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<url>
+<loc>https://ulisessg.com</loc>
+</url>
+<url>
+<loc>https://ulisessg.com/blog</loc>
+</url>
+`;
+
+  const sites = blogs.map((blog) => {
+    const site = `<url>
+      <loc>https://ulisessg.com/${blog.name}</loc>
+    </url>`;
+
+    return site;
+  });
+
+  XMLSitemap = `${XMLSitemap} ${sites.join('\n')}\n</urlset>`;
+
+  fs.writeFileSync(join(__dirname, 'dist', 'sitemap.xml'), XMLSitemap, {
+    encoding: 'utf-8',
+  });
 });
