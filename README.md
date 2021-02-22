@@ -2,19 +2,19 @@
 
 ## If there is something you like, just use it 😄.
 
-# Start with 👩‍🚀
+## Start with 👩‍🚀
 
 Execute in your terminal
 
     git clone git@github.com:Ulisessg/web-projects.git
 
-# Instalation 🔧
+## Instalation 🔧
 
 Execute in your terminal
 
     npm i
 
-# Technologies used 👨‍💻
+## Technologies used 👨‍💻
 
 - ### [React](https://github.com/facebook/react)
 - ### [Stylus](https://stylus-lang.com/)
@@ -25,15 +25,15 @@ Execute in your terminal
 - ### [Lighthouse](https://github.com/GoogleChrome/lighthouse-ci)
 - ### [Firebase (Deploy)](https://github.com/firebase/firebase-tools)
 
-# Deploy 🚀
+## Deploy 🚀
 
-[https://ulisessg.com/design](https://ulisessg.com/design)
+[https://ulisessg.com](https://ulisessg.com)
 
-# Methodologies
+## Methodologies
 
 - ## Atomic design ⚛
 
-# Develop: 👷‍♀️
+# #Develop: 👷‍♀️
 
 ## Scripts 🏃‍♀️
 
@@ -41,46 +41,41 @@ _Start the develop server of one page_ (DON'T add the extension file)
 
     npm run dev nameOfPage
 
-_Start the develop server for all pages_
-
-    npm run dev-all
-
 _New pages_
 
-(For the moment in production you need to add the new pages in the entries of production file)
+For add new pages just add the .tsx file in the folder **./src/react/pages** and the .html file at the folder **./public**
 
-For add new pages just add the .js file in the folder **./src/react/pages** and the .html file at the folder **./public**
+## Build
 
-# Build
+_Execute in your terminal_:
 
-_Build all pages_
+    node ./build.js
 
-    npm run build
-
-# Continuous integration 👷‍♂️
+## Continuous integration 👷‍♂️
 
 ## The continuous integration process runs on Github Actions following the next steps
 
-### 1. All dependencies are installed.
+1.  Instalation of dependencies.
 
-### 2. Run the eslint test.
+2.  Run the eslint test.
 
-### 3. Webpack build an dll with the common dependencies to improve performance.
+3.  Webpack build a dll with the common dependencies to improve performance.
 
-### 4. Webpack build the rest of the app.
+4.  Node runs a webpack build for each page
 
-### 5. Webpack compress all the files.
+5.  Webpack compress all the files.
 
-### 6. Lighthouse run the test of:
+6.  Node builds my blog posts
+
+7.  Lighthouse runs mobile test of:
 
 - Accesibility.
 - Performance.
-- Good practices.
-- PWA.
+- Best practices.
 
 ### **If all tests are successful:**
 
-### 7. Firebase deploy the app at [ulisessg.com](https://ulisessg.com/design-system)
+8.  Firebase deploy the app at [ulisessg.com](https://ulisessg.com)
 
 # Continuous testing
 
