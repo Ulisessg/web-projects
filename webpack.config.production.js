@@ -6,10 +6,10 @@ const TerserPlugin = require('terser-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
 const webpack = require('webpack');
 const AddAssetHtmlPlugin = require('add-asset-html-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const WorkboxPlugin = require('workbox-webpack-plugin');
 
+//  preload
 //  Get the name of file without extension to add later
 const EnvVarfile = process.env.FILE.split('.')[0];
 
@@ -75,7 +75,7 @@ module.exports = {
       },
       {
         test: /\.(styl|css)$/i,
-        use: [MiniCssExtractPlugin.loader, 'css-loader', 'stylus-loader'],
+        use: [MiniCSSExtractPlugin.loader, 'css-loader', 'stylus-loader'],
       },
     ],
   },

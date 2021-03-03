@@ -5,7 +5,7 @@ const axios = require('axios');
 async function getBlogs() {
   try {
     const blogs = await axios.default.get(
-      'https://web-projects-api.ulisessg.vercel.app/api/blog/all-blogs',
+      'https://web-projects-api.vercel.app/api/blog/all-blogs',
     );
 
     return blogs;
