@@ -27,7 +27,7 @@ Execute in your terminal
 
 # Deploy 🚀
 
-[https://ulisessg.com/design](https://ulisessg.com/design)
+[https://ulisessg.com](https://ulisessg.com)
 
 # Methodologies
 
