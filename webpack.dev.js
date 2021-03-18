@@ -78,7 +78,6 @@ module.exports = {
     watchContentBase: true,
     port: 2001,
     hot: true,
-    writeToDisk: true,
     open: true,
     watchOptions: {
       poll: 420,
