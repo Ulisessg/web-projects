@@ -185,7 +185,7 @@ a {
 }
 @media screen and (min-width: 900px) {
   #blog {
-    width: 50vw;
+    width: 80vw;
   }
 }
 #blog li {
