@@ -8,10 +8,10 @@ const Element = lazy(() => {
   return import('../atoms/LazyObserverImage');
 });
 
-function Img({ src, alt }: imgProps) {
+function Img({ src, alt, classN }: imgProps | any) {
   return (
     <>
-      <Element src={src} alt={alt} />
+      <Element classN={classN} src={src} alt={alt} />
     </>
   );
 }

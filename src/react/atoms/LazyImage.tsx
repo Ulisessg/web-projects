@@ -1,10 +1,10 @@
 import React from 'react';
 import { imgProps } from '../interfaces';
 
-function LazyImage({ src, alt }: imgProps) {
+function LazyImage({ src, alt, classN }: imgProps | any) {
   return (
     <>
-      <img loading="lazy" src={src} alt={alt} />
+      <img className={classN} loading="lazy" src={src} alt={alt} />
     </>
   );
 }
