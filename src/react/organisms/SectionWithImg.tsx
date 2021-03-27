@@ -38,8 +38,7 @@ function SectionWithImg({
               >
                 <div className="section--img--cotainer">
                   <ImgLazy
-                    loading="lazy"
-                    className="section--img"
+                    classN="section--img"
                     src={images[iteration].image}
                     alt={images[iteration].title}
                   />
