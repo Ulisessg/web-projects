@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import SectionWithImg from '../atoms/SectionWithImg';
+import SectionWithImg from './SectionWithImg';
 
 interface BlogEntry {
   metaSubjects: Array<any | string>;
@@ -25,9 +25,9 @@ function MainBlog({ blogs }: { blogs: Array<BlogEntry | any> }): JSX.Element {
 
   return (
     <>
-      <main className='main' id='main'>
+      <main className="main" id="main">
         <h1>Ultimos posts:</h1>
-        <section className='sections'>
+        <section className="sections">
           {/* Loading blogs message */}
           {blogs.length === 0 && (
             <>

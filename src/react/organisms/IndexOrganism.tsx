@@ -1,7 +1,7 @@
 import React from 'react';
 
 import '../../styles/organisms/IndexOrganism.styl';
-import SectionWithImg from '../atoms/SectionWithImg';
+import SectionWithImg from './SectionWithImg';
 import Nav from '../atoms/Nav';
 
 function IndexOrganism(): JSX.Element {
@@ -89,17 +89,17 @@ function IndexOrganism(): JSX.Element {
 
   return (
     <>
-      <div className='about-me'>
+      <div className="about-me">
         <img
-          className='about-me__img'
-          src='https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2FSEO%2Fulises5G.jfif?alt=media&token=bbe0eb8b-ee31-4ef1-a444-452691ca8f67'
-          alt='Foto mía'
+          className="about-me__img"
+          src="https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2FSEO%2Fulises5G.jfif?alt=media&token=bbe0eb8b-ee31-4ef1-a444-452691ca8f67"
+          alt="Foto mía"
         />
-        <h1 className='about-me__title'>Frontend / Backend</h1>
-        <h2 className='about-me__name'>Ulises Antonio Sámano Galván</h2>
+        <h1 className="about-me__title">Frontend / Backend</h1>
+        <h2 className="about-me__name">Ulises Antonio Sámano Galván</h2>
       </div>
 
-      <div className='about-me__navigation'>
+      <div className="about-me__navigation">
         <Nav paths={navPaths} backgroundIsLigth />
       </div>
 
@@ -107,8 +107,8 @@ function IndexOrganism(): JSX.Element {
 
       <h2>Proyectos</h2>
 
-      <div className='wrapper'>
-        <section className='sections' id='proyectos'>
+      <div className="wrapper">
+        <section className="sections" id="proyectos">
           <SectionWithImg images={projectsImages} sections={projectsInfo} />
         </section>
       </div>

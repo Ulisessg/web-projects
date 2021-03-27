@@ -13,7 +13,7 @@ module.exports = {
       'src',
       'react',
       'pages',
-      process.env.FILE.split('.')[0].concat('.tsx')
+      process.env.FILE.split('.')[0].concat('.tsx'),
     ),
   },
   output: {
@@ -54,12 +54,12 @@ module.exports = {
       template: join(
         __dirname,
         'public',
-        process.env.FILE.split('.')[0].concat('.html')
+        process.env.FILE.split('.')[0].concat('.html'),
       ),
       filename: join(
         __dirname,
         'dist',
-        process.env.FILE.split('.')[0].concat('.html')
+        process.env.FILE.split('.')[0].concat('.html'),
       ),
     }),
     new WorkboxPlugin.GenerateSW({

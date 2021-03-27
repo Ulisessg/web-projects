@@ -2,7 +2,7 @@ import React from 'react';
 
 //  Styles
 import '../../styles/organisms/sections-styles.styl';
-import SectionWithImg from '../atoms/SectionWithImg';
+import SectionWithImg from './SectionWithImg';
 
 interface SectionsProps {
   sections: Array<{
@@ -17,7 +17,7 @@ interface SectionsProps {
 function Section({ sections, images }: SectionsProps): JSX.Element {
   return (
     <>
-      <div className='sections'>
+      <div className="sections">
         <SectionWithImg sections={sections} images={images} />
       </div>
     </>

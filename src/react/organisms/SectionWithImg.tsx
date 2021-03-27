@@ -1,4 +1,5 @@
 import React from 'react';
+import ImgLazy from '../molecules/Img';
 
 import '../../styles/organisms/sections-styles.styl';
 
@@ -27,24 +28,24 @@ function SectionWithImg({
           return (
             <section
               id={section.elementId}
-              className='section--container'
+              className="section--container"
               key={section.id}
             >
               <a
                 aria-label={`${section.name}, ${section.description}`}
-                className='section--link'
+                className="section--link"
                 href={section.path}
               >
-                <div className='section--img--cotainer'>
-                  <img
-                    loading='lazy'
-                    className='section--img'
+                <div className="section--img--cotainer">
+                  <ImgLazy
+                    loading="lazy"
+                    className="section--img"
                     src={images[iteration].image}
                     alt={images[iteration].title}
                   />
                 </div>
-                <h3 className='section--title'>{section.name}</h3>
-                <p className='section--description'>{section.description}</p>
+                <h3 className="section--title">{section.name}</h3>
+                <p className="section--description">{section.description}</p>
               </a>
             </section>
           );
