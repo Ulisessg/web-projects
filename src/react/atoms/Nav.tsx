@@ -10,15 +10,16 @@ interface NavProps {
     name: string;
   }>;
   backgroundIsLigth: boolean;
+  col?: boolean;
 }
 
-function Nav({ paths, backgroundIsLigth }: NavProps): JSX.Element {
+function Nav({ paths, backgroundIsLigth, col = false }: NavProps): JSX.Element {
   return (
-    <nav className='nav'>
-      <ul className='nav__ul' id='secciones'>
+    <nav className="nav">
+      <ul className={col ? 'nav__ul--column' : 'nav__ul'} id="secciones">
         {paths.map(
           (path): JSX.Element => (
-            <li className='ul__li' key={path.id}>
+            <li className="ul__li" key={path.id}>
               <p>
                 <a
                   aria-label={path.description}
