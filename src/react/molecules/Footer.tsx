@@ -2,6 +2,7 @@ import React from 'react';
 
 import '../../styles/atoms/footer.styl';
 import Nav from '../atoms/Nav';
+import LinkedInBadge from './LinkedInBadge';
 
 interface Path {
   id: number;
@@ -38,26 +39,10 @@ function Footer(): JSX.Element {
     },
   ];
   return (
-    <footer className='footer' id='contacto'>
+    <footer className="footer" id="contacto">
+      <LinkedInBadge />
       <div>
         <Nav paths={footerPaths} backgroundIsLigth={false} />
-      </div>
-
-      <div
-        className='LI-profile-badge'
-        data-version='v1'
-        data-size='medium'
-        data-locale='es_ES'
-        data-type='vertical'
-        data-theme='light'
-        data-vanity='ulisessg'
-      >
-        <a
-          className='LI-simple-link'
-          href='https://mx.linkedin.com/in/ulisessg?trk=profile-badge'
-        >
-          Ulises Antonio Sámano Galván
-        </a>
       </div>
     </footer>
   );
