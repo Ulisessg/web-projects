@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../styles/organisms/header.styl';
+import '../../styles/molecules/header.styl';
 import SkipLink from '../atoms/SkipLink';
 import Img from './Img';
 import Nav from '../atoms/Nav';

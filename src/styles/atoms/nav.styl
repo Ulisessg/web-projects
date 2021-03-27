@@ -8,83 +8,45 @@
   width: 100%
   display flex
   justify-content: space-around
+
 .ul__li
   align-self: center
-.ul__li--a
-  cursor: pointer
-  color: color-ligth
-  display inline-block
-  text-align: center
-  font-size: 0.5rem
-  // @media screen and (min-width: 400px)
-  //   font-size: unity * 2
-  //   width auto
-  // @media screen and (min-width: 700px)
-  //   font-size: unity * 2
-  //   width unity * 14
 
-.ul__li--a-ligth:hover,
-.ul__li--a-ligth:focus
-  border: 1px solid background-dark !important
+.ul__li--a
+  // On focus padding is less and border width replace them
+  cursor pointer
+  color: color-ligth
+  text-align: center
+  font-size: 1.5rem
+  padding: 7px 30px
+  @media screen and (max-width: 450px)
+    padding: 7px 20px
+
+.ul__li--a:focus,
+.ul__li--a:hover
+  padding: 5px 28px
+  border: 2px solid color-ligth
+  width auto
   border-radius: 20px
-  padding: 5px
-  border 2px solid color-ligth
-  width unity * 14
-  @media screen and (max-width: 700px)
-    width: unity * 8
-    height unity * 3
-    // font-size: unity * 2
-    text-align: center
-  
+  @media screen and (max-width: 450px)
+    padding: 7px 18px
 
 .ul__li--a-ligth
   color: color-ligth
   background-color: color-highlight
-  display inline-block
   text-align: center
   border-radius: 20px
-  padding: 5px
-  border 2px solid color-ligth
-  width unity * 14
-  @media screen and (max-width: 700px)
-    width: unity * 8
-    height unity * 3
-    text-align: center
-  @media screen and (max-width: 300px)
-    width auto
-  @media screen and (min-width: 400px)
-    width auto
-  @media screen and (min-width: 700px)
-    width unity * 14
+  padding: 10px 15px
+
+.ul__li--a-ligth:hover,
+.ul__li--a-ligth:focus
+  background-color: background-contrasting
+  border: 2px solid box-shadow
+  padding: 8px 13px
+  @media screen and (max-width: 450px)
+    padding: 7px 18px
 
 .ul__li--a-dark:hover,
 .ul__li--a-dark:focus
   background-color: color-highlight
 
-.ul__li--a
-  color: color-ligth
-  display inline-block
-  text-align: center
-  font-size: 1.5rem
-  // font-size: unity * 2
-  @media screen and (max-width: 300px)
-    // font-size: unity  0.5
-    width auto
-  @media screen and (min-width: 400px)
-    // font-size: unity * 2
-    width auto
-  @media screen and (min-width: 700px)
-    // font-size: unity * 2
-    width unity * 14
-
-.ul__li--a:focus, 
-.ul__li--a:hover
-  border-radius: 20px
-  padding: 5px
-  border 2px solid color-ligth
-  width unity * 14
-  @media screen and (max-width: 700px)
-    width: unity * 8
-    height unity * 3
-    // font-size: unity * 2
-    text-align: center
