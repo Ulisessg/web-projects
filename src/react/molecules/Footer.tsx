@@ -81,7 +81,7 @@ function Footer(): JSX.Element {
 
         {/* Other links */}
         <div className="footer__other-links">
-          <Nav paths={footerPaths} backgroundIsLigth={false} col />
+          <Nav paths={footerPaths} backgroundIsLigth={false} col blank />
         </div>
 
         <h3 className="footer__quote coffe-quote">

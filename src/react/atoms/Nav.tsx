@@ -11,9 +11,15 @@ interface NavProps {
   }>;
   backgroundIsLigth: boolean;
   col?: boolean;
+  blank?: boolean;
 }
 
-function Nav({ paths, backgroundIsLigth, col = false }: NavProps): JSX.Element {
+function Nav({
+  paths,
+  backgroundIsLigth,
+  col = false,
+  blank = false,
+}: NavProps): JSX.Element {
   return (
     <nav className="nav">
       <ul className={col ? 'nav__ul--column' : 'nav__ul'} id="secciones">
@@ -22,6 +28,8 @@ function Nav({ paths, backgroundIsLigth, col = false }: NavProps): JSX.Element {
             <li className="ul__li" key={path.id}>
               <p>
                 <a
+                  target={blank ? '_blank' : '_self'}
+                  rel="noreferrer"
                   aria-label={path.description}
                   className={
                     backgroundIsLigth
