@@ -37,9 +37,9 @@ function Header(): JSX.Element {
     <>
       <SkipLink />
       <header className="header">
-        <a href="/">
+        <a className="header__logo--link" href="/">
           <Img
-            classN="header__logo"
+            classN="header__logo--img"
             alt="Logo"
             src="https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2Fv2%2Flogo-192x192.png?alt=media&token=1a4aa1ca-1846-41b3-9005-9c4dc5c4d888"
           />
