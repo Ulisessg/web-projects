@@ -1,7 +1,4 @@
 import React, { useEffect, lazy, Suspense } from 'react';
-import { connect } from 'react-redux';
-
-import * as blogActions from '../actions/blogActions/index';
 
 //  Styles
 import '../../styles/default-styles.styl';
@@ -15,19 +12,13 @@ const Layout = lazy(() => import('../organisms/Layout'));
 const IndexOrganism = lazy(() => import('../organisms/IndexOrganism'));
 const Blogs = lazy(() => import('../organisms/MainBlog'));
 
-function Main({ getBlogs }: { getBlogs: any }): JSX.Element {
-  let blogsRequested = false;
-  useEffect(() => {
-    getBlogs();
-    blogsRequested = true;
-  }, [blogsRequested]);
-
+function Main(): JSX.Element {
   return (
     <>
       <Suspense fallback={<Loading />}>
         <Layout>
           {/* Move styles in a file */}
-          <main style={{ marginTop: '0' }} className='main' id='main'>
+          <main style={{ marginTop: '0' }} className="main" id="main">
             <IndexOrganism />
 
             <div style={{ height: '10vh', marginTop: '10vh' }} />
@@ -41,7 +32,7 @@ function Main({ getBlogs }: { getBlogs: any }): JSX.Element {
             }}
           /> */}
 
-            <section className='wrapper' id='posts'>
+            <section className="wrapper" id="posts">
               <Blogs />
             </section>
           </main>
@@ -51,8 +42,4 @@ function Main({ getBlogs }: { getBlogs: any }): JSX.Element {
   );
 }
 
-function mapStateToProps({ getBlogs }) {
-  return { getBlogs };
-}
-
-export default connect(mapStateToProps, blogActions)(Main);
+export default Main;

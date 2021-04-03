@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
+import getBlogs from '../utils/getBlogs';
 
 import SectionWithImg from './SectionWithModal';
 
@@ -13,15 +14,20 @@ interface BlogEntry {
   title: string;
 }
 
-function MainBlog({ blogs }: { blogs: Array<BlogEntry | any> }): JSX.Element {
+function MainBlog(): JSX.Element {
   //  Check if request returns a error
+  const [blogEntries, setBlogEntries] = useState<any>();
+  const [blogStatus, setBlogStatus] = useState('loading');
 
-  let areError;
-  if (blogs.length > 0 && blogs[0].error === true) {
-    areError = true;
-  } else {
-    areError = false;
-  }
+  let blogsRequested: boolean = false;
+
+  useEffect(() => {
+    blogsRequested = true;
+    getBlogs().then((data) => {
+      setBlogEntries(JSON.parse(data));
+      setBlogStatus('success');
+    });
+  }, [blogsRequested]);
 
   return (
     <>
@@ -29,7 +35,7 @@ function MainBlog({ blogs }: { blogs: Array<BlogEntry | any> }): JSX.Element {
         <h1>Ultimos posts:</h1>
         <section className="sections">
           {/* Loading blogs message */}
-          {blogs.length === 0 && (
+          {blogStatus === 'loading' && (
             <>
               <div
                 style={{ width: '100vw', textAlign: 'center', margin: '20vh' }}
@@ -38,7 +44,7 @@ function MainBlog({ blogs }: { blogs: Array<BlogEntry | any> }): JSX.Element {
               </div>
             </>
           )}
-          {areError === true ? (
+          {blogStatus === 'error' && (
             <>
               <h1
                 style={{
@@ -50,8 +56,12 @@ function MainBlog({ blogs }: { blogs: Array<BlogEntry | any> }): JSX.Element {
                 Error getting blogs, try later 🕵️‍♀️
               </h1>
             </>
-          ) : (
-            <SectionWithImg images={blogs} sections={blogs} />
+          )}
+          {blogStatus === 'success' && (
+            <SectionWithImg
+              images={blogEntries.message}
+              sections={blogEntries.message}
+            />
           )}
         </section>
       </main>
@@ -59,9 +69,4 @@ function MainBlog({ blogs }: { blogs: Array<BlogEntry | any> }): JSX.Element {
   );
 }
 
-function mapStateToProps({ blogsReducer }) {
-  const { blogs } = blogsReducer;
-  return { blogs };
-}
-
-export default connect(mapStateToProps, {})(MainBlog);
+export default MainBlog;
