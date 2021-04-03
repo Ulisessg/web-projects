@@ -1,7 +1,7 @@
 import React from 'react';
 import ImgLazy from '../molecules/Img';
 
-import '../../styles/organisms/sections-styles.styl';
+import '../../styles/organisms/sectionWithImg.styl';
 
 interface SectionWithImgProps {
   sections: Array<{
@@ -31,20 +31,21 @@ function SectionWithImg({
               className="section--container"
               key={section.id}
             >
+              <div className="section-img-container">
+                <ImgLazy
+                  classN="section--img"
+                  src={images[iteration].image}
+                  alt={images[iteration].title}
+                />
+              </div>
+              <h3 className="section--title">{section.name}</h3>
+              <p className="section--description">{section.description}</p>
               <a
-                aria-label={`${section.name}, ${section.description}`}
-                className="section--link"
+                aria-label={`Leer más sobre ${section.name}`}
+                className="section--link ul__li--a-dark"
                 href={section.path}
               >
-                <div className="section--img--cotainer">
-                  <ImgLazy
-                    classN="section--img"
-                    src={images[iteration].image}
-                    alt={images[iteration].title}
-                  />
-                </div>
-                <h3 className="section--title">{section.name}</h3>
-                <p className="section--description">{section.description}</p>
+                <span>Leer más</span>
               </a>
             </section>
           );
