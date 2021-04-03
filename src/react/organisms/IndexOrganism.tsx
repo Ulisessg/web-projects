@@ -41,7 +41,7 @@ function IndexOrganism(): JSX.Element {
       name: 'Platzi stack',
       path: '/como-los-datos-me-ayudaron',
       description:
-        'En Platzi Stack analicé las vacantes de Backend Developer que ofrece Platzi Master para analizar cuál sería el proximo lenguaje de programación que aprendería y con que Framworks/tecnologias',
+        'En Platzi Stack analicé las vacantes de Backend Developer que ofrece Platzi Master para analizar cuál sería el proximo lenguaje de programación que aprendería y con que Framworks / tecnologias.',
     },
     {
       id: 2,
@@ -62,7 +62,7 @@ function IndexOrganism(): JSX.Element {
       name: 'UD',
       path: 'https://github.com/Ulisessg/web-projects',
       description:
-        'UD es un sitio web enfocado principalmente en compartir conocimiento de tecnologia, además de contener mis proyectos personales, este sitio está creado usando el stack MERN y Typescript',
+        'UD es un sitio web enfocado principalmente en compartir conocimiento de tecnologia, además de contener mis proyectos personales, este sitio está creado usando el stack MERN y Typescript.',
     },
   ];
 
