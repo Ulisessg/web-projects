@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import SectionWithImg from './SectionWithImg';
+import SectionWithImg from './SectionWithModal';
 
 interface BlogEntry {
   metaSubjects: Array<any | string>;

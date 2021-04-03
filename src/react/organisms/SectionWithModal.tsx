@@ -1,7 +1,7 @@
 import React from 'react';
 import ImgLazy from '../molecules/Img';
 
-import '../../styles/organisms/sectionWithImg.styl';
+import '../../styles/organisms/sectionWithModal.styl';
 
 interface SectionWithImgProps {
   sections: Array<{

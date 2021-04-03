@@ -1,7 +1,7 @@
 import React from 'react';
 
 import '../../styles/organisms/IndexOrganism.styl';
-import SectionWithImg from './SectionWithImg';
+import SectionWithImg from './SectionWithModal';
 import Nav from '../atoms/Nav';
 
 function IndexOrganism(): JSX.Element {
