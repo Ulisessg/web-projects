@@ -76,7 +76,7 @@ module.exports = {
     index: process.env.FILE.split('.')[0].concat('.html'),
     contentBase: join(__dirname, 'src', 'react', 'pages', process.env.FILE),
     watchContentBase: true,
-    port: 2001,
+    port: 8080,
     hot: true,
     open: true,
     watchOptions: {

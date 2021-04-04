@@ -1,0 +1,116 @@
+@import '../variables.styl'
+
+modal-animation = 0.2s
+
+
+.modal-container
+  position: relative
+  z-index 999
+  display: flex
+  justify-content: center
+
+.section--modal
+  position fixed
+  display: -ms-flexbox
+  display: flex
+  flex-direction: column
+  -ms-flex-direction: column
+  align-content: space-between
+  top 0
+  background-color: white
+  align-items: center
+  justify-content: space-between
+  margin-top: 40px
+  width 80vw
+  height: 90%
+  padding: 20px
+  border-radius: 20px
+  animation: appears modal-animation
+
+.disapear-modal
+  animation: disapear modal-animation
+
+.close-modal
+  display: flex
+  align-self: flex-end
+  font-size: 2rem
+  margin 10px 10px 0px 0px
+  align-items: center
+  background background-dark
+  color: white
+  border-radius: 50px
+  border: none
+  width: 40px
+  height: 40px
+  text-align: center
+  justify-content: center
+
+.close-modal:focus, .close-modal:hover
+  cursor pointer
+
+
+.section-modal-img-container
+  justify-content: center
+  display -ms-flexbox
+  display: flex
+.section-modal--img
+  object-fit: contain
+  width 150px
+
+.section__modal--title
+  font-size: 2rem
+
+.modal-redirect
+  width 100%
+
+.blur-body
+  animation blured modal-animation
+  -webkit-animation-fill-mode: forwards; /* Chrome 16+, Safari 4+ */
+  -moz-animation-fill-mode: forwards;    /* FF 5+ */
+  -o-animation-fill-mode: forwards;      /* Not implemented yet */
+  -ms-animation-fill-mode: forwards;     /* IE 10+ */
+  animation-fill-mode: forwards;         /* When the spec is finished */
+
+.delete-blur-body
+  animation unblur modal-animation
+  -webkit-animation-fill-mode: forwards; /* Chrome 16+, Safari 4+ */
+  -moz-animation-fill-mode: forwards;    /* FF 5+ */
+  -o-animation-fill-mode: forwards;      /* Not implemented yet */
+  -ms-animation-fill-mode: forwards;     /* IE 10+ */
+  animation-fill-mode: forwards;         /* When the spec is finished */
+
+@keyframes blured{
+  0% {
+    filter: blur(0px)
+  }
+  100% {
+    filter: blur(8px)
+  }
+}
+
+@keyframes unblur {
+  0% {
+    filter: blur(8px)
+  }
+  100% {
+    filter: blur(0px)
+  }
+}
+
+@keyframes appears {
+ 0% {
+    filter: blur(8px)
+  }
+  100% {
+    filter: blur(0px)
+  }
+}
+
+@keyframes disapear{
+  0% {
+    filter: blur(0px)
+  }
+  100% {
+    filter: blur(8px)
+  }
+}
