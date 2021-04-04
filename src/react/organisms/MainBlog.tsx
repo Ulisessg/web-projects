@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { connect } from 'react-redux';
 import getBlogs from '../utils/getBlogs';
 
 import SectionWithImg from './SectionWithModal';
@@ -16,17 +15,21 @@ interface BlogEntry {
 
 function MainBlog(): JSX.Element {
   //  Check if request returns a error
-  const [blogEntries, setBlogEntries] = useState<any>();
-  const [blogStatus, setBlogStatus] = useState('loading');
+  const [blogEntries, setBlogEntries] = useState<BlogEntry | any>();
+  const [blogStatus, setBlogStatus] = useState<string>('loading');
 
   let blogsRequested: boolean = false;
 
   useEffect(() => {
     blogsRequested = true;
-    getBlogs().then((data) => {
-      setBlogEntries(JSON.parse(data));
-      setBlogStatus('success');
-    });
+    getBlogs()
+      .then((data) => {
+        setBlogEntries(JSON.parse(data));
+        setBlogStatus('success');
+      })
+      .catch(() => {
+        setBlogStatus('error');
+      });
   }, [blogsRequested]);
 
   return (
