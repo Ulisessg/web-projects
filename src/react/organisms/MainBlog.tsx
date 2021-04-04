@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import getBlogs from '../utils/getBlogs';
-
+import LoadingSpinner from '../atoms/Loading';
 import SectionNoModal from './SectionNoModal';
 import transformBlogInfo from '../utils/tranformBlogInfo';
 
@@ -33,15 +33,7 @@ function MainBlog(): JSX.Element {
             {/* Loading blogs message */}
             {blogStatus === 'loading' && (
               <>
-                <div
-                  style={{
-                    width: '100vw',
-                    textAlign: 'center',
-                    margin: '20vh',
-                  }}
-                >
-                  <h1>Loading blogs...</h1>
-                </div>
+                <LoadingSpinner />
               </>
             )}
             {blogStatus === 'error' && (

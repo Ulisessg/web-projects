@@ -1,12 +1,9 @@
 import React from 'react';
+import '../../styles/atoms/loadingSpinner.styl';
 
 const Loading: React.FC = () => (
   <>
-    <div style={{ width: '100%', height: '100%' }}>
-      <progress max='100' style={{ marginTop: '25%', marginLeft: '25%' }}>
-        Cargando...
-      </progress>
-    </div>
+    <div className="loading-spinner" />
   </>
 );
 
