@@ -3,7 +3,9 @@ import '../../styles/atoms/loadingSpinner.styl';
 
 const Loading: React.FC = () => (
   <>
-    <div className="loading-spinner" />
+    <div className="loading-spinner--container">
+      <div className="loading-spinner" />
+    </div>
   </>
 );
 
