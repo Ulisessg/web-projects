@@ -1,8 +1,9 @@
 import React, { lazy, useState, Suspense, useEffect } from 'react';
 import ImgLazy from '../molecules/Img';
 import { SectionWithModalProps } from '../interfaces';
-import '../../styles/organisms/sectionWithModal.styl';
 import Loading from '../atoms/Loading';
+
+import '../../styles/organisms/sectionWithModal.styl';
 
 const ModalComponent = lazy(() => import('../molecules/SectionModal'));
 
@@ -27,7 +28,6 @@ function Section({ id, images, name, description, path }): JSX.Element {
     setOpenModal(!openModal);
   }
 
-  //
   return (
     <>
       <section id={id} className="section--container" key={id}>
@@ -43,7 +43,7 @@ function Section({ id, images, name, description, path }): JSX.Element {
         <button
           type="button"
           aria-label={`Leer más sobre ${name}`}
-          className="section--link ul__li--a-dark"
+          className="section--link ul__li--a-dark section-modal-button"
           onClick={handleModal}
         >
           <span>Leer más</span>
