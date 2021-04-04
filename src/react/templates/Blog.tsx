@@ -1,7 +1,4 @@
-import React, { useEffect } from 'react';
-import { connect } from 'react-redux';
-
-import * as blogActions from '../actions/blogActions/index';
+import React from 'react';
 
 //  Styles
 import '../../styles/default-styles.styl';
@@ -12,18 +9,11 @@ import '../../styles/templates/blog-styles.styl';
 import MainBlog from '../organisms/MainBlog';
 import Layout from '../organisms/Layout';
 
-function Blog({ getBlogs }: { getBlogs: any }): JSX.Element {
-  let blogsRequested = false;
-
-  useEffect(() => {
-    getBlogs();
-    blogsRequested = true;
-  }, [blogsRequested]);
-
+function Blog(): JSX.Element {
   return (
     <>
       <Layout>
-        <div className='wrapper'>
+        <div className="wrapper">
           <MainBlog />
         </div>
       </Layout>
@@ -31,8 +21,4 @@ function Blog({ getBlogs }: { getBlogs: any }): JSX.Element {
   );
 }
 
-function mapStateToProps(initialState: any) {
-  return { initialState };
-}
-
-export default connect(mapStateToProps, blogActions)(Blog);
+export default Blog;
