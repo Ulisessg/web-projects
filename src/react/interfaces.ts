@@ -22,3 +22,17 @@ export interface SectionModalProps extends imgProps {
   description: string;
   closeModal: () => void;
 }
+
+export interface BlogEntry {
+  metaSubjects: Array<any | string>;
+  name: string;
+  description: string;
+  image: string;
+  id: number;
+  path: string;
+  title: string;
+}
+
+export interface transformBlogInfoParams {
+  blogs: Array<any>;
+}
