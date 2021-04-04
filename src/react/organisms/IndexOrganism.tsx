@@ -1,10 +1,30 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 import '../../styles/organisms/IndexOrganism.styl';
 import SectionWithImg from './SectionWithModal';
 import Nav from '../atoms/Nav';
 
 function IndexOrganism(): JSX.Element {
+  const [isMobile, setIsMobile] = useState<boolean>(false);
+  const [firstPrint, setFirstPrint] = useState<boolean>(true);
+
+  const query = window.matchMedia('(max-width: 320px)');
+  useEffect(() => {
+    if (query.matches && firstPrint) {
+      setFirstPrint(false);
+      setIsMobile(true);
+      return;
+    }
+
+    query.addEventListener('change', (change) => {
+      if (change.matches) {
+        setIsMobile(true);
+      } else {
+        setIsMobile(false);
+      }
+    });
+  }, [isMobile]);
+
   interface Path {
     id: number;
     name: string;
@@ -100,7 +120,7 @@ function IndexOrganism(): JSX.Element {
       </div>
 
       <div className="about-me__navigation">
-        <Nav paths={navPaths} backgroundIsLigth />
+        <Nav col={isMobile} paths={navPaths} backgroundIsLigth />
       </div>
 
       {/* Main content */}
