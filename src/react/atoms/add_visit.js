@@ -16,15 +16,12 @@ window.onload = function () {
     const raw = JSON.stringify({ blog_name: blog });
 
     window
-      .fetch(
-        'https://web-projects-api-ulisessg.vercel.app/api/blog/add-visit',
-        {
-          method: 'POST',
-          headers: myHeaders,
-          body: raw,
-          redirect: 'follow',
-        },
-      )
+      .fetch('https://web-projects-api.vercel.app/api/blog/add-visit', {
+        method: 'POST',
+        headers: myHeaders,
+        body: raw,
+        redirect: 'follow',
+      })
       .then((response) => response.text())
       .then(() => window.localStorage.setItem('blog', 'visited'))
       .catch((error) => console.log('error', error));
