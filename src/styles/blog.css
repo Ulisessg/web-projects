@@ -232,26 +232,24 @@ a {
 }
 .header > a {
   display: flex;
-  padding-left: 20px;
+  padding-left: 10px;
 }
-/* .header__logo--link:focus,
-.header__logo--link:hover > .header__logo--img {
-  border: 1px solid white;
-} */
+
 .header__logo--img {
   height: 50px;
   width: 50px;
   align-self: center;
-  margin-left: 10px;
+  /* margin-left: 10px; */
 }
+
 @media screen and (max-width: 360px) {
-  .header {
+  .header__logo--img {
     width: 40px;
     height: 40px;
   }
 }
 @media screen and (max-width: 360px) and (orientation: landscape) {
-  .header {
+  .header__logo--img {
     width: 40px;
     height: 40px;
   }
@@ -288,7 +286,7 @@ a {
   cursor: pointer;
   color: #fafafa;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   padding: 7px 30px;
 }
 @media screen and (max-width: 450px) {
