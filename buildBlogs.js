@@ -70,7 +70,7 @@ Allow: /
     <meta name="theme-color" content="#052336" />
     <link
       rel="apple-touch-icon"
-      href="https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2FSEO%2Flogo.png?alt=media&token=65636b9b-0dcd-4845-b66a-56e2c5b762b0"
+      href="https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2Fv2%2Flogo-48x48.png?alt=media&token=e4a7a039-7439-48fb-bfbb-c4cc01454451"
     />
 
     <!-- Basic SEO  -->
@@ -99,7 +99,11 @@ Allow: /
 
     <!-- SEO end  -->
 
-    <link rel="icon" type="image/png" href="https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2FSEO%2Flogo.png?alt=media&token=65636b9b-0dcd-4845-b66a-56e2c5b762b0" />
+    <link
+      rel="shortcut icon"
+      href="https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2Fv2%2Flogo-48x48.png?alt=media&token=e4a7a039-7439-48fb-bfbb-c4cc01454451"
+      type="image/png"
+    />
 
     <link rel="stylesheet" type="text/css" href="/css/${cssName}" />
 
