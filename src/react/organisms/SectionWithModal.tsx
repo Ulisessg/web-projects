@@ -1,4 +1,4 @@
-import React, { lazy, useState, Suspense, useEffect } from 'react';
+import React, { lazy, useState, Suspense, useEffect, useCallback } from 'react';
 import ImgLazy from '../molecules/Img';
 import { SectionWithModalProps } from '../interfaces';
 import Loading from '../atoms/Loading';
@@ -9,18 +9,29 @@ const ModalComponent = lazy(() => import('../molecules/SectionModal'));
 
 function Section({ id, images, name, description, path }): JSX.Element {
   const [openModal, setOpenModal] = useState<boolean>(false);
-  useEffect(() => {
-    const body: HTMLBodyElement = document.querySelector('body');
-    const root: HTMLElement = document.getElementById('root');
 
+  const handleKeyUp = useCallback((e: KeyboardEvent): void => {
+    if ('key' in e && (e.key === 'Escape' || e.key === 'Esc')) {
+      setOpenModal(false);
+    } else if (e.keyCode === 27) {
+      setOpenModal(false);
+    }
+  }, []);
+
+  const body: HTMLBodyElement = document.querySelector('body');
+  const root: HTMLElement = document.getElementById('root');
+
+  useEffect(() => {
     // Prevent scroll
     if (openModal) {
+      body.addEventListener('keyup', handleKeyUp);
       root.classList.replace('delete-blur-body', 'blur-body');
       body.style.overflow = 'hidden';
       root.classList.add('blur-body');
     } else {
       body.style.overflow = 'auto';
       root.classList.replace('blur-body', 'delete-blur-body');
+      body.removeEventListener('keyup', handleKeyUp);
     }
   }, [openModal]);
 
