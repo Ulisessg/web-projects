@@ -15,7 +15,7 @@ html {
   font-size: 19px;
 }
 body {
-  background-color: background-color;
+  background-color: #ffffff;
 }
 #root {
   overflow: hidden;
@@ -226,63 +226,113 @@ a {
 .header {
   width: 100vw;
   display: flex;
-  height: 10vh;
-  background-color: #052336;
-  box-shadow: 0 1px 6px 0 #bcbdb0;
+  height: 13vh;
+  background-color: #012661;
+  box-shadow: 0px 3px 8px 0px #bcbdb0;
 }
-.header__nav,
-.header__ul {
+.header > a {
+  display: flex;
+  padding-left: 20px;
+}
+/* .header__logo--link:focus,
+.header__logo--link:hover > .header__logo--img {
+  border: 1px solid white;
+} */
+.header__logo--img {
+  height: 50px;
+  width: 50px;
+  align-self: center;
+  margin-left: 10px;
+}
+@media screen and (max-width: 360px) {
+  .header {
+    width: 40px;
+    height: 40px;
+  }
+}
+@media screen and (max-width: 360px) and (orientation: landscape) {
+  .header {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* Nav */
+
+.nav {
   width: 100%;
   height: 100%;
 }
-.header__ul {
+.nav__ul {
+  height: 100%;
+  width: 100%;
   display: flex;
   justify-content: space-around;
 }
+
+.nav__ul--column {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
 .ul__li {
   list-style: none;
   align-self: center;
 }
+
 .ul__li--a {
+  /* On focus padding is less and border width replace them */
+  cursor: pointer;
   color: #fafafa;
-  display: inline-block;
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.5rem;
+  padding: 7px 30px;
 }
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 450px) {
   .ul__li--a {
-    font-size: 1rem 0.5;
-    width: auto;
+    padding: 7px 20px;
   }
 }
-@media screen and (min-width: 400px) {
-  .ul__li--a {
-    font-size: 2rem;
-    width: auto;
-  }
-}
-@media screen and (min-width: 700px) {
-  .ul__li--a {
-    font-size: 2rem;
-    width: 14rem;
-  }
-}
+
 .ul__li--a:focus,
 .ul__li--a:hover {
-  background-color: #176085;
-  border-radius: 20px;
-  padding: 5px;
+  padding: 5px 28px;
   border: 2px solid #fafafa;
-  width: 14rem;
+  width: auto;
+  border-radius: 20px;
 }
-@media screen and (max-width: 700px) {
-  .ul__li--a:focus,
-  .ul__li--a:hover {
-    width: 8rem;
-    height: 3rem;
-    font-size: 2rem;
-    text-align: center;
+@media screen and (max-width: 450px) {
+  .ul__li--a {
+    padding: 7px 18px;
   }
+}
+
+.ul__li--a-ligth {
+  color: #052336;
+  background-color: #176085;
+  text-align: center;
+  border-radius: 20px;
+  padding: 10px 15px;
+}
+
+.ul__li--a-ligth:hover,
+.ul__li--a-ligth:focus {
+  background-color: #007db3;
+  border: 2px solid #bcbdb0;
+  padding: 8px 13px;
+}
+@media screen and (max-width: 450px) {
+  .ul__li--a-ligth {
+    padding: 7px 18px;
+  }
+}
+
+.ul__li--a-dark:hover,
+.ul__li--a-dark:focus {
+  background-color: #176085;
 }
 
 /* Latoyt ends */
@@ -483,81 +533,4 @@ li > p {
 
 li {
   list-style: inside;
-}
-
-/* Nav */
-
-.nav {
-  width: 100%;
-  height: 100%;
-}
-.nav__ul {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-}
-
-.nav__ul--column {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  flex-direction: column;
-}
-
-.ul__li {
-  align-self: center;
-}
-
-.ul__li--a {
-  /* On focus padding is less and border width replace them */
-  cursor: pointer;
-  color: #fafafa;
-  text-align: center;
-  font-size: 1.5rem;
-  padding: 7px 30px;
-}
-@media screen and (max-width: 450px) {
-  .ul__li--a {
-    padding: 7px 20px;
-  }
-}
-
-.ul__li--a:focus,
-.ul__li--a:hover {
-  padding: 5px 28px;
-  border: 2px solid #fafafa;
-  width: auto;
-  border-radius: 20px;
-}
-@media screen and (max-width: 450px) {
-  .ul__li--a {
-    padding: 7px 18px;
-  }
-}
-
-.ul__li--a-ligth {
-  color: #052336;
-  background-color: #176085;
-  text-align: center;
-  border-radius: 20px;
-  padding: 10px 15px;
-}
-
-.ul__li--a-ligth:hover,
-.ul__li--a-ligth:focus {
-  background-color: #007db3;
-  border: 2px solid #bcbdb0;
-  padding: 8px 13px;
-}
-@media screen and (max-width: 450px) {
-  .ul__li--a-ligth {
-    padding: 7px 18px;
-  }
-}
-
-.ul__li--a-dark:hover,
-.ul__li--a-dark:focus {
-  background-color: #176085;
 }

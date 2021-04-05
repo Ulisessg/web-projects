@@ -126,28 +126,37 @@ Allow: /
 
     <!-- Header -->
     <header class="header">
-      <nav class="header__nav">
-        <ul class="header__ul" id="secciones">
+      <a className="header__logo--link" href="/">
+        <img
+          class="header__logo--img"
+          alt="Logo"
+          src="https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2Fv2%2Flogo-192x192.png?alt=media&token=1a4aa1ca-1846-41b3-9005-9c4dc5c4d888"
+        />
+      </a>
+      <nav class="nav">
+        <ul class="nav__ul">
           <!-- Links -->
           <li class="ul__li">
             <p>
-              <a aria-label="Sobre mí" class="ul__li--a" href="/">About</a>
+              <a aria-label="Sobre mí" class="ul__li--a ul__li--a-dark" href="/">About</a>
             </p>
           </li>
+
           <li class="ul__li">
             <p>
               <a
                 aria-label="Blog sobre tecnología"
-                class="ul__li--a"
+                class="ul__li--a ul__li--a-dark"
                 href="/blog"
                 >Blog</a
               >
             </p>
           </li>
+
           <li class="ul__li">
             <p>
-              <a aria-label="Sistema de diseño" class="ul__li--a" href="/design"
-                >Sistema</a
+              <a aria-label="Mi cuenta en GitHub" class="ul__li--a ul__li--a-dark" href="https://github.com/Ulisessg"
+                >GitHub</a
               >
             </p>
           </li>
