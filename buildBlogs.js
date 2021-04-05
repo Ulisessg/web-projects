@@ -73,7 +73,7 @@ Allow: /
       href="https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2FSEO%2Flogo.png?alt=media&token=65636b9b-0dcd-4845-b66a-56e2c5b762b0"
     />
 
-    <!-- Basic SEO  -->   
+    <!-- Basic SEO  -->
     <link rel="canonical" href="https://ulisessg.com/${blog.name}"/>
     <meta name="description" content="${blog.metaDescription}" />
     <meta name="keywords" content="${blog.metaSubjects}" />
@@ -103,13 +103,6 @@ Allow: /
 
     <link rel="stylesheet" type="text/css" href="/css/${cssName}" />
 
-    <!-- LinkedIn badge -->
-    <script
-      type="text/javascript"
-      src="https://platform.linkedin.com/badges/js/profile.js"
-      async
-      defer
-    ></script>
     <title>${blog.title} | UlisesSG</title>
   </head>
   <body>
@@ -170,79 +163,132 @@ Allow: /
       </section>
     </main>
 
-    <footer class="footer">
-      <div>
-        <nav>
-          <ul class="header__ul" id="secciones">
-            <!-- Links -->
-            <li class="ul__li">
-              <p>
-                <a
-                  aria-label="Mi Twitter"
-                  class="ul__li--a"
-                  href="https://twitter.com/Ulises5G"
-                  >Twitter</a
-                >
-              </p>
-            </li>
-            <li class="ul__li">
-              <p>
-                <a
-                  aria-label="Mi perfil de platzi"
-                  class="ul__li--a"
-                  href="https://platzi.com/p/UlisesSG/"
-                  >Perfil de platzi</a
-                >
-              </p>
-            </li>
-            <li class="ul__li">
-              <p>
-                <a
-                  aria-label="Mi LinkedIn"
-                  class="ul__li--a"
-                  href="https://www.linkedin.com/in/ulisessg/"
-                  >LinkedIn</a
-                >
-              </p>
-            </li>
-            <li class="ul__li">
-              <p>
-                <a
-                  aria-label="Mi repositorio de GitHub"
-                  class="ul__li--a"
-                  href="https://github.com/Ulisessg"
-                  >GitHub</a
-                >
-              </p>
-            </li>
-          </ul>
-        </nav>
-      </div>
+    <!-- Footer -->
 
-      <div
-        class="LI-profile-badge"
-        data-version="v1"
-        data-size="medium"
-        data-locale="es_ES"
-        data-type="vertical"
-        data-theme="light"
-        data-vanity="ulisessg"
+<footer class="footer" id="footer">
+  <div class="footer__container">
+    <img
+      alt="Ulises Antonio Samano Galvan"
+      src="https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2Fv2%2Flogo-192x192.png?alt=media&token=1a4aa1ca-1846-41b3-9005-9c4dc5c4d888"
+      class="footer--logo"
+    />
+    <h3 class="footer__quote">Si puedes imaginarlo puedes programarlo 💚</h3>
+
+    <!-- Social media -->
+    <h3 class="footer__quote follow-me">Sigueme en mis redes sociales</h3>
+
+    <div class="footer__social">
+      <a href="https://www.facebook.com/Ulises5G">
+        <img
+          src="https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2Fv2%2Ffacebook.png?alt=media&token=69833032-271c-4f43-a2d4-c621350b2e54"
+          alt="Logo de Facebook"
+          class="footer__social--logo"
+        />
+      </a>
+      <a href="https://twitter.com/Ulises5G">
+        <img
+          src="https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2Fv2%2Ftwitter.png?alt=media&token=539518e5-e18b-4cc4-a41e-498b68caf60b"
+          alt="Logo de twitter"
+          class="footer__social--logo"
+        />
+      </a>
+      <a href="https://github.com/Ulisessg">
+        <img
+          src="https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2Fv2%2FGitHub-logo.png?alt=media&token=f7d795cd-d7db-4b35-a2f4-0dca3070dd1b"
+          alt="Logo de github"
+          class="footer__social--logo"
+        />
+      </a>
+    </div>
+
+    <!-- <Linkedin Badge> -->
+
+    <section class="linkedin-badge">
+      <div class="linkedin-badge--background">
+        <img
+          src="https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2FSEO%2Fme.jfif?alt=media&token=6f3e9ef4-df67-462c-bba5-0d2bea0e2076"
+          alt="Ulises Antonio Sámano Galván"
+          class="linkedin-badge--image"
+        />
+      </div>
+      <a
+        class="linkedin-badge--name"
+        href="https://mx.linkedin.com/in/ulisessg?trk=profile-badge"
       >
-        <a
-          class="LI-simple-link"
-          href="https://mx.linkedin.com/in/ulisessg?trk=profile-badge"
-        >
-          Ulises Antonio Sámano Galván
+        <h3>Ulises Antonio Sámano Galván</h3>
+      </a>
+
+      <p class="linkedin-badge--description">
+        Frontend / Backend / Nerd / Student at Platzi Master.
+      </p>
+      <div class="linkedin-badge--go-profile">
+        <a href="https://mx.linkedin.com/in/ulisessg?trk=profile-badge">
+          Ver perfil
         </a>
       </div>
-    </footer>
+      <img
+        class="linkedin-logo"
+        alt="Linkedin Logo"
+        src="https://static-exp1.licdn.com/scds/common/u/images/logos/linkedin/logo_linkedin_93x21_v2.png"
+      />
+    </section>
 
-    <script
-      type="text/javascript"
-      src="/js/${jsName}"
-      async
-      defer
-    ></script>
+    <!-- </ Linkedin Badge> -->
+
+    <div class="footer__other-links">
+      <nav class="nav">
+        <ul class="nav__ul--column" id="secciones">
+          <li class="ul__li">
+            <p>
+              <a
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Mi perfil de Platzi"
+                class="ul__li--a ul__li--a-dark"
+                href="https://platzi.com/p/UlisesSG/"
+              >
+                Perfil de platzi
+              </a>
+            </p>
+          </li>
+
+          <li class="ul__li">
+            <p>
+              <a
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Curriculum"
+                class="ul__li--a ul__li--a-dark"
+                href="https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2Fv2%2FFullstack%20React%20Developer%20-%20Ulises%20Antonio%20Samano%20Galvan.pdf?alt=media&token=a5cac99c-1cb9-4e9b-908d-f84eb6089b36"
+              >
+                Curriculum
+              </a>
+            </p>
+          </li>
+
+          <li class="ul__li">
+            <p>
+              <a
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Perfil de Hacker Rank"
+                class="ul__li--a ul__li--a-dark"
+                href="https://www.hackerrank.com/ukisessg"
+              >
+                HackerRank
+              </a>
+            </p>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <h3 class="footer__quote coffe-quote">
+      Hecho con amor, café y amor al café 💚
+    </h3>
+  </div>
+</footer>
+
 
   </body>
 </html>`;

@@ -1,27 +1,27 @@
 *,
-:after,
-:before {
+*:after,
+*:before {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  list-style: none;
   text-decoration: none;
   outline: none;
-  font-family: Helvetica;
-  overflow-x: hidden;
+  font-family: Helvetica, sans-serif;
 }
 html {
-  font-size: 16px;
+  font-size: 20px;
 }
 body {
-  background-color: #fff;
+  background-color: background-color;
+}
+#root {
+  overflow: hidden;
 }
 a {
-  font-size: 1.5rem;
-}
-* {
-  font-size: 1.5rem;
+  font-size: 1rem + 0.5;
 }
 
 /* Layout starts*/
@@ -48,55 +48,180 @@ a {
   display: inline-block;
   text-align: center;
 }
+
+/* Footer */
+
 .footer {
   height: auto;
-  background-color: #052336;
+  background-color: #012661;
+  width: 100vw;
+  box-shadow: 0px -3px 8px 0px #bcbdb0;
+}
+
+.footer__container {
+  width: 80vw;
+  margin: 0 auto;
   display: grid;
-  grid-auto-flow: column;
-  align-items: center;
+  justify-items: center;
+  text-align: center;
+}
+
+.footer--logo {
+  height: 80px;
+  margin: 30px auto;
+}
+
+.footer__quote {
+  color: white;
+  text-align: center;
+  margin: 40px 0 10px 0;
+  padding: 17px;
+}
+
+.footer__social {
+  width: 100%;
+  display: flex;
   justify-content: space-around;
 }
 
-@media screen and (max-width: 699px) {
-  .footer {
-    grid-auto-flow: row;
+.footer__social--logo {
+  height: 40px;
+  width: auto;
+}
+
+.footer__social > a:hover,
+.footer__social > a:focus {
+  height: 39px;
+  border: 1px solid white;
+}
+
+.footer__other-links {
+  margin-top: 30px;
+}
+
+.footer__other-links > nav > ul > li {
+  margin-top: 30px;
+}
+
+/* LinkedIn Badge */
+
+.linkedin-badge {
+  width: 100%;
+  height: 400px;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  background-color: aliceblue;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+  padding-bottom: 15px;
+}
+
+.linkedin-badge--name {
+  color: black;
+}
+
+.linkedin-badge--name:hover,
+.linkedin-badge--name:focus {
+  color: #007db3;
+}
+
+.linkedin-badge > a:visited {
+  color: black;
+}
+
+.linkedin-badge--background {
+  background-image: url(https://static-exp1.licdn.com/sc/h/856xpihrituhwdjrua9z5u5na);
+  background-position: center;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  padding: 15px;
+}
+
+.linkedin-badge--image {
+  border-radius: 100%;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  border: 4px solid white;
+}
+
+.linkedin-badge--description {
+  padding: 10px;
+}
+
+.linkedin-badge--go-profile {
+  border: 1px solid #007db3;
+  padding: 3px;
+}
+.linkedin-badge--go-profile > a {
+  padding: 7px;
+  color: #007db3;
+}
+.linkedin-badge--go-profile > a:hover,
+.linkedin-badge--go-profile > a:focus {
+  color: black;
+}
+
+.linkedin-logo {
+  height: 40px;
+}
+
+/* LinkedIn Badge */
+
+@media screen and (min-width: 768px) {
+  .linkedin-badge {
+    width: 42%;
   }
 }
 
-.footer > div {
-  padding: 20px;
-}
-
-.footer > div > nav > ul {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
-@media screen and (max-width: 699px) {
-  .footer > div > nav > ul {
-    grid-template-columns: 1fr;
+@media screen and (min-width: 1200px) {
+  .footer__container {
+    grid-template-areas:
+      'logo quoteMine'
+      'socialMediaTitle socialMediaTitle'
+      'socialMediaImages socialMediaImages'
+      'badge extraLinks'
+      'loveQuote loveQuote';
   }
-  .header__ul > li > p {
-    display: flex;
-    justify-content: center;
+
+  .footer--logo {
+    grid-area: logo;
+    margin-top: 30px;
+  }
+  .footer__quote {
+    grid-area: quoteMine;
+    margin-top: 30px;
+  }
+  .follow-me {
+    grid-area: socialMediaTitle;
+    margin-top: 30px;
+  }
+  .footer__quote {
+    margin-top: 20px;
+  }
+  .footer__social {
+    grid-area: socialMediaImages;
+    margin-top: 30px;
+    margin-bottom: 40px;
+  }
+  .linkedin-badge {
+    grid-area: badge;
+    margin-top: 30px;
+  }
+  .footer__other-links {
+    grid-area: extraLinks;
+    margin-top: 30px;
+  }
+  .coffe-quote {
+    grid-area: loveQuote;
+    margin-top: 30px;
   }
 }
 
-.footer > div > nav > ul > li {
-  margin-top: 5rem;
-}
-
-.footer--link:focus,
-.footer--link:hover {
-  border: 2px solid#fafafa;
-  background-color: #176085;
-  border-radius: 20px;
-  padding: 5px;
-}
-
-/* Badge image container, setter as important */
-.LI-profile-pic-container {
-  height: 160px !important;
-}
+/* Footer ends */
 
 .header {
   width: 100vw;
@@ -358,4 +483,81 @@ li > p {
 
 li {
   list-style: inside;
+}
+
+/* Nav */
+
+.nav {
+  width: 100%;
+  height: 100%;
+}
+.nav__ul {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav__ul--column {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.ul__li {
+  align-self: center;
+}
+
+.ul__li--a {
+  /* On focus padding is less and border width replace them */
+  cursor: pointer;
+  color: #fafafa;
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 7px 30px;
+}
+@media screen and (max-width: 450px) {
+  .ul__li--a {
+    padding: 7px 20px;
+  }
+}
+
+.ul__li--a:focus,
+.ul__li--a:hover {
+  padding: 5px 28px;
+  border: 2px solid #fafafa;
+  width: auto;
+  border-radius: 20px;
+}
+@media screen and (max-width: 450px) {
+  .ul__li--a {
+    padding: 7px 18px;
+  }
+}
+
+.ul__li--a-ligth {
+  color: #052336;
+  background-color: #176085;
+  text-align: center;
+  border-radius: 20px;
+  padding: 10px 15px;
+}
+
+.ul__li--a-ligth:hover,
+.ul__li--a-ligth:focus {
+  background-color: #007db3;
+  border: 2px solid #bcbdb0;
+  padding: 8px 13px;
+}
+@media screen and (max-width: 450px) {
+  .ul__li--a-ligth {
+    padding: 7px 18px;
+  }
+}
+
+.ul__li--a-dark:hover,
+.ul__li--a-dark:focus {
+  background-color: #176085;
 }
