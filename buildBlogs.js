@@ -303,6 +303,8 @@ Allow: /
 </footer>
 
 
+  <script src="/js/${jsName}"></script>
+
   </body>
 </html>`;
 
