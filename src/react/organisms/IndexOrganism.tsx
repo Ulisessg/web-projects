@@ -115,7 +115,10 @@ function IndexOrganism(): JSX.Element {
           src="https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2FSEO%2Fulises5G.jfif?alt=media&token=bbe0eb8b-ee31-4ef1-a444-452691ca8f67"
           alt="Foto mía"
         />
-        <h1 className="about-me__title">Frontend / Backend</h1>
+        <h1 className="about-me__title">
+          Frontend / Backend
+          <br /> Future Data Sciencetist
+        </h1>
         <h2 className="about-me__name">Ulises Antonio Sámano Galván</h2>
       </div>
 
