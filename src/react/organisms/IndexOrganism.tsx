@@ -37,6 +37,11 @@ function IndexOrganism(): JSX.Element {
 
   const projectsImages = [
     {
+      title: 'Finders logo',
+      image:
+        'https://camo.githubusercontent.com/d2e1968d43217594f9348515fdbfb630a71e7647045a1507f17a59b49afc5296/68747470733a2f2f666972656261736573746f726167652e676f6f676c65617069732e636f6d2f76302f622f7765622d70726f6a656374732d35306537652e61707073706f742e636f6d2f6f2f66696e646572732532466c6f676f2d66696e646572732e706e673f616c743d6d6564696126746f6b656e3d30663437373538642d313761342d343939392d626262642d623861333039373530343637',
+    },
+    {
       title: 'Platzi stack',
       image: Logo,
     },
@@ -56,6 +61,13 @@ function IndexOrganism(): JSX.Element {
     },
   ];
   const projectsInfo = [
+    {
+      id: 5,
+      name: 'Finders - Findme',
+      path: 'https://github.com/Finders-Master/finders-FE',
+      description:
+        'Finders es un sitio web enfocado en ayudar a localizar familiares de personas con alguna enfermedad mental o discapacidad mediante el uso de códigos QR',
+    },
     {
       id: 1,
       name: 'Platzi stack',
