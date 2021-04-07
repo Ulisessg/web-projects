@@ -101,9 +101,9 @@ function IndexOrganism(): JSX.Element {
   const navPaths: Array<Path> = [
     {
       id: 1,
-      description: 'Ir a mis proyectos',
-      name: 'Proyectos',
-      path: '#proyectos',
+      description: 'Ir a mi experiencia',
+      name: 'Experiencia',
+      path: '#experiencia',
     },
     {
       id: 2,
@@ -140,10 +140,10 @@ function IndexOrganism(): JSX.Element {
 
       {/* Main content */}
 
-      <h2>Proyectos</h2>
+      <h2>Experiencia</h2>
 
       <div className="wrapper">
-        <section className="sections" id="proyectos">
+        <section className="sections" id="experiencia">
           <SectionWithImg images={projectsImages} sections={projectsInfo} />
         </section>
       </div>
