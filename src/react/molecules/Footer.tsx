@@ -25,7 +25,7 @@ function Footer(): JSX.Element {
       description: 'Curriculum',
       name: 'Curriculum',
       path:
-        'https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2Fv2%2FFullstack%20React%20Developer%20-%20Ulises%20Antonio%20Samano%20Galvan.pdf?alt=media&token=a5cac99c-1cb9-4e9b-908d-f84eb6089b36',
+        'https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2Fv2%2FFullstack%20React%20Developer%20-%20Ulises%20Antonio%20Samano%20Galvan.pdf?alt=media&token=a4b86dfa-b4ef-4f63-be7e-50e39d1970b6',
     },
     {
       id: 3,
