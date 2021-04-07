@@ -66,7 +66,7 @@ function IndexOrganism(): JSX.Element {
       name: 'Finders - Findme',
       path: 'https://github.com/Finders-Master/finders-FE',
       description:
-        'Finders es un sitio web enfocado en ayudar a localizar familiares de personas con alguna enfermedad mental o discapacidad mediante el uso de códigos QR',
+        'Finders es un sitio web enfocado en ayudar a localizar personas con alguna enfermedad mental o discapacidad mediante el uso de códigos QR',
     },
     {
       id: 1,
