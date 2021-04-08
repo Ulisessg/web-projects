@@ -1,5 +1,6 @@
 import React from 'react';
 import { createPortal } from 'react-dom';
+import ButtonClose from '../atoms/ButtonClose';
 import ImgLazy from './Img';
 import { SectionModalProps } from '../interfaces';
 
@@ -16,9 +17,7 @@ function SectionModal({
   return createPortal(
     <>
       <section className="section--modal">
-        <button onClick={closeModal} type="button" className="close-modal">
-          X
-        </button>
+        <ButtonClose handleClick={closeModal} />
 
         <div className="section-modal-img-container">
           <ImgLazy classN="section-modal--img" src={src} alt={alt} />
