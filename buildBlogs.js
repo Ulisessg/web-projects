@@ -42,7 +42,7 @@ Promise.all([blogRequest]).then(() => {
   //  Js file
 
   fs.copyFileSync(
-    join(__dirname, 'src', 'react', 'atoms', 'add_visit.js'),
+    join(__dirname, 'src', 'react', 'utils', 'add_visit.js'),
     join(__dirname, 'dist', 'js', jsName),
   );
 
