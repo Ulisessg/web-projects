@@ -1,5 +1,6 @@
 import React, { lazy, useState, Suspense, useEffect, useCallback } from 'react';
 import ImgLazy from '../molecules/Img';
+import ButtonDark from '../atoms/ButtonDark';
 import { SectionWithModalProps } from '../interfaces';
 import Loading from '../atoms/Loading';
 
@@ -51,14 +52,7 @@ function Section({ id, images, name, description, path }): JSX.Element {
         </div>
         <h3 className="section--title">{name}</h3>
         <p className="section--description">{description}</p>
-        <button
-          type="button"
-          aria-label={`Leer más sobre ${name}`}
-          className="section--link ul__li--a-dark section-modal-button"
-          onClick={handleModal}
-        >
-          <span>Leer más</span>
-        </button>
+        <ButtonDark handleClick={handleModal} text="Leer más" type="button" />
         {openModal && (
           <Suspense fallback={<Loading />}>
             <ModalComponent
