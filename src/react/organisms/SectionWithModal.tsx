@@ -1,14 +1,21 @@
+/* eslint-disable object-curly-newline */
 import React, { lazy, useState, Suspense, useEffect, useCallback } from 'react';
 import ImgLazy from '../molecules/Img';
 import ButtonDark from '../atoms/ButtonDark';
 import { SectionWithModalProps } from '../interfaces';
 import Loading from '../atoms/Loading';
-
+import SectionProps from '../interfaces_and_types/organisms/SectionProps';
 import '../../styles/organisms/sectionWithModal.styl';
 
 const ModalComponent = lazy(() => import('../molecules/SectionModal'));
 
-function Section({ id, images, name, description, path }): JSX.Element {
+function Section({
+  id,
+  images,
+  name,
+  description,
+  path,
+}: SectionProps): JSX.Element {
   const [openModal, setOpenModal] = useState<boolean>(false);
 
   const handleKeyUp = useCallback((e: KeyboardEvent): void => {
