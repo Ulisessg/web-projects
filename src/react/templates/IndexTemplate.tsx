@@ -1,7 +1,6 @@
 import React, { lazy, Suspense } from 'react';
 
 //  Styles
-import '../../styles/default-styles.styl';
 import '../../styles/templates/blog-styles.styl';
 import '../../styles/organisms/mainBlog-styles.styl';
 

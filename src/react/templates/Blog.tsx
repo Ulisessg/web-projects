@@ -1,7 +1,6 @@
 import React from 'react';
 
 //  Styles
-import '../../styles/default-styles.styl';
 import '../../styles/organisms/mainBlog-styles.styl';
 import '../../styles/templates/blog-styles.styl';
 

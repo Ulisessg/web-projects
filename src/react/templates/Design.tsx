@@ -1,7 +1,6 @@
 import React from 'react';
 
 //  Styles
-import '../../styles/default-styles.styl';
 import '../../styles/templates/design-styles.styl';
 
 //  Components
@@ -12,7 +11,7 @@ function Design(): JSX.Element {
   return (
     <>
       <Layout>
-        <div className='wrapper'>
+        <div className="wrapper">
           <MainDesign />
         </div>
       </Layout>

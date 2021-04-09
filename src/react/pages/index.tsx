@@ -1,5 +1,6 @@
 import React, { lazy, Suspense } from 'react';
 import ReactDom from 'react-dom';
+import GlobalStyles from '../../styles/GlobalStyles';
 import Loading from '../atoms/Loading';
 
 if (process.env.NODE_ENV !== 'development') {
@@ -19,6 +20,7 @@ const IndexTemplate = lazy(() => import('../templates/IndexTemplate'));
 ReactDom.render(
   <>
     <Suspense fallback={<Loading />}>
+      <GlobalStyles />
       <IndexTemplate />
     </Suspense>
   </>,
