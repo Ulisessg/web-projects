@@ -61,7 +61,7 @@ function Section({
         <p className="section--description">{description}</p>
         <ButtonDark handleClick={handleModal} text="Leer más" type="button" />
         {openModal && (
-          <Suspense fallback={<Loading />}>
+          <Suspense fallback={<Loading heightExternal="100%" />}>
             <ModalComponent
               alt={images.title}
               src={images.image}

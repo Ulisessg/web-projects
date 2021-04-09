@@ -1,12 +1,24 @@
+/* eslint-disable react/require-default-props */
 import React from 'react';
-import '../../styles/atoms/loadingSpinner.styl';
+import {
+  LoadingContainer,
+  LoadingSpinner,
+} from '../../styles/atoms/LoadingStyles';
 
-const Loading: React.FC = () => (
-  <>
-    <div className="loading-spinner--container">
-      <div className="loading-spinner" />
-    </div>
-  </>
-);
+function Loading({ heightExternal }: { heightExternal?: string }): JSX.Element {
+  //
+
+  return (
+    <>
+      <LoadingContainer
+        style={
+          heightExternal ? { height: `${heightExternal}` } : { height: '100vh' }
+        }
+      >
+        <LoadingSpinner className="loading-spinner" />
+      </LoadingContainer>
+    </>
+  );
+}
 
 export default Loading;
