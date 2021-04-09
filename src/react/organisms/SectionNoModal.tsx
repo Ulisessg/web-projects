@@ -1,10 +1,11 @@
 import React from 'react';
 
 import ImgLazy from '../molecules/Img';
+import LinkDark from '../atoms/LinkDark';
 
 import '../../styles/organisms/sectionWithModal.styl';
 
-function SectionNoModal({ sections, images }) {
+function SectionNoModal({ sections, images, linkText = 'Leer más' }) {
   let iteration: number = -1;
 
   return (
@@ -27,13 +28,12 @@ function SectionNoModal({ sections, images }) {
               </div>
               <h3 className="section--title">{section.title}</h3>
               <p className="section--description">{section.description}</p>
-              <a
-                href={`/${section.name}`}
-                aria-label={`Leer más sobre ${section.name}`}
-                className="section--link ul__li--a-dark section-modal-button"
-              >
-                <span>Leer más</span>
-              </a>
+              <LinkDark
+                path={`/${section.name}`}
+                text={linkText}
+                label={`Leer más sobre ${section.name}`}
+                blank="false"
+              />
             </section>
           );
         },
