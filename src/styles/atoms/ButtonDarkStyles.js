@@ -21,8 +21,13 @@ const Button = styled.button`
   color: white;
   justify-content: center;
   cursor: pointer;
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: ${backgroundDark};
+  }
+
+  &:active {
+    transform: scale(0.9);
   }
 `;
 
