@@ -1,7 +1,6 @@
 const { join, resolve } = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCSSExtractPlugin = require('mini-css-extract-plugin');
-const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
 const webpack = require('webpack');
@@ -46,19 +45,9 @@ module.exports = {
           ecma: 2015,
         },
       }),
-      new OptimizeCSSAssetsPlugin(),
       new CompressionPlugin({
         test: /\.js(\?.*)?$/i,
         exclude: /\/node_modules/,
-      }),
-      new OptimizeCSSAssetsPlugin({
-        assetNameRegExp: /\.optimize\.css$/g,
-        // eslint-disable-next-line global-require
-        cssProcessor: require('cssnano'),
-        cssProcessorPluginOptions: {
-          preset: ['default', { discardComments: { removeAll: true } }],
-        },
-        canPrint: true,
       }),
     ],
   },
