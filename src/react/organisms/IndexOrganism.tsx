@@ -1,3 +1,4 @@
+/* eslint-disable operator-linebreak */
 import React, { useState, useEffect } from 'react';
 
 import '../../styles/organisms/IndexOrganism.styl';
@@ -129,6 +130,7 @@ function IndexOrganism(): JSX.Element {
         />
         <h1 className="about-me__title">
           Frontend / Backend
+          {/* eslint-disable-next-line react/jsx-one-expression-per-line */}
           <br /> Future Data Sciencetist
         </h1>
         <h2 className="about-me__name">Ulises Antonio Sámano Galván</h2>
