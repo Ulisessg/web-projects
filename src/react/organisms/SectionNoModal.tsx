@@ -1,7 +1,7 @@
 import React from 'react';
 
 import ImgLazy from '../molecules/Img';
-import LinkDark from '../atoms/LinkDark';
+import LinkDarkNoBlank from '../atoms/LinkDarkNoBlank';
 
 import '../../styles/organisms/sectionWithModal.styl';
 
@@ -28,11 +28,10 @@ function SectionNoModal({ sections, images, linkText = 'Leer más' }) {
               </div>
               <h3 className="section--title">{section.title}</h3>
               <p className="section--description">{section.description}</p>
-              <LinkDark
+              <LinkDarkNoBlank
                 path={`/${section.name}`}
                 text={linkText}
                 label={`Leer más sobre ${section.name}`}
-                blank="false"
               />
             </section>
           );
