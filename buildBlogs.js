@@ -328,6 +328,9 @@ Allow: /
 <url>
 <loc>https://ulisessg.com/blog</loc>
 </url>
+<url>
+<loc>https://ulisessg.com/design</loc>
+</url>
 `;
 
   const sites = blogs.map((blog) => {

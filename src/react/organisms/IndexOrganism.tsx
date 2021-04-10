@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import '../../styles/organisms/IndexOrganism.styl';
 import SectionWithImg from './SectionWithModal';
 import Nav from '../atoms/Nav';
+import RoundedImage from '../atoms/RoundedImage';
 
 function IndexOrganism(): JSX.Element {
   const [isMobile, setIsMobile] = useState<boolean>(false);
@@ -123,10 +124,13 @@ function IndexOrganism(): JSX.Element {
   return (
     <>
       <div className="about-me">
-        <img
-          className="about-me__img"
+        <RoundedImage
+          widthMobile="180px"
+          widthTablet="300px"
+          widthLaptop="300px"
+          widthDesktop="300px"
+          bottom=""
           src="https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2FSEO%2Fulises5G.jfif?alt=media&token=bbe0eb8b-ee31-4ef1-a444-452691ca8f67"
-          alt="Foto mía"
         />
         <h1 className="about-me__title">
           Frontend / Backend
