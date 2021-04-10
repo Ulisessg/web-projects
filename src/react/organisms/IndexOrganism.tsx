@@ -3,26 +3,21 @@ import React, { useState, useEffect } from 'react';
 
 import '../../styles/organisms/IndexOrganism.styl';
 import SectionWithImg from './SectionWithModal';
-import Nav from '../atoms/Nav';
 import RoundedImage from '../atoms/RoundedImage';
+import NavLigthNoBlank from '../molecules/NavLigthNoBlank';
+
+const query = window.matchMedia('(max-width: 650px)');
+const initialWidth = window.outerWidth <= 320 ? 'column' : 'row';
 
 function IndexOrganism(): JSX.Element {
-  const [isMobile, setIsMobile] = useState<boolean>(false);
-  const [firstPrint, setFirstPrint] = useState<boolean>(true);
+  const [isMobile, setIsMobile] = useState<'row' | 'column'>(initialWidth);
 
-  const query = window.matchMedia('(max-width: 320px)');
   useEffect(() => {
-    if (query.matches && firstPrint) {
-      setFirstPrint(false);
-      setIsMobile(true);
-      return;
-    }
-
     query.addEventListener('change', (change) => {
       if (change.matches) {
-        setIsMobile(true);
+        setIsMobile('column');
       } else {
-        setIsMobile(false);
+        setIsMobile('row');
       }
     });
   }, [isMobile]);
@@ -100,23 +95,20 @@ function IndexOrganism(): JSX.Element {
     },
   ];
 
-  const navPaths: Array<Path> = [
+  const navPaths = [
     {
-      id: 1,
-      description: 'Ir a mi experiencia',
-      name: 'Experiencia',
+      label: 'Ir a mi experiencia',
+      text: 'Mi experiencia',
       path: '#experiencia',
     },
     {
-      id: 2,
-      description: 'Ultimas entradas del blog',
-      name: 'Posts',
+      label: 'Ultimas entradas del blog',
+      text: 'Ultimos posts',
       path: '#posts',
     },
     {
-      id: 3,
-      description: 'Enlaces de contacto',
-      name: 'Contacto',
+      label: 'Enlaces de contacto',
+      text: 'Ir a contacto',
       path: '#contacto',
     },
   ];
@@ -140,8 +132,10 @@ function IndexOrganism(): JSX.Element {
         <h2 className="about-me__name">Ulises Antonio Sámano Galván</h2>
       </div>
 
-      <div className="about-me__navigation">
-        <Nav col={isMobile} paths={navPaths} backgroundIsLigth />
+      <div style={{ height: '45vh' }} className="about-me__navigation">
+        {/* <Nav col={isMobile} paths={navPaths} backgroundIsLigth /> */}
+
+        <NavLigthNoBlank dir={isMobile} paths={navPaths} />
       </div>
 
       {/* Main content */}
