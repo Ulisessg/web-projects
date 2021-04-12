@@ -4,7 +4,6 @@ import '../../styles/atoms/nav.styl';
 
 interface NavProps {
   paths: Array<{
-    id: number;
     description: string;
     path: string;
     name: string;
@@ -25,7 +24,7 @@ function Nav({
       <ul className={col ? 'nav__ul--column' : 'nav__ul'} id="secciones">
         {paths.map(
           (path): JSX.Element => (
-            <li className="ul__li" key={path.id}>
+            <li className="ul__li" key={path.name}>
               <p>
                 <a
                   target={blank ? '_blank' : '_self'}

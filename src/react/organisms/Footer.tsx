@@ -1,40 +1,11 @@
 import React from 'react';
-
 import '../../styles/molecules/footer.styl';
-import Nav from '../atoms/Nav';
-import LinkedInBadge from './LinkedInBadge';
-import LazyImage from './Img';
-
-interface Path {
-  id: number;
-  name: string;
-  description: string;
-  path: string;
-}
+import LinkedInBadge from '../molecules/LinkedInBadge';
+import LazyImage from '../molecules/Img';
+import { footerPaths } from '../states/index';
+import NavLightBlank from '../molecules/NavLightBlank';
 
 function Footer(): JSX.Element {
-  const footerPaths: Array<Path> = [
-    {
-      id: 1,
-      description: 'Mi perfil de Platzi',
-      name: 'Perfil de platzi',
-      path: 'https://platzi.com/p/UlisesSG/',
-    },
-    {
-      id: 2,
-      description: 'Curriculum',
-      name: 'Curriculum',
-      path:
-        'https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2Fv2%2FFullstack%20React%20Developer%20-%20Ulises%20Antonio%20Samano%20Galvan.pdf?alt=media&token=a4b86dfa-b4ef-4f63-be7e-50e39d1970b6',
-    },
-    {
-      id: 3,
-      description: 'Perfil de Hacker Rank',
-      name: 'HackerRank',
-      path: 'https://www.hackerrank.com/ukisessg',
-    },
-  ];
-
   return (
     <footer className="footer" id="contacto">
       <div className="footer__container">
@@ -81,7 +52,7 @@ function Footer(): JSX.Element {
 
         {/* Other links */}
         <div className="footer__other-links">
-          <Nav paths={footerPaths} backgroundIsLigth={false} col blank />
+          <NavLightBlank dir="column" paths={footerPaths} />
         </div>
 
         <h3 className="footer__quote coffe-quote">
