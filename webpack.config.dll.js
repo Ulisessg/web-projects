@@ -11,7 +11,7 @@ module.exports = {
     filename: '[name].dll.js',
     library: '[name]',
   },
-  target: ['web', 'es5'],
+  target: ['web'],
   plugins: [
     new DllPlugin({
       path: join(__dirname, 'dist', '[name]-manifest.json'),
