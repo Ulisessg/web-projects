@@ -10,6 +10,7 @@ import Loading from '../atoms/Loading';
 const Layout = lazy(() => import('../organisms/Layout'));
 const IndexOrganism = lazy(() => import('../organisms/IndexOrganism'));
 const Blogs = lazy(() => import('../organisms/MainBlog'));
+const Gists = lazy(() => import('../organisms/Gists'));
 
 function Main(): JSX.Element {
   return (
@@ -34,6 +35,8 @@ function Main(): JSX.Element {
             <section className="wrapper" id="posts">
               <Blogs />
             </section>
+
+            <Gists />
           </main>
         </Layout>
       </Suspense>
