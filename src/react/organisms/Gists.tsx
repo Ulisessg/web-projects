@@ -3,6 +3,7 @@ import SectionNoModal from './SectionNoModal';
 import GetGists from '../utils/getGists';
 import LoadingSpinner from '../atoms/Loading';
 import TransformGistsResponse from '../utils/transformGistsResponse';
+import '../../styles/organisms/mainBlog-styles.styl';
 
 function Gists() {
   const [response, setResponse] = useState<any>();
@@ -31,8 +32,16 @@ function Gists() {
 
       {status === 'success' && (
         <>
-          <h2>Últimos Gists</h2>
-          <section className="sections">
+          <h2
+            style={{
+              textAlign: 'center',
+              fontSize: '2rem',
+              margin: '5vh 0',
+            }}
+          >
+            Últimos Gists
+          </h2>
+          <section className="sections" style={{ margin: '0 auto' }}>
             <SectionNoModal images={response} sections={response} />
           </section>
         </>
