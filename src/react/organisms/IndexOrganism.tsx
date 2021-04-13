@@ -40,7 +40,8 @@ function IndexOrganism(): JSX.Element {
     },
     {
       title: 'Platzi stack',
-      image: Logo,
+      image:
+        'https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2Fv2%2Fprojects%2Fplatzi%20stack.png?alt=media&token=db54843b-d3b2-4bcb-a3d1-1ec0b409b99c',
     },
     {
       title: 'Learningator image',
