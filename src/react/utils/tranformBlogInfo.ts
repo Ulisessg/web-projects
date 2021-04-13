@@ -6,7 +6,7 @@ export default function transformBlogInfo(blogs) {
       id: blog.id,
       image: blog.seoCardUrl,
       title: blog.title,
-      name: blog.name,
+      name: `/${blog.name}`,
       description: blog.metaDescription,
     };
 

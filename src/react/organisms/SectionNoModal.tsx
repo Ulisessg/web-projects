@@ -29,7 +29,7 @@ function SectionNoModal({ sections, images, linkText = 'Leer más' }) {
               <h3 className="section--title">{section.title}</h3>
               <p className="section--description">{section.description}</p>
               <LinkDarkNoBlank
-                path={`/${section.name}`}
+                path={section.name}
                 text={linkText}
                 label={`Leer más sobre ${section.name}`}
               />
