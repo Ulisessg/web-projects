@@ -46,7 +46,7 @@ function IndexOrganism(): JSX.Element {
     {
       title: 'Learningator image',
       image:
-        'https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2Fv2%2Fprojects%2Flearningathor.jpg?alt=media&token=77ae6a9e-3201-4db0-8576-e59136c47f31',
+        'https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2Fv2%2Fprojects%2FLearningator.png?alt=media&token=3a092855-76a8-457c-ba5d-7a085530b1eb',
     },
     {
       title: 'Always update',
