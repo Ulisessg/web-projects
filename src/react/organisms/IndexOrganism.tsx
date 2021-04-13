@@ -22,18 +22,11 @@ function IndexOrganism(): JSX.Element {
     });
   }, [isMobile]);
 
-  interface Path {
-    id: number;
-    name: string;
-    description: string;
-    path: string;
-  }
-
   const projectsImages = [
     {
       title: 'Finders logo',
       image:
-        'https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2Fv2%2Fprojects%2Ffindme.png?alt=media&token=349b36d9-a692-4461-8ca5-c33e839ae5d3',
+        'https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2Fv2%2Fprojects%2Ffindme.png?alt=media&token=99b04a9b-acf6-460b-8dd6-a5f508beff3a',
     },
     {
       title: 'Platzi stack',
