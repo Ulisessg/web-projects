@@ -29,9 +29,6 @@ function IndexOrganism(): JSX.Element {
     path: string;
   }
 
-  const Logo =
-    'https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2Fv2%2Flogo-192x192.png?alt=media&token=1a4aa1ca-1846-41b3-9005-9c4dc5c4d888';
-
   const projectsImages = [
     {
       title: 'Finders logo',
@@ -51,11 +48,12 @@ function IndexOrganism(): JSX.Element {
     {
       title: 'Always update',
       image:
-        'https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2FSEO%2FalwaysUpdate.ico?alt=media&token=d41e23f6-aeec-40d6-ab25-7e698f7b4e19',
+        'https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2Fv2%2Fprojects%2FalwaysUpdate.png?alt=media&token=fe4b78ec-d2e4-4834-a1e7-ce8f2f221db6',
     },
     {
       title: 'UD logo',
-      image: Logo,
+      image:
+        'https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2Fv2%2Fprojects%2FUD.png?alt=media&token=14d7b327-3b49-4412-be21-b9816e6ab80e',
     },
   ];
   const projectsInfo = [
