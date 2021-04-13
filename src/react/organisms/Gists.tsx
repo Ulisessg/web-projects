@@ -32,18 +32,20 @@ function Gists() {
 
       {status === 'success' && (
         <>
-          <h2
-            style={{
-              textAlign: 'center',
-              fontSize: '2rem',
-              margin: '5vh 0',
-            }}
-          >
-            Últimos Gists
-          </h2>
-          <section className="sections" style={{ margin: '0 auto' }}>
-            <SectionNoModal images={response} sections={response} />
-          </section>
+          <div style={{ width: '90vw', margin: '0 auto' }}>
+            <h2
+              style={{
+                textAlign: 'center',
+                fontSize: '2rem',
+                margin: '5vh 0',
+              }}
+            >
+              Últimos Gists
+            </h2>
+            <section className="sections" style={{ margin: '0 auto' }}>
+              <SectionNoModal images={response} sections={response} />
+            </section>
+          </div>
         </>
       )}
     </>
