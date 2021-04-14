@@ -329,6 +329,9 @@ Allow: /
 <loc>https://ulisessg.com/blog</loc>
 </url>
 <url>
+<loc>https://ulisessg.com/gist</loc>
+</url>
+<url>
 <loc>https://ulisessg.com/design</loc>
 </url>
 `;
