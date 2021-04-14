@@ -12,9 +12,9 @@ function Blog(): JSX.Element {
   return (
     <>
       <Layout>
-        <div className="wrapper">
+        <main role="main" className="wrapper">
           <MainBlog />
-        </div>
+        </main>
       </Layout>
     </>
   );

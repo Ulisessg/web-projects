@@ -26,7 +26,7 @@ function MainBlog(): JSX.Element {
 
   return (
     <>
-      <main className="main" id="main">
+      <div className="main" id="main">
         <h1>Ultimos posts:</h1>
         <div className="wrapper">
           <section className="sections">
@@ -54,7 +54,7 @@ function MainBlog(): JSX.Element {
             )}
           </section>
         </div>
-      </main>
+      </div>
     </>
   );
 }
