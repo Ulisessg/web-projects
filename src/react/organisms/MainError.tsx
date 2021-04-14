@@ -1,6 +1,5 @@
 import React from 'react';
-
-import '../../styles/atoms/buttonGoBack.styl';
+import ButtonGoBackStyles from '../../styles/atoms/ButtonGoBackStyles';
 
 function MainError(): JSX.Element {
   function goBack() {
@@ -9,28 +8,27 @@ function MainError(): JSX.Element {
 
   return (
     <>
-      <main id='main'>
-        <h1 className='message'>
+      <main id="main">
+        <h1 className="message">
           Página no encontrada o en proceso de construcción&nbsp;
-          <span role='img' aria-label='emoji ingeniera'>
+          <span role="img" aria-label="emoji ingeniera">
             👷‍♀️
           </span>
-          <span role='img' aria-label='emoji señal de construcción'>
+          <span role="img" aria-label="emoji señal de construcción">
             🚧
           </span>
-          <span role='img' aria-label='emoji ingeniero'>
+          <span role="img" aria-label="emoji ingeniero">
             👷‍♂️
           </span>
         </h1>
-        <button
-          title='Regresar a la página anterior'
-          className='button-back'
-          type='button'
+
+        <ButtonGoBackStyles
+          title="Regresar a la página anterior"
+          type="button"
           onClick={goBack}
         >
           Regresar a la página anterior
-        </button>
-        <span />
+        </ButtonGoBackStyles>
       </main>
     </>
   );
