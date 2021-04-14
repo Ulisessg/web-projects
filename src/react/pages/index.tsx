@@ -3,6 +3,11 @@ import ReactDom from 'react-dom';
 import GlobalStyles from '../../styles/GlobalStyles';
 import Loading from '../atoms/Loading';
 
+const Layout = lazy(() => import('../organisms/Layout'));
+const AboutMe = lazy(() => import('../organisms/IndexOrganism'));
+const Blogs = lazy(() => import('../templates/Blog'));
+const Gists = lazy(() => import('../organisms/Gists'));
+
 if (process.env.NODE_ENV !== 'development') {
   // Check that service workers are supported
   if ('serviceWorker' in navigator) {
@@ -13,7 +18,7 @@ if (process.env.NODE_ENV !== 'development') {
   }
 }
 
-const IndexTemplate = lazy(() => import('../templates/IndexTemplate'));
+// const IndexTemplate = lazy(() => import('../templates/IndexTemplate'));
 
 //  App
 
@@ -21,7 +26,13 @@ ReactDom.render(
   <>
     <Suspense fallback={<Loading />}>
       <GlobalStyles />
-      <IndexTemplate />
+      <Layout>
+        <main role="main">
+          <AboutMe />
+          <Blogs />
+          <Gists />
+        </main>
+      </Layout>
     </Suspense>
   </>,
   window.document.getElementById('root'),

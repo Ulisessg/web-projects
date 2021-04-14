@@ -21,7 +21,9 @@ render(
     <Suspense fallback={<LoadingSpinner />}>
       <GlobalStyles />
       <Layout>
-        <GistsTemplate />
+        <main role="main">
+          <GistsTemplate />
+        </main>
       </Layout>
     </Suspense>
   </>,

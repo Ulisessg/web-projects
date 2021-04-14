@@ -4,6 +4,8 @@ import ReactDom from 'react-dom';
 import GlobalStyles from '../../styles/GlobalStyles';
 import Loading from '../atoms/Loading';
 
+const Layout = lazy(() => import('../organisms/Layout'));
+
 if (process.env.NODE_ENV !== 'development') {
   // Check that service workers are supported
   if ('serviceWorker' in navigator) {
@@ -21,7 +23,12 @@ ReactDom.render(
   <>
     <Suspense fallback={<Loading />}>
       <GlobalStyles />
-      <Blog />
+
+      <Layout>
+        <main role="main" className="wrapper">
+          <Blog />
+        </main>
+      </Layout>
     </Suspense>
   </>,
   document.getElementById('root'),
