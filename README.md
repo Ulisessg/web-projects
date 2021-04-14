@@ -18,6 +18,7 @@ Execute in your terminal
 
 - ### [React](https://github.com/facebook/react)
 - ### [Stylus](https://stylus-lang.com/)
+- ### [Styled Components](https://styled-components.com/docs/basics)
 - ### [Redux](https://github.com/reduxjs/redux)
 - ### [Webpack](https://github.com/webpack/webpack)
 - ### [Husky](https://github.com/typicode/husky)
