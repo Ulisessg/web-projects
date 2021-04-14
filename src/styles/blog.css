@@ -159,6 +159,7 @@ a {
 }
 .linkedin-badge--go-profile > a {
   padding: 7px;
+  font-size: 1.5rem;
   color: #007db3;
 }
 .linkedin-badge--go-profile > a:hover,
