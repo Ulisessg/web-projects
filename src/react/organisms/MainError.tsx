@@ -1,5 +1,6 @@
 import React from 'react';
 import ButtonGoBackStyles from '../../styles/atoms/ButtonGoBackStyles';
+import DogIframe from '../atoms/DogIFrame';
 
 function MainError(): JSX.Element {
   function goBack() {
@@ -29,6 +30,9 @@ function MainError(): JSX.Element {
         >
           Regresar a la página anterior
         </ButtonGoBackStyles>
+
+        <h2>O mejor ve a este perrito 💚</h2>
+        <DogIframe />
       </main>
     </>
   );
