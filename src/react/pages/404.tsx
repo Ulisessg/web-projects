@@ -14,12 +14,16 @@ if (process.env.NODE_ENV !== 'development') {
 }
 
 const Error = lazy(() => import('../templates/Error'));
-
+const Layout = lazy(() => import('../organisms/Layout'));
 ReactDom.render(
   <>
     <Suspense fallback={<Loading />}>
       <GlobalStyles />
-      <Error />
+      <Layout>
+        <main id="main">
+          <Error />
+        </main>
+      </Layout>
     </Suspense>
   </>,
   window.document.getElementById('root'),
