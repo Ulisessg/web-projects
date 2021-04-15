@@ -5,7 +5,7 @@ import Loading from '../atoms/Loading';
 
 const Layout = lazy(() => import('../organisms/Layout'));
 // const AboutMe = lazy(() => import('../organisms/IndexOrganism'));
-const AboutMe = lazy(() => import('../molecules/AboutMe'));
+const AboutMe = lazy(() => import('../molecules/Description'));
 const Blogs = lazy(() => import('../templates/Blog'));
 const Gists = lazy(() => import('../organisms/Gists'));
 
