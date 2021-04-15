@@ -1,4 +1,3 @@
-/* eslint-disable import/prefer-default-export */
 import { Path } from '../interfaces_and_types/organisms/FooterTypes';
 
 export const footerPaths: Array<Path> = [
