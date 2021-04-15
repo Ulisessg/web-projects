@@ -2,6 +2,7 @@ import React, { lazy, Suspense } from 'react';
 import ReactDom from 'react-dom';
 import Loading from '../atoms/Loading';
 import GlobalStyles from '../../styles/GlobalStyles';
+import Styles404 from '../../styles/pages/404Styles';
 
 if (process.env.NODE_ENV !== 'development') {
   // Check that service workers are supported
@@ -20,9 +21,9 @@ ReactDom.render(
     <Suspense fallback={<Loading />}>
       <GlobalStyles />
       <Layout>
-        <main id="main">
+        <Styles404 id="main">
           <Error />
-        </main>
+        </Styles404>
       </Layout>
     </Suspense>
   </>,

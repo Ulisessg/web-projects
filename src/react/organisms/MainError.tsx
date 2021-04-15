@@ -30,7 +30,7 @@ function MainError(): JSX.Element {
         Regresar a la página anterior
       </ButtonGoBackStyles>
 
-      <h2>O mejor ve a este perrito 💚</h2>
+      <h2>O puedes ver a este perrito 💚</h2>
       <DogIframe />
     </>
   );

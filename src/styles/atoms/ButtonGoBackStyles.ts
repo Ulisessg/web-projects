@@ -12,7 +12,6 @@ const ButtonGoBackStyles = styled.button`
   &:focus,
   &:hover {
     background-color: ${backgroundDark};
-    border: 2px solid white;
     cursor: pointer;
   }
 `;
