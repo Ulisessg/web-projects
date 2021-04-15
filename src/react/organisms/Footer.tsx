@@ -7,7 +7,7 @@ import NavLightBlank from '../molecules/NavLightBlank';
 
 function Footer(): JSX.Element {
   return (
-    <footer className="footer" id="contacto">
+    <footer className="footer" id="contact">
       <div className="footer__container">
         <LazyImage
           alt="Ulises Antonio Samano Galvan"

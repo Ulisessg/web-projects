@@ -84,3 +84,21 @@ export const experienceInfos = [
       'UD es un sitio web enfocado principalmente en compartir conocimiento de tecnologia, además de contener mis proyectos personales, este sitio está creado usando el stack MERN y Typescript.',
   },
 ];
+
+export const IndexSections = [
+  {
+    path: '#experience',
+    label: 'Mi experiencia',
+    text: 'Mi experiencia',
+  },
+  {
+    path: '#posts',
+    label: 'Ultimos posts',
+    text: 'Ultimos posts',
+  },
+  {
+    path: '#contact',
+    label: 'Ir al contacto',
+    text: 'Ir al contacto',
+  },
+];

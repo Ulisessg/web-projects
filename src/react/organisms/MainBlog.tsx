@@ -28,7 +28,7 @@ function MainBlog(): JSX.Element {
     <>
       <div className="main" id="main">
         <h1>Ultimos posts:</h1>
-        <div className="wrapper">
+        <div className="wrapper" id="posts">
           <section className="sections">
             {/* Loading blogs message */}
             {blogStatus === 'loading' && (

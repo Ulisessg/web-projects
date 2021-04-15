@@ -2,12 +2,14 @@ import React, { lazy, Suspense } from 'react';
 import ReactDom from 'react-dom';
 import GlobalStyles from '../../styles/GlobalStyles';
 import Loading from '../atoms/Loading';
+import { IndexSections } from '../states/index';
 
 const Layout = lazy(() => import('../organisms/Layout'));
 const AboutMe = lazy(() => import('../molecules/Description'));
 const Blogs = lazy(() => import('../templates/Blog'));
 const Gists = lazy(() => import('../organisms/Gists'));
 const Experience = lazy(() => import('../templates/Experience'));
+const PageNav = lazy(() => import('../organisms/DynamicNav'));
 
 if (process.env.NODE_ENV !== 'development') {
   // Check that service workers are supported
@@ -28,6 +30,7 @@ ReactDom.render(
       <Layout>
         <main role="main">
           <AboutMe />
+          <PageNav paths={IndexSections} />
           <Experience />
           <Blogs />
           <Gists />

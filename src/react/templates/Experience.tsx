@@ -8,7 +8,7 @@ function Experience() {
     <>
       <Container>
         <Title>Experiencia</Title>
-        <section className="sections" id="experiencia">
+        <section className="sections" id="experience">
           <SectionWithModal
             images={experienceImages}
             sections={experienceInfos}
