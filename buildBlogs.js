@@ -164,6 +164,13 @@ Allow: /
               >
             </p>
           </li>
+          <li class="ul__li">
+            <p>
+              <a aria-label="Piezas de código que comparto" class="ul__li--a ul__li--a-dark" href="/gist"
+                >Gists</a
+              >
+            </p>
+          </li>
         </ul>
       </nav>
     </header>

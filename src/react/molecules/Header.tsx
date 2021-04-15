@@ -31,6 +31,12 @@ function Header(): JSX.Element {
       description: 'Mi cuenta en GitHub',
       path: 'https://github.com/Ulisessg',
     },
+    {
+      id: 4,
+      name: 'Gists',
+      description: 'Piezas de código que comparto',
+      path: '/gist',
+    },
   ];
 
   return (
