@@ -1,7 +1,7 @@
 export interface imgProps {
   src: string;
   alt: string;
-  classN: string;
+  classN?: string;
 }
 
 export interface SectionWithModalProps {
