@@ -26,9 +26,11 @@ function MainBlog(): JSX.Element {
 
   return (
     <>
-      <div className="main" id="main">
-        <h1>Ultimos posts:</h1>
-        <div className="wrapper" id="posts">
+      <div>
+        <h1 style={{ textAlign: 'center', marginTop: '50px' }}>
+          Ultimos posts:
+        </h1>
+        <div id="posts">
           <section className="sections">
             {/* Loading blogs message */}
             {blogStatus === 'loading' && (

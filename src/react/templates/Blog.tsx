@@ -1,16 +1,14 @@
 import React from 'react';
 
-//  Styles
-import '../../styles/organisms/mainBlog-styles.styl';
-import '../../styles/templates/blog-styles.styl';
-
 //  Components
 import MainBlog from '../organisms/MainBlog';
 
 function Blog(): JSX.Element {
   return (
     <>
-      <MainBlog />
+      <div style={{ margin: '0 auto', width: '90vw' }}>
+        <MainBlog />
+      </div>
     </>
   );
 }
