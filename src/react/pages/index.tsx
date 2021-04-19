@@ -1,10 +1,10 @@
 import React, { lazy, Suspense } from 'react';
 import ReactDom from 'react-dom';
 import GlobalStyles from '../../styles/GlobalStyles';
+import Layout from '../organisms/Layout';
 import Loading from '../atoms/Loading';
 import { IndexSections } from '../states/index';
 
-const Layout = lazy(() => import('../organisms/Layout'));
 const AboutMe = lazy(() => import('../molecules/Description'));
 const Blogs = lazy(() => import('../templates/Blog'));
 const Gists = lazy(() => import('../organisms/Gists'));

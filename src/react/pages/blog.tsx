@@ -3,8 +3,7 @@ import React, { lazy, Suspense } from 'react';
 import ReactDom from 'react-dom';
 import GlobalStyles from '../../styles/GlobalStyles';
 import Loading from '../atoms/Loading';
-
-const Layout = lazy(() => import('../organisms/Layout'));
+import Layout from '../organisms/Layout';
 
 if (process.env.NODE_ENV !== 'development') {
   // Check that service workers are supported
