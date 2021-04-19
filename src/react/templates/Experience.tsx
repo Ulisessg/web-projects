@@ -8,12 +8,12 @@ function Experience() {
     <>
       <Container>
         <Title>Experiencia</Title>
-        <section className="sections" id="experience">
+        <div id="experience">
           <SectionWithModal
             images={experienceImages}
             sections={experienceInfos}
           />
-        </section>
+        </div>
       </Container>
     </>
   );

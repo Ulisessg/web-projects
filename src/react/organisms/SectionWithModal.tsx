@@ -5,7 +5,14 @@ import ButtonDark from '../atoms/ButtonDark';
 import { SectionWithModalProps } from '../interfaces';
 import Loading from '../atoms/Loading';
 import SectionProps from '../interfaces_and_types/organisms/SectionProps';
-import '../../styles/organisms/sectionWithModal.styl';
+
+import {
+  Sections,
+  SectionContainer,
+  ImageContainer,
+  Title,
+  Description,
+} from '../../styles/organisms/SectionWithModalStyles';
 
 const ModalComponent = lazy(() => import('../molecules/SectionModal'));
 
@@ -49,16 +56,20 @@ function Section({
 
   return (
     <>
-      <section id={id} className="section--container" key={id}>
-        <div className="section-img-container">
+      <SectionContainer id={id} key={id}>
+        <ImageContainer>
           <ImgLazy
             classN="section--img"
             src={images.image}
             alt={images.title}
           />
-        </div>
-        <h3 className="section--title">{name}</h3>
-        <p className="section--description">{description}</p>
+        </ImageContainer>
+        <Title>{name}</Title>
+
+        <Description className="section--description">
+          {description}
+        </Description>
+
         <ButtonDark handleClick={handleModal} text="Leer más" type="button" />
         {openModal && (
           <Suspense fallback={<Loading heightExternal="100%" />}>
@@ -73,7 +84,7 @@ function Section({
             />
           </Suspense>
         )}
-      </section>
+      </SectionContainer>
     </>
   );
 }
@@ -82,23 +93,25 @@ function SectionWithModal({ sections, images }: SectionWithModalProps) {
   let iteration: number = -1;
   return (
     <>
-      {sections.map(
-        (section): JSX.Element => {
-          iteration += 1;
-          return (
-            <>
-              <Section
-                key={section.name}
-                description={section.description}
-                id={section.id}
-                images={images[iteration]}
-                name={section.name}
-                path={section.path}
-              />
-            </>
-          );
-        },
-      )}
+      <Sections>
+        {sections.map(
+          (section): JSX.Element => {
+            iteration += 1;
+            return (
+              <>
+                <Section
+                  key={section.name}
+                  description={section.description}
+                  id={section.id}
+                  images={images[iteration]}
+                  name={section.name}
+                  path={section.path}
+                />
+              </>
+            );
+          },
+        )}
+      </Sections>
     </>
   );
 }

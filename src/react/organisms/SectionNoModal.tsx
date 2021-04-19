@@ -2,41 +2,53 @@ import React from 'react';
 
 import ImgLazy from '../molecules/Img';
 import LinkDarkNoBlank from '../atoms/LinkDarkNoBlank';
-
-import '../../styles/organisms/sectionWithModal.styl';
+import {
+  Sections,
+  SectionContainer,
+  ImageContainer,
+  Title,
+  Description,
+} from '../../styles/organisms/SectionWithModalStyles';
 
 function SectionNoModal({ sections, images, linkText = 'Leer más' }) {
   let iteration: number = -1;
 
   return (
     <>
-      {sections.map(
-        (section): JSX.Element => {
-          iteration += 1;
-          return (
-            <section
-              id={section.id}
-              className="section--container"
-              key={section.id}
-            >
-              <div className="section-img-container">
-                <ImgLazy
-                  classN="section--img"
-                  src={images[iteration].image}
-                  alt={images[iteration].title}
+      <Sections>
+        {sections.map(
+          (section): JSX.Element => {
+            iteration += 1;
+            return (
+              <SectionContainer
+                id={section.id}
+                className="section--container"
+                key={section.id}
+              >
+                <ImageContainer className="section-img-container">
+                  <ImgLazy
+                    classN="section--img"
+                    src={images[iteration].image}
+                    alt={images[iteration].title}
+                  />
+                </ImageContainer>
+
+                <Title className="section--title">{section.title}</Title>
+
+                <Description className="section--description">
+                  {section.description}
+                </Description>
+
+                <LinkDarkNoBlank
+                  path={section.name}
+                  text={linkText}
+                  label={`Leer más sobre ${section.name}`}
                 />
-              </div>
-              <h3 className="section--title">{section.title}</h3>
-              <p className="section--description">{section.description}</p>
-              <LinkDarkNoBlank
-                path={section.name}
-                text={linkText}
-                label={`Leer más sobre ${section.name}`}
-              />
-            </section>
-          );
-        },
-      )}
+              </SectionContainer>
+            );
+          },
+        )}
+      </Sections>
     </>
   );
 }

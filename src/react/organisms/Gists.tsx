@@ -42,9 +42,7 @@ function Gists() {
             >
               Últimos Gists
             </h2>
-            <section className="sections" style={{ margin: '0 auto' }}>
-              <SectionNoModal images={response} sections={response} />
-            </section>
+            <SectionNoModal images={response} sections={response} />
           </div>
         </>
       )}
