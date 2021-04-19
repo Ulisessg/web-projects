@@ -18,7 +18,7 @@ const NavLigthStyles = styled.nav<props>`
 
     & li {
       align-self: center;
-      margin-bottom: 15px;
+      margin-bottom: ${({ dir }) => (dir === 'column' ? '20px' : '0px')};
     }
   }
 `;
