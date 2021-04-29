@@ -2,9 +2,14 @@ import React from 'react';
 import { createPortal } from 'react-dom';
 import ButtonClose from '../atoms/ButtonClose';
 import ImgLazy from './Img';
+import LinkDarkBlank from '../atoms/LinkDarkBlank';
+import {
+  SectionModalContainer,
+  SectionModalImageContainer,
+  SectionModalTitle,
+  ExternalStyles,
+} from '../../styles/molecules/SectionModalStyles';
 import { SectionModalProps } from '../interfaces';
-
-import '../../styles/molecules/SectionModal.styl';
 
 function SectionModal({
   src,
@@ -13,25 +18,28 @@ function SectionModal({
   path,
   description,
   closeModal,
-}: SectionModalProps): any {
+}: SectionModalProps): JSX.Element {
   return createPortal(
     <>
-      <section className="section--modal">
+      <ExternalStyles />
+      <SectionModalContainer>
         <ButtonClose handleClick={closeModal} />
 
-        <div className="section-modal-img-container">
+        <SectionModalImageContainer>
           <ImgLazy classN="section-modal--img" src={src} alt={alt} />
-        </div>
-        <h3 className="section__modal--title">{name}</h3>
-        <p className="section__modal--description">{description}</p>
-        <a
-          aria-label={`Leer más sobre ${name}`}
-          className="section--link ul__li--a-dark modal-redirect"
-          href={path}
-        >
-          <span>Leer más</span>
-        </a>
-      </section>
+        </SectionModalImageContainer>
+        <SectionModalTitle className="section__modal--title">
+          {name}
+        </SectionModalTitle>
+        <p>{description}</p>
+
+        <LinkDarkBlank
+          label={`Ver más sobre ${name}`}
+          path={path}
+          text="Ver el proyecto"
+          className="section-modal-link"
+        />
+      </SectionModalContainer>
     </>,
     document.getElementById('modal'),
   );
