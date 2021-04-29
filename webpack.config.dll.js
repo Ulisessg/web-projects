@@ -4,7 +4,7 @@ const { DllPlugin } = require('webpack');
 module.exports = {
   mode: 'production',
   entry: {
-    modules: ['react', 'react-dom'],
+    modules: ['react', 'react-dom', 'styled-components'],
   },
   output: {
     path: join(__dirname, 'dist', 'auto'),
