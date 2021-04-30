@@ -431,9 +431,14 @@ a {
 #blog * {
   margin-top: 15px;
 }
+
+#blog a {
+  color: #007db3;
+}
+
 #blog a:focus,
 #blog a:hover {
-  color: #007db3;
+  color: #0ebbf3;
 }
 h1 {
   margin-bottom: 10vh;
