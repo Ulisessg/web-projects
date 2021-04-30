@@ -25,6 +25,10 @@ a {
   font-size: 1rem + 0.5;
 }
 
+* > #blog img {
+  width: 100%;
+}
+
 /* Layout starts*/
 
 .skip-link {
@@ -55,44 +59,88 @@ a {
 .footer {
   height: auto;
   background-color: #012661;
-  width: 100%;
   width: 100vw;
   box-shadow: 0px -3px 8px 0px #bcbdb0;
 }
-
 .footer__container {
   width: 80vw;
   margin: 0 auto;
-  display: flex;
-  display: -webkit-flex;
-  display: flex;
-  flex-direction: column;
-  -ms-flex-direction: column;
+  display: grid;
+  display: -ms-grid;
+  display: -moz-grid;
   justify-items: center;
   text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .linkedin-badge {
+    width: 42%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer__container {
+    grid-template-areas:
+      'logo quoteMine'
+      'socialMediaTitle socialMediaTitle'
+      'socialMediaImages socialMediaImages'
+      'badge extraLinks'
+      'loveQuote loveQuote';
+  }
+  .footer--logo {
+    grid-area: logo;
+    margin-top: 30px;
+  }
+
+  .footer__quote {
+    grid-area: quoteMine;
+    margin-top: 30px;
+  }
+  .follow-me {
+    grid-area: socialMediaTitle;
+    margin-top: 30px;
+  }
+  .footer__quote {
+    grid-area: follow-me;
+    margin-top: 20px;
+  }
+  .footer__social {
+    grid-area: socialMediaImages;
+    margin-top: 30px;
+    margin-bottom: 40px;
+  }
+  .linkedin-badge {
+    grid-area: badge;
+    margin-top: 30px;
+  }
+  .footer__other-links {
+    grid-area: extraLinks;
+    margin-top: 30px;
+  }
+  .coffe-quote {
+    grid-area: loveQuote;
+    margin-top: 30px;
+  }
 }
 
 .footer--logo {
   height: 80px;
   margin: 30px auto;
 }
-
 .footer__quote {
   color: white;
   text-align: center;
-  margin: 40px 0 10px 0;
+  margin: 40px 0px 10px 0px;
   padding: 17px;
 }
-
 .footer__social {
   width: 100%;
   display: flex;
+  display: -webkit-flex;
   justify-content: space-around;
 }
-
 .footer__social--logo {
   height: 40px;
-  width: auto;
 }
 
 .footer__social > a:hover,
@@ -100,13 +148,59 @@ a {
   height: 39px;
   border: 1px solid white;
 }
+.footer__social--logo {
+  height: 39px;
+}
 
 .footer__other-links {
   margin-top: 30px;
 }
-
 .footer__other-links > nav > ul > li {
   margin-top: 30px;
+}
+
+@media screen and (min-width: 1200px) {
+  .footer__container {
+    grid-template-areas:
+      'logo quoteMine'
+      'socialMediaTitle socialMediaTitle'
+      'socialMediaImages socialMediaImages'
+      'badge extraLinks'
+      'loveQuote loveQuote';
+  }
+
+  .footer--logo {
+    grid-area: logo;
+    margin-top: 30px;
+  }
+  .footer__quote {
+    grid-area: quoteMine;
+    margin-top: 30px;
+  }
+  .follow-me {
+    grid-area: socialMediaTitle;
+    margin-top: 30px;
+  }
+  .footer__quote {
+    margin-top: 20px;
+  }
+  .footer__social {
+    grid-area: socialMediaImages;
+    margin-top: 30px;
+    margin-bottom: 40px;
+  }
+  .linkedin-badge {
+    grid-area: badge;
+    margin-top: 30px;
+  }
+  .footer__other-links {
+    grid-area: extraLinks;
+    margin-top: 30px;
+  }
+  .coffe-quote {
+    grid-area: loveQuote;
+    margin-top: 30px;
+  }
 }
 
 /* LinkedIn Badge */
@@ -175,59 +269,11 @@ a {
   color: black;
 }
 
-.linkedin-logo {
-  height: 40px;
-}
-
 /* LinkedIn Badge */
 
 @media screen and (min-width: 768px) {
   .linkedin-badge {
     width: 42%;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .footer__container {
-    grid-template-areas:
-      'logo quoteMine'
-      'socialMediaTitle socialMediaTitle'
-      'socialMediaImages socialMediaImages'
-      'badge extraLinks'
-      'loveQuote loveQuote';
-  }
-
-  .footer--logo {
-    grid-area: logo;
-    margin-top: 30px;
-  }
-  .footer__quote {
-    grid-area: quoteMine;
-    margin-top: 30px;
-  }
-  .follow-me {
-    grid-area: socialMediaTitle;
-    margin-top: 30px;
-  }
-  .footer__quote {
-    margin-top: 20px;
-  }
-  .footer__social {
-    grid-area: socialMediaImages;
-    margin-top: 30px;
-    margin-bottom: 40px;
-  }
-  .linkedin-badge {
-    grid-area: badge;
-    margin-top: 30px;
-  }
-  .footer__other-links {
-    grid-area: extraLinks;
-    margin-top: 30px;
-  }
-  .coffe-quote {
-    grid-area: loveQuote;
-    margin-top: 30px;
   }
 }
 
@@ -372,6 +418,7 @@ a {
   width: 90vw;
   text-align: left;
 }
+
 @media screen and (min-width: 900px) {
   #blog {
     width: 80%;
@@ -503,21 +550,7 @@ td {
     padding: 20px auto;
   }
 }
-* > img {
-  width: 80%;
-  height: 40%;
-  object-fit: contain;
-}
-@media screen and (max-width: 900px) {
-  * > img {
-    width: 100%;
-  }
-}
-@media screen and (min-width: 900px) {
-  * > img {
-    margin-left: 10%;
-  }
-}
+
 h1 {
   color: #020400;
   text-align: center;
