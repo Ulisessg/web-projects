@@ -61,7 +61,6 @@ a {
 }
 
 .footer__container {
-  width: 80%;
   width: 80vw;
   margin: 0 auto;
   display: flex;
@@ -235,7 +234,6 @@ a {
 /* Footer ends */
 
 .header {
-  width: 100%;
   width: 100vw;
   display: flex;
   display: -webkit-flex;
@@ -395,16 +393,17 @@ h1 {
   font-size: 1.8rem;
 }
 blockquote {
-  font-size: 1.4em;
+  font-size: 1.2rem;
+  font-style: italic;
   width: 100%;
   margin: 50px auto;
-  font-style: italic;
-  color: #555;
-  padding: 1.2em 30px 1.2em 45px;
+  color: #252323;
+  padding: 20px;
   border-left: 8px solid #176085;
   line-height: 1.4;
   position: relative;
   background: #ededed;
+  border-left: 10px solid #176085;
 }
 @media screen and (min-width: 900px) {
   blockquote {
@@ -425,13 +424,6 @@ pre {
   overflow: auto;
   padding: 1em 1.5em;
   height: 20vh;
-}
-
-blockquote {
-  color: #666666;
-  margin: 0;
-  padding-left: 3em;
-  border-left: 0.5em #eee solid;
 }
 
 pre,
