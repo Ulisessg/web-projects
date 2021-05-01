@@ -42,11 +42,7 @@ function Gists(): JSX.Element {
             >
               Últimos Gists
             </h2>
-            <SectionNoModal
-              images={response}
-              sections={response}
-              linkText={response}
-            />
+            <SectionNoModal images={response} sections={response} />
           </div>
         </>
       )}

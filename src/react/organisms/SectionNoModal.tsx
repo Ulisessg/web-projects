@@ -13,14 +13,9 @@ import {
 interface temporalProps {
   sections: Array<any>;
   images: Array<any> | any;
-  linkText: string;
 }
 
-function SectionNoModal({
-  sections,
-  images,
-  linkText = 'Leer más',
-}: temporalProps) {
+function SectionNoModal({ sections, images }: temporalProps): JSX.Element {
   let iteration = -1;
 
   return (
