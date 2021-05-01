@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { buttonDarkColor, backgroundDark, boxShadowColor } from '../variables';
 
 const Link = styled.a`
+  font-size: 1rem;
   border-radius: 15px;
   display: flex;
   display: -webkit-flex;
@@ -10,7 +11,7 @@ const Link = styled.a`
   justify-content: center;
   margin: 30px 0px;
   width: 90%;
-  height: 50px;
+  height: 70px;
   text-align: -webkit-center;
   text-align: center;
   background-color: ${buttonDarkColor};
