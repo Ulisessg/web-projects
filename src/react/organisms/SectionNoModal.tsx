@@ -41,7 +41,7 @@ function SectionNoModal({ sections, images, linkText = 'Leer más' }) {
 
                 <LinkDarkNoBlank
                   path={section.name}
-                  text={linkText}
+                  text={`Ver más sobre ${section.title}`}
                   label={`Leer más sobre ${section.name}`}
                 />
               </SectionContainer>

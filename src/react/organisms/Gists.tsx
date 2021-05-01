@@ -42,7 +42,11 @@ function Gists() {
             >
               Últimos Gists
             </h2>
-            <SectionNoModal images={response} sections={response} />
+            <SectionNoModal
+              images={response}
+              sections={response}
+              linkText={response}
+            />
           </div>
         </>
       )}

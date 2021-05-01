@@ -70,7 +70,11 @@ function Section({
           {description}
         </Description>
 
-        <ButtonDark handleClick={handleModal} text="Leer más" type="button" />
+        <ButtonDark
+          handleClick={handleModal}
+          text={`Ver más sobre ${name}`}
+          type="button"
+        />
         {openModal && (
           <Suspense fallback={<Loading heightExternal="100%" />}>
             <ModalComponent

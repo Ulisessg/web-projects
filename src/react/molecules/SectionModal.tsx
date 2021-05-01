@@ -36,7 +36,7 @@ function SectionModal({
         <LinkDarkBlank
           label={`Ver más sobre ${name}`}
           path={path}
-          text="Ver el proyecto"
+          text={`Ver más sobre ${name}`}
           className="section-modal-link"
         />
       </SectionModalContainer>
