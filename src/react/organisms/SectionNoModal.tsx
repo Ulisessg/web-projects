@@ -10,7 +10,17 @@ import {
   Description,
 } from '../../styles/organisms/SectionWithModalStyles';
 
-function SectionNoModal({ sections, images, linkText = 'Leer más' }) {
+interface temporalProps {
+  sections: Array<any>;
+  images: Array<any> | any;
+  linkText: string;
+}
+
+function SectionNoModal({
+  sections,
+  images,
+  linkText = 'Leer más',
+}: temporalProps) {
   let iteration = -1;
 
   return (
