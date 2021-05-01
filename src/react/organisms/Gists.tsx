@@ -5,7 +5,7 @@ import LoadingSpinner from '../atoms/Loading';
 import TransformGistsResponse from '../utils/transformGistsResponse';
 import '../../styles/organisms/mainBlog-styles.styl';
 
-function Gists() {
+function Gists(): JSX.Element {
   const [response, setResponse] = useState<any>();
   const [status, setStatus] = useState<string>('loading');
 

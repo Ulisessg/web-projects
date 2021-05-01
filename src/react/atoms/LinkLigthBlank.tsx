@@ -3,7 +3,7 @@ import LinkLighthStyles from '../../styles/atoms/LinkLigthStyles';
 
 import LinkProps from '../interfaces_and_types/atoms/LinkProps';
 
-function LinkLigthBlank({ label, text, path }: LinkProps) {
+function LinkLigthBlank({ label, text, path }: LinkProps): JSX.Element {
   return (
     <>
       <LinkLighthStyles

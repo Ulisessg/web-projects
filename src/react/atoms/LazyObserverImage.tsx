@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { imgProps } from '../interfaces';
 
-function LazyObserverImage({ src, alt, classN }: imgProps | any) {
+function LazyObserverImage({ src, alt, classN }: imgProps | any): JSX.Element {
   const Image = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
   const [notRequirePolifill, setNotRequirePolifill] = useState(

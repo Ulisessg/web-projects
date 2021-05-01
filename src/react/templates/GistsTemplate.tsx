@@ -1,7 +1,7 @@
 import React from 'react';
 import Gists from '../organisms/Gists';
 
-function GistsTemplate() {
+function GistsTemplate(): JSX.Element {
   return (
     <>
       <Gists />

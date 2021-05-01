@@ -5,7 +5,7 @@ import {
   DescriptionStyles,
 } from '../../styles/molecules/DescriptionStyles';
 
-function AboutMe() {
+function AboutMe(): JSX.Element {
   return (
     <>
       <Container>

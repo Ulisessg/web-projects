@@ -9,7 +9,7 @@ function RoundedImage({
   widthMobile,
   widthTablet,
   bottom,
-}: ImageProps) {
+}: ImageProps): JSX.Element {
   return (
     <>
       <RoundedImageStyles

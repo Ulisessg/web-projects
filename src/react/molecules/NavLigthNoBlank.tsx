@@ -3,7 +3,7 @@ import NavLigthStyles from '../../styles/molecules/NavLigthStyles';
 import LinkLigthNoBlank from '../atoms/LinkLigthNoBlank';
 import NavProps from '../interfaces_and_types/molecules/NavProps';
 
-function NavLigthRow({ paths, dir }: NavProps) {
+function NavLigthRow({ paths, dir }: NavProps): JSX.Element {
   return (
     <>
       <NavLigthStyles dir={dir}>

@@ -1,7 +1,7 @@
 import React from 'react';
 import DogIframeStyles from '../../styles/atoms/DogIframeStyles';
 
-function DogIFrame() {
+function DogIFrame(): JSX.Element {
   return (
     <>
       <DogIframeStyles

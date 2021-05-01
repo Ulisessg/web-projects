@@ -3,7 +3,7 @@ import NavProps from '../interfaces_and_types/molecules/NavProps';
 import LinkDarkBlank from '../atoms/LinkDarkBlank';
 import NavLigthStyles from '../../styles/molecules/NavLigthStyles';
 
-function NavDarkBlank({ paths, dir }: NavProps) {
+function NavDarkBlank({ paths, dir }: NavProps): JSX.Element {
   return (
     <>
       <NavLigthStyles dir={dir}>

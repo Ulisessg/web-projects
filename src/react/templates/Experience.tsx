@@ -3,7 +3,7 @@ import { experienceInfos, experienceImages } from '../states/index';
 import SectionWithModal from '../organisms/SectionWithModal';
 import { Container, Title } from '../../styles/templates/ExperienceStyles';
 
-function Experience() {
+function Experience(): JSX.Element {
   return (
     <>
       <Container>

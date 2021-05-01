@@ -3,8 +3,11 @@ import LinkDarkStyles from '../../styles/atoms/LinkDarkStyles';
 import LinkProps from '../interfaces_and_types/atoms/LinkProps';
 
 function LinkDarkBlank({
-  label, path, text, className,
-}: LinkProps) {
+  label,
+  path,
+  text,
+  className,
+}: LinkProps): JSX.Element {
   return (
     <>
       <LinkDarkStyles

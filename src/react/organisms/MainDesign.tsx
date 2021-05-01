@@ -10,7 +10,10 @@ interface MainDesignProps {
   imagesReducer: any;
 }
 
-function MainDesign({ sectionsReducer, imagesReducer }: MainDesignProps) {
+function MainDesign({
+  sectionsReducer,
+  imagesReducer,
+}: MainDesignProps): JSX.Element {
   const { sections } = sectionsReducer;
   const { images } = imagesReducer;
 
