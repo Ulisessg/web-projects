@@ -9,7 +9,7 @@ function Gists() {
   const [response, setResponse] = useState<any>();
   const [status, setStatus] = useState<string>('loading');
 
-  let gistsRequested: boolean = false;
+  let gistsRequested = false;
 
   useEffect(() => {
     gistsRequested = true;

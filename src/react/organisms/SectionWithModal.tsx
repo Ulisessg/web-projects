@@ -94,7 +94,7 @@ function Section({
 }
 
 function SectionWithModal({ sections, images }: SectionWithModalProps) {
-  let iteration: number = -1;
+  let iteration = -1;
   return (
     <>
       <Sections>

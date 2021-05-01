@@ -4,21 +4,21 @@ import '../../styles/atoms/skipLink.styl';
 
 const SkipLink: React.FC = () => (
   <>
-    <div className='skip-link'>
-      <span className='skip-link--p'>
+    <div className="skip-link">
+      <span className="skip-link--p">
         <a
-          aria-label='Contenido principal'
-          className='skip-link--link'
-          href='#main'
+          aria-label="Contenido principal"
+          className="skip-link--link"
+          href="#main"
         >
           Contenido principal
         </a>
       </span>
-      <span className='skip-link--p'>
+      <span className="skip-link--p">
         <a
-          aria-label='Otras páginas'
-          className='skip-link--link'
-          href='#secciones'
+          aria-label="Otras páginas"
+          className="skip-link--link"
+          href="#secciones"
         >
           Otras páginas
         </a>

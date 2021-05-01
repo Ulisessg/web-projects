@@ -9,7 +9,7 @@ function MainBlog(): JSX.Element {
   const [blogEntries, setBlogEntries] = useState<any>();
   const [blogStatus, setBlogStatus] = useState<string>('loading');
 
-  let blogsRequested: boolean = false;
+  let blogsRequested = false;
 
   useEffect(() => {
     blogsRequested = true;

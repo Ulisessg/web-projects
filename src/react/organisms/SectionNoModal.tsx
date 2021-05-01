@@ -11,7 +11,7 @@ import {
 } from '../../styles/organisms/SectionWithModalStyles';
 
 function SectionNoModal({ sections, images, linkText = 'Leer más' }) {
-  let iteration: number = -1;
+  let iteration = -1;
 
   return (
     <>
