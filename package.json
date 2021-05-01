@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "description": "All my personal projects",
   "scripts": {
-    "lint": "eslint --fix ./src/react/**/**/**",
+    "lint": "eslint ./src/react/**/**/** --fix",
     "dev": "node develop.js",
     "production": "webpack --config ./webpack.config.production.js",
-    "dll": "webpack --config ./webpack.config.dll.js"
+    "dll": "webpack --config ./webpack.config.dll.js",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -35,14 +36,14 @@
     "copy-webpack-plugin": "8.1.1",
     "css-loader": "5.2.2",
     "cssnano": "5.0.1",
-    "eslint": "7.24.0",
+    "eslint": "7.25.0",
     "eslint-config-airbnb": "18.2.1",
     "eslint-plugin-import": "2.22.1",
     "eslint-plugin-jsx-a11y": "6.4.1",
     "eslint-plugin-react": "7.23.2",
     "eslint-plugin-react-hooks": "4.2.0",
     "html-webpack-plugin": "5.3.1",
-    "husky": "6.0.0",
+    "husky": "^6.0.0",
     "mini-css-extract-plugin": "1.5.0",
     "style-loader": "2.0.0",
     "stylus": "0.54.8",
@@ -65,10 +66,5 @@
     "redux-thunk": "2.3.0",
     "styled-components": "^5.2.3",
     "workbox-webpack-plugin": "6.1.5"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run lint"
-    }
   }
 }
