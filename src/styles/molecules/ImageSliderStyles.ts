@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const ImageSliderStyles = styled.section`
+export const ImageSliderStyles = styled.section`
   width: 100%;
   height: 100%;
   display: flex;
@@ -8,5 +8,12 @@ const ImageSliderStyles = styled.section`
   flex-direction: column;
   -ms-flex-direction: column;
 `;
-
-export default ImageSliderStyles;
+export const ButtonsContainer = styled.div`
+  display: flex;
+  display: -webkit-flex;
+  justify-content: center;
+  margin-top: 20px;
+  .image-slider--button {
+    margin-left: 5px;
+  }
+`;
