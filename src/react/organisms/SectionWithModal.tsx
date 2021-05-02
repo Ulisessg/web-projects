@@ -2,7 +2,7 @@
 import React, { lazy, useState, Suspense, useEffect, useCallback } from 'react';
 import ImgLazy from '../molecules/Img';
 import ButtonDark from '../atoms/ButtonDark';
-import { SectionWithModalProps } from '../interfaces';
+import SectionWithModalProps from '../interfaces_and_types/organisms/SectionWithModalProps';
 import Loading from '../atoms/Loading';
 import SectionProps from '../interfaces_and_types/organisms/SectionProps';
 

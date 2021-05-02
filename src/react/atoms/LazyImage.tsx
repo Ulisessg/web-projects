@@ -1,5 +1,5 @@
 import React from 'react';
-import { imgProps } from '../interfaces';
+import { imgProps } from '../interfaces_and_types/globalPropsAndProperties';
 
 function LazyImage({ src, alt, classN }: imgProps | any): JSX.Element {
   return (

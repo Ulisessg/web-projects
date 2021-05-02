@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react';
-import { imgProps } from '../interfaces';
+import { imgProps } from '../interfaces_and_types/globalPropsAndProperties';
 
 function LazyObserverImage({ src, alt, classN }: imgProps | any): JSX.Element {
   const Image = useRef(null);

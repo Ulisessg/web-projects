@@ -1,5 +1,5 @@
 import React, { lazy } from 'react';
-import { imgProps } from '../interfaces';
+import { imgProps } from '../interfaces_and_types/globalPropsAndProperties';
 
 const Element = lazy(() => {
   if (navigator !== undefined && 'loading' in HTMLImageElement.prototype) {

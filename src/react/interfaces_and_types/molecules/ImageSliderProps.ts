@@ -1,4 +1,4 @@
-import { imgProps } from '../../interfaces';
+import { imgProps } from '../globalPropsAndProperties';
 
 interface imageSlider {
   images: Array<imgProps>;

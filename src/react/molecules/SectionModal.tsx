@@ -9,7 +9,7 @@ import {
   SectionModalTitle,
   ExternalStyles,
 } from '../../styles/molecules/SectionModalStyles';
-import { SectionModalProps } from '../interfaces';
+import SectionModalProps from '../interfaces_and_types/molecules/SectionModalProps';
 
 const ImageSlider = lazy(() => import('./ImageSlider'));
 
