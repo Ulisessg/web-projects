@@ -6,8 +6,8 @@ interface SectionProps {
     alt: string;
   }>;
   cover: {
-    image: string;
-    title: string;
+    src: string;
+    alt: string;
   };
   path: string;
   description: string;

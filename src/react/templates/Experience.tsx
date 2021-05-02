@@ -1,5 +1,5 @@
 import React from 'react';
-import { experienceInfos, experienceImages } from '../states/index';
+import { experienceInfos } from '../states/index';
 import SectionWithModal from '../organisms/SectionWithModal';
 import { Container, Title } from '../../styles/templates/ExperienceStyles';
 
@@ -10,7 +10,7 @@ function Experience(): JSX.Element {
         <Title>Experiencia</Title>
         <div id="experience">
           <SectionWithModal
-            images={experienceImages}
+            images={[{ alt: '', src: '' }]}
             sections={experienceInfos}
           />
         </div>

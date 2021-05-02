@@ -60,7 +60,7 @@ function Section({
     <>
       <SectionContainer id={id} key={id}>
         <ImageContainer>
-          <ImgLazy classN="section--img" src={cover.image} alt={cover.title} />
+          <ImgLazy classN="section--img" src={cover.src} alt={cover.alt} />
         </ImageContainer>
         <Title>{name}</Title>
 
@@ -108,7 +108,7 @@ function SectionWithModal({
                 images={images}
                 name={section.name}
                 path={section.path}
-                cover={{ image: '', title: '' }}
+                cover={section.cover}
               />
             </>
           ),

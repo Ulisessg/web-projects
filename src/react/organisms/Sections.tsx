@@ -10,6 +10,7 @@ interface SectionsProps {
     name: string;
     path: string;
     description: string;
+    cover: { alt: string; src: string };
   }>;
   images: Array<{ alt: string; src: string }>;
 }

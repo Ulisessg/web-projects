@@ -11,6 +11,7 @@ export interface SectionWithModalProps {
     path: string;
     description: string;
     elementId?: string;
+    cover: imgProps;
   }>;
 
   images: Array<{ src: string; alt: string }>;
