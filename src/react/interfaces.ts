@@ -13,14 +13,15 @@ export interface SectionWithModalProps {
     elementId?: string;
   }>;
 
-  images: Array<{ title: string; image: string }> | any;
+  images: Array<{ src: string; alt: string }>;
 }
 
-export interface SectionModalProps extends imgProps {
+export interface SectionModalProps {
   name: string;
   path: string;
   description: string;
   closeModal: () => void;
+  images?: Array<imgProps>;
 }
 
 export interface BlogEntry {

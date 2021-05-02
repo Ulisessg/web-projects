@@ -16,12 +16,14 @@ import {
 
 const ModalComponent = lazy(() => import('../molecules/SectionModal'));
 
+// Individual Section
 function Section({
   id,
   images,
   name,
   description,
   path,
+  cover,
 }: SectionProps): JSX.Element {
   const [openModal, setOpenModal] = useState<boolean>(false);
 
@@ -58,11 +60,7 @@ function Section({
     <>
       <SectionContainer id={id} key={id}>
         <ImageContainer>
-          <ImgLazy
-            classN="section--img"
-            src={images.image}
-            alt={images.title}
-          />
+          <ImgLazy classN="section--img" src={cover.image} alt={cover.title} />
         </ImageContainer>
         <Title>{name}</Title>
 
@@ -78,12 +76,10 @@ function Section({
         {openModal && (
           <Suspense fallback={<Loading heightExternal="100%" />}>
             <ModalComponent
-              alt={images.title}
-              src={images.image}
               description={description}
               path={path}
               name={name}
-              classN=""
+              images={images}
               closeModal={handleModal}
             />
           </Suspense>
@@ -93,27 +89,29 @@ function Section({
   );
 }
 
-function SectionWithModal({ sections, images }: SectionWithModalProps) {
-  let iteration = -1;
+// Modal
+
+function SectionWithModal({
+  sections,
+  images,
+}: SectionWithModalProps): JSX.Element {
   return (
     <>
       <Sections>
         {sections.map(
-          (section): JSX.Element => {
-            iteration += 1;
-            return (
-              <>
-                <Section
-                  key={section.name}
-                  description={section.description}
-                  id={section.id}
-                  images={images[iteration]}
-                  name={section.name}
-                  path={section.path}
-                />
-              </>
-            );
-          },
+          (section): JSX.Element => (
+            <>
+              <Section
+                key={section.name}
+                description={section.description}
+                id={section.id}
+                images={images}
+                name={section.name}
+                path={section.path}
+                cover={{ image: '', title: '' }}
+              />
+            </>
+          ),
         )}
       </Sections>
     </>

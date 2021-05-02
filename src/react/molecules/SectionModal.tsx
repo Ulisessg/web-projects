@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { lazy } from 'react';
 import { createPortal } from 'react-dom';
 import ButtonClose from '../atoms/ButtonClose';
 import ImgLazy from './Img';
@@ -11,13 +11,14 @@ import {
 } from '../../styles/molecules/SectionModalStyles';
 import { SectionModalProps } from '../interfaces';
 
+const ImageSlider = lazy(() => import('./ImageSlider'));
+
 function SectionModal({
-  src,
-  alt,
   name,
   path,
   description,
   closeModal,
+  images,
 }: SectionModalProps): JSX.Element {
   return createPortal(
     <>
@@ -25,13 +26,23 @@ function SectionModal({
       <SectionModalContainer>
         <ButtonClose handleClick={closeModal} />
 
-        <SectionModalImageContainer>
+        {/* <SectionModalImageContainer>
           <ImgLazy classN="section-modal--img" src={src} alt={alt} />
-        </SectionModalImageContainer>
+        </SectionModalImageContainer> */}
         <SectionModalTitle className="section__modal--title">
           {name}
         </SectionModalTitle>
-        <p>{description}</p>
+
+        {images.length > 0 && (
+          <>
+            <div style={{ width: '100px' }}>
+              <ImageSlider images={images} />
+            </div>
+          </>
+        )}
+
+        {/* Description temporally disabled */}
+        {/* <p>{description}</p> */}
 
         <LinkDarkBlank
           label={`Ver más sobre ${name}`}

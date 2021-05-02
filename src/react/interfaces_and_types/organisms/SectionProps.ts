@@ -1,7 +1,11 @@
 interface SectionProps {
   id: any;
   name: string;
-  images: {
+  images?: Array<{
+    src: string;
+    alt: string;
+  }>;
+  cover: {
     image: string;
     title: string;
   };

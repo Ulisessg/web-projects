@@ -11,7 +11,7 @@ interface SectionsProps {
     path: string;
     description: string;
   }>;
-  images: Array<{ title: string; image: string }>;
+  images: Array<{ alt: string; src: string }>;
 }
 
 function Section({ sections, images }: SectionsProps): JSX.Element {
