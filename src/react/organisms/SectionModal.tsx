@@ -1,17 +1,15 @@
 import React, { lazy } from 'react';
 import { createPortal } from 'react-dom';
 import ButtonClose from '../atoms/ButtonClose';
-import ImgLazy from './Img';
 import LinkDarkBlank from '../atoms/LinkDarkBlank';
 import {
   SectionModalContainer,
-  SectionModalImageContainer,
   SectionModalTitle,
   ExternalStyles,
 } from '../../styles/molecules/SectionModalStyles';
 import SectionModalProps from '../interfaces_and_types/molecules/SectionModalProps';
 
-const ImageSlider = lazy(() => import('./ImageSlider'));
+const ImageSlider = lazy(() => import('../molecules/ImageSlider'));
 
 function SectionModal({
   name,

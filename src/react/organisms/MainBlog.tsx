@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import getBlogs from '../utils/getBlogs';
 import LoadingSpinner from '../atoms/Loading';
-import SectionNoModal from './SectionNoModal';
+import SectionNoModal from '../templates/SectionNoModal';
 import transformBlogInfo from '../utils/tranformBlogInfo';
 
 function MainBlog(): JSX.Element {

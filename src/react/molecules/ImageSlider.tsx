@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import imageSliderProps from '../interfaces_and_types/molecules/ImageSliderProps';
 import Img from './Img';
-import CircleButton from '../atoms/circleButton';
+import CircleButton from '../atoms/CircleButton';
 import {
   ImageSliderStyles,
   ButtonsContainer,

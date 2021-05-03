@@ -14,7 +14,7 @@ import {
   Description,
 } from '../../styles/organisms/SectionWithModalStyles';
 
-const ModalComponent = lazy(() => import('../molecules/SectionModal'));
+const ModalComponent = lazy(() => import('../organisms/SectionModal'));
 
 // Individual Section
 function Section({

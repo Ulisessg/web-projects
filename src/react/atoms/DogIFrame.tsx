@@ -5,7 +5,6 @@ function DogIFrame(): JSX.Element {
   return (
     <>
       <DogIframeStyles
-        loading="lazy"
         src="https://www.youtube.com/embed/jxGrbtGmxnI"
         title="YouTube video player"
         frameBorder="0"

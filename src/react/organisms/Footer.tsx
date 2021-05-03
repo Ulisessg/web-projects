@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../styles/molecules/footer.styl';
+import '../../styles/organisms/footer.styl';
 import LinkedInBadge from '../molecules/LinkedInBadge';
 import LazyImage from '../molecules/Img';
 import { footerPaths } from '../states/index';
