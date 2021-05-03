@@ -14,7 +14,7 @@ if (process.env.NODE_ENV !== 'development') {
   }
 }
 
-const GistsTemplate = lazy(() => import('../templates/GistsTemplate'));
+const Gists = lazy(() => import('../templates/Gists'));
 
 render(
   <>
@@ -22,7 +22,7 @@ render(
       <GlobalStyles />
       <Layout>
         <main role="main">
-          <GistsTemplate />
+          <Gists />
         </main>
       </Layout>
     </Suspense>

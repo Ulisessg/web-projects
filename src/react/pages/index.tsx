@@ -7,7 +7,7 @@ import { IndexSections } from '../states/index';
 
 const AboutMe = lazy(() => import('../molecules/Description'));
 const Blogs = lazy(() => import('../templates/Blog'));
-const Gists = lazy(() => import('../organisms/Gists'));
+const Gists = lazy(() => import('../templates/Gists'));
 const Experience = lazy(() => import('../templates/Experience'));
 const PageNav = lazy(() => import('../organisms/DynamicNav'));
 

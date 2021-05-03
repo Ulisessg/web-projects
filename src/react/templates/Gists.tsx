@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import SectionNoModal from '../templates/SectionNoModal';
+import SectionNoModal from './SectionNoModal';
 import GetGists from '../utils/getGists';
 import LoadingSpinner from '../atoms/Loading';
 import TransformGistsResponse from '../utils/transformGistsResponse';
