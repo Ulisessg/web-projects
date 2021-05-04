@@ -1,3 +1,4 @@
+/* eslint-disable react/require-default-props */
 import React from 'react';
 import LazyImage from './Img';
 
@@ -6,10 +7,12 @@ import '../../styles/molecules/LinkedinBadge.styl';
 
 // LinkedIn logo https://static-exp1.licdn.com/scds/common/u/images/logos/linkedin/logo_linkedin_93x21_v2.png
 
-function LinkedInBadge(): JSX.Element {
+function LinkedInBadge({ classN }: { classN?: string }): JSX.Element {
   return (
     <>
-      <section className="linkedin-badge">
+      <section
+        className={classN ? `linkedin-badge ${classN}` : 'linkedin-badge'}
+      >
         <div className="linkedin-badge--background">
           <LazyImage
             src="https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2FSEO%2Fme.jfif?alt=media&token=6f3e9ef4-df67-462c-bba5-0d2bea0e2076"
