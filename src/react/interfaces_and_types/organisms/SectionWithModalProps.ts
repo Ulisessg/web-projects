@@ -11,6 +11,7 @@ interface SectionWithModalProps {
       cover: imgProps;
     };
 
+    key?: any;
     images: Array<{ src: string; alt: string }>;
   };
 }

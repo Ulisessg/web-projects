@@ -12,13 +12,10 @@ function Experience(): JSX.Element {
         <div id="experience">
           <SectionContainer>
             {experienceInfos.map((experience) => (
-              <span key={experience.sections.id}>
-                <SectionWithModal
-                  sections={experience}
-
-                  // sections={experience.experiences}
-                />
-              </span>
+              <SectionWithModal
+                sections={experience}
+                key={experience.sections.id}
+              />
             ))}
           </SectionContainer>
         </div>

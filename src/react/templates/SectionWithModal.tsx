@@ -92,17 +92,15 @@ function Section({
 function SectionWithModal({ sections }: SectionWithModalProps): JSX.Element {
   return (
     <>
-      <>
-        <Section
-          key={sections.sections.name}
-          description={sections.sections.description}
-          id={sections.sections.id}
-          images={sections.images}
-          name={sections.sections.name}
-          path={sections.sections.path}
-          cover={sections.sections.cover}
-        />
-      </>
+      <Section
+        key={sections.sections.name}
+        description={sections.sections.description}
+        id={sections.sections.id}
+        images={sections.images}
+        name={sections.sections.name}
+        path={sections.sections.path}
+        cover={sections.sections.cover}
+      />
     </>
   );
 }
