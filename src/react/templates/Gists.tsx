@@ -3,7 +3,9 @@ import SectionNoModal from './SectionNoModal';
 import GetGists from '../utils/getGists';
 import LoadingSpinner from '../atoms/Loading';
 import TransformGistsResponse from '../utils/transformGistsResponse';
-import '../../styles/organisms/mainBlog-styles.styl';
+// import '../../styles/organisms/mainBlog-styles.styl';
+
+import SectionContainer from '../../styles/molecules/SectionContainer';
 
 function Gists(): JSX.Element {
   const [response, setResponse] = useState<any>();
@@ -42,7 +44,9 @@ function Gists(): JSX.Element {
             >
               Últimos Gists
             </h2>
-            <SectionNoModal images={response} sections={response} />
+            <SectionContainer>
+              <SectionNoModal images={response} sections={response} />
+            </SectionContainer>
           </div>
         </>
       )}

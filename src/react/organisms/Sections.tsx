@@ -19,7 +19,7 @@ function Section({ sections, images }: SectionsProps): JSX.Element {
   return (
     <>
       <div className="sections">
-        <SectionWithImg sections={sections} images={images} />
+        {/* <SectionWithImg sections={sections} images={images} /> */}
       </div>
     </>
   );

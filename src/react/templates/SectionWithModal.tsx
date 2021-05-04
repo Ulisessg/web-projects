@@ -7,7 +7,6 @@ import Loading from '../atoms/Loading';
 import SectionProps from '../interfaces_and_types/organisms/SectionProps';
 
 import {
-  Sections,
   SectionContainer,
   ImageContainer,
   Title,
@@ -18,7 +17,6 @@ const ModalComponent = lazy(() => import('../organisms/SectionModal'));
 
 // Individual Section
 function Section({
-  id,
   images,
   name,
   description,
@@ -58,7 +56,7 @@ function Section({
 
   return (
     <>
-      <SectionContainer id={id} key={id}>
+      <SectionContainer>
         <ImageContainer>
           <ImgLazy classN="section--img" src={cover.src} alt={cover.alt} />
         </ImageContainer>
@@ -91,29 +89,20 @@ function Section({
 
 // Modal
 
-function SectionWithModal({
-  sections,
-  images,
-}: SectionWithModalProps): JSX.Element {
+function SectionWithModal({ sections }: SectionWithModalProps): JSX.Element {
   return (
     <>
-      <Sections>
-        {sections.map(
-          (section): JSX.Element => (
-            <>
-              <Section
-                key={section.name}
-                description={section.description}
-                id={section.id}
-                images={images}
-                name={section.name}
-                path={section.path}
-                cover={section.cover}
-              />
-            </>
-          ),
-        )}
-      </Sections>
+      <>
+        <Section
+          key={sections.sections.name}
+          description={sections.sections.description}
+          id={sections.sections.id}
+          images={sections.images}
+          name={sections.sections.name}
+          path={sections.sections.path}
+          cover={sections.sections.cover}
+        />
+      </>
     </>
   );
 }

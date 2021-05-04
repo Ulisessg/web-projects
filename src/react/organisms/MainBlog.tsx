@@ -4,6 +4,8 @@ import LoadingSpinner from '../atoms/Loading';
 import SectionNoModal from '../templates/SectionNoModal';
 import transformBlogInfo from '../utils/tranformBlogInfo';
 
+import SectionContainer from '../../styles/molecules/SectionContainer';
+
 function MainBlog(): JSX.Element {
   //  Check if request returns a error
   const [blogEntries, setBlogEntries] = useState<any>();
@@ -52,7 +54,11 @@ function MainBlog(): JSX.Element {
               </>
             )}
             {blogStatus === 'success' && (
-              <SectionNoModal images={blogEntries} sections={blogEntries} />
+              <>
+                <SectionContainer>
+                  <SectionNoModal images={blogEntries} sections={blogEntries} />
+                </SectionContainer>
+              </>
             )}
           </section>
         </div>
