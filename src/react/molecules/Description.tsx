@@ -16,7 +16,7 @@ function AboutMe(): JSX.Element {
         <DescriptionStyles>
           <p>Frontend / Backend</p>
           <div />
-          <p>Future Data Sciencetist</p>
+          <p>Future Data Scientist</p>
           <br />
           <p>Ulises Antonio Sámano Galván</p>
         </DescriptionStyles>
