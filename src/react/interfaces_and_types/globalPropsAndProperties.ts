@@ -1,4 +1,6 @@
-export interface imgProps {
+import React from 'react';
+
+export interface imgProps extends React.HTMLAttributes<HTMLImageElement> {
   src: string;
   alt: string;
   classN?: string;

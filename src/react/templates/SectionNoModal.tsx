@@ -1,6 +1,6 @@
 import React from 'react';
 
-import ImgLazy from '../molecules/Img';
+import ImageExpand from '../molecules/ImageExpand';
 import LinkDarkNoBlank from '../atoms/LinkDarkNoBlank';
 import {
   SectionContainer,
@@ -29,7 +29,7 @@ function SectionNoModal({ sections, images }: temporalProps): JSX.Element {
               key={section.id}
             >
               <ImageContainer className="section-img-container">
-                <ImgLazy
+                <ImageExpand
                   classN="section--img"
                   src={images[iteration].image}
                   alt={images[iteration].title}
