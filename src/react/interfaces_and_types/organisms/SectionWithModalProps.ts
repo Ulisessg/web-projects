@@ -12,7 +12,7 @@ interface SectionWithModalProps {
     };
 
     key?: any;
-    images: Array<{ src: string; alt: string }>;
+    images?: Array<{ src: string; alt: string }>;
   };
 }
 
