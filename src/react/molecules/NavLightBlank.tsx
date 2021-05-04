@@ -9,7 +9,7 @@ function NavLightBlank({ dir, paths }: NavProps): JSX.Element {
       <NavLightStyles dir={dir}>
         <ul>
           {paths.map((path) => (
-            <li>
+            <li key={path.path}>
               <LinkLightBlank
                 label={path.label}
                 path={path.path}
