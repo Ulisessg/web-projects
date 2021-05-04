@@ -5,7 +5,7 @@ import CircleButton from '../atoms/CircleButton';
 import {
   ImageSliderStyles,
   ButtonsContainer,
-} from '../../styles/molecules/ImageSliderStyles';
+} from '../../styles/molecules/InternalSlider';
 
 function Buttons({
   func,
