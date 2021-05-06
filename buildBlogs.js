@@ -1,3 +1,5 @@
+/* eslint-disable import/no-extraneous-dependencies */
+/* eslint-disable array-callback-return */
 const { join } = require('path');
 const fs = require('fs');
 const axios = require('axios');
@@ -56,7 +58,6 @@ Allow: /
   );
 
   //  Iterator
-  let i = 0;
 
   blogs.map((blog) => {
     const basicTemplate = `<!DOCTYPE html>
@@ -96,7 +97,7 @@ Allow: /
     <link rel="canonical" href="https://ulisessg.com/${blog.name}"/>
     <meta name="description" content="${blog.metaDescription}" />
     <meta name="keywords" content="${blog.metaSubjects}" />
-    <meta name="author" content="UliseSG">
+    <meta name="author" content="Ulises Antonio Samano Galvan" />
 
     <!-- Twitter SEO  -->
     <meta name="twitter:title" content="${blog.title}" />
@@ -341,8 +342,6 @@ Allow: /
         console.log('Blog created');
       },
     );
-
-    i += 1;
   });
 
   //  Build sitemap.xml
