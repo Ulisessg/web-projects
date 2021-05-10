@@ -59,6 +59,9 @@ Promise.all([blogRequest]).then(() => {
     join(__dirname, 'dist', 'robots.txt'),
     `User-Agent: *
 Allow: /
+Allow: /en
+
+Sitemap: https://ulisessg.com/sitemap.xml
     `,
   );
 
