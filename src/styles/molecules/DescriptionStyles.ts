@@ -7,6 +7,7 @@ export const Container = styled.div`
   display: -ms-grid;
   justify-items: center;
   margin-top: 5vh;
+  text-align: center;
   & img {
     width: 150px;
     border-radius: 50%;
