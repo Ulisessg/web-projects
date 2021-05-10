@@ -5,7 +5,9 @@ window.onload = function registerVisit() {
   }
 
   if (!window.localStorage.getItem('blog')) {
-    const blog = window.location.pathname.split('/')[1].split('.html')[0];
+    const urlLength = window.location.pathname.split('/').length;
+
+    const blog = window.location.pathname.split('/')[urlLength - 1];
 
     const raw = JSON.stringify({ blog_name: blog });
 
