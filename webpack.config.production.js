@@ -102,6 +102,10 @@ module.exports = {
           from: join(__dirname, 'pwa', 'manifest.json'),
           to: join(__dirname, 'dist'),
         },
+        {
+          from: join(__dirname, 'pwa', 'favicon.ico'),
+          to: join(__dirname, 'dist'),
+        },
       ],
     }),
   ],
