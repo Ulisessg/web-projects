@@ -214,7 +214,7 @@ module.exports = function spanishBlogTemplate(blog, cssName, jsName) {
         </a>
 
         <p class="linkedin-badge--description">
-          Frontend / Backend / Nerd / Student at Platzi Master.
+          Full Stack Developer / Nerd / Student at Platzi Master.
         </p>
         <div class="linkedin-badge--go-profile">
           <a href="https://mx.linkedin.com/in/ulisessg?trk=profile-badge">

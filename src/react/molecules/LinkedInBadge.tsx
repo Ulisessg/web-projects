@@ -38,7 +38,7 @@ function LinkedInBadge({ classN }: { classN?: string }): JSX.Element {
         </a>
 
         <LinkedInBadgeDescription className="linkedin-badge--description">
-          Frontend / Backend / Nerd / Student at Platzi Master.
+          Full Stack Developer / Nerd / Student at Platzi Master.
         </LinkedInBadgeDescription>
 
         <LinkedInBadgeGoProfileContiner className="linkedin-badge--go-profile">
