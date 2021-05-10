@@ -56,7 +56,7 @@ module.exports = function englishBlogTemplate(blog, cssName, jsName) {
 
       <!-- OG SEO -->
       <meta property="og:site_name" content="UlisesDev" />
-      <meta property="og:locale" content="es_MX" />
+      <meta property="og:locale" content="en_US" />
       <meta property="og:type" content="article" />
       <meta property="og:title" content="${blog.title}" />
       <meta property="og:description" content="${blog.metaDescription}" />
