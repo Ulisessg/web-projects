@@ -14,4 +14,5 @@ export interface BlogEntry {
   id: number;
   path: string;
   title: string;
+  language?: 'en' | 'es';
 }
