@@ -13,6 +13,13 @@ module.exports = function englishBlogTemplate(blog, cssName, jsName) {
         href="https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2Fv2%2FLogo-favicon.png?alt=media&token=60a872bd-af09-47dd-a5cc-66e5a5b3ab51"
       />
 
+      <!-- Facebook comments plugin -->
+
+      <div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v10.0" nonce="h8ZjI4Zv"></script>
+
+    <!-- End Facebook comments plugin -->
+
       <!-- Facebook Pixel Code -->
   <script>
     !function(f,b,e,v,n,t,s)
@@ -59,10 +66,10 @@ module.exports = function englishBlogTemplate(blog, cssName, jsName) {
       <!-- SEO end  -->
 
       <link
-        rel="shortcut icon"
-        href="https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2Fv2%2FLogo-favicon.png?alt=media&token=60a872bd-af09-47dd-a5cc-66e5a5b3ab51"
-        type="image/png"
-      />
+      rel="icon"
+      href="https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2Fv2%2FLogo-favicon.png?alt=media&token=60a872bd-af09-47dd-a5cc-66e5a5b3ab51"
+      type="image/png"
+    />
 
       <link rel="stylesheet" type="text/css" href="/css/${cssName}" />
 
@@ -142,6 +149,15 @@ module.exports = function englishBlogTemplate(blog, cssName, jsName) {
         </section>
       </main>
 
+      <!-- Facebook comments plugin -->
+
+      <div style="display: flex;justify-content: center">
+
+        <div class="fb-comments" data-href="https://ulisessg.com/${blog.name}" data-width="" data-numposts="5"></div>
+
+      </div>
+
+      <!-- End Facebook comments plugin -->
       <!-- Footer -->
 
   <footer class="footer" id="footer">
