@@ -389,11 +389,6 @@ h2 {
   border: 2px solid #bcbdb0;
   padding: 8px 13px;
 }
-@media screen and (max-width: 450px) {
-  .ul__li--a-ligth {
-    padding: 7px 18px;
-  }
-}
 
 .ul__li--a-dark:hover,
 .ul__li--a-dark:focus {
