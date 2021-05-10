@@ -3,6 +3,7 @@
 # Testing features
 test.js
 
+test.*
 
 #design
 ./design
