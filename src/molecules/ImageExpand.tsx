@@ -1,7 +1,7 @@
 import React from 'react';
 import Img from './Img';
 import { imgProps } from '../interfaces_and_types/globalPropsAndProperties';
-import ClassesStyles from '../styles/molecules/ImageExpandStyles';
+import ClassesStyles from '../../styles/molecules/ImageExpandStyles';
 
 function ImageExpand({ alt, src, classN }: imgProps): JSX.Element {
   return (

@@ -7,8 +7,8 @@ import {
 } from '../states/index';
 // import SectionWithModal from './SectionWithModal';
 import SectionNoModal from './SectionNoModal';
-import { Container, Title } from '../styles/templates/ExperienceStyles';
-import SectionContainer from '../styles/molecules/SectionContainer';
+import { Container, Title } from '../../styles/templates/ExperienceStyles';
+import SectionContainer from '../../styles/molecules/SectionContainer';
 
 function Experience(): JSX.Element {
   return (

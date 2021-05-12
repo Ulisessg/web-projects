@@ -1,5 +1,5 @@
 import React from 'react';
-import LinkLighthStyles from '../styles/atoms/LinkLigthStyles';
+import LinkLighthStyles from '../../styles/atoms/LinkLigthStyles';
 
 import LinkProps from '../interfaces_and_types/atoms/LinkProps';
 

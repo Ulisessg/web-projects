@@ -1,6 +1,6 @@
 import React from 'react';
 
-import '../styles/atoms/skipLink.styl';
+import '../../styles/atoms/skipLink.styl';
 
 const SkipLink: React.FC = () => (
   <>

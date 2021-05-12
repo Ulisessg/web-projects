@@ -1,7 +1,7 @@
 import React from 'react';
 // import ReactDom from 'react-dom';
 import dynamic from 'next/dynamic';
-import GlobalStyles from '../styles/GlobalStyles';
+import GlobalStyles from '../../styles/GlobalStyles';
 import Layout from '../organisms/Layout';
 import Loading from '../atoms/Loading';
 import { IndexSections } from '../states/index';

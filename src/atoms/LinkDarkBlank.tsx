@@ -1,5 +1,5 @@
 import React from 'react';
-import LinkDarkStyles from '../styles/atoms/LinkDarkStyles';
+import LinkDarkStyles from '../../styles/atoms/LinkDarkStyles';
 import LinkProps from '../interfaces_and_types/atoms/LinkProps';
 
 function LinkDarkBlank({

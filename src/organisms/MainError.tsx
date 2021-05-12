@@ -1,5 +1,5 @@
 import React from 'react';
-import ButtonGoBackStyles from '../styles/atoms/ButtonGoBackStyles';
+import ButtonGoBackStyles from '../../styles/atoms/ButtonGoBackStyles';
 import DogIframe from '../atoms/DogIFrame';
 
 function MainError(): JSX.Element {

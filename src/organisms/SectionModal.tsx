@@ -6,7 +6,7 @@ import {
   SectionModalContainer,
   SectionModalTitle,
   ExternalStyles,
-} from '../styles/molecules/SectionModalStyles';
+} from '../../styles/molecules/SectionModalStyles';
 import SectionModalProps from '../interfaces_and_types/molecules/SectionModalProps';
 
 const ImageSlider = lazy(() => import('../molecules/ImageSlider'));

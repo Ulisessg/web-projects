@@ -3,7 +3,7 @@ import SkipLink from '../atoms/SkipLink';
 import Img from './Img';
 import Nav from './NavDarkNoBlank';
 import LinkProps from '../interfaces_and_types/atoms/LinkProps';
-import HeraderStyles from '../styles/molecules/HeaderStyles';
+import HeraderStyles from '../../styles/molecules/HeaderStyles';
 
 function Header(): JSX.Element {
   const headerPaths: Array<LinkProps> = [

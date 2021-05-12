@@ -1,5 +1,5 @@
 import React from 'react';
-import NavLigthStyles from '../styles/molecules/NavLigthStyles';
+import NavLigthStyles from '../../styles/molecules/NavLigthStyles';
 import LinkLigthNoBlank from '../atoms/LinkLigthNoBlank';
 import NavProps from '../interfaces_and_types/molecules/NavProps';
 

@@ -12,7 +12,7 @@ import {
   OtherLinks,
   CoffeQuote,
   CssStyles,
-} from '../styles/organisms/FooterStyles';
+} from '../../styles/organisms/FooterStyles';
 
 function Footer(): JSX.Element {
   return (

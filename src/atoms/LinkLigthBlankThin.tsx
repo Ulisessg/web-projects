@@ -1,6 +1,6 @@
 import React from 'react';
 import LinkProps from '../interfaces_and_types/atoms/LinkProps';
-import LinkLightThinStyles from '../styles/atoms/LinkLightThinStyles';
+import LinkLightThinStyles from '../../styles/atoms/LinkLightThinStyles';
 
 function LinkLightBlankThin({ label, path, text }: LinkProps): JSX.Element {
   return (

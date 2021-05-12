@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import '../styles/organisms/mainDesign-styles.styl';
+import '../../styles/organisms/mainDesign-styles.styl';
 
 import Sections from './Sections';
 
