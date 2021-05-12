@@ -31,7 +31,7 @@ function Header(): JSX.Element {
 
   return (
     <>
-      <SkipLink />
+      {/* <SkipLink /> */}
       <HeraderStyles className="header">
         <a href="/">
           <Img

@@ -7,7 +7,10 @@
     "dev": "node develop.js",
     "production": "webpack --config ./webpack.config.production.js",
     "dll": "webpack --config ./webpack.config.dll.js",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "devs": "next ./src/",
+    "build": "next build ./src/",
+    "start": "next start ./src/"
   },
   "repository": {
     "type": "git",
@@ -58,6 +61,7 @@
   "dependencies": {
     "intersection-observer": "^0.12.0",
     "loading-attribute-polyfill": "^2.0.0",
+    "next": "^10.2.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-helmet": "6.1.0",

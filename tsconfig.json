@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "baseUrl": "./src/react/pages",
+    "baseUrl": "src/pages",
     "outDir": "./dist/",
     "noImplicitAny": false,
     "module": "CommonJS",

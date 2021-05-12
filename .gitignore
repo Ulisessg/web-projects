@@ -5,6 +5,10 @@ test.js
 
 test.*
 
+# Nextjs
+
+.next
+
 #design
 ./design
 
