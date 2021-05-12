@@ -8,7 +8,7 @@ test.*
 # Nextjs
 
 .next
-
+out
 #design
 ./design
 

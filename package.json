@@ -9,7 +9,7 @@
     "dll": "webpack --config ./webpack.config.dll.js",
     "prepare": "husky install",
     "devs": "next ./src/",
-    "build": "next build ./src/",
+    "build": "next build ./src/ && next export ./src/",
     "start": "next start ./src/"
   },
   "repository": {

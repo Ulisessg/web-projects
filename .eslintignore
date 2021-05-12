@@ -1,3 +1,5 @@
 *.css
 *.styl
 *.json
+.next
+out
