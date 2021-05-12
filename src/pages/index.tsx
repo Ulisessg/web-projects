@@ -1,27 +1,23 @@
 import React from 'react';
 // import ReactDom from 'react-dom';
+import dynamic from 'next/dynamic';
 import GlobalStyles from '../styles/GlobalStyles';
-import Layout from '../react/organisms/Layout';
-import Loading from '../react/atoms/Loading';
-import { IndexSections } from '../react/states/index';
+import Layout from '../organisms/Layout';
+import Loading from '../atoms/Loading';
+import { IndexSections } from '../states/index';
 
 // const AboutMe = lazy(() => import('../react/molecules/Description'));
 // const Blogs = lazy(() => import('../react/templates/Blog'));
 // const Gists = lazy(() => import('../react/templates/Gists'));
 // const Experience = lazy(() => import('../react/templates/Experience'));
 // const PageNav = lazy(() => import('../react/organisms/DynamicNav'));
-import dynamic from 'next/dynamic';
 
+import AboutMe from '../molecules/Description';
+import Blogs from '../templates/Blog';
+import Gists from '../templates/Gists';
+import Experience from '../templates/Experience';
 
-import AboutMe from '../react/molecules/Description';
-import Blogs from '../react/templates/Blog';
-import Gists from '../react/templates/Gists';
-import Experience from '../react/templates/Experience';
-
-
-const PageNav = dynamic(() => import('../react/organisms/DynamicNav'), { ssr: false });
-
-
+const PageNav = dynamic(() => import('../organisms/DynamicNav'), { ssr: false });
 
 // if (process.env.NODE_ENV !== 'development') {
 //   // Check that service workers are supported
@@ -36,17 +32,18 @@ const PageNav = dynamic(() => import('../react/organisms/DynamicNav'), { ssr: fa
 //  App
 
 export default function Index() {
-  return <>
-    <GlobalStyles />
-    <Layout>
-      <main role="main">
-        <AboutMe />
-        <PageNav paths={IndexSections} />
-        <Experience />
-        <Blogs />
-        <Gists />
-      </main>
-    </Layout>
-  </>;
-
+  return (
+    <>
+      <GlobalStyles />
+      <Layout>
+        <main role="main">
+          <AboutMe />
+          <PageNav paths={IndexSections} />
+          <Experience />
+          <Blogs />
+          <Gists />
+        </main>
+      </Layout>
+    </>
+  );
 }

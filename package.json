@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "All my personal projects",
   "scripts": {
-    "lint": "eslint \"src/react/**\" --fix",
+    "lint": "eslint \"src/**\" --fix",
     "dev": "node develop.js",
     "production": "webpack --config ./webpack.config.production.js",
     "dll": "webpack --config ./webpack.config.dll.js",

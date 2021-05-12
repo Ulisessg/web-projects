@@ -7,7 +7,7 @@ import {
   desktopSize,
 } from '../variables';
 
-import ImageRoundedProps from '../../react/interfaces_and_types/atoms/ImageProps';
+import ImageRoundedProps from '../../interfaces_and_types/atoms/ImageProps';
 
 const RoundedImage = styled.img<ImageRoundedProps>`
   border-radius: 50%;

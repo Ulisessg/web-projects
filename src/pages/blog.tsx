@@ -2,8 +2,8 @@ import React from 'react';
 
 // import ReactDom from 'react-dom';
 import GlobalStyles from '../styles/GlobalStyles';
-import Loading from '../react/atoms/Loading';
-import Layout from '../react/organisms/Layout';
+import Loading from '../atoms/Loading';
+import Layout from '../organisms/Layout';
 
 // if (process.env.NODE_ENV !== 'development') {
 //   // Check that service workers are supported
@@ -18,8 +18,7 @@ import Layout from '../react/organisms/Layout';
 //  App
 // const Blog = lazy(() => import('../react/templates/Blog'));
 
-import Blog from '../react/templates/Blog';
-
+import Blog from '../templates/Blog';
 
 // ReactDom.render(
 //   <>

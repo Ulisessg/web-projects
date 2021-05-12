@@ -1,8 +1,8 @@
 import React from 'react';
 // import { render } from 'react-dom';
-import LoadingSpinner from '../react/atoms/Loading';
+import LoadingSpinner from '../atoms/Loading';
 import GlobalStyles from '../styles/GlobalStyles';
-import Layout from '../react/organisms/Layout';
+import Layout from '../organisms/Layout';
 
 // if (process.env.NODE_ENV !== 'development') {
 //   // Check that service workers are supported
@@ -16,7 +16,7 @@ import Layout from '../react/organisms/Layout';
 
 // const Gists = lazy(() => import('../react/templates/Gists'));
 
-import Gists from '../react/templates/Gists';
+import Gists from '../templates/Gists';
 
 // render(
 //   <>

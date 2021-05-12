@@ -1,6 +1,6 @@
 import React from 'react';
 // import ReactDom from 'react-dom';
-import Loading from '../react/atoms/Loading';
+import Loading from '../atoms/Loading';
 import GlobalStyles from '../styles/GlobalStyles';
 import Styles404 from '../styles/pages/404Styles';
 
@@ -14,8 +14,8 @@ import Styles404 from '../styles/pages/404Styles';
 //   }
 // }
 
-import ErrorTemplate from '../react/templates/Error';
-import Layout from '../react/organisms/Layout';
+import ErrorTemplate from '../templates/Error';
+import Layout from '../organisms/Layout';
 // ReactDom.render(
 //   <>
 //     <Suspense fallback={<Loading />}>
@@ -24,7 +24,6 @@ import Layout from '../react/organisms/Layout';
 //   </>,
 //   window.document.getElementById('root'),
 // );
-
 
 export default function Error() {
   return (
