@@ -1,7 +1,7 @@
 import React from 'react';
 
 //  Styles
-import '../../styles/organisms/sections-styles.styl';
+import '../styles/organisms/sections-styles.styl';
 import SectionWithImg from '../templates/SectionWithModal';
 
 interface SectionsProps {

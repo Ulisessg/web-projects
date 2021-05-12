@@ -1,5 +1,5 @@
 import React from 'react';
-import DogIframeStyles from '../../styles/atoms/DogIframeStyles';
+import DogIframeStyles from '../styles/atoms/DogIframeStyles';
 
 function DogIFrame(): JSX.Element {
   return (

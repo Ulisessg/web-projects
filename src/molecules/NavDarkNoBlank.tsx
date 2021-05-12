@@ -1,7 +1,7 @@
 import React from 'react';
 import NavProps from '../interfaces_and_types/molecules/NavProps';
 import LinkLigthNoBlankThin from '../atoms/LinkLigthNoBlankThin';
-import NavLigthStyles from '../../styles/molecules/NavLigthStyles';
+import NavLigthStyles from '../styles/molecules/NavLigthStyles';
 
 function NavDarkBlank({ paths, dir }: NavProps): JSX.Element {
   return (

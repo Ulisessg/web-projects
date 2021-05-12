@@ -11,7 +11,7 @@ import {
   ImageContainer,
   Title,
   Description,
-} from '../../styles/organisms/SectionWithModalStyles';
+} from '../styles/organisms/SectionWithModalStyles';
 
 const ModalComponent = lazy(() => import('../organisms/SectionModal'));
 

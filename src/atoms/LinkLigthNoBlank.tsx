@@ -1,6 +1,6 @@
 import React from 'react';
 import LinkProps from '../interfaces_and_types/atoms/LinkProps';
-import LinkLigthStyles from '../../styles/atoms/LinkLigthStyles';
+import LinkLigthStyles from '../styles/atoms/LinkLigthStyles';
 
 function LinkLightNoBlank({ label, text, path }: LinkProps): JSX.Element {
   return (

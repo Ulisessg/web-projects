@@ -1,7 +1,7 @@
 import React from 'react';
 
 //  Styles
-import '../../styles/templates/design-styles.styl';
+import '../styles/templates/design-styles.styl';
 
 //  Components
 import Layout from '../organisms/Layout';

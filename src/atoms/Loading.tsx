@@ -3,7 +3,7 @@ import React from 'react';
 import {
   LoadingContainer,
   LoadingSpinner,
-} from '../../styles/atoms/LoadingStyles';
+} from '../styles/atoms/LoadingStyles';
 
 function Loading({ heightExternal }: { heightExternal?: string; }): JSX.Element {
   //

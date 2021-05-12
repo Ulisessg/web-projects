@@ -4,7 +4,7 @@ import LoadingSpinner from '../atoms/Loading';
 import SectionNoModal from '../templates/SectionNoModal';
 import transformBlogInfo from '../utils/tranformBlogInfo';
 
-import SectionContainer from '../../styles/molecules/SectionContainer';
+import SectionContainer from '../styles/molecules/SectionContainer';
 
 function MainBlog(): JSX.Element {
   //  Check if request returns a error

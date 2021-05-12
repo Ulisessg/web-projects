@@ -8,7 +8,7 @@ import {
   LinkedInBadgeDescription,
   LinkedInBadgeGoProfileContiner,
   ClsStyles,
-} from '../../styles/molecules/LinkedinBadgeStyles';
+} from '../styles/molecules/LinkedinBadgeStyles';
 
 // Background image https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2Fv2%2Flinkedin%20cover.jpeg?alt=media&token=7af29779-027c-4d39-b97e-819707fac55c
 

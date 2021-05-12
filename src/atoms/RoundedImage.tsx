@@ -1,5 +1,5 @@
 import React from 'react';
-import RoundedImageStyles from '../../styles/atoms/RoundedImageStyles';
+import RoundedImageStyles from '../styles/atoms/RoundedImageStyles';
 import ImageProps from '../interfaces_and_types/atoms/ImageProps';
 
 function RoundedImage({

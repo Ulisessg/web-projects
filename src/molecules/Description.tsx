@@ -3,7 +3,7 @@ import Img from './Img';
 import {
   Container,
   DescriptionStyles,
-} from '../../styles/molecules/DescriptionStyles';
+} from '../styles/molecules/DescriptionStyles';
 
 function AboutMe(): JSX.Element {
   return (

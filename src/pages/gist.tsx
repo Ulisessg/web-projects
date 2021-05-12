@@ -1,7 +1,7 @@
 import React from 'react';
 // import { render } from 'react-dom';
 import LoadingSpinner from '../atoms/Loading';
-import GlobalStyles from '../../styles/GlobalStyles';
+import GlobalStyles from '../styles/GlobalStyles';
 import Layout from '../organisms/Layout';
 
 // if (process.env.NODE_ENV !== 'development') {

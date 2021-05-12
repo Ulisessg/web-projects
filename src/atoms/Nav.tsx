@@ -1,7 +1,7 @@
 /* eslint-disable react/require-default-props */
 import React from 'react';
 
-import '../../styles/atoms/nav.styl';
+import '../styles/atoms/nav.styl';
 
 interface NavProps {
   paths: Array<{

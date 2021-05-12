@@ -1,5 +1,5 @@
 import React from 'react';
-import CircleButtonStyles from '../../styles/atoms/CircleButtonStyles';
+import CircleButtonStyles from '../styles/atoms/CircleButtonStyles';
 
 function circleButton({
   func,
