@@ -4,11 +4,8 @@
   "description": "All my personal projects",
   "scripts": {
     "lint": "eslint \"src/**\" --fix",
-    "dev": "node develop.js",
-    "production": "webpack --config ./webpack.config.production.js",
-    "dll": "webpack --config ./webpack.config.dll.js",
     "prepare": "husky install",
-    "devs": "next ./src/",
+    "dev": "next ./src/",
     "build": "next build ./src/ && next export ./src/",
     "start": "next start ./src/"
   },
