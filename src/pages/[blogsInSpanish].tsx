@@ -57,21 +57,6 @@ export async function getStaticPaths() {
 }
 
 export default function Post({ data }: { data: any; }) {
-  useEffect(() => {
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/sw.js').then(
-          (registration) => {
-            console.log('Service Worker registration successful with scope: ', registration.scope);
-          },
-          (err) => {
-            console.log('Service Worker registration failed: ', err);
-          },
-        );
-      });
-    }
-  }, []);
-
   return (
     <>
       <GlobalStyles />
@@ -80,6 +65,17 @@ export default function Post({ data }: { data: any; }) {
       <Head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <script dangerouslySetInnerHTML={{
+          __html: `navigator.serviceWorker.getRegistrations().then((registrations) => {
+    for (const registration of registrations) {
+      registration.unregister();
+    }
+  }).catch((err) => {
+    console.log('Service Worker registration failed: ', err);
+  });`,
+        }}
+        />
 
         {/* <!-- PWA --> */}
         <link rel="manifest" href="/manifest.json" />
@@ -98,14 +94,17 @@ export default function Post({ data }: { data: any; }) {
 
         {/* <!-- Facebook Pixel Code --> */}
         <script dangerouslySetInnerHTML={{
-          __html: `!function(f,b,e,v,n,t,s)
-          {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-          n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-          if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-          n.queue=[];t=b.createElement(e);t.async=!0;
-          t.src=v;s=b.getElementsByTagName(e)[0];
-          s.parentNode.insertBefore(t,s)}(window, document,'script',
-          'https://connect.facebook.net/en_US/fbevents.js');
+          __html: `!function(f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+              n.callMethod ?
+              n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s);
+          }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
           fbq('init', '1205494516547352');
           fbq('track', 'PageView');`,
         }}

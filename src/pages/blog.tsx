@@ -1,3 +1,4 @@
+/* eslint-disable react/no-danger */
 /* eslint-disable jsx-a11y/alt-text */
 import React, { useEffect } from 'react';
 import Head from 'next/head';
@@ -6,20 +7,6 @@ import Layout from '../organisms/Layout';
 import Blog from '../templates/Blog';
 
 export default function BlogPage(): JSX.Element {
-  useEffect(() => {
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/sw.js').then(
-          (registration) => {
-            console.log('Service Worker registration successful with scope: ', registration.scope);
-          },
-          (err) => {
-            console.log('Service Worker registration failed: ', err);
-          },
-        );
-      });
-    }
-  }, []);
   return (
 
     <>
@@ -27,6 +14,17 @@ export default function BlogPage(): JSX.Element {
       <Head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <script dangerouslySetInnerHTML={{
+          __html: `navigator.serviceWorker.getRegistrations().then((registrations) => {
+    for (const registration of registrations) {
+      registration.unregister();
+    }
+  }).catch((err) => {
+    console.log('Service Worker registration failed: ', err);
+  });`,
+        }}
+        />
 
         {/* <!-- PWA --> */}
         <link rel="manifest" href="/manifest.json" />

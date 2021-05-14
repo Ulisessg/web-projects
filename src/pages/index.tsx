@@ -1,3 +1,4 @@
+/* eslint-disable react/no-danger */
 /* eslint-disable jsx-a11y/alt-text */
 import React, { useEffect } from 'react';
 // import ReactDom from 'react-dom';
@@ -14,26 +15,22 @@ import Experience from '../templates/Experience';
 const PageNav = dynamic(() => import('../organisms/DynamicNav'), { ssr: false });
 
 export default function Index(): JSX.Element {
-  useEffect(() => {
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/sw.js').then(
-          (registration) => {
-            console.log('Service Worker registration successful with scope: ', registration.scope);
-          },
-          (err) => {
-            console.log('Service Worker registration failed: ', err);
-          },
-        );
-      });
-    }
-  }, []);
-
   return (
     <>
       <Head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <script dangerouslySetInnerHTML={{
+          __html: `navigator.serviceWorker.getRegistrations().then((registrations) => {
+    for (const registration of registrations) {
+      registration.unregister();
+    }
+  }).catch((err) => {
+    console.log('Service Worker registration failed: ', err);
+  });`,
+        }}
+        />
 
         {/* <!-- PWA --> */}
         <link rel="manifest" href="/manifest.json" />
