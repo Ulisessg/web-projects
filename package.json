@@ -6,8 +6,9 @@
     "lint": "eslint \"src/**\" --fix",
     "prepare": "husky install",
     "dev": "next ./src/",
-    "build": "next build ./src/ && next export ./src/ && npm run generate-sitemap",
+    "build": "next build ./src/ && next export ./src/ && npm run generate-sitemap && npm run generate-manifest",
     "generate-sitemap": "node ./src/sitemap-generator.js",
+    "generate-manifest": "node ./src/manifest-generator.js",
     "start": "next start ./src/"
   },
   "repository": {
