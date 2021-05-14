@@ -40,16 +40,20 @@ const BlogPostsStyles = createGlobalStyle`
 }
 
 #blog a {
-  color: #007db3;
+  color: #2e06ff;
 }
 
 #blog a:focus,
 #blog a:hover {
-  color: #0ebbf3;
+  color: #000000;
 }
 h1 {
   margin-bottom: 10vh;
   font-size: 1.8rem;
+}
+
+h2 {
+  text-align: center
 }
 blockquote {
   font-size: 1.2rem;
@@ -141,7 +145,8 @@ dd {
   margin: 0 0 0 2em;
 }
 
-img {
+#blog img {
+  width: 100%;
   border: 0;
   -ms-interpolation-mode: bicubic;
   vertical-align: middle;
@@ -175,17 +180,21 @@ main {
   margin-bottom: 10vh;
 }
 
-li {
+#blog li {
   text-align: left;
 }
 
-li > p {
+#blog li > p {
   text-align: left;
   display: inline;
 }
 
-li {
+#blog li {
   list-style: inside;
+}
+
+footer {
+  margin-top: 50px
 }
 `;
 
