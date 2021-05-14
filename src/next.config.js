@@ -1,9 +1,9 @@
-const withOffline = require('next-offline');
+// const withOffline = require('next-offline');
 
-const nextConfig = {
+module.exports = {
   future: {
     webpack5: true,
   },
 };
 
-module.exports = withOffline(nextConfig);
+// module.exports = withOffline(nextConfig);
