@@ -41,8 +41,8 @@ export default function Index(): JSX.Element {
         />
 
         {/* <!-- Facebook Pixel Code --> */}
-        <script>
-          {`!(function (f, b, e, v, n, t, s) {
+        <script dangerouslySetInnerHTML={{
+          __html: `!(function (f, b, e, v, n, t, s) {
             if (f.fbq) return;
             n = f.fbq = function () {
               n.callMethod
@@ -66,9 +66,9 @@ export default function Index(): JSX.Element {
             'https://connect.facebook.net/en_US/fbevents.js',
           );
       fbq('init', '1205494516547352');
-      fbq('track', 'PageView')`}
-
-        </script>
+      fbq('track', 'PageView')`,
+        }}
+        />
         <noscript>
           <img
             height="1"
