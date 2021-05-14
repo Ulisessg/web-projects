@@ -10,10 +10,12 @@ const Element = dynamic(() => {
   return import('../atoms/LazyObserverImage');
 }, { ssr: false, loading: () => <LoadingSpinner /> });
 
-function Img({ src, alt, classN }: imgProps): JSX.Element {
+function Img({
+  src, alt, classN, className,
+}: imgProps): JSX.Element {
   return (
     <>
-      <Element className={classN} src={src} alt={alt} />
+      <Element className={className || classN} src={src} alt={alt} />
     </>
   );
 }

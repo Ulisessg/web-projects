@@ -28,7 +28,7 @@ export const FooterContainer = styled.div`
       'badge extraLinks'
       'loveQuote loveQuote';
 
-    .logo-footer {
+    & > img {
       grid-area: logo;
     }
 
@@ -101,11 +101,11 @@ export const CoffeQuote = styled.h3`
 `;
 
 export const CssStyles = createGlobalStyle`
-.logo-footer {
+ footer > div  > img {
     width: 180px;
     margin: 30px auto;
   }
-  .social-media--logo {
+  .social-media-link > img {
     width: 40px;
     height: 40px;
 

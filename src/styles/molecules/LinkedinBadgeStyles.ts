@@ -22,6 +22,12 @@ export const LinkedInBadgeBackground = styled.div`
   width: 100%;
   display: flex;
   padding: 15px;
+  & > img {
+    border-radius: 100%;
+    width: 100px;
+    margin: 0 auto;
+    border: 4px solid white;
+  }
 `;
 
 export const LinkedInBadgeName = styled.h3`
@@ -50,14 +56,5 @@ export const LinkedInBadgeGoProfileLink = styled.a`
   &:hover,
   &:focus {
     color: black;
-  }
-`;
-
-export const ClsStyles = createGlobalStyle`
-  .linkedin-badge--image {
-    border-radius: 100%;
-    width: 100px;
-    margin: 0 auto;
-    border: 4px solid white;
   }
 `;
