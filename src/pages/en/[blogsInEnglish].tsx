@@ -10,6 +10,7 @@ import React from 'react';
 import Head from 'next/head';
 import Layout from '../../organisms/Layout';
 import BlogPostStyles from '../../styles/atoms/BlogPostStyles';
+import GlobalStyles from '../../styles/GlobalStyles';
 
 export async function getStaticProps(context) {
   const blog = context.params.blogsInEnglish;
@@ -133,6 +134,7 @@ export default function Post({ data }: { data: any; }) {
 
         <title>{`${data.title} | UlisesSG`}</title>
       </Head>
+      <GlobalStyles />
       <BlogPostStyles />
       <Layout>
         <main id="main">
