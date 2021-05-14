@@ -1,3 +1,4 @@
+/* eslint-disable react/no-danger */
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable no-template-curly-in-string */
 /* eslint-disable no-underscore-dangle */
@@ -143,6 +144,24 @@ export default function Post({ data }: { data: any; }) {
           </section>
         </main>
       </Layout>
+      <script dangerouslySetInnerHTML={{
+        __html: `const urlLength = window.location.pathname.split('/').length;
+
+const blog = window.location.pathname.split('/')[urlLength - 1];
+
+const raw = JSON.stringify({ blog_name: blog });
+
+const request = new XMLHttpRequest();
+
+request.open(
+  'POST',
+  'https://web-projects-api.vercel.app/api/blog/add-visit',
+  true,
+);
+
+request.send(raw);`,
+      }}
+      />
     </>
   );
 }

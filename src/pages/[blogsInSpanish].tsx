@@ -1,3 +1,4 @@
+/* eslint-disable react/no-danger */
 /* eslint-disable no-template-curly-in-string */
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable no-underscore-dangle */
@@ -60,6 +61,7 @@ export default function Post({ data }: { data: any; }) {
     <>
       <GlobalStyles />
       <BlogPostStyles />
+
       <Head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -80,8 +82,8 @@ export default function Post({ data }: { data: any; }) {
         {/* <!-- End Facebook comments plugin --> */}
 
         {/* <!-- Facebook Pixel Code --> */}
-        <script>
-          {`!function(f,b,e,v,n,t,s)
+        <script dangerouslySetInnerHTML={{
+          __html: `!function(f,b,e,v,n,t,s)
           {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
           n.callMethod.apply(n,arguments):n.queue.push(arguments)};
           if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
@@ -90,8 +92,9 @@ export default function Post({ data }: { data: any; }) {
           s.parentNode.insertBefore(t,s)}(window, document,'script',
           'https://connect.facebook.net/en_US/fbevents.js');
           fbq('init', '1205494516547352');
-          fbq('track', 'PageView');`}
-        </script>
+          fbq('track', 'PageView');`,
+        }}
+        />
         <noscript>
           <img
             height="1"
@@ -146,6 +149,24 @@ export default function Post({ data }: { data: any; }) {
           </section>
         </main>
       </Layout>
+      <script dangerouslySetInnerHTML={{
+        __html: `const urlLength = window.location.pathname.split('/').length;
+
+const blog = window.location.pathname.split('/')[urlLength - 1];
+
+const raw = JSON.stringify({ blog_name: blog });
+
+const request = new XMLHttpRequest();
+
+request.open(
+  'POST',
+  'https://web-projects-api.vercel.app/api/blog/add-visit',
+  true,
+);
+
+request.send(raw);`,
+      }}
+      />
     </>
   );
 }
