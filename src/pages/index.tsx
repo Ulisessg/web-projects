@@ -3,14 +3,7 @@ import React from 'react';
 import dynamic from 'next/dynamic';
 import GlobalStyles from '../styles/GlobalStyles';
 import Layout from '../organisms/Layout';
-import Loading from '../atoms/Loading';
 import { IndexSections } from '../states/index';
-
-// const AboutMe = lazy(() => import('../react/molecules/Description'));
-// const Blogs = lazy(() => import('../react/templates/Blog'));
-// const Gists = lazy(() => import('../react/templates/Gists'));
-// const Experience = lazy(() => import('../react/templates/Experience'));
-// const PageNav = lazy(() => import('../react/organisms/DynamicNav'));
 
 import AboutMe from '../molecules/Description';
 import Blogs from '../templates/Blog';
@@ -29,9 +22,7 @@ const PageNav = dynamic(() => import('../organisms/DynamicNav'), { ssr: false })
 //   }
 // }
 
-//  App
-
-export default function Index() {
+export default function Index(): JSX.Element {
   return (
     <>
       <GlobalStyles />
