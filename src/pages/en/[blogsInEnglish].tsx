@@ -5,6 +5,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import axios from 'axios';
 import React from 'react';
+import Layout from '../../organisms/Layout';
 import BlogPostStyles from '../../styles/atoms/BlogPostStyles';
 
 export async function getStaticProps(context) {
@@ -54,9 +55,13 @@ export default function Post({ data }: { data: any; }) {
   return (
     <>
       <BlogPostStyles />
-      <div>
-        {data.content}
-      </div>
+      <Layout>
+        <main id="main">
+          <section className="blog-wrapper" id="blogWraper">
+            <div id="blog" dangerouslySetInnerHTML={{ __html: data.content }} />
+          </section>
+        </main>
+      </Layout>
     </>
   );
 }
