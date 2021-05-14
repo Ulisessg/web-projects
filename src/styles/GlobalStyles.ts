@@ -22,16 +22,13 @@ const GlobalStyles = createGlobalStyle`
     background-color: ${backgroundColor}
   }
 
-  #root {
-    overflow: hidden;
-    overflow: -moz-hidden-unscrollable;
-  }
-  #main {
-    width: 90vw;
-    margin: 0 auto;
+  #__next {
 
     overflow: hidden;
-    overflow: -moz-hidden-unscrollable;
+  }
+  main {
+    width: 90vw;
+    margin: 0 auto;
   }
 `;
 
