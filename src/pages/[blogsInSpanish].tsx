@@ -10,6 +10,7 @@ import React from 'react';
 import Head from 'next/head';
 import GlobalStyles from '../styles/GlobalStyles';
 import Layout from '../organisms/Layout';
+import BlogPostStyles from '../styles/atoms/BlogPostStyles';
 
 export async function getStaticProps(context) {
   const blog = context.params.blogsInSpanish;
@@ -58,6 +59,7 @@ export default function Post({ data }: { data: any; }) {
   return (
     <>
       <GlobalStyles />
+      <BlogPostStyles />
       <Head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />

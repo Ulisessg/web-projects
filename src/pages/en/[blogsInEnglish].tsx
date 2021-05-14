@@ -5,6 +5,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import axios from 'axios';
 import React from 'react';
+import BlogPostStyles from '../../styles/atoms/BlogPostStyles';
 
 export async function getStaticProps(context) {
   const blog = context.params.blogsInEnglish;
@@ -52,6 +53,7 @@ export async function getStaticPaths() {
 export default function Post({ data }: { data: any; }) {
   return (
     <>
+      <BlogPostStyles />
       <div>
         {data.content}
       </div>
