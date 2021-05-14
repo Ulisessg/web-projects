@@ -7,7 +7,7 @@
 /* eslint-disable max-len */
 /* eslint-disable import/no-extraneous-dependencies */
 import axios from 'axios';
-import React from 'react';
+import React, { useEffect } from 'react';
 import Head from 'next/head';
 import GlobalStyles from '../styles/GlobalStyles';
 import Layout from '../organisms/Layout';
@@ -57,6 +57,21 @@ export async function getStaticPaths() {
 }
 
 export default function Post({ data }: { data: any; }) {
+  useEffect(() => {
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js').then(
+          (registration) => {
+            console.log('Service Worker registration successful with scope: ', registration.scope);
+          },
+          (err) => {
+            console.log('Service Worker registration failed: ', err);
+          },
+        );
+      });
+    }
+  }, []);
+
   return (
     <>
       <GlobalStyles />

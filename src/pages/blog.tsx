@@ -1,21 +1,25 @@
 /* eslint-disable jsx-a11y/alt-text */
-import React from 'react';
+import React, { useEffect } from 'react';
 import Head from 'next/head';
 import GlobalStyles from '../styles/GlobalStyles';
 import Layout from '../organisms/Layout';
 import Blog from '../templates/Blog';
 
-// if (process.env.NODE_ENV !== 'development') {
-//   // Check that service workers are supported
-//   if ('serviceWorker' in navigator) {
-//     // Use the window load event to keep the page load performant
-//     window.addEventListener('load', () => {
-//       navigator.serviceWorker.register('/service-worker.js');
-//     });
-//   }
-// }
-
 export default function BlogPage(): JSX.Element {
+  useEffect(() => {
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js').then(
+          (registration) => {
+            console.log('Service Worker registration successful with scope: ', registration.scope);
+          },
+          (err) => {
+            console.log('Service Worker registration failed: ', err);
+          },
+        );
+      });
+    }
+  }, []);
   return (
 
     <>
