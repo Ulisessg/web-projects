@@ -3,7 +3,7 @@ import SkipLink from '../atoms/SkipLink';
 import Img from './Img';
 import Nav from './NavDarkNoBlank';
 import LinkProps from '../interfaces_and_types/atoms/LinkProps';
-import HeraderStyles from '../styles/molecules/HeaderStyles';
+import { HeaderContainer, ClassessStyles } from '../styles/molecules/HeaderStyles';
 
 function Header(): JSX.Element {
   const headerPaths: Array<LinkProps> = [
@@ -32,8 +32,9 @@ function Header(): JSX.Element {
   return (
     <>
       {/* <SkipLink /> */}
-      <HeraderStyles className="header">
-        <a href="/">
+      <ClassessStyles />
+      <HeaderContainer>
+        <a className="header-link" href="/">
           <Img
             classN="header__logo--img"
             alt="Logo"
@@ -41,7 +42,7 @@ function Header(): JSX.Element {
           />
         </a>
         <Nav dir="row" paths={headerPaths} />
-      </HeraderStyles>
+      </HeaderContainer>
     </>
   );
 }

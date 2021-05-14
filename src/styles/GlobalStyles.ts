@@ -26,6 +26,13 @@ const GlobalStyles = createGlobalStyle`
     overflow: hidden;
     overflow: -moz-hidden-unscrollable;
   }
+  #main {
+    width: 90vw;
+    margin: 0 auto;
+
+    overflow: hidden;
+    overflow: -moz-hidden-unscrollable;
+  }
 `;
 
 export default GlobalStyles;

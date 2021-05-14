@@ -1,7 +1,7 @@
-import styled from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 import { backgroundDark } from '../variables';
 
-const Header = styled.header`
+export const HeaderContainer = styled.header`
   width: 100vw;
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -15,11 +15,13 @@ const Header = styled.header`
     display: flex;
     justify-content: space-around;
   }
+`;
 
-  & a {
+export const ClassessStyles = createGlobalStyle`
+  .header-link {
     align-self: center;
   }
-  & img {
+  .header__logo--img {
     height: 50px;
     width: 50px;
     align-self: center;
@@ -35,7 +37,7 @@ const Header = styled.header`
       height: 40px;
     }
   }
-  & nav ul li p a {
+  header nav ul li p a {
     display: flex;
     font-size: 1rem !important;
     padding: 7px 30px;
@@ -44,5 +46,3 @@ const Header = styled.header`
     }
   }
 `;
-
-export default Header;
