@@ -1,5 +1,5 @@
 export default function getBlogs(): Promise<any> {
-  const endpoint = 'https://web-projects-api.vercel.app/api/blog/last-entries';
+  const endpoint = 'https://web-projects-api.vercel.app/api/blog/last-entries?limit=10';
 
   return window
     .fetch(endpoint, {
