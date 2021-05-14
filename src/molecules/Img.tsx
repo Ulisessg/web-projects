@@ -1,13 +1,14 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
 import { imgProps } from '../interfaces_and_types/globalPropsAndProperties';
+import LoadingSpinner from '../atoms/Loading';
 
 const Element = dynamic(() => {
   if (navigator !== undefined && 'loading' in HTMLImageElement.prototype) {
     return import('../atoms/LazyImage');
   }
   return import('../atoms/LazyObserverImage');
-}, { ssr: false });
+}, { ssr: false, loading: () => <LoadingSpinner /> });
 
 function Img({ src, alt, classN }: imgProps): JSX.Element {
   return (

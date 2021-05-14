@@ -17,25 +17,16 @@ export const HeaderContainer = styled.header`
   }
 `;
 
-export const ClassessStyles = createGlobalStyle`
+export const HeaderClassesStyles = createGlobalStyle`
   .header-link {
     align-self: center;
   }
-  .header__logo--img {
-    height: 50px;
-    width: 50px;
-    align-self: center;
-    margin-left: 10px;
 
-    @media screen and (max-width: 360px) {
-      width: 40px;
-      height: 40px;
-    }
-
-    @media screen and (orientation: landscape) {
-      width: 40px;
-      height: 40px;
-    }
+  header img {
+    height: 40px;
+              width: 40px;
+              align-self: center;
+              margin-left: 10px;
   }
   header nav ul li p a {
     display: flex;
