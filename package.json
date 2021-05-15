@@ -6,9 +6,10 @@
     "lint": "eslint \"src/**\" --fix",
     "prepare": "husky install",
     "dev": "next ./src/",
-    "build": "next build ./src/ && next export ./src/ && npm run generate-sitemap && npm run generate-manifest",
+    "build": "next build ./src/ && next export ./src/ && npm run generate-sitemap && npm run generate-manifest && npm run robots-gen",
     "generate-sitemap": "node ./src/postbuild/sitemap-generator",
     "generate-manifest": "node ./src/postbuild/manifest-generator",
+    "robots-gen": "node ./src/postbuild/robots-txt-generator",
     "start": "next start ./src/"
   },
   "repository": {
