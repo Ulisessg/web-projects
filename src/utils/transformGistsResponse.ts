@@ -7,7 +7,7 @@ export default function transformGistsInfo(gists: {
       id: gist.description,
       image: gist.image,
       title: gist.title,
-      name: gist.githubLink,
+      name: `/gists/${gist.name}`,
       description: gist.description,
     };
 
