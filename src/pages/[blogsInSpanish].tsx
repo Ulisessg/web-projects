@@ -8,6 +8,7 @@ import React from 'react';
 import Head from 'next/head';
 import Layout from '../organisms/Layout';
 import BlogPostStyles from '../styles/atoms/BlogPostStyles';
+import FacebookPixelCode from '../utils/facebookPixel';
 
 export async function getStaticProps(context) {
   const blog = context.params.blogsInSpanish;
@@ -87,19 +88,7 @@ export default function Post({ data }: { data: any; }) {
 
         {/* <!-- Facebook Pixel Code --> */}
         <script dangerouslySetInnerHTML={{
-          __html: `!function(f, b, e, v, n, t, s) {
-            if (f.fbq) return; n = f.fbq = function () {
-              n.callMethod ?
-              n.callMethod.apply(n, arguments) : n.queue.push(arguments);
-            };
-            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
-            n.queue = []; t = b.createElement(e); t.async = !0;
-            t.src = v; s = b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t, s);
-          }(window, document, 'script',
-            'https://connect.facebook.net/en_US/fbevents.js');
-          fbq('init', '1205494516547352');
-          fbq('track', 'PageView');`,
+          __html: FacebookPixelCode,
         }}
         />
         <noscript>
@@ -157,21 +146,19 @@ export default function Post({ data }: { data: any; }) {
         </main>
       </Layout>
       <script dangerouslySetInnerHTML={{
-        __html: `const urlLength = window.location.pathname.split('/').length;
+        __html: `'use strict';
 
-const blog = window.location.pathname.split('/')[urlLength - 1];
+        var urlLength = window.location.pathname.split('/').length;
 
-const raw = JSON.stringify({ blog_name: blog });
+        var blog = window.location.pathname.split('/')[urlLength - 1];
 
-const request = new XMLHttpRequest();
+        var raw = JSON.stringify({ blog_name: blog });
 
-request.open(
-  'POST',
-  'https://web-projects-api.vercel.app/api/blog/add-visit',
-  true,
-);
+        var request = new XMLHttpRequest();
 
-request.send(raw);`,
+        request.open('POST', 'https://web-projects-api.vercel.app/api/blog/add-visit', true);
+
+        request.send(raw);`,
       }}
       />
     </>

@@ -168,21 +168,19 @@ export default function Post({ data }: { data: any; }) {
         </main>
       </Layout>
       <script dangerouslySetInnerHTML={{
-        __html: `const urlLength = window.location.pathname.split('/').length;
+        __html: `'use strict';
 
-const blog = window.location.pathname.split('/')[urlLength - 1];
+        var urlLength = window.location.pathname.split('/').length;
 
-const raw = JSON.stringify({ blog_name: blog });
+        var blog = window.location.pathname.split('/')[urlLength - 1];
 
-const request = new XMLHttpRequest();
+        var raw = JSON.stringify({ blog_name: blog });
 
-request.open(
-  'POST',
-  'https://web-projects-api.vercel.app/api/blog/add-visit',
-  true,
-);
+        var request = new XMLHttpRequest();
 
-request.send(raw);`,
+        request.open('POST', 'https://web-projects-api.vercel.app/api/blog/add-visit', true);
+
+        request.send(raw);`,
       }}
       />
 

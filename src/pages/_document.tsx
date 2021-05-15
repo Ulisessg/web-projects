@@ -36,7 +36,7 @@ export default class MyDocument extends Document {
     const lang = this.props.dangerousAsPath.substring(0, 3);
     return (
       <>
-        <Html lang={lang === '/en' ? 'en' : 'es'}>
+        <Html lang={lang === '/en' ? 'en' : 'es'} prefix="og: http://ogp.me/ns#">
           <Head />
           <body>
             <Main />

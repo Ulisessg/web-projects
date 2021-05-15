@@ -5,6 +5,14 @@ import Head from 'next/head';
 import Layout from '../organisms/Layout';
 import Blog from '../templates/Blog';
 
+/**
+ *
+ *
+ *
+ *
+ *
+*/
+
 export default function BlogPage(): JSX.Element {
   return (
 
