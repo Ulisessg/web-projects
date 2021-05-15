@@ -7,7 +7,7 @@
 /* eslint-disable max-len */
 /* eslint-disable import/no-extraneous-dependencies */
 import axios from 'axios';
-import React, { useEffect } from 'react';
+import React from 'react';
 import Head from 'next/head';
 import Layout from '../../organisms/Layout';
 import BlogPostStyles from '../../styles/atoms/BlogPostStyles';
@@ -32,7 +32,6 @@ export async function getStaticPaths() {
 
   const paths = [];
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   request.data.message.filter((blog: {
     metaSubjects: Array<any | string>;
     name: string;
@@ -48,8 +47,6 @@ export async function getStaticPaths() {
     }
   });
 
-  // { params: { blogsInEnglish: blog.name } }
-
   return {
     paths,
     fallback: false,
@@ -57,23 +54,11 @@ export async function getStaticPaths() {
 }
 
 export default function Post({ data }: { data: any; }) {
-  // useEffect(() => {
-  //   if ('serviceWorker' in navigator) {
-  //     window.addEventListener('load', () => {
-  //       navigator.serviceWorker.register('/sw.js').then(
-  //         (registration) => {
-  //           console.log('Service Worker registration successful with scope: ', registration.scope);
-  //         },
-  //         (err) => {
-  //           console.log('Service Worker registration failed: ', err);
-  //         },
-  //       );
-  //     });
-  //   }
-  // }, []);
   return (
     <>
+
       <Head>
+        <html lang="en" />
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -203,6 +188,7 @@ request.open(
 request.send(raw);`,
       }}
       />
+
     </>
   );
 }

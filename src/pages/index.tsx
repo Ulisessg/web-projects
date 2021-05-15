@@ -1,6 +1,6 @@
 /* eslint-disable react/no-danger */
 /* eslint-disable jsx-a11y/alt-text */
-import React, { useEffect } from 'react';
+import React from 'react';
 // import ReactDom from 'react-dom';
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
@@ -18,6 +18,7 @@ export default function Index(): JSX.Element {
   return (
     <>
       <Head>
+        <html lang="es" />
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 

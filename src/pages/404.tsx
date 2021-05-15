@@ -1,8 +1,8 @@
 /* eslint-disable react/no-danger */
-import React, { useEffect } from 'react';
+import React from 'react';
+import Head from 'next/head';
 import GlobalStyles from '../styles/GlobalStyles';
 import Styles404 from '../styles/pages/404Styles';
-
 import ErrorTemplate from '../templates/Error';
 import Layout from '../organisms/Layout';
 
@@ -10,6 +10,9 @@ export default function Error(): JSX.Element {
   return (
     <>
       <GlobalStyles />
+      <Head>
+        <html lang="es" />
+      </Head>
       <Layout>
         <script dangerouslySetInnerHTML={{
           __html: `navigator.serviceWorker.getRegistrations().then((registrations) => {
