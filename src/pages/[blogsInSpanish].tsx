@@ -6,7 +6,6 @@
 import axios from 'axios';
 import React from 'react';
 import Head from 'next/head';
-import GlobalStyles from '../styles/GlobalStyles';
 import Layout from '../organisms/Layout';
 import BlogPostStyles from '../styles/atoms/BlogPostStyles';
 
@@ -54,7 +53,6 @@ export async function getStaticPaths() {
 export default function Post({ data }: { data: any; }) {
   return (
     <>
-      <GlobalStyles />
       <BlogPostStyles />
 
       <Head>

@@ -3,7 +3,6 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
-import GlobalStyles from '../styles/GlobalStyles';
 import Layout from '../organisms/Layout';
 import { IndexSections } from '../states/index';
 import AboutMe from '../molecules/Description';
@@ -137,7 +136,6 @@ export default function Index(): JSX.Element {
           UlisesSG - FullStack Developer | Student at Platzi Master | Nerd
         </title>
       </Head>
-      <GlobalStyles />
       <Layout>
         <main role="main">
           <AboutMe />

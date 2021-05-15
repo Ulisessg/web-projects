@@ -2,7 +2,6 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React from 'react';
 import Head from 'next/head';
-import GlobalStyles from '../styles/GlobalStyles';
 import Layout from '../organisms/Layout';
 import Blog from '../templates/Blog';
 
@@ -10,7 +9,6 @@ export default function BlogPage(): JSX.Element {
   return (
 
     <>
-      <GlobalStyles />
       <Head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />

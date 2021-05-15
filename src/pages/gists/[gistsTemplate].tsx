@@ -7,7 +7,6 @@ import React from 'react';
 import Head from 'next/head';
 import ReactGist from 'react-gist';
 import axios from 'axios';
-import GlobalStyles from '../../styles/GlobalStyles';
 import Layout from '../../organisms/Layout';
 import { GistsClassesStyles } from '../../styles/templates/GistsPagesStyles';
 import LinkDarkNoBlank from '../../atoms/LinkDarkNoBlank';
@@ -43,7 +42,6 @@ export async function getStaticPaths() {
 function GistsTemplate({ data, githubCode }: { data: any; githubCode: any; }): JSX.Element {
   return (
     <>
-      <GlobalStyles />
       <GistsClassesStyles />
 
       <Head>

@@ -1,12 +1,10 @@
 import React from 'react';
 import Head from 'next/head';
-import GlobalStyles from '../styles/GlobalStyles';
 import DesignTemplate from '../templates/Design';
 
 export default function Design(): JSX.Element {
   return (
     <>
-      <GlobalStyles />
       <Head>
         {/* <!-- PWA --> */}
         <link rel="manifest" href="/manifest.json" />
