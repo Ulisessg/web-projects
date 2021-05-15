@@ -1,7 +1,6 @@
 /* eslint-disable react/no-danger */
 /* eslint-disable array-callback-return */
 /* eslint-disable consistent-return */
-/* eslint-disable import/no-extraneous-dependencies */
 import axios from 'axios';
 import React from 'react';
 import Layout from '../../organisms/Layout';
