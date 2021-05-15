@@ -3,11 +3,12 @@
 /* eslint-disable consistent-return */
 import axios from 'axios';
 import React from 'react';
+import { GetStaticPaths, GetStaticProps } from 'next';
 import Layout from '../../organisms/Layout';
 import BlogPostStyles from '../../styles/atoms/BlogPostStyles';
 import Head from '../../atoms/Head';
 
-export async function getStaticProps(context) {
+export const getStaticProps: GetStaticProps = async (context) => {
   const blog = context.params.blogsInEnglish;
 
   const request = await axios.get(`https://web-projects-api.vercel.app/api/blog/?name=${blog}`);
@@ -19,9 +20,9 @@ export async function getStaticProps(context) {
       data,
     },
   };
-}
+};
 
-export async function getStaticPaths() {
+export const getStaticPaths: GetStaticPaths = async () => {
   const request: any = await axios.get('https://web-projects-api.vercel.app/api/blog/all-blogs');
 
   const paths = [];
@@ -45,9 +46,9 @@ export async function getStaticPaths() {
     paths,
     fallback: false,
   };
-}
+};
 
-export default function Post({ data }: { data: any; }) {
+export default function Post({ data }: { data: any; }): JSX.Element {
   return (
     <>
       <Head

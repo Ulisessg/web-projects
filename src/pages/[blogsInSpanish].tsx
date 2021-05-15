@@ -2,15 +2,15 @@
 /* eslint-disable no-template-curly-in-string */
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable array-callback-return */
-/* eslint-disable import/no-extraneous-dependencies */
-import axios from 'axios';
 import React from 'react';
+import { GetStaticPaths, GetStaticProps } from 'next';
+import axios from 'axios';
 import Head from 'next/head';
 import Layout from '../organisms/Layout';
 import BlogPostStyles from '../styles/atoms/BlogPostStyles';
 import FacebookPixelCode from '../utils/facebookPixel';
 
-export async function getStaticProps(context) {
+export const getStaticProps: GetStaticProps = async (context) => {
   const blog = context.params.blogsInSpanish;
 
   const request = await axios.get(`https://web-projects-api.vercel.app/api/blog/?name=${blog}`);
@@ -22,14 +22,13 @@ export async function getStaticProps(context) {
       data,
     },
   };
-}
+};
 
-export async function getStaticPaths() {
+export const getStaticPaths: GetStaticPaths = async () => {
   const request: any = await axios.get('https://web-projects-api.vercel.app/api/blog/all-blogs');
 
   const paths = [];
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   request.data.message.filter((blog: {
     metaSubjects: Array<any | string>;
     name: string;
@@ -49,9 +48,9 @@ export async function getStaticPaths() {
     paths,
     fallback: false,
   };
-}
+};
 
-export default function Post({ data }: { data: any; }) {
+export default function Post({ data }: { data: any; }): JSX.Element {
   return (
     <>
       <BlogPostStyles />
