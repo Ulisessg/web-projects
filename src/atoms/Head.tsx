@@ -99,7 +99,11 @@ function Head({
       {/* <!-- SEO end  --> */}
 
       { children}
-
+      <link
+        rel="icon"
+        href="https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2Fv2%2FLogo-favicon.png?alt=media&token=60a872bd-af09-47dd-a5cc-66e5a5b3ab51"
+        type="image/png"
+      />
       <title>
         {`${title}`}
       </title>
