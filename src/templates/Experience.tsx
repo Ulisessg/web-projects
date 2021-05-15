@@ -1,11 +1,9 @@
 import React from 'react';
-// import { experienceInfos } from '../states/index';
-
 import {
-  temporalExperienceInfosData,
-  temporalExperienceInfosImages,
+  experiencesInfo,
 } from '../states/index';
-// import SectionWithModal from './SectionWithModal';
+
+import SectionWithModal from './SectionWithModal';
 import SectionNoModal from './SectionNoModal';
 import { Container, Title } from '../styles/templates/ExperienceStyles';
 import SectionContainer from '../styles/molecules/SectionContainer';
@@ -25,10 +23,22 @@ function Experience(): JSX.Element {
               />
             ))} */}
 
-            <SectionNoModal
+            {experiencesInfo.sections.map((section) => (
+              <SectionWithModal
+                key={section.id}
+                cover={section.cover}
+                description={section.description}
+                id={section.id}
+                name={section.name}
+                path={section.path}
+                elementId={section.name}
+                images={section.images}
+              />
+            ))}
+            {/* <SectionNoModal
               images={temporalExperienceInfosImages}
               sections={temporalExperienceInfosData}
-            />
+            /> */}
           </SectionContainer>
         </div>
       </Container>

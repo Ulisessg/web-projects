@@ -1,57 +1,85 @@
-import React, { lazy } from 'react';
-import { createPortal } from 'react-dom';
-import ButtonClose from '../atoms/ButtonClose';
-import LinkDarkBlank from '../atoms/LinkDarkBlank';
+import React, { useCallback, useState, useEffect } from 'react';
+import dynamic from 'next/dynamic';
+import SectionProps from '../interfaces_and_types/organisms/SectionProps';
+import ImgLazy from '../molecules/Img';
+import Loading from '../atoms/Loading';
 import {
-  SectionModalContainer,
-  SectionModalTitle,
-  ExternalStyles,
-} from '../styles/molecules/SectionModalStyles';
-import SectionModalProps from '../interfaces_and_types/molecules/SectionModalProps';
+  SectionContainer,
+  ImageContainer,
+  Title,
+  Description,
+} from '../styles/organisms/SectionWithModalStyles';
+import ButtonDark from '../atoms/ButtonDark';
 
-const ImageSlider = lazy(() => import('../molecules/ImageSlider'));
+const ModalComponent = dynamic(() => import('../organisms/ModalForSectionWithModal'), { loading: () => <Loading /> });
 
-function SectionModal({
-  name,
-  path,
-  description,
-  closeModal,
+function Section({
   images,
-}: SectionModalProps): JSX.Element {
-  return createPortal(
+  name,
+  description,
+  path,
+  cover,
+}: SectionProps): JSX.Element {
+  const [openModal, setOpenModal] = useState<boolean>(false);
+
+  const handleKeyUp = useCallback((e: KeyboardEvent): void => {
+    if ('key' in e && (e.key === 'Escape' || e.key === 'Esc')) {
+      setOpenModal(false);
+    } else if (e.keyCode === 27) {
+      setOpenModal(false);
+    }
+  }, []);
+
+  // useEffect(() => {
+  //   const body: HTMLBodyElement = document.querySelector('body');
+  //   const root: HTMLElement = document.getElementById('root');
+  //   // Prevent scroll
+  //   if (openModal) {
+  //     body.addEventListener('keyup', handleKeyUp);
+  //     root.classList.replace('delete-blur-body', 'blur-body');
+  //     body.style.overflow = 'hidden';
+  //     root.classList.add('blur-body');
+  //   } else {
+  //     body.style.overflow = 'auto';
+  //     root.classList.replace('blur-body', 'delete-blur-body');
+  //     body.removeEventListener('keyup', handleKeyUp);
+  //   }
+  // }, [openModal]);
+
+  function handleModal(): void {
+    setOpenModal(!openModal);
+  }
+
+  return (
     <>
-      <ExternalStyles />
-      <SectionModalContainer>
-        <ButtonClose handleClick={closeModal} />
+      <SectionContainer>
+        <ImageContainer>
+          <ImgLazy classN="section--img" src={cover.src} alt={cover.alt} />
+        </ImageContainer>
+        <Title>{name}</Title>
 
-        {/* <SectionModalImageContainer>
-          <ImgLazy classN="section-modal--img" src={src} alt={alt} />
-        </SectionModalImageContainer> */}
-        <SectionModalTitle className="section__modal--title">
-          {name}
-        </SectionModalTitle>
+        <Description className="section--description">
+          {description}
+        </Description>
 
-        {images.length > 0 && (
-          <>
-            <div style={{ width: '100px' }}>
-              <ImageSlider images={images} />
-            </div>
-          </>
-        )}
-
-        {/* Description temporally disabled */}
-        {/* <p>{description}</p> */}
-
-        <LinkDarkBlank
-          label={`Ver más sobre ${name}`}
-          path={path}
+        <ButtonDark
+          handleClick={handleModal}
           text={`Ver más sobre ${name}`}
-          className="section-modal-link"
+          type="button"
         />
-      </SectionModalContainer>
-    </>,
-    document.getElementById('modal'),
+        {openModal && (
+
+          <ModalComponent
+            description={description}
+            path={path}
+            name={name}
+            images={images}
+            closeModal={handleModal}
+          />
+
+        )}
+      </SectionContainer>
+    </>
   );
 }
-
-export default SectionModal;
+export default Section;

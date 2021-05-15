@@ -1,4 +1,5 @@
 import { Path } from '../interfaces_and_types/organisms/FooterTypes';
+import SectionWithModalProps from '../interfaces_and_types/organisms/SectionWithModalProps';
 
 export const footerPaths: Array<Path> = [
   {
@@ -19,19 +20,11 @@ export const footerPaths: Array<Path> = [
   },
 ];
 
-export const experienceInfos: Array<{
-  sections: {
-    id: number;
-    name: string;
-    path: string;
-    description: string;
-    cover: { alt: string; src: string };
-  };
-  images?: Array<{ alt: string; src: string }>;
-}> = [
-  {
-    sections: {
-      id: 5,
+export const experiencesInfo: SectionWithModalProps = {
+  sections: [
+    {
+      id: 1,
+      key: 1,
       name: 'Finders - Findme',
       path: 'https://github.com/Finders-Master/finders-FE',
 
@@ -42,11 +35,9 @@ export const experienceInfos: Array<{
         src:
           'https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2Fv2%2Fprojects%2Ffindme.png?alt=media&token=99b04a9b-acf6-460b-8dd6-a5f508beff3a',
       },
+      images: [],
     },
-    images: [],
-  },
-  {
-    sections: {
+    {
       id: 1,
       name: 'Platzi stack',
       path: '/como-los-datos-me-ayudaron',
@@ -57,11 +48,9 @@ export const experienceInfos: Array<{
         src:
           'https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2Fv2%2Fprojects%2Fplatzi%20stack.png?alt=media&token=db54843b-d3b2-4bcb-a3d1-1ec0b409b99c',
       },
+      images: [],
     },
-    images: [],
-  },
-  {
-    sections: {
+    {
       id: 2,
       name: 'Learningator - Hackathon Platzi Master',
       path: 'https://github.com/Learningator/learning-200-frontend',
@@ -72,11 +61,9 @@ export const experienceInfos: Array<{
         src:
           'https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2Fv2%2Fprojects%2FLearningator.png?alt=media&token=3a092855-76a8-457c-ba5d-7a085530b1eb',
       },
+      images: [],
     },
-    images: [],
-  },
-  {
-    sections: {
+    {
       id: 3,
       name: 'Always update - Proyecto final Platzi Master',
       path: 'https://github.com/Proyecto-Noticias/Frontend',
@@ -87,11 +74,9 @@ export const experienceInfos: Array<{
         src:
           'https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2Fv2%2Fprojects%2FalwaysUpdate.png?alt=media&token=fe4b78ec-d2e4-4834-a1e7-ce8f2f221db6',
       },
+      images: [],
     },
-    images: [],
-  },
-  {
-    sections: {
+    {
       id: 4,
       name: 'UD',
       path: 'https://github.com/Ulisessg/web-projects',
@@ -102,10 +87,10 @@ export const experienceInfos: Array<{
         src:
           'https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2Fv2%2Fprojects%2FUD.png?alt=media&token=14d7b327-3b49-4412-be21-b9816e6ab80e',
       },
+      images: [],
     },
-    images: [],
-  },
-];
+  ],
+};
 
 export const temporalExperienceInfosData = [
   {
