@@ -16,7 +16,8 @@ function getFiles(path = '.') {
     }
   });
 
-  const filesNoExtension = files.map((file) => {
+  // Delete .html extension
+  const filesWithNoExtension = files.map((file) => {
     const fileParts = file.split('.');
 
     if (fileParts[0] === 'index') {
@@ -26,7 +27,7 @@ function getFiles(path = '.') {
     return fileParts[0];
   });
 
-  return filesNoExtension;
+  return filesWithNoExtension;
 }
 
 const rootPats = getFiles('.').map((path) => {
@@ -39,6 +40,7 @@ const rootPats = getFiles('.').map((path) => {
   <loc>https://ulisessg.com/${path}</loc>
   </url>`;
 });
+
 const englishPahts = getFiles('en').map((path) => {
   if (path === '') {
     return `<url>
@@ -50,9 +52,14 @@ const englishPahts = getFiles('en').map((path) => {
   </url>`;
 });
 
+const gistsPahts = getFiles('gists').map((path) => `<url>
+  <loc>https://ulisessg.com/gists/${path}</loc>
+  </url>`);
+
 const FullXML = `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 ${rootPats.join('\n')}\n
 ${englishPahts.join('\n')}\n
+${gistsPahts.join('\n')}\n
 </urlset>`;
 
 writeFileSync(join(__dirname, 'out', 'sitemap.xml'), FullXML, {
