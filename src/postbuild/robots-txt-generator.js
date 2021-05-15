@@ -5,8 +5,8 @@ writeFileSync(
   join(__dirname, '..', 'out', 'robots.txt'),
   `User-Agent: *
 Allow: /
-Allow: /en
-Allow: /gists
+Allow: /en/*
+Allow: /gists/*
 
 Sitemap: https://ulisessg.com/sitemap.xml
   `,
