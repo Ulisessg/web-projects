@@ -1,9 +1,7 @@
 import React from 'react';
-import { connect } from 'react-redux';
 
-import '../styles/organisms/mainDesign-styles.styl';
-
-import Sections from './Sections';
+import SectionWithNoModal from '../templates/SectionNoModal';
+import SectionsContainer from '../styles/molecules/SectionContainer';
 
 interface MainDesignProps {
   sectionsReducer: any;
@@ -63,18 +61,12 @@ function MainDesign({
 
       <h2 className="main__introduction">Secciones del sistema de diseño</h2>
 
-      <Sections images={images} sections={sections} />
+      <SectionsContainer>
+
+        <SectionWithNoModal sections={sections} images={images} />
+      </SectionsContainer>
     </main>
   );
 }
 
-interface StateProps {
-  sectionsReducer: any;
-  imagesReducer: any;
-}
-
-function mapStateToProps({ sectionsReducer, imagesReducer }: StateProps) {
-  return { sectionsReducer, imagesReducer };
-}
-
-export default connect(mapStateToProps, {})(MainDesign);
+export default MainDesign;
