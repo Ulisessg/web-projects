@@ -7,8 +7,8 @@
     "prepare": "husky install",
     "dev": "next ./src/",
     "build": "next build ./src/ && next export ./src/ && npm run generate-sitemap && npm run generate-manifest",
-    "generate-sitemap": "node ./src/sitemap-generator.js",
-    "generate-manifest": "node ./src/manifest-generator.js",
+    "generate-sitemap": "node ./src/postbuild/sitemap-generator",
+    "generate-manifest": "node ./src/postbuild/manifest-generator",
     "start": "next start ./src/"
   },
   "repository": {
