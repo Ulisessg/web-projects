@@ -5,7 +5,7 @@ import FacebookPixelCode from '../utils/facebookPixel';
 import HeadProps from '../interfaces_and_types/atoms/HeadProps';
 
 function Head({
-  canonicalUrl, description, keywords, title, image,
+  canonicalUrl, description, keywords, title, image, locale, imageAlt, children,
 }: HeadProps): JSX.Element {
   return (
     <NextHead>
@@ -71,8 +71,17 @@ function Head({
 
       {/* <!-- OG SEO --> */}
       <meta property="og:site_name" content="UlisesDev" />
-      <meta property="og:locale" content="es_MX" />
+      <meta property="og:locale" content={locale} />
       <meta property="og:type" content="website" />
+      <meta property="og:image:width" content="1600" />
+      <meta property="og:image:height" content="800" />
+      <meta property="og:image:alt" content={imageAlt} />
+      <meta property="article:author" content="https://www.facebook.com/Ulises5G" />
+      <meta property="article:publisher" content="https://www.facebook.com/Ulises5G" />
+      <meta
+        name="article:tag"
+        content={keywords}
+      />
       <meta
         property="og:title"
         content={title}
@@ -88,6 +97,8 @@ function Head({
       <meta property="og:url" content={`https://ulisessg.com${canonicalUrl}`} />
 
       {/* <!-- SEO end  --> */}
+
+      { children}
 
       <title>
         {`${title}`}
