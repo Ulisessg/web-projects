@@ -17,6 +17,7 @@ export default class MyDocument extends Document {
       });
 
       const initialProps = await Document.getInitialProps(ctx);
+
       return {
         ...initialProps,
         styles: (
@@ -32,9 +33,10 @@ export default class MyDocument extends Document {
   }
 
   render() {
+    const lang = this.props.dangerousAsPath.substring(0, 3);
     return (
       <>
-        <Html>
+        <Html lang={lang === '/en' ? 'en' : 'es'}>
           <Head />
           <body>
             <Main />

@@ -10,9 +10,7 @@ export default function Error(): JSX.Element {
   return (
     <>
       <GlobalStyles />
-      <Head>
-        <html lang="es" />
-      </Head>
+
       <Layout>
         <script dangerouslySetInnerHTML={{
           __html: `navigator.serviceWorker.getRegistrations().then((registrations) => {

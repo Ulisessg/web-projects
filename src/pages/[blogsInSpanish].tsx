@@ -63,7 +63,6 @@ export default function Post({ data }: { data: any; }) {
       <BlogPostStyles />
 
       <Head>
-        <html lang="es" />
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 

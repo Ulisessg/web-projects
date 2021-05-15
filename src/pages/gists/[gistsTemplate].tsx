@@ -47,7 +47,6 @@ function GistsTemplate({ data, githubCode }: { data: any; githubCode: any; }): J
       <GistsClassesStyles />
 
       <Head>
-        <html lang="es" />
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
