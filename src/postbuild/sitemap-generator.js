@@ -4,7 +4,7 @@ const { readdirSync, writeFileSync } = require('fs');
 const { join } = require('path');
 
 function getFiles(path = '.') {
-  const files = readdirSync(join(__dirname, 'out', path), {
+  const files = readdirSync(join(__dirname, '..', 'out', path), {
     encoding: 'utf-8',
   }).filter((file) => {
     const fileParts = file.split('.');
@@ -62,7 +62,7 @@ ${englishPahts.join('\n')}\n
 ${gistsPahts.join('\n')}\n
 </urlset>`;
 
-writeFileSync(join(__dirname, 'out', 'sitemap.xml'), FullXML, {
+writeFileSync(join(__dirname, '..', 'out', 'sitemap.xml'), FullXML, {
   encoding: 'utf-8',
 });
 
