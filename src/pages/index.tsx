@@ -1,141 +1,38 @@
-/* eslint-disable react/no-danger */
-/* eslint-disable jsx-a11y/alt-text */
 import React from 'react';
 import dynamic from 'next/dynamic';
-import Head from 'next/head';
 import Layout from '../organisms/Layout';
 import { IndexSections } from '../states/index';
 import AboutMe from '../molecules/Description';
 import Blogs from '../templates/Blog';
 import Gists from '../templates/Gists';
 import Experience from '../templates/Experience';
+import Head from '../atoms/Head';
+
+/**
+ *  English description:
+ *  I'm a FullStack Frontend Developer with experience using MERN stack and Typescript,
+ *  I use Jira and my * designs are made with Figma,
+ *  my experience came from personal projects and Platzi Master
+ *  what is a  bootcamp that trains 0.1%
+ *  Platzi students for 3 months in Frontend / Backend or Data Science skills
+ *
+ */
 
 const PageNav = dynamic(() => import('../organisms/DynamicNav'), { ssr: false });
 
 export default function Index(): JSX.Element {
   return (
     <>
-      <Head>
-        <meta charSet="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-        <script dangerouslySetInnerHTML={{
-          __html: `navigator.serviceWorker.getRegistrations().then((registrations) => {
-    for (const registration of registrations) {
-      registration.unregister();
-    }
-  }).catch((err) => {
-    console.log('Service Worker registration failed: ', err);
-  });`,
-        }}
-        />
-
-        {/* <!-- PWA --> */}
-        <link rel="manifest" href="/manifest.json" />
-        <meta name="theme-color" content="#052336" />
-        <link
-          rel="apple-touch-icon"
-          href="https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2Fv2%2FLogo-favicon.png?alt=media&token=60a872bd-af09-47dd-a5cc-66e5a5b3ab51"
-        />
-
-        {/* <!-- Facebook Pixel Code --> */}
-        <script dangerouslySetInnerHTML={{
-          __html: `!(function (f, b, e, v, n, t, s) {
-            if (f.fbq) return;
-            n = f.fbq = function () {
-              n.callMethod
-                ? n.callMethod.apply(n, arguments)
-                : n.queue.push(arguments);
-            };
-            if (!f._fbq) f._fbq = n;
-            n.push = n;
-            n.loaded = !0;
-            n.version = "2.0";
-            n.queue = [];
-            t = b.createElement(e);
-            t.async = !0;
-            t.src = v;
-            s = b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t, s);
-          })(
-            window,
-            document,
-            'script',
-            'https://connect.facebook.net/en_US/fbevents.js',
-          );
-      fbq('init', '1205494516547352');
-      fbq('track', 'PageView')`,
-        }}
-        />
-        <noscript>
-          <img
-            height="1"
-            width="1"
-            style={{ display: 'none' }}
-            src="https://www.facebook.com/tr?id=1205494516547352&ev=PageView&noscript=1"
-          />
-        </noscript>
-        {/* <!-- End Facebook Pixel Code --> */}
-
-        {/* <!-- Basic SEO  --> */}
-        <link rel="canonical" href="https://ulisessg.com" />
-        <meta
-          name="description"
-          content="UlisesSG - FullStack Developer | Student at Platzi Master | Nerd"
-        />
-        <meta
-          name="keywords"
-          content="Full stack developer, Frontend Developer, Backend Developer, Back-end, Front-end, Front-End, Back-End, Web developer, Platzi Master"
-        />
-
-        <meta name="author" content="Ulises Antonio Samano Galvan" />
-
-        {/* <!-- Twitter SEO  --> */}
-        <meta
-          name="twitter:title"
-          content="UlisesSG - FullStack Developer | Student at Platzi Master | Nerd"
-        />
-        <meta
-          name="twitter:description"
-          content="UlisesSG - FullStack Developer | Student at Platzi Master | Nerd"
-        />
-        <meta
-          name="twitter:image"
-          content="https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2FSEO%2Fulises5G.jfif?alt=media&token=bbe0eb8b-ee31-4ef1-a444-452691ca8f67"
-        />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@Ulises5G" />
-        <meta name="twitter:creator" content="@Ulises5G" />
-
-        {/* OG SEO  */}
-        <meta property="og:site_name" content="UlisesDev" />
-        <meta property="og:locale" content="es_MX" />
-        <meta property="og:type" content="website" />
-        <meta
-          property="og:title"
-          content="UlisesSG - FullStack Developer | Student at Platzi Master | Nerd"
-        />
-        <meta
-          property="og:description"
-          content="UlisesSG - FullStack Developer | Student at Platzi Master | Nerd"
-        />
-        <meta
-          property="og:image"
-          content="https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2FSEO%2Fulises5G.jfif?alt=media&token=bbe0eb8b-ee31-4ef1-a444-452691ca8f67"
-        />
-        <meta property="og:url" content="https://ulisessg.com" />
-
-        {/* SEO end */}
-
-        <link
-          rel="icon"
-          href="https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2Fv2%2FLogo-favicon.png?alt=media&token=60a872bd-af09-47dd-a5cc-66e5a5b3ab51"
-          type="image/png"
-        />
-        <title>
-          UlisesSG - FullStack Developer | Student at Platzi Master | Nerd
-        </title>
-      </Head>
+      <Head
+        canonicalUrl=""
+        type="website"
+        title="Ulises Antonio | FullStack Developer | Student at Platzi Master | Nerd"
+        description="Soy un FullStack Frontend Developer con experiencia usando el stack MERN y Typescript, utilizo Figma para diseñar y Jira para manejar SCRUM, mi experiencia viene de proyectos personales y de Platzi Master, un bootcamp que capacita a 0.1% estudiantes de Platzi durante 3 meses en Frontend / Backend o Data Science"
+        image="https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2Fv2%2FUlises%20Antonio%20Samano%20Galvan%20Full%20Stack%20Developer.png?alt=media&token=27ce101b-0901-4f75-917d-46276a3f0d89"
+        imageAlt="Ulises Antonio Samano Galvan photo"
+        keywords="Full Stack Developer, Frontend Developer, Gists, MERN, Typescript, Platzi Master"
+        locale="es_MX"
+      />
       <Layout>
         <main role="main">
           <AboutMe />
