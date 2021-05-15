@@ -1,31 +1,13 @@
-/* eslint-disable react/no-danger */
-/* eslint-disable jsx-a11y/alt-text */
-/* eslint-disable max-len */
-/* eslint-disable import/no-extraneous-dependencies */
-
 import React from 'react';
-import Head from 'next/head';
 import ReactGist from 'react-gist';
 import axios from 'axios';
+import { GetStaticProps, GetStaticPaths } from 'next';
 import Layout from '../../organisms/Layout';
 import { GistsClassesStyles } from '../../styles/templates/GistsPagesStyles';
 import LinkDarkNoBlank from '../../atoms/LinkDarkNoBlank';
+import Head from '../../atoms/Head';
 
-/**
- *
- * Cannonical url /gists/${data.name}
- *
- * Description {data.description}
- *
- *  Keywords content={data.subjects}
- *
- * Twitter title content={data.title}
- */
-/* <title>
-  {`${data.title} | UlisesSG FullStack Developer`}
-</title> */
-
-export async function getStaticProps(context) {
+export const getStaticProps: GetStaticProps = async (context) => {
   const request = await axios.get(`https://web-projects-api.vercel.app/api/gist?name=${context.params.gistsTemplate}`);
 
   const data = request.data.message[0];
@@ -37,9 +19,9 @@ export async function getStaticProps(context) {
 
     },
   };
-}
+};
 
-export async function getStaticPaths() {
+export const getStaticPaths: GetStaticPaths = async () => {
   const request = await axios.get('https://web-projects-api.vercel.app/api/gist?limit=100');
   const gists = request.data.message;
 
@@ -51,25 +33,25 @@ export async function getStaticPaths() {
     paths,
     fallback: false,
   };
-}
+};
 
 function GistsTemplate({ data, githubCode }: { data: any; githubCode: any; }): JSX.Element {
   return (
     <>
       <GistsClassesStyles />
-
-      <Head>
-
-        <link
-          rel="icon"
-          href="https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2Fv2%2FLogo-favicon.png?alt=media&token=60a872bd-af09-47dd-a5cc-66e5a5b3ab51"
-          type="image/png"
-        />
-      </Head>
+      <Head
+        title={`${data.title} | UlisesSG FullStack Developer`}
+        canonicalUrl={`/gists/${data.name}`}
+        description={data.description}
+        image={data.image}
+        imageAlt={`Portada del gist: ${data.title}`}
+        keywords={`${data.subjects}`}
+        locale="es_MX"
+        type="website"
+      />
       <Layout>
         <main>
           <h1>{data.title}</h1>
-
           <section>
             <p>
               {data.description}
@@ -80,7 +62,6 @@ function GistsTemplate({ data, githubCode }: { data: any; githubCode: any; }): J
             <ReactGist id={githubCode} file={null} />
           </section>
           <LinkDarkNoBlank path="/gist" text="Ver más códigos" label="Ver más códigos" />
-
         </main>
       </Layout>
     </>
