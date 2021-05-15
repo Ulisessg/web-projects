@@ -1,7 +1,6 @@
 /* eslint-disable react/no-danger */
 /* eslint-disable jsx-a11y/alt-text */
 import React from 'react';
-// import ReactDom from 'react-dom';
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
 import GlobalStyles from '../styles/GlobalStyles';

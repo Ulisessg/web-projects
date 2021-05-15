@@ -1,6 +1,6 @@
 /* eslint-disable react/no-danger */
 /* eslint-disable jsx-a11y/alt-text */
-import React, { useEffect } from 'react';
+import React from 'react';
 import Head from 'next/head';
 import GlobalStyles from '../styles/GlobalStyles';
 import Layout from '../organisms/Layout';

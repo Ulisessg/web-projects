@@ -1,13 +1,10 @@
 /* eslint-disable react/no-danger */
 /* eslint-disable no-template-curly-in-string */
 /* eslint-disable jsx-a11y/alt-text */
-/* eslint-disable no-underscore-dangle */
 /* eslint-disable array-callback-return */
-/* eslint-disable consistent-return */
-/* eslint-disable max-len */
 /* eslint-disable import/no-extraneous-dependencies */
 import axios from 'axios';
-import React, { useEffect } from 'react';
+import React from 'react';
 import Head from 'next/head';
 import GlobalStyles from '../styles/GlobalStyles';
 import Layout from '../organisms/Layout';
@@ -47,8 +44,6 @@ export async function getStaticPaths() {
       paths.push({ params: { blogsInSpanish: blog.name } });
     }
   });
-
-  // { params: { blogsInSpanish: blog.name } }
 
   return {
     paths,

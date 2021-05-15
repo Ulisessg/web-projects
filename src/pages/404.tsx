@@ -1,6 +1,5 @@
 /* eslint-disable react/no-danger */
 import React from 'react';
-import Head from 'next/head';
 import GlobalStyles from '../styles/GlobalStyles';
 import Styles404 from '../styles/pages/404Styles';
 import ErrorTemplate from '../templates/Error';
