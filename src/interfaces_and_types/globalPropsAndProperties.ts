@@ -16,3 +16,9 @@ export interface BlogEntry {
   title: string;
   language?: 'en' | 'es';
 }
+
+export interface LinkProps extends React.HtmlHTMLAttributes<HTMLAnchorElement> {
+  label: string;
+  path: string;
+  text: string;
+}
