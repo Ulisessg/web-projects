@@ -33,6 +33,10 @@ export const SectionModalContainer = styled.section`
   -ms-flex-direction: column;
   align-content: space-between;
   top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
   background-color: #fafafa;
   align-items: center;
   justify-content: space-between;
