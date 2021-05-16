@@ -1,15 +1,15 @@
 import React from 'react';
-import ButtonGoBackStyles from '../styles/atoms/ButtonGoBackStyles';
-import DogIframe from '../atoms/DogIFrame';
+// import ButtonGoBackStyles from '../styles/atoms/ButtonGoBackStyles';
+// import DogIframe from '../atoms/DogIFrame';
 
 function MainError(): JSX.Element {
-  function goBack() {
-    window.history.back();
-  }
+  // function goBack() {
+  //   window.history.back();
+  // }
 
   return (
     <>
-      <h1 className="message">
+      <h1 className="message" style={{ textAlign: 'center' }}>
         Página no encontrada o en proceso de construcción&nbsp;
         <span role="img" aria-label="emoji ingeniera">
           👷‍♀️
@@ -22,16 +22,6 @@ function MainError(): JSX.Element {
         </span>
       </h1>
 
-      <ButtonGoBackStyles
-        title="Regresar a la página anterior"
-        type="button"
-        onClick={goBack}
-      >
-        Regresar a la página anterior
-      </ButtonGoBackStyles>
-
-      <h2>O puedes ver a este perrito 💚</h2>
-      <DogIframe />
     </>
   );
 }
