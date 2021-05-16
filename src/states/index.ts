@@ -38,7 +38,7 @@ export const experiencesInfo: SectionWithModalProps = {
       images: [],
     },
     {
-      id: 1,
+      id: 7,
       name: 'Platzi stack',
       path: '/como-los-datos-me-ayudaron',
       description:
@@ -74,7 +74,11 @@ export const experiencesInfo: SectionWithModalProps = {
         src:
           'https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2Fv2%2Fprojects%2FalwaysUpdate.png?alt=media&token=fe4b78ec-d2e4-4834-a1e7-ce8f2f221db6',
       },
-      images: [],
+      images: [
+        {
+          alt: 'Always update screenshoot',
+          src: 'https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2Fv2%2Fprojects%2FAlways%20Update%2FAlways%20update%20screen%20shoot.jpg?alt=media&token=0734f88a-0f58-40d4-b2eb-87f486653cb4',
+        }],
     },
     {
       id: 4,

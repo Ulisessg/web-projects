@@ -11,7 +11,7 @@ import {
 } from '../styles/organisms/SectionWithModalStyles';
 import ButtonDark from '../atoms/ButtonDark';
 
-const ModalComponent = dynamic(() => import('../organisms/ModalForSectionWithModal'), { loading: () => <Loading /> });
+const ModalComponent = dynamic(() => import('../organisms/ModalForSectionWithModal'), { loading: () => <Loading />, ssr: false });
 
 function Section({
   images,
@@ -30,21 +30,23 @@ function Section({
     }
   }, []);
 
-  // useEffect(() => {
-  //   const body: HTMLBodyElement = document.querySelector('body');
-  //   const root: HTMLElement = document.getElementById('root');
-  //   // Prevent scroll
-  //   if (openModal) {
-  //     body.addEventListener('keyup', handleKeyUp);
-  //     root.classList.replace('delete-blur-body', 'blur-body');
-  //     body.style.overflow = 'hidden';
-  //     root.classList.add('blur-body');
-  //   } else {
-  //     body.style.overflow = 'auto';
-  //     root.classList.replace('blur-body', 'delete-blur-body');
-  //     body.removeEventListener('keyup', handleKeyUp);
-  //   }
-  // }, [openModal]);
+  useEffect(() => {
+    if (typeof navigator !== 'undefined') {
+      const body: HTMLBodyElement = document.querySelector('body');
+      // const root: HTMLElement = document.getElementById('experience');
+      // Prevent scroll
+      if (openModal) {
+        body.addEventListener('keyup', handleKeyUp);
+        // root.classList.replace('delete-blur-body', 'blur-body');
+        body.style.overflow = 'hidden';
+        // root.classList.add('blur-body');
+      } else {
+        body.style.overflow = 'auto';
+        // root.classList.replace('blur-body', 'delete-blur-body');
+        body.removeEventListener('keyup', handleKeyUp);
+      }
+    }
+  }, [openModal]);
 
   function handleModal(): void {
     setOpenModal(!openModal);

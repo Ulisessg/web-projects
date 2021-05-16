@@ -1,4 +1,5 @@
-import React, { lazy } from 'react';
+import React from 'react';
+import dynamic from 'next/dynamic';
 import ButtonClose from '../atoms/ButtonClose';
 import LinkDarkBlank from '../atoms/LinkDarkBlank';
 import {
@@ -7,8 +8,9 @@ import {
   ExternalStyles,
 } from '../styles/molecules/SectionModalStyles';
 import SectionModalProps from '../interfaces_and_types/molecules/SectionModalProps';
+import Loading from '../atoms/Loading';
 
-const ImageSlider = lazy(() => import('../molecules/ImageSlider'));
+const ImageSlider = dynamic(() => import('../molecules/ImageSlider'), { loading: () => <Loading /> });
 
 function SectionModal({
   name,
