@@ -42,7 +42,7 @@ export const SectionModalContainer = styled.section`
   justify-content: space-between;
   margin-top: 10px;
   width: 80vw;
-  height: 95%;
+  height: 98%;
   padding: 20px;
   border-radius: 20px;
   animation: ${appears} 0.2s;

@@ -1,5 +1,4 @@
 import React from 'react';
-import dynamic from 'next/dynamic';
 import ButtonClose from '../atoms/ButtonClose';
 import LinkDarkBlank from '../atoms/LinkDarkBlank';
 import {
@@ -8,9 +7,7 @@ import {
   ExternalStyles,
 } from '../styles/molecules/SectionModalStyles';
 import SectionModalProps from '../interfaces_and_types/molecules/SectionModalProps';
-import Loading from '../atoms/Loading';
-
-const ImageSlider = dynamic(() => import('../molecules/ImageSlider'), { loading: () => <Loading /> });
+import ModalSlider from '../molecules/ModalSlider';
 
 function SectionModal({
   name,
@@ -25,23 +22,11 @@ function SectionModal({
       <SectionModalContainer>
         <ButtonClose handleClick={closeModal} />
 
-        {/* <SectionModalImageContainer>
-          <ImgLazy classN="section-modal--img" src={src} alt={alt} />
-        </SectionModalImageContainer> */}
         <SectionModalTitle className="section__modal--title">
           {name}
         </SectionModalTitle>
 
-        {images.length > 0 && (
-          <>
-            <div style={{ width: '100px' }}>
-              <ImageSlider images={images} />
-            </div>
-          </>
-        )}
-
-        {/* Description temporally disabled */}
-        <p>{description}</p>
+        <ModalSlider description={description} links={[{ label: 'some', text: 'Some', path: '/some' }, { label: 'Other', text: 'Other', path: '/other' }]} images={images} />
 
         <LinkDarkBlank
           label={`Ver más sobre ${name}`}
