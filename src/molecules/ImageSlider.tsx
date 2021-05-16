@@ -1,30 +1,11 @@
 import React, { useState } from 'react';
 import imageSliderProps from '../interfaces_and_types/molecules/ImageSliderProps';
 import Img from './Img';
-import CircleButton from '../atoms/CircleButton';
+import ButtonsForSlider from './ButtonsForSlider';
 import {
   ImageSliderStyles,
   ButtonsContainer,
 } from '../styles/molecules/InternalSlider';
-
-function Buttons({
-  func,
-  reference,
-  className,
-}: {
-  func: any;
-  reference: number;
-  // eslint-disable-next-line react/require-default-props
-  className?: string;
-}): JSX.Element {
-  return (
-    <>
-      <div>
-        <CircleButton className={className} func={() => func(reference)} />
-      </div>
-    </>
-  );
-}
 
 function ImageSlider({ images }: imageSliderProps): JSX.Element {
   const [imageIndex, setImageIndex] = useState<number>(0);
@@ -42,7 +23,7 @@ function ImageSlider({ images }: imageSliderProps): JSX.Element {
         {images.map(() => {
           x += 1;
           return (
-            <Buttons
+            <ButtonsForSlider
               className="image-slider--button"
               func={test}
               reference={x}
