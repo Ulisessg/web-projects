@@ -61,7 +61,9 @@ function GistsTemplate({ data, githubCode }: { data: any; githubCode: any; }): J
           <section id="code">
             <ReactGist id={githubCode} file={null} />
           </section>
-          <LinkDarkNoBlank path="/gist" text="Ver más códigos" label="Ver más códigos" />
+          <div style={{ width: '100%', display: 'grid', justifyItems: 'center' }}>
+            <LinkDarkNoBlank path="/gist" text="Ver más códigos" label="Ver más códigos" />
+          </div>
         </main>
       </Layout>
     </>
