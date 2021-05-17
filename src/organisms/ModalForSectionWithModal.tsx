@@ -28,12 +28,12 @@ function SectionModal({
 
         <ModalSlider description={description} links={[{ label: 'some', text: 'Some', path: '/some' }, { label: 'Other', text: 'Other', path: '/other' }]} images={images} />
 
-        <LinkDarkBlank
+        {/* <LinkDarkBlank
           label={`Ver más sobre ${name}`}
           path={path}
           text={`Ver más sobre ${name}`}
           className="section-modal-link"
-        />
+        /> */}
       </SectionModalContainer>
     </>
   );

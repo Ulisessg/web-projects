@@ -18,7 +18,7 @@ function ImageSlider({ images }: imageSliderProps): JSX.Element {
 
   return (
     <ImageSliderStyles>
-      <Img src={images[imageIndex].src} alt={images[imageIndex].alt} />
+      <Img classN="image-slider-image" src={images[imageIndex].src} alt={images[imageIndex].alt} />
       <ButtonsContainer>
         {images.map(() => {
           x += 1;

@@ -27,10 +27,7 @@ const disapear = keyframes`
 
 export const SectionModalContainer = styled.section`
   position: fixed;
-  display: flex;
-  display: -webkit-flex;
-  flex-direction: column;
-  -ms-flex-direction: column;
+  display: grid;
   align-content: space-between;
   top: 0;
   bottom: 0;
@@ -46,13 +43,7 @@ export const SectionModalContainer = styled.section`
   padding: 20px;
   border-radius: 20px;
   animation: ${appears} 0.2s;
-`;
 
-export const SectionModalImageContainer = styled.div`
-  display: flex;
-  display: -webkit-flex;
-  justify-content: center;
-  width: 100%;
 `;
 
 export const SectionModalTitle = styled.h3`

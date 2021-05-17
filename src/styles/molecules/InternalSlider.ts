@@ -7,6 +7,10 @@ export const ImageSliderStyles = styled.section`
   display: -webkit-flex;
   flex-direction: column;
   -ms-flex-direction: column;
+  & img {
+    width: 230px;
+    margin: 0 auto;
+  }
 `;
 export const ButtonsContainer = styled.div`
   display: flex;

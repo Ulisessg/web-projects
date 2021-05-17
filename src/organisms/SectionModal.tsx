@@ -11,7 +11,7 @@ import {
 } from '../styles/organisms/SectionWithModalStyles';
 import ButtonDark from '../atoms/ButtonDark';
 
-const ModalComponent = dynamic(() => import('../organisms/ModalForSectionWithModal'), { loading: () => <Loading />, ssr: false });
+const ModalComponent = dynamic(() => import('./ModalForSectionWithModal'), { loading: () => <Loading />, ssr: false });
 
 function Section({
   images,
