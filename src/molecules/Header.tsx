@@ -1,5 +1,5 @@
 import React from 'react';
-import SkipLink from '../atoms/SkipLink';
+// import SkipLink from '../atoms/SkipLink';
 import Img from './Img';
 import Nav from './NavDarkNoBlank';
 import LinkProps from '../interfaces_and_types/atoms/LinkProps';

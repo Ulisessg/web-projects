@@ -24,16 +24,16 @@ export const HeaderClassesStyles = createGlobalStyle`
 
   header img {
     height: 40px;
-              width: 40px;
-              align-self: center;
-              margin-left: 10px;
+    width: 40px;
+    align-self: center;
+    margin-left: 10px;
   }
   header nav ul li p a {
     display: flex;
     font-size: 1rem !important;
-    padding: 7px 30px;
+
     @media screen and (max-width: 450px) {
-      padding: 7px 15px;
+      padding: 4px 10px !important;
     }
   }
 `;
