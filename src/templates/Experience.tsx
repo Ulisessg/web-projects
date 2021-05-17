@@ -3,7 +3,7 @@ import {
   experiencesInfo,
 } from '../states/index';
 
-import SectionWithModal from './SectionWithModal';
+// import SectionWithModal from './SectionWithModal';
 import SectionNoModal from './SectionNoModal';
 import { Container, Title } from '../styles/templates/ExperienceStyles';
 import SectionContainer from '../styles/molecules/SectionContainer';
@@ -23,7 +23,7 @@ function Experience(): JSX.Element {
               />
             ))} */}
 
-            {experiencesInfo.sections.map((section) => (
+            {/* {experiencesInfo.sections.map((section) => (
               <SectionWithModal
                 key={section.id}
                 cover={section.cover}
@@ -34,7 +34,7 @@ function Experience(): JSX.Element {
                 elementId={section.name}
                 images={section.images}
               />
-            ))}
+            ))} */}
             {/* <SectionNoModal
               images={temporalExperienceInfosImages}
               sections={temporalExperienceInfosData}
