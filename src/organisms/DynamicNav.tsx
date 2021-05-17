@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import NavLigthNoBlank from '../molecules/NavLigthNoBlank';
 import LinkProps from '../interfaces_and_types/atoms/LinkProps';
 
-const mediaQuery = window.matchMedia('(min-width: 650px)');
+const mediaQuery = window.matchMedia('(min-width: 690px)');
 
 function DynamicNav({ paths }: { paths: Array<LinkProps>; }): JSX.Element {
   const [isMobile, setIsMobile] = useState<boolean>(mediaQuery.matches);
