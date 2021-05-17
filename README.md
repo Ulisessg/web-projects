@@ -1,87 +1,95 @@
-# 🚀Frontend of UD, website that will be focused on sharing knowledge, mainly about technology and a design system.
+# UD is a website that focused on sharing knowledge, mainly about technology and contain my latest projects.
 
-## If there is something you like, just use it 😄.
+## UD is my experimentation corner because there I apply my new knowledge, when I learn something I try to implement here, for example:
 
-## Start with 👩‍🚀
+- Typescript.
 
-Execute in your terminal
+- MongoDB.
 
-    git clone git@github.com:Ulisessg/web-projects.git
+- SEO.
 
-## Instalation 🔧
+- Atomic Design.
 
-Execute in your terminal
+- Styled Components.
 
-    npm i
+- SSR (Server Side Render).
 
-## Technologies used 👨‍💻
+- GitHub actions.
 
-- ### [React](https://github.com/facebook/react)
-- ### [Stylus](https://stylus-lang.com/)
-- ### [Styled Components](https://styled-components.com/docs/basics)
-- ### [Redux](https://github.com/reduxjs/redux)
-- ### [Webpack](https://github.com/webpack/webpack)
-- ### [Husky](https://github.com/typicode/husky)
-- ### [Eslint](https://github.com/eslint/eslint)
-- ### [Lighthouse](https://github.com/GoogleChrome/lighthouse-ci)
-- ### [Firebase (Deploy)](https://github.com/firebase/firebase-tools)
+- Facebook Pixel.
 
-## Deploy 🚀
+- PWA.
+
+- Polyfills usage.
+
+- Web optimization.
+
+## This project began like a design system and eventually try to add a blog using:
+
+- Stylus
+- Pug
+- Travis CI
+- GitHub pages
+
+But when I began to learn about React the project were archived, and I begin from 0.
+
+I tried to implement my design system, but I realized I had no portfolio, so I stop to create them. At this moment my design system continue archived, but I still take account some rules:
+
+1. Accessibility
+
+Every product must be able to be used by anyone, so it must be:
+
+- Perceptible: All the elements that compose it must be able to be easily visualized.
+- Operable: The product must be easy to use.
+- Understanding: Anyone must understand what he is doing.
+- Robust: The product must be supported by accessibility programs.
+
+2. Consistency
+
+All the elements must be familiar to people, seeking that the learning curve of the product is short.
+
+3. Reusability
+
+All the elements that make up the product must be able to be reused at any time.
+
+4. Compatibility
+
+The product must be able to be viewed on most devices (the existing browsers)
+
+5. Optimization
+
+All items in the product should consume the least amount of user resources
+
+## At this moment the project contains:
+
+- [My portfolio](https://ulisessg.com/)
+- [My personal blog](https://ulisessg.com/blog)
+- [A page where I share gists (code pieces)](https://ulisessg.com/gist)
+
+### Front End:
+- Next.js
+- React.
+- Typescript.
+- Styled Components
+- Firebase.
+- NVDA (screen reader).
+- Workbox
+
+### CI/CD:
+- GitHub Actions, where I test:
+    - Accessibility, performance, SEO and best practices using LHCI (Google Lighthouse)
+    - Husky to enforce ESLINT rules
+
+### Back End:
+- Express.js.
+- Typescript.
+- MongoDB.
+- Vercel.
+
+### Deploy 🚀
 
 [https://ulisessg.com](https://ulisessg.com)
 
-## Methodologies
+### License
 
-- ## Atomic design ⚛
-
-# #Develop: 👷‍♀️
-
-## Scripts 🏃‍♀️
-
-_Start the develop server of one page_ (DON'T add the extension file)
-
-    npm run dev nameOfPage
-
-_New pages_
-
-For add new pages just add the .tsx file in the folder **./src/react/pages** and the .html file at the folder **./public**
-
-## Build
-
-_Execute in your terminal_:
-
-    node ./build.js
-
-## Continuous integration 👷‍♂️
-
-## The continuous integration process runs on Github Actions following the next steps
-
-1.  Instalation of dependencies.
-
-2.  Run the eslint test.
-
-3.  Webpack build a dll with the common dependencies to improve performance.
-
-4.  Node runs a webpack build for each page
-
-5.  Webpack compress all the files.
-
-6.  Node builds my blog posts
-
-7.  Lighthouse runs mobile test of:
-
-- Accesibility.
-- Performance.
-- Best practices.
-
-### **If all tests are successful:**
-
-8.  Firebase deploy the app at [ulisessg.com](https://ulisessg.com)
-
-# Continuous testing
-
-- ## In local, Husky run the eslint verification to prevent errors in production
-
-# License
-
-## [MIT License](./LICENSE)
+[MIT License](./LICENSE)
