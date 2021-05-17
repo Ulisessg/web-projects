@@ -7,7 +7,7 @@ import {
   ImageContainer,
   Title,
   Description,
-} from '../styles/organisms/SectionWithModalStyles';
+} from '../styles/organisms/SectionStyles';
 
 interface temporalProps {
   sections: Array<any>;
