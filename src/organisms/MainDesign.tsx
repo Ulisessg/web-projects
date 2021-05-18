@@ -1,20 +1,16 @@
 import React from 'react';
 
-import SectionWithNoModal from '../templates/SectionNoModal';
+import SectionWithNoModal from './SectionNoModal';
 import SectionsContainer from '../styles/molecules/SectionContainer';
+import SectionProps from '../interfaces_and_types/organisms/SectionProps';
 
 interface MainDesignProps {
-  sectionsReducer: any;
-  imagesReducer: any;
+  sections: Array<SectionProps>;
 }
 
 function MainDesign({
-  sectionsReducer,
-  imagesReducer,
+  sections,
 }: MainDesignProps): JSX.Element {
-  const { sections } = sectionsReducer;
-  const { images } = imagesReducer;
-
   return (
     <main className="main" id="main">
       <section>
@@ -62,8 +58,16 @@ function MainDesign({
       <h2 className="main__introduction">Secciones del sistema de diseño</h2>
 
       <SectionsContainer>
-
-        <SectionWithNoModal sections={sections} images={images} />
+        {sections.map((section) => (
+          <SectionWithNoModal
+            title={section.title}
+            description={section.description}
+            id={section.id}
+            name={section.name}
+            image={section.image}
+            key={section.title}
+          />
+        ))}
       </SectionsContainer>
     </main>
   );

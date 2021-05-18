@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { sections, images } from '../states/designInitialState';
+import { sections } from '../states/designInitialState';
 //  Styles
 // import '../styles/templates/design-styles.styl';
 
@@ -13,7 +13,7 @@ function Design(): JSX.Element {
     <>
       <Layout>
         <div className="wrapper">
-          <MainDesign sectionsReducer={sections} imagesReducer={images} />
+          <MainDesign sections={sections} />
         </div>
       </Layout>
     </>
