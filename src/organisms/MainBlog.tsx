@@ -26,8 +26,6 @@ function MainBlog(): JSX.Element {
       });
   }, [blogsRequested]);
 
-  console.log(blogEntries);
-
   return (
     <>
       <div>
