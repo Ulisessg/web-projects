@@ -1,5 +1,6 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
+import { GetStaticProps } from 'next';
 import Layout from '../organisms/Layout';
 import { IndexSections } from '../states/index';
 import AboutMe from '../molecules/Description';
@@ -7,7 +8,9 @@ import Blogs from '../templates/Blog';
 import Gists from '../templates/Gists';
 import Experience from '../templates/Experience';
 import Head from '../atoms/Head';
-
+import GetGists from '../utils/getGists';
+import TransformGistsResponse from '../utils/transformGistsResponse';
+import SectionProps from '../interfaces_and_types/organisms/SectionProps';
 /**
  *  English description:
  *  I'm a FullStack Frontend Developer with experience using MERN stack and Typescript,
@@ -20,7 +23,7 @@ import Head from '../atoms/Head';
 
 const PageNav = dynamic(() => import('../organisms/DynamicNav'), { ssr: false });
 
-export default function Index(): JSX.Element {
+export default function Index({ gistsInfo }: { gistsInfo: Array<SectionProps>; }): JSX.Element {
   return (
     <>
       <Head
@@ -39,9 +42,19 @@ export default function Index(): JSX.Element {
           <PageNav paths={IndexSections} />
           <Experience />
           <Blogs />
-          <Gists />
+          <Gists gists={gistsInfo} />
         </main>
       </Layout>
     </>
   );
 }
+
+export const getStaticProps: GetStaticProps = async () => {
+  const gists = await GetGists();
+  const gistsInfo = TransformGistsResponse(gists);
+
+  return {
+    props: { gistsInfo },
+
+  };
+};

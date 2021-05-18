@@ -1,9 +1,13 @@
 import React from 'react';
+import { GetStaticProps } from 'next';
 import Layout from '../organisms/Layout';
 import Head from '../atoms/Head';
 import Gists from '../templates/Gists';
+import GetGists from '../utils/getGists';
+import TransformGistsResponse from '../utils/transformGistsResponse';
+import SectionProps from '../interfaces_and_types/organisms/SectionProps';
 
-export default function GistsPage(): JSX.Element {
+export default function Gist({ gistsInfo }: { gistsInfo: Array<SectionProps>; }): JSX.Element {
   return (
     <>
       <Head
@@ -18,10 +22,20 @@ export default function GistsPage(): JSX.Element {
       />
       <Layout>
         <main role="main">
-          <Gists />
+          <Gists gists={gistsInfo} />
         </main>
       </Layout>
     </>
 
   );
 }
+
+export const getStaticProps: GetStaticProps = async () => {
+  const gists = await GetGists();
+  const gistsInfo = TransformGistsResponse(gists);
+
+  return {
+    props: { gistsInfo },
+
+  };
+};
