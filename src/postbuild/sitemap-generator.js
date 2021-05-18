@@ -30,6 +30,16 @@ function getFiles(path = '.') {
   return filesWithNoExtension;
 }
 
+function createSitemap(sitemapPaths, outPath) {
+  const FullXML = `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+${sitemapPaths.join('\n')}\n
+</urlset>`;
+
+  writeFileSync(join(__dirname, '..', 'out', outPath, 'sitemap.xml'), FullXML, {
+    encoding: 'utf-8',
+  });
+}
+
 const rootPats = getFiles('.').map((path) => {
   if (path === '') {
     return `<url>
@@ -56,14 +66,8 @@ const gistsPahts = getFiles('gists').map((path) => `<url>
   <loc>https://ulisessg.com/gists/${path}</loc>
   </url>`);
 
-const FullXML = `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-${rootPats.join('\n')}\n
-${englishPahts.join('\n')}\n
-${gistsPahts.join('\n')}\n
-</urlset>`;
+createSitemap(rootPats, '');
+createSitemap(englishPahts, 'en');
+createSitemap(gistsPahts, 'gists');
 
-writeFileSync(join(__dirname, '..', 'out', 'sitemap.xml'), FullXML, {
-  encoding: 'utf-8',
-});
-
-process.stdout.write('Sitemap generated');
+process.stdout.write('Sitemaps generated');
