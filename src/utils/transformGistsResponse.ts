@@ -5,7 +5,10 @@ export default function transformGistsInfo(gists: {
   const gitstsTransformated = gists.message.map((gist) => {
     const trasformatedGist = {
       id: gist.description,
-      image: gist.image,
+      image: {
+        src: gist.image,
+        alt: `Portdada de ${gist.title}`,
+      },
       title: gist.title,
       name: `/gists/${gist.name}`,
       description: gist.description,

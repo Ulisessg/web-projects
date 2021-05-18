@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import SectionNoModal from './SectionNoModal';
+import SectionNoModal from '../organisms/SectionNoModal';
 import GetGists from '../utils/getGists';
 import LoadingSpinner from '../atoms/Loading';
 import TransformGistsResponse from '../utils/transformGistsResponse';
@@ -45,7 +45,16 @@ function Gists(): JSX.Element {
               Últimos Gists
             </h2>
             <SectionContainer>
-              <SectionNoModal images={response} sections={response} />
+              {response.map((gist) => (
+                <SectionNoModal
+                  key={gist.name}
+                  description={gist.description}
+                  image={gist.image}
+                  id={gist.name}
+                  name={gist.name}
+                  title={gist.title}
+                />
+              ))}
             </SectionContainer>
           </div>
         </>
