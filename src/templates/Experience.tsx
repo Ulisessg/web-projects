@@ -4,7 +4,7 @@ import {
 } from '../states/index';
 
 // import SectionWithModal from './SectionWithModal';
-import SectionNoModal from './SectionNoModal';
+import SectionNoModal from '../organisms/SectionNoModal';
 import { Container, Title } from '../styles/templates/ExperienceStyles';
 import SectionContainer from '../styles/molecules/SectionContainer';
 
@@ -15,30 +15,16 @@ function Experience(): JSX.Element {
         <Title>Experiencia</Title>
         <div id="experience">
           <SectionContainer>
-            {/* {experienceInfos.map((experience) => (
+            {experiencesInfo.map((experience) => (
               <SectionNoModal
-              images
-                sections={experience}
-                key={experience.sections.id}
+                title={experience.title}
+                description={experience.description}
+                id={experience.title}
+                image={experience.image}
+                name={experience.name}
+                key={experience.name}
               />
-            ))} */}
-
-            {/* {experiencesInfo.sections.map((section) => (
-              <SectionWithModal
-                key={section.id}
-                cover={section.cover}
-                description={section.description}
-                id={section.id}
-                name={section.name}
-                path={section.path}
-                elementId={section.name}
-                images={section.images}
-              />
-            ))} */}
-            {/* <SectionNoModal
-              images={temporalExperienceInfosImages}
-              sections={temporalExperienceInfosData}
-            /> */}
+            ))}
           </SectionContainer>
         </div>
       </Container>

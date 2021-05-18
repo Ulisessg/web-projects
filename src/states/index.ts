@@ -1,5 +1,5 @@
 import { Path } from '../interfaces_and_types/organisms/FooterTypes';
-import SectionWithModalProps from '../interfaces_and_types/organisms/SectionWithModalProps';
+import SectionProps from '../interfaces_and_types/organisms/SectionProps';
 
 export const footerPaths: Array<Path> = [
   {
@@ -20,81 +20,68 @@ export const footerPaths: Array<Path> = [
   },
 ];
 
-export const experiencesInfo: SectionWithModalProps = {
-  sections: [
-    {
-      id: 1,
-      key: 1,
-      name: 'Finders - Findme',
-      path: 'https://github.com/Finders-Master/finders-FE',
+export const experiencesInfo: Array<SectionProps> = [
+  {
+    id: 1,
+    title: 'Finders - Findme',
+    name: 'https://github.com/Finders-Master/finders-FE',
 
-      description:
-        'Finders es un sitio web enfocado en ayudar a localizar personas con alguna enfermedad mental o discapacidad mediante el uso de códigos QR',
-      cover: {
-        alt: 'Finders logo',
-        src:
-          'https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2Fv2%2Fprojects%2Ffindme.png?alt=media&token=99b04a9b-acf6-460b-8dd6-a5f508beff3a',
-      },
-      images: [],
+    description:
+      'Finders es un sitio web enfocado en ayudar a localizar personas con alguna enfermedad mental o discapacidad mediante el uso de códigos QR',
+    image: {
+      alt: 'Finders logo',
+      src:
+        'https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2Fv2%2Fprojects%2Ffindme.png?alt=media&token=99b04a9b-acf6-460b-8dd6-a5f508beff3a',
     },
-    {
-      id: 7,
-      name: 'Platzi stack',
-      path: '/como-los-datos-me-ayudaron',
-      description:
-        'En Platzi Stack analicé las vacantes de Backend Developer que ofrece Platzi Master para analizar cuál sería el proximo lenguaje de programación que aprendería y con que Framworks / tecnologias.',
-      cover: {
-        alt: 'Platzi stack',
-        src:
-          'https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2Fv2%2Fprojects%2Fplatzi%20stack.png?alt=media&token=db54843b-d3b2-4bcb-a3d1-1ec0b409b99c',
-      },
-      images: [],
+  },
+  {
+    id: 7,
+    title: 'Platzi stack',
+    name: '/como-los-datos-me-ayudaron',
+    description:
+      'En Platzi Stack analicé las vacantes de Backend Developer que ofrece Platzi Master para analizar cuál sería el proximo lenguaje de programación que aprendería y con que Framworks / tecnologias.',
+    image: {
+      alt: 'Platzi stack',
+      src:
+        'https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2Fv2%2Fprojects%2Fplatzi%20stack.png?alt=media&token=db54843b-d3b2-4bcb-a3d1-1ec0b409b99c',
     },
-    {
-      id: 2,
-      name: 'Learningator - Hackathon Platzi Master',
-      path: 'https://github.com/Learningator/learning-200-frontend',
-      description:
-        'Learningator es un generador de learning paths automatizado enfocado en l@s coaches de Platzi Master que generalmente pasan 6 horas generando un nuevo Learning Path o incluso más si el coach no tiene conocimientos sobre el campo de estudio del estudiante, además la ruta de aprendizaje puede cambiar durante el programa.',
-      cover: {
-        alt: 'Learningator image',
-        src:
-          'https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2Fv2%2Fprojects%2FLearningator.png?alt=media&token=3a092855-76a8-457c-ba5d-7a085530b1eb',
-      },
-      images: [],
+  },
+  {
+    id: 2,
+    title: 'Learningator - Hackathon Platzi Master',
+    name: 'https://github.com/Learningator/learning-200-frontend',
+    description:
+      'Learningator es un generador de learning paths automatizado enfocado en l@s coaches de Platzi Master que generalmente pasan 6 horas generando un nuevo Learning Path o incluso más si el coach no tiene conocimientos sobre el campo de estudio del estudiante, además la ruta de aprendizaje puede cambiar durante el programa.',
+    image: {
+      alt: 'Learningator image',
+      src:
+        'https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2Fv2%2Fprojects%2FLearningator.png?alt=media&token=3a092855-76a8-457c-ba5d-7a085530b1eb',
     },
-    {
-      id: 3,
-      name: 'Always update - Proyecto final Platzi Master',
-      path: 'https://github.com/Proyecto-Noticias/Frontend',
-      description:
-        'Always Update es una plataforma que recopila noticias de México, Argentina, Colombia y Venezuela, recolectando más de 200 noticias todos los días y realizando un análisis sentimental de cada una mostrando el resultado con un siticker en la portada.',
-      cover: {
-        alt: 'Always update',
-        src:
-          'https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2Fv2%2Fprojects%2FalwaysUpdate.png?alt=media&token=fe4b78ec-d2e4-4834-a1e7-ce8f2f221db6',
-      },
-      images: [
-        {
-          alt: 'Always update screenshoot',
-          src: 'https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2Fv2%2Fprojects%2FAlways%20Update%2FAlways%20update%20screen%20shoot.jpg?alt=media&token=0734f88a-0f58-40d4-b2eb-87f486653cb4',
-        }],
+  },
+  {
+    id: 3,
+    title: 'Always update - Proyecto final Platzi Master',
+    name: 'https://github.com/Proyecto-Noticias/Frontend',
+    description:
+      'Always Update es una plataforma que recopila noticias de México, Argentina, Colombia y Venezuela, recolectando más de 200 noticias todos los días y realizando un análisis sentimental de cada una mostrando el resultado con un siticker en la portada.',
+    image: {
+      alt: 'Always update',
+      src:
+        'https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2Fv2%2Fprojects%2FalwaysUpdate.png?alt=media&token=fe4b78ec-d2e4-4834-a1e7-ce8f2f221db6',
     },
-    {
-      id: 4,
-      name: 'UD',
-      path: 'https://github.com/Ulisessg/web-projects',
-      description:
-        'UD es un sitio web enfocado principalmente en compartir conocimiento de tecnologia, además de contener mis proyectos personales, este sitio está creado usando el stack MERN y Typescript.',
-      cover: {
-        alt: 'UD logo',
-        src:
-          'https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2Fv2%2Fprojects%2FUD.png?alt=media&token=14d7b327-3b49-4412-be21-b9816e6ab80e',
-      },
-      images: [],
+  },
+  {
+    id: 4,
+    title: 'UD',
+    name: 'https://github.com/Ulisessg/web-projects',
+    description:
+      'UD es un sitio web enfocado principalmente en compartir conocimiento de tecnologia, además de contener mis proyectos personales, este sitio está creado usando el stack MERN y Typescript.',
+    image: {
+      alt: 'UD logo',
+      src:
+        'https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2Fv2%2Fprojects%2FUD.png?alt=media&token=14d7b327-3b49-4412-be21-b9816e6ab80e',
     },
-  ],
-};
+  }];
 
 export const temporalExperienceInfosData = [
   {
