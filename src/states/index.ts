@@ -31,7 +31,7 @@ export const experiencesInfo: Array<SectionProps> = [
     image: {
       alt: 'Finders logo',
       src:
-        'https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2Fv2%2Fprojects%2Ffindme.png?alt=media&token=99b04a9b-acf6-460b-8dd6-a5f508beff3a',
+        'https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2Fv2%2Fprojects%2FFindMe%20-%20Platzi%20Master%20Swat%20NEO.png?alt=media&token=d8f6a697-d1a3-45df-beb6-9cc9793265e9',
     },
   },
   {
@@ -43,7 +43,7 @@ export const experiencesInfo: Array<SectionProps> = [
     image: {
       alt: 'Platzi stack',
       src:
-        'https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2Fv2%2Fprojects%2Fplatzi%20stack.png?alt=media&token=db54843b-d3b2-4bcb-a3d1-1ec0b409b99c',
+        'https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2Fv2%2Fprojects%2FPlatzi%20Stack.png?alt=media&token=77b51ddb-88b8-4775-b23d-9cb58e59210a',
     },
   },
   {
@@ -55,7 +55,7 @@ export const experiencesInfo: Array<SectionProps> = [
     image: {
       alt: 'Learningator image',
       src:
-        'https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2Fv2%2Fprojects%2FLearningator.png?alt=media&token=3a092855-76a8-457c-ba5d-7a085530b1eb',
+        'https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2Fv2%2Fprojects%2FLearningator%20Hackathon%20Platzi%20Master.png?alt=media&token=220cd771-f08d-4bcd-9589-a2ee7272b627',
     },
   },
   {
@@ -67,7 +67,7 @@ export const experiencesInfo: Array<SectionProps> = [
     image: {
       alt: 'Always update',
       src:
-        'https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2Fv2%2Fprojects%2FalwaysUpdate.png?alt=media&token=fe4b78ec-d2e4-4834-a1e7-ce8f2f221db6',
+        'https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2Fv2%2Fprojects%2FAlways%20Update%20Platzi%20Master%20Final%20Project.png?alt=media&token=8b8c0d77-c1ef-4641-b4d3-6f9524d91955',
     },
   },
   {
@@ -79,7 +79,7 @@ export const experiencesInfo: Array<SectionProps> = [
     image: {
       alt: 'UD logo',
       src:
-        'https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2Fv2%2Fprojects%2FUD.png?alt=media&token=14d7b327-3b49-4412-be21-b9816e6ab80e',
+        'https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2Fv2%2Fprojects%2FUD%20Personal%20Project.png?alt=media&token=cc8c74e6-330c-4b85-84ab-b23ab223b0ac',
     },
   }];
 
