@@ -11,6 +11,9 @@ import Head from '../atoms/Head';
 import GetGists from '../utils/getGists';
 import TransformGistsResponse from '../utils/transformGistsResponse';
 import SectionProps from '../interfaces_and_types/organisms/SectionProps';
+import GetBlogs from '../utils/getBlogs';
+import TransformBlogsInfo from '../utils/tranformBlogInfo';
+
 /**
  *  English description:
  *  I'm a FullStack Frontend Developer with experience using MERN stack and Typescript,
@@ -23,7 +26,8 @@ import SectionProps from '../interfaces_and_types/organisms/SectionProps';
 
 const PageNav = dynamic(() => import('../organisms/DynamicNav'), { ssr: false });
 
-export default function Index({ gistsInfo }: { gistsInfo: Array<SectionProps>; }): JSX.Element {
+export default function Index({ gistsInfo, blogs }:
+  { gistsInfo: Array<SectionProps>; blogs: Array<SectionProps>; }): JSX.Element {
   return (
     <>
       <Head
@@ -41,7 +45,7 @@ export default function Index({ gistsInfo }: { gistsInfo: Array<SectionProps>; }
           <AboutMe />
           <PageNav paths={IndexSections} />
           <Experience />
-          <Blogs />
+          <Blogs blogEntries={blogs} />
           <Gists gists={gistsInfo} />
         </main>
       </Layout>
@@ -51,10 +55,12 @@ export default function Index({ gistsInfo }: { gistsInfo: Array<SectionProps>; }
 
 export const getStaticProps: GetStaticProps = async () => {
   const gists = await GetGists();
-  const gistsInfo = TransformGistsResponse(gists);
+  const gistsInfo = TransformGistsResponse(gists.data);
+  const blogs = await GetBlogs();
+  const blogsInfo = TransformBlogsInfo(blogs.data);
 
   return {
-    props: { gistsInfo },
+    props: { gistsInfo, blogs: blogsInfo },
 
   };
 };

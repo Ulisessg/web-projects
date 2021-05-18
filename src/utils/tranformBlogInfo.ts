@@ -1,7 +1,5 @@
 export default function transformBlogInfo(blogs: any): any {
-  const blogsParsed = JSON.parse(blogs);
-
-  const blogsTransformated = blogsParsed.message.map((blog) => {
+  const blogsTransformated = blogs.message.map((blog) => {
     const blogTransformed = {
       id: blog.id,
       image: {

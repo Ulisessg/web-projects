@@ -1,10 +1,5 @@
-export default function getBlogs(): Promise<any> {
-  const endpoint = 'https://web-projects-api.vercel.app/api/blog/last-entries?limit=10';
+import axios from 'axios';
 
-  return window
-    .fetch(endpoint, {
-      method: 'GET',
-      redirect: 'follow',
-    })
-    .then((res) => res.text());
+export default function getBlogs() {
+  return axios.get('https://web-projects-api.vercel.app/api/blog/last-entries?limit=10');
 }

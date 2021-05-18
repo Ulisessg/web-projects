@@ -32,7 +32,7 @@ export default function Gist({ gistsInfo }: { gistsInfo: Array<SectionProps>; })
 
 export const getStaticProps: GetStaticProps = async () => {
   const gists = await GetGists();
-  const gistsInfo = TransformGistsResponse(gists);
+  const gistsInfo = TransformGistsResponse(gists.data);
 
   return {
     props: { gistsInfo },

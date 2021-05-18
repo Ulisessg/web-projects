@@ -1,9 +1,13 @@
 import React from 'react';
+import { GetStaticProps } from 'next';
 import Layout from '../organisms/Layout';
 import Blog from '../templates/Blog';
 import Head from '../atoms/Head';
+import GetBlog from '../utils/getBlogs';
+import tranformBlogInfo from '../utils/tranformBlogInfo';
+import SectionProps from '../interfaces_and_types/organisms/SectionProps';
 
-export default function BlogPage(): JSX.Element {
+export default function BlogPage({ blogs }: { blogs: Array<SectionProps>; }): JSX.Element {
   return (
     <>
       <Head
@@ -18,9 +22,19 @@ export default function BlogPage(): JSX.Element {
       />
       <Layout>
         <main role="main" className="wrapper">
-          <Blog />
+          <Blog blogEntries={blogs} />
         </main>
       </Layout>
     </>
   );
 }
+
+export const getStaticProps: GetStaticProps = async () => {
+  const blogs = await GetBlog();
+  const blogsInfo = tranformBlogInfo(blogs.data);
+
+  return {
+    props: { blogs: blogsInfo },
+
+  };
+};
