@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import getBlogs from '../utils/getBlogs';
 import LoadingSpinner from '../atoms/Loading';
-import SectionNoModal from '../templates/SectionNoModal';
+import SectionNoModal from './SectionNoModal';
 import transformBlogInfo from '../utils/tranformBlogInfo';
 
 import SectionContainer from '../styles/molecules/SectionContainer';
@@ -25,6 +25,8 @@ function MainBlog(): JSX.Element {
         setBlogStatus('error');
       });
   }, [blogsRequested]);
+
+  console.log(blogEntries);
 
   return (
     <>
@@ -56,7 +58,17 @@ function MainBlog(): JSX.Element {
             {blogStatus === 'success' && (
               <>
                 <SectionContainer>
-                  <SectionNoModal images={blogEntries} sections={blogEntries} />
+
+                  {blogEntries.map((blog) => (
+                    <SectionNoModal
+                      id={blog.name}
+                      image={blog.image}
+                      name={blog.name}
+                      title={blog.title}
+                      key={blog.name}
+                      description={blog.description}
+                    />
+                  ))}
                 </SectionContainer>
               </>
             )}

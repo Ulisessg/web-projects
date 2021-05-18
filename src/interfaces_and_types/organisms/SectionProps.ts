@@ -1,14 +1,11 @@
 import { imgProps } from '../globalPropsAndProperties';
 
-type SectionProps = {
-  id: number;
-  name: string;
-  path: string;
+interface sectionProps {
+  id: number | string;
+  title: string;
   description: string;
-  elementId?: string;
-  cover: imgProps;
-  key?: any;
-  images?: Array<imgProps>;
-};
+  name: string;
+  image: imgProps;
+}
 
-export default SectionProps;
+export default sectionProps;
