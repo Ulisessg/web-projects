@@ -21,7 +21,7 @@ function LinkedInBadge({ classN }: { classN?: string; }): JSX.Element {
       >
         <LinkedInBadgeBackground>
           <LazyImage
-            src="https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2FSEO%2Fme.jfif?alt=media&token=6f3e9ef4-df67-462c-bba5-0d2bea0e2076"
+            src="https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2FSEO%2Fulises5G.jfif?alt=media&token=bbe0eb8b-ee31-4ef1-a444-452691ca8f67"
             alt="Ulises Antonio Sámano Galván"
             classN="linkedin-badge--image"
           />
