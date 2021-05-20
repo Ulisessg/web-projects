@@ -11,13 +11,9 @@ const SectionContainer = styled.section`
     grid-column-gap: 20px;
     -ms-grid-column: 1fr 1fr;
   }
-  @media screen and (min-width: 1000px) {
+  @media screen and (min-width: 1200px) {
     grid-template-columns: 1fr 1fr 1fr;
     -ms-grid-columns: 1fr 1fr 1fr;
-  }
-  @media screen and (min-width: 1200px) {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    -ms-grid-columns: 1fr 1fr 1fr 1fr;
   }
 `;
 
