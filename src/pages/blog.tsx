@@ -22,7 +22,7 @@ export default function BlogPage({ blogs }: { blogs: Array<SectionProps>; }): JS
       />
       <Layout>
         <main role="main" className="wrapper">
-          <Blog blogEntries={blogs} />
+          <Blog isPageOrSection="page" blogEntries={blogs} />
         </main>
       </Layout>
     </>

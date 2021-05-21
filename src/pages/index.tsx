@@ -45,7 +45,7 @@ export default function Index({ gistsInfo, blogs }:
           <AboutMe />
           <PageNav paths={IndexSections} />
           <Experience />
-          <Blogs blogEntries={blogs} />
+          <Blogs isPageOrSection="section" blogEntries={blogs} />
           <Gists gists={gistsInfo} />
         </main>
       </Layout>
