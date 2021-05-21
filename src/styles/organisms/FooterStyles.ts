@@ -5,7 +5,7 @@ export const FooterElement = styled.footer`
   height: auto;
   background-color: ${backgroundDark};
   width: 100vw;
-  box-shadow: 0px -3px 8px 0px ${boxShadowColor};
+  box-shadow: 0px -3px 10px 0px ${boxShadowColor};
 `;
 
 export const FooterContainer = styled.div`

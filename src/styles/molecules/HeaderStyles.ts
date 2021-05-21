@@ -1,5 +1,5 @@
 import styled, { createGlobalStyle } from 'styled-components';
-import { backgroundDark } from '../variables';
+import { backgroundDark, boxShadowColor } from '../variables';
 
 export const HeaderContainer = styled.header`
   width: 100vw;
@@ -8,6 +8,7 @@ export const HeaderContainer = styled.header`
   display: flex;
   height: 10vh;
   background-color: ${backgroundDark};
+  box-shadow: 0px 3px 6px 0px ${boxShadowColor};
 
   & ul {
     height: 100%;
