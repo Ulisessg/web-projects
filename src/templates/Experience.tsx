@@ -5,14 +5,15 @@ import {
 
 // import SectionWithModal from './SectionWithModal';
 import SectionNoModal from '../organisms/SectionNoModal';
-import { Container, Title } from '../styles/templates/ExperienceStyles';
+import Container from '../styles/templates/ExperienceStyles';
 import SectionContainer from '../styles/molecules/SectionContainer';
+import H2 from '../atoms/H2';
 
 function Experience(): JSX.Element {
   return (
     <>
       <Container>
-        <Title>Experiencia</Title>
+        <H2 text="Experiencia" />
         <div id="experience">
           <SectionContainer>
             {experiencesInfo.map((experience) => (

@@ -2,6 +2,7 @@ import React from 'react';
 import SectionContainer from '../styles/molecules/SectionContainer';
 import SectionNoModal from '../organisms/SectionNoModal';
 import SectionProps from '../interfaces_and_types/organisms/SectionProps';
+import H2 from '../atoms/H2';
 
 function Blog({ blogEntries, isPageOrSection }:
   { blogEntries: Array<SectionProps>; isPageOrSection: 'page' | 'section'; }): JSX.Element {
@@ -14,9 +15,7 @@ function Blog({ blogEntries, isPageOrSection }:
               Ultimos posts:
             </h1>
           ) : (
-            <h2 style={{ textAlign: 'center', marginTop: '50px' }}>
-              Ultimos posts:
-            </h2>
+            <H2 style={{ textAlign: 'center', marginTop: '50px' }} text="Ultimos posts:" />
           )}
           <div id="posts">
             <section className="sections">
