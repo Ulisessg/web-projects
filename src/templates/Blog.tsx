@@ -12,10 +12,10 @@ function Blog({ blogEntries, isPageOrSection }:
         <div>
           {isPageOrSection === 'page' ? (
             <h1 style={{ textAlign: 'center', marginTop: '50px' }}>
-              Ultimos posts:
+              Ultimos posts
             </h1>
           ) : (
-            <H2 style={{ textAlign: 'center', marginTop: '50px' }} text="Ultimos posts:" />
+            <H2 style={{ textAlign: 'center', marginTop: '50px' }} text="Ultimos posts" />
           )}
           <div id="posts">
             <section className="sections">
