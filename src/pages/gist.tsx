@@ -22,7 +22,7 @@ export default function Gist({ gistsInfo }: { gistsInfo: Array<SectionProps>; })
       />
       <Layout>
         <main role="main">
-          <Gists gists={gistsInfo} />
+          <Gists isPageOrSection="page" gists={gistsInfo} />
         </main>
       </Layout>
     </>
