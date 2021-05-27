@@ -11,7 +11,7 @@ export const footerPaths: Array<Path> = [
     label: 'Curriculum',
     text: 'Curriculum',
     path:
-      'https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2Fv2%2FFrontend%20Developer%20-%20Ulises%20Antonio%20Samano%20Galvan.pdf?alt=media&token=b5366063-3170-482a-bacc-e997b36f1d84',
+      'https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2Fv2%2FFull%20Stack%20-%20Ulises%20Antonio%20Samano%20Galvan.pdf?alt=media&token=433c6049-d994-492e-be35-5ce5ce582495',
   },
   {
     label: 'Perfil de Hacker Rank',
