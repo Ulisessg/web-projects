@@ -22,6 +22,19 @@ export const footerPaths: Array<Path> = [
 
 export const experiencesInfo: Array<SectionProps> = [
   {
+    id: 12,
+    title: 'UCA - Platzi Master Jam',
+    name: 'https://github.com/Platzi-MasterJam/UCA',
+
+    description:
+      'La aplicación UCA tiene como objetivo mostrar información en tiempo real sobre cómo está la contaminación en la ciudad que quieres visitar o vivir. Utilizamos datos de múltiples organismos mundiales que recogen esta información.',
+    image: {
+      alt: 'Platzi Master Jam logo',
+      src:
+        'https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2Fv2%2Fprojects%2FPlatzi%20master%20jam.png?alt=media&token=05875380-0772-4856-bbc6-0f16b693b1d8',
+    },
+  },
+  {
     id: 1,
     title: 'Finders - Findme',
     name: 'https://github.com/Finders-Master/finders-FE',
