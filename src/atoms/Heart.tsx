@@ -5,7 +5,7 @@ function Heart({ url, name }: {
   url: string;
   name: string | undefined;
 }): JSX.Element {
-  const [isLiked, setIsLiked] = useState<string | undefined>(window.localStorage.getItem('liked'));
+  const [isLiked, setIsLiked] = useState<string | undefined>(typeof window !== 'undefined' && window.localStorage.getItem(name));
   const [clicksCounter, setClicksCounter] = useState<number>(0);
 
   function updateLike(): void {
@@ -34,7 +34,7 @@ function Heart({ url, name }: {
   return (
     <>
       <OtherStyles />
-      <HeartStyles onClick={updateLike} className={isLiked === 'true' && name} />
+      <HeartStyles onClick={updateLike} className={isLiked === 'true' && 'liked'} />
     </>
   );
 }
