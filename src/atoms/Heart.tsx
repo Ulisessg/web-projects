@@ -13,18 +13,18 @@ function Heart({ url, name }: {
 
     // Void lot of clicks
     if (clicksCounter >= 3) {
-      window.localStorage.setItem('liked', 'true');
+      window.localStorage.setItem(name, 'true');
       return;
     }
 
-    if (`${window.localStorage.getItem('liked')}` === 'true') {
-      window.localStorage.setItem('liked', 'false');
+    if (`${window.localStorage.getItem(name)}` === 'true') {
+      window.localStorage.setItem(name, 'false');
       setIsLiked('false');
     } else {
       // Add like
       fetch(url, { method: 'POST', body: JSON.stringify({ name }) }).then(() => {
         setIsLiked('true');
-        window.localStorage.setItem('liked', 'true');
+        window.localStorage.setItem(name, 'true');
       }).catch(() => {
         setIsLiked('false');
       });
@@ -34,7 +34,7 @@ function Heart({ url, name }: {
   return (
     <>
       <OtherStyles />
-      <HeartStyles onClick={updateLike} className={isLiked === 'true' && 'liked'} />
+      <HeartStyles onClick={updateLike} className={isLiked === 'true' && name} />
     </>
   );
 }
