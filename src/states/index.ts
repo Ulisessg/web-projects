@@ -179,3 +179,19 @@ export const IndexSections = [
     text: 'Ir al contacto',
   },
 ];
+
+export const IndexSectionsEnglish = [{
+  path: '#experience',
+  label: 'My experience',
+  text: 'My experience',
+},
+{
+  path: '#posts',
+  label: 'Last posts',
+  text: 'Last posts',
+},
+{
+  path: '#contact',
+  label: 'Contact',
+  text: 'Contact',
+}];
