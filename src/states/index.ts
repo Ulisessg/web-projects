@@ -94,71 +94,83 @@ export const experiencesInfo: Array<SectionProps> = [
       src:
         'https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2Fv2%2Fprojects%2FUD%20Personal%20Project.png?alt=media&token=cc8c74e6-330c-4b85-84ab-b23ab223b0ac',
     },
-  }];
+  },
+];
 
-export const temporalExperienceInfosData = [
+export const experiencesInfoEnglish: Array<SectionProps> = [
   {
-    id: 5,
-    title: 'Finders - Findme',
+    id: 12,
+    title: 'UCA - Platzi Master Jam',
+    name: 'https://github.com/Platzi-MasterJam/UCA',
+
     description:
-      'Finders es un sitio web enfocado en ayudar a localizar personas con alguna enfermedad mental o discapacidad mediante el uso de códigos QR',
-    name: 'https://github.com/Finders-Master/finders-FE',
+      'The UCA application aims to show real-time information about how the pollution is in the city you want to visit or live. We use data from multiple global organizations that collect this information.',
+    image: {
+      alt: 'Platzi Master Jam logo',
+      src:
+        'https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2Fv2%2Fprojects%2FPlatzi%20master%20jam.png?alt=media&token=05875380-0772-4856-bbc6-0f16b693b1d8',
+    },
   },
   {
     id: 1,
-    title: 'Platzi stack',
+    title: 'Finders - Findme',
+    name: 'https://github.com/Finders-Master/finders-FE',
+
     description:
-      'En Platzi Stack analicé las vacantes de Backend Developer que ofrece Platzi Master para analizar cuál sería el proximo lenguaje de programación que aprendería y con que Framworks / tecnologias.',
+      'Finders is a website focused on helping to locate people with a mental illness or disability usin QR codes',
+    image: {
+      alt: 'Finders logo',
+      src:
+        'https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2Fv2%2Fprojects%2FFindMe%20-%20Platzi%20Master%20Swat%20NEO.png?alt=media&token=d8f6a697-d1a3-45df-beb6-9cc9793265e9',
+    },
+  },
+  {
+    id: 7,
+    title: 'Platzi stack',
     name: '/como-los-datos-me-ayudaron',
+    description:
+      'In Platzi Stack I analyzed the Backend Developer vacancies offered by Platzi Master to analyze what would be the next programming language that I would learn and with which Framworks / technologies.',
+    image: {
+      alt: 'Platzi stack',
+      src:
+        'https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2Fv2%2Fprojects%2FPlatzi%20Stack.png?alt=media&token=77b51ddb-88b8-4775-b23d-9cb58e59210a',
+    },
   },
   {
     id: 2,
     title: 'Learningator - Hackathon Platzi Master',
-    description:
-      'Learningator es un generador de learning paths automatizado enfocado en l@s coaches de Platzi Master que generalmente pasan 6 horas generando un nuevo Learning Path o incluso más si el coach no tiene conocimientos sobre el campo de estudio del estudiante, además la ruta de aprendizaje puede cambiar durante el programa.',
     name: 'https://github.com/Learningator/learning-200-frontend',
+    description:
+      'Learningator is an automatized learning path generator focused in coaches of Platzi Master who generally pass 6 hours to generate a new learning path or more if the coach don\'t have knwoldege about the field of the student, besides the learnign path can change durring the programm.',
+    image: {
+      alt: 'Learningator image',
+      src:
+        'https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2Fv2%2Fprojects%2FLearningator%20Hackathon%20Platzi%20Master.png?alt=media&token=220cd771-f08d-4bcd-9589-a2ee7272b627',
+    },
   },
   {
     id: 3,
     title: 'Always update - Proyecto final Platzi Master',
-    description:
-      'Always Update es una plataforma que recopila noticias de México, Argentina, Colombia y Venezuela, recolectando más de 200 noticias todos los días y realizando un análisis sentimental de cada una mostrando el resultado con un siticker en la portada.',
     name: 'https://github.com/Proyecto-Noticias/Frontend',
+    description:
+      'Always Update is a newspaper platform who scrapping news of Mexico, Argentina, Colombia and Venezuela, collecting more than 200 news every day and realizing a sentimental analysis showing the result with a sticker in the cover page.',
+    image: {
+      alt: 'Always update',
+      src:
+        'https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2Fv2%2Fprojects%2FAlways%20Update%20Platzi%20Master%20Final%20Project.png?alt=media&token=8b8c0d77-c1ef-4641-b4d3-6f9524d91955',
+    },
   },
   {
     id: 4,
     title: 'UD',
-    description:
-      'UD es un sitio web enfocado principalmente en compartir conocimiento de tecnologia, además de contener mis proyectos personales, este sitio está creado usando el stack MERN y Typescript.',
     name: 'https://github.com/Ulisessg/web-projects',
-  },
-];
-
-export const temporalExperienceInfosImages = [
-  {
-    image:
-      'https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2Fv2%2Fprojects%2Ffindme.png?alt=media&token=99b04a9b-acf6-460b-8dd6-a5f508beff3a',
-    title: 'Finders logo',
-  },
-  {
-    image:
-      'https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2Fv2%2Fprojects%2Fplatzi%20stack.png?alt=media&token=db54843b-d3b2-4bcb-a3d1-1ec0b409b99c',
-    title: 'Platzi stack logo',
-  },
-  {
-    image:
-      'https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2Fv2%2Fprojects%2FLearningator.png?alt=media&token=3a092855-76a8-457c-ba5d-7a085530b1eb',
-    title: 'Learningator logo',
-  },
-  {
-    image:
-      'https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2Fv2%2Fprojects%2FalwaysUpdate.png?alt=media&token=fe4b78ec-d2e4-4834-a1e7-ce8f2f221db6',
-    title: 'Always Update logo',
-  },
-  {
-    image:
-      'https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2Fv2%2Fprojects%2FUD.png?alt=media&token=14d7b327-3b49-4412-be21-b9816e6ab80e',
-    title: 'UD logo',
+    description:
+      'UD is a website that focused on sharing knowledge, mainly about technology and contain my latest projects.',
+    image: {
+      alt: 'UD logo',
+      src:
+        'https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2Fv2%2Fprojects%2FUD%20Personal%20Project.png?alt=media&token=cc8c74e6-330c-4b85-84ab-b23ab223b0ac',
+    },
   },
 ];
 

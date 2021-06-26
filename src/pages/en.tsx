@@ -5,10 +5,19 @@ import Head from '../atoms/Head';
 import Layout from '../organisms/Layout';
 import AboutMe from '../molecules/Description';
 import { IndexSectionsEnglish } from '../states/index';
+import ExperienceEn from '../templates/ExperienceEn';
+import Blog from '../templates/Blog';
+import Gists from '../templates/Gists';
+import GetBlogs from '../utils/getBlogs';
+import GetGists from '../utils/getGists';
+import SectionProps from '../interfaces_and_types/organisms/SectionProps';
+import TransformGistsResponse from '../utils/transformGistsResponse';
+import TransformBlogsInfo from '../utils/tranformBlogInfo';
 
 const PageNav = dynamic(() => import('../organisms/DynamicNav'), { ssr: false });
 
-function En(): JSX.Element {
+function En({ gistsInfo, blogs }:
+  { gistsInfo: Array<SectionProps>; blogs: Array<SectionProps>; }): JSX.Element {
   return (
     <>
       <Head
@@ -25,6 +34,9 @@ function En(): JSX.Element {
         <main role="main">
           <AboutMe />
           <PageNav paths={IndexSectionsEnglish} />
+          <ExperienceEn />
+          <Blog blogEntries={blogs} isPageOrSection="section" />
+          <Gists gists={gistsInfo} isPageOrSection="section" />
         </main>
       </Layout>
     </>
@@ -32,3 +44,15 @@ function En(): JSX.Element {
 }
 
 export default En;
+
+export const getStaticProps: GetStaticProps = async () => {
+  const gists = await GetGists();
+  const gistsInfo = TransformGistsResponse(gists.data);
+  const blogs = await GetBlogs();
+  const blogsInfo = TransformBlogsInfo(blogs.data);
+
+  return {
+    props: { gistsInfo, blogs: blogsInfo },
+
+  };
+};
