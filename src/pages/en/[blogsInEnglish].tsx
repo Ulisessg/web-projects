@@ -8,6 +8,7 @@ import Layout from '../../organisms/Layout';
 import BlogPostStyles from '../../styles/atoms/BlogPostStyles';
 import Head from '../../atoms/Head';
 import ShareMedia from '../../organisms/ShareMedia';
+import AddBlogVisit from '../../atoms/AddBlogVisit';
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const blog = context.params.blogsInEnglish;
@@ -80,22 +81,8 @@ export default function Post({ data }: { data: any; }): JSX.Element {
           </section>
         </main>
       </Layout>
-      {/* <script dangerouslySetInnerHTML={{
-        __html: `'use strict';
-
-        var urlLength = window.location.pathname.split('/').length;
-
-        var blog = window.location.pathname.split('/')[urlLength - 1];
-
-        var raw = JSON.stringify({ blog_name: blog });
-
-        var request = new XMLHttpRequest();
-
-        request.open('POST', 'https://web-projects-api.vercel.app/api/blog/add-visit', true);
-
-        request.send(raw);`,
-      }}
-      /> */}
+      {process.env.NODE_ENV !== 'development'
+        && <AddBlogVisit />}
 
     </>
   );
