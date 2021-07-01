@@ -74,7 +74,7 @@ export default function Post({ data }: { data: any; }): JSX.Element {
               description={data.metaDescription}
               title={data.title}
               addLikePath="https://web-projects-api.vercel.app/api/blog/add-like"
-              documentNameForLike={typeof window !== 'undefined' && window.location.pathname.split('/')[1]}
+              documentNameForLike={typeof window !== 'undefined' && window.location.pathname.split('/')[2]}
             />
 
             <div id="blog" dangerouslySetInnerHTML={{ __html: data.content }} />
