@@ -9,6 +9,7 @@ import BlogPostStyles from '../../styles/atoms/BlogPostStyles';
 import Head from '../../atoms/Head';
 import ShareMedia from '../../organisms/ShareMedia';
 import AddBlogVisit from '../../atoms/AddBlogVisit';
+import FacebookComments from '../../molecules/FacebookComments';
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const blog = context.params.blogsInEnglish;
@@ -78,6 +79,10 @@ export default function Post({ data }: { data: any; }): JSX.Element {
             />
 
             <div id="blog" dangerouslySetInnerHTML={{ __html: data.content }} />
+
+            {typeof window !== 'undefined'
+              && <FacebookComments path={`https://ulisessg.com/en/${data.name}`} />}
+
           </section>
         </main>
       </Layout>
