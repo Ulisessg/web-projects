@@ -6,6 +6,7 @@ import Layout from '../../organisms/Layout';
 import { GistsClassesStyles } from '../../styles/templates/GistsPagesStyles';
 import LinkDarkNoBlank from '../../atoms/LinkDarkNoBlank';
 import Head from '../../atoms/Head';
+import ShareMedia from '../../organisms/ShareMedia';
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const request = await axios.get(`https://web-projects-api.vercel.app/api/gist?name=${context.params.gistsTemplate}`);
@@ -51,6 +52,11 @@ function GistsTemplate({ data, githubCode }: { data: any; githubCode: any; }): J
       />
       <Layout>
         <main>
+          <ShareMedia
+            path={`/gists/${data.name}`}
+            addLikePath="https://web-projects-api.vercel.app/api/gist/add-like"
+            documentNameForLike={typeof window !== 'undefined' && window.location.pathname.split('/')[2]}
+          />
           <h1>{data.title}</h1>
           <section>
             <p>
