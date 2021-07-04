@@ -72,8 +72,6 @@ export default function Post({ data }: { data: any; }): JSX.Element {
             {/* Share and likes */}
             <ShareMedia
               path={`/en/${data.name}`}
-              description={data.metaDescription}
-              title={data.title}
               addLikePath="https://web-projects-api.vercel.app/api/blog/add-like"
               documentNameForLike={typeof window !== 'undefined' && window.location.pathname.split('/')[2]}
             />
