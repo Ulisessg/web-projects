@@ -12,6 +12,13 @@
         "source": "/gists",
         "destination": "/gist"
       }
+    ],
+    "redirects": [
+      {
+        "source": "/ciencia-en-defensa-trans",
+        "destination": "/en-defensa-trans",
+        "type": 301
+      }
     ]
   }
 }
