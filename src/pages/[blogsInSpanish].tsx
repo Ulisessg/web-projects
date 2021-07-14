@@ -38,6 +38,8 @@ export const getStaticPaths: GetStaticPaths = async () => {
     path: string;
     title: string;
     language?: 'en' | 'es';
+    likes: number;
+    publicationDate: string;
   }) => {
     if (blog.language === 'es') {
       paths.push({ params: { blogsInSpanish: blog.name } });
@@ -62,7 +64,10 @@ export default function Post({ data }: { data: any; }): JSX.Element {
         locale="es_MX"
         title={`${data.title} | UlisesSG`}
         type="article"
-      />
+      >
+        <meta property="article:published_time" content={data.publicationDate} />
+        <meta name="publish_date" property="og:publish_date" content={data.publicationDate} />
+      </Head>
       <BlogPostStyles />
 
       <Layout>
