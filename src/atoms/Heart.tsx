@@ -34,7 +34,7 @@ function Heart({ url, name }: {
   return (
     <>
       <OtherStyles />
-      <HeartStyles onClick={updateLike} className={isLiked === 'true' && 'liked'} />
+      <HeartStyles aria-label="Like a esta publicación" onClick={updateLike} className={isLiked === 'true' && 'liked'} />
     </>
   );
 }
