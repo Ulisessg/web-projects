@@ -2,10 +2,17 @@ import styled from 'styled-components';
 
 const ShareMediaStyles = styled.section`
   margin-top: 15px;
-  display: flex;
-  display: -webkit-flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  justify-items: center;
   align-items: center;
-  justify-content: space-evenly;
+  overflow: visible !important;
+  @media screen and (min-width: 400px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+
+  }
 `;
 
 export default ShareMediaStyles;
