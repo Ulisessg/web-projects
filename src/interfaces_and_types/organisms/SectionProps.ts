@@ -6,6 +6,7 @@ interface sectionProps {
   description: string;
   name: string;
   image: imgProps;
+  path?: string;
 }
 
 export default sectionProps;

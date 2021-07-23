@@ -10,7 +10,7 @@ import {
 import SectionProps from '../interfaces_and_types/organisms/SectionProps';
 
 function SectionNoModal({
-  image, name, description, title, id,
+  image, name, description, title, id, path,
 }: SectionProps): JSX.Element {
   return (
     <>
@@ -33,7 +33,7 @@ function SectionNoModal({
         </Description>
 
         <LinkDarkNoBlank
-          path={name}
+          path={path || name}
           text={`Ver más sobre ${title}`}
           label={`Leer más sobre ${name}`}
         />

@@ -29,6 +29,7 @@ function Blog({ blogEntries, isPageOrSection }:
                     name={blog.name}
                     title={blog.title}
                     key={blog.name}
+                    path={blog.path}
                     description={blog.description}
                   />
                 ))}

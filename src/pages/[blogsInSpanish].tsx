@@ -9,13 +9,14 @@ import BlogPostStyles from '../styles/atoms/BlogPostStyles';
 import ShareMedia from '../organisms/ShareMedia';
 import AddBlogVisit from '../atoms/AddBlogVisit';
 import FacebookComments from '../molecules/FacebookComments';
+import { BlogEntryRaw } from '../interfaces_and_types/globalPropsAndProperties';
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const blog = context.params.blogsInSpanish;
 
-  const request = await axios.get(`https://web-projects-api.vercel.app/api/blog/?name=${blog}`);
+  const request: { data: { message: Array<BlogEntryRaw>; }; } = await axios.get(`https://web-projects-api.vercel.app/api/blog/?name=${blog}`);
 
-  const data = request.data.message;
+  const data: Array<BlogEntryRaw> = request.data.message;
 
   return {
     props: {
@@ -25,22 +26,11 @@ export const getStaticProps: GetStaticProps = async (context) => {
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const request: any = await axios.get('https://web-projects-api.vercel.app/api/blog/all-blogs');
+  const request: { data: { message: Array<BlogEntryRaw>; }; } = await axios.get('https://web-projects-api.vercel.app/api/blog/all-blogs');
 
   const paths = [];
 
-  request.data.message.filter((blog: {
-    metaSubjects: Array<any | string>;
-    name: string;
-    description: string;
-    image: string;
-    id: number;
-    path: string;
-    title: string;
-    language?: 'en' | 'es';
-    likes: number;
-    publicationDate: string;
-  }) => {
+  request.data.message.filter((blog: BlogEntryRaw) => {
     if (blog.language === 'es') {
       paths.push({ params: { blogsInSpanish: blog.name } });
     }
@@ -52,7 +42,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   };
 };
 
-export default function Post({ data }: { data: any; }): JSX.Element {
+export default function Post({ data }: { data: BlogEntryRaw; }): JSX.Element {
   return (
     <>
       <Head

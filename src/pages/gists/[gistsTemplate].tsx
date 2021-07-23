@@ -48,7 +48,7 @@ function GistsTemplate({ data, githubCode }: { data: any; githubCode: any; }): J
         imageAlt={`Portada del gist: ${data.title}`}
         keywords={`${data.subjects}`}
         locale="es_MX"
-        type="website"
+        type="article"
       />
       <Layout>
         <main>
