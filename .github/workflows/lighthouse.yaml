@@ -2,16 +2,14 @@ name: Lighthouse CI
 on:
   push:
     branches: [main]
-  pull_request:
-    branches: [main]
 jobs:
   lighthouseci:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
-      - run: npm install && npm install -g @lhci/cli@0.6.x && npm install firebase-tools -g
+      - run: npm install && npm install -g @lhci/cli@0.8.x && npm install firebase-tools -g
       - run: npm run lint
-      - run: node ./build.js
+      - run: npm run build
       - run: lhci autorun
       - run: firebase deploy --token ${{ secrets.FIREBASE_TOKEN }}

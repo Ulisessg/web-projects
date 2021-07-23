@@ -3,8 +3,8 @@
 module.exports = {
   ci: {
     collect: {
-      staticDistDir: './dist',
-      url: ['index.html', 'blog.html'],
+      staticDistDir: './src/out',
+      url: ['index.html', 'blog.html', 'gist.html'],
       numberOfRuns: 5,
     },
     assert: {
