@@ -2,7 +2,7 @@ import React from 'react';
 import Styles404 from '../styles/pages/404Styles';
 import ErrorTemplate from '../templates/Error';
 import Layout from '../organisms/Layout';
-import Head from '../atoms/Head';
+import Head from '../molecules/Head';
 
 export default function Error(): JSX.Element {
   return (

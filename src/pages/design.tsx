@@ -1,5 +1,5 @@
 import React from 'react';
-import Head from '../atoms/Head';
+import Head from '../molecules/Head';
 import DesignTemplate from '../templates/Design';
 
 export default function Design(): JSX.Element {

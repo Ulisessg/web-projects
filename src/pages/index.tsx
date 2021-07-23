@@ -7,7 +7,7 @@ import AboutMe from '../molecules/Description';
 import Blogs from '../templates/Blog';
 import Gists from '../templates/Gists';
 import Experience from '../templates/Experience';
-import Head from '../atoms/Head';
+import Head from '../molecules/Head';
 import GetGists from '../utils/getGists';
 import TransformGistsResponse from '../utils/transformGistsResponse';
 import SectionProps from '../interfaces_and_types/organisms/SectionProps';

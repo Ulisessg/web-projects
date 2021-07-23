@@ -1,7 +1,7 @@
 import React from 'react';
 import { GetStaticProps } from 'next';
 import Layout from '../organisms/Layout';
-import Head from '../atoms/Head';
+import Head from '../molecules/Head';
 import Gists from '../templates/Gists';
 import GetGists from '../utils/getGists';
 import TransformGistsResponse from '../utils/transformGistsResponse';

@@ -5,7 +5,7 @@ import { GetStaticProps, GetStaticPaths } from 'next';
 import Layout from '../../organisms/Layout';
 import { GistsClassesStyles } from '../../styles/templates/GistsPagesStyles';
 import LinkDarkNoBlank from '../../atoms/LinkDarkNoBlank';
-import Head from '../../atoms/Head';
+import Head from '../../molecules/Head';
 import ShareMedia from '../../organisms/ShareMedia';
 
 export const getStaticProps: GetStaticProps = async (context) => {

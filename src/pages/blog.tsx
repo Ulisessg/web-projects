@@ -2,7 +2,7 @@ import React from 'react';
 import { GetStaticProps } from 'next';
 import Layout from '../organisms/Layout';
 import Blog from '../templates/Blog';
-import Head from '../atoms/Head';
+import Head from '../molecules/Head';
 import GetBlog from '../utils/getBlogs';
 import tranformBlogInfo from '../utils/tranformBlogInfo';
 import SectionProps from '../interfaces_and_types/organisms/SectionProps';

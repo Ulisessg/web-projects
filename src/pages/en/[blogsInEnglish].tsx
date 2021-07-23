@@ -6,7 +6,7 @@ import React from 'react';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import Layout from '../../organisms/Layout';
 import BlogPostStyles from '../../styles/atoms/BlogPostStyles';
-import Head from '../../atoms/Head';
+import Head from '../../molecules/Head';
 import ShareMedia from '../../organisms/ShareMedia';
 import AddBlogVisit from '../../atoms/AddBlogVisit';
 import FacebookComments from '../../molecules/FacebookComments';

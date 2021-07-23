@@ -4,7 +4,7 @@ import React from 'react';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import axios from 'axios';
 import Layout from '../organisms/Layout';
-import Head from '../atoms/Head';
+import Head from '../molecules/Head';
 import BlogPostStyles from '../styles/atoms/BlogPostStyles';
 import ShareMedia from '../organisms/ShareMedia';
 import AddBlogVisit from '../atoms/AddBlogVisit';

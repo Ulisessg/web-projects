@@ -1,7 +1,7 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
 import { GetStaticProps } from 'next';
-import Head from '../atoms/Head';
+import Head from '../molecules/Head';
 import Layout from '../organisms/Layout';
 import AboutMe from '../molecules/Description';
 import { IndexSectionsEnglish } from '../states/index';
