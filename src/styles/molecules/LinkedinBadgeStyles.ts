@@ -1,4 +1,4 @@
-import styled, { createGlobalStyle } from 'styled-components';
+import styled from 'styled-components';
 import { backgroundLight } from '../variables';
 
 export const LinkedInBadgeContainer = styled.section`

@@ -8,7 +8,7 @@ interface SectionWithModalProps {
     description: string;
     elementId?: string;
     cover: imgProps;
-    key?: any;
+    key?: string | number;
     images?: Array<imgProps>;
   }>;
 }
