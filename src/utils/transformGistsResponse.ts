@@ -1,7 +1,7 @@
-export default function transformGistsInfo(gists: {
-  error: boolean;
-  message: Array<any>;
-}) {
+import { GistResponse, gistTransformed } from '../interfaces_and_types/globalPropsAndProperties';
+
+export default function transformGistsInfo(gists: GistResponse):
+  Array<gistTransformed> {
   const gitstsTransformated = gists.message.map((gist) => {
     const trasformatedGist = {
       id: gist.description,

@@ -55,3 +55,14 @@ export interface GistResponse {
     }
   >;
 }
+
+export interface gistTransformed {
+  id: string;
+  image: {
+    src: string;
+    alt: string;
+  };
+  title: string;
+  name: string;
+  description: string;
+}
