@@ -39,3 +39,19 @@ export interface LinkProps extends React.HtmlHTMLAttributes<HTMLAnchorElement> {
   path: string;
   text: string;
 }
+
+export interface GistResponse {
+  error: boolean,
+  message: Array<
+    {
+      subjects: Array<string>;
+      image: string;
+      description: string;
+      title: string;
+      githubLink: string;
+      id: number;
+      name: string;
+      likes: number;
+    }
+  >;
+}

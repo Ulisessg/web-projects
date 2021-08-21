@@ -1,5 +1,7 @@
-import axios from 'axios';
+import axios, { AxiosResponse } from 'axios';
 
-export default function getGists() {
+import { GistResponse } from '../interfaces_and_types/globalPropsAndProperties';
+
+export default function getGists(): Promise<AxiosResponse<GistResponse>> {
   return axios.get('https://web-projects-api.vercel.app/api/gist?limit=15');
 }
