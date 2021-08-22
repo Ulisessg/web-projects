@@ -11,7 +11,9 @@
     "generate-sitemap": "node ./src/postbuild/sitemap-generator",
     "generate-manifest": "node ./src/postbuild/manifest-generator",
     "robots-gen": "node ./src/postbuild/robots-txt-generator",
-    "start": "next start ./src/"
+    "start": "next start ./src/",
+    "test-watch": "jest --watch",
+    "test": "jest --coverage"
   },
   "repository": {
     "type": "git",
@@ -24,12 +26,16 @@
   },
   "homepage": "https://github.com/Ulisessg/web-projects#readme",
   "devDependencies": {
+    "@babel/preset-typescript": "^7.15.0",
     "@lhci/cli": "0.8.0",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^12.0.0",
     "@types/react": "17.0.19",
     "@types/react-dom": "17.0.9",
     "@types/styled-components": "5.1.12",
     "@typescript-eslint/eslint-plugin": "4.29.2",
     "@typescript-eslint/parser": "4.29.2",
+    "babel-jest": "^27.0.6",
     "eslint": "7.32.0",
     "eslint-config-airbnb": "18.2.1",
     "eslint-config-next": "11.1.0",
@@ -38,6 +44,8 @@
     "eslint-plugin-react": "7.24.0",
     "eslint-plugin-react-hooks": "4.2.0",
     "husky": "7.0.1",
+    "jest": "^27.0.6",
+    "react-test-renderer": "^17.0.2",
     "typescript": "4.3.5"
   },
   "dependencies": {
