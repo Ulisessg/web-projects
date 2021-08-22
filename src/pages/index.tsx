@@ -34,7 +34,7 @@ export default function Index({ gistsInfo, blogs }:
         canonicalUrl=""
         type="website"
         title="Ulises Antonio | FullStack Developer | Student at Platzi Master | Nerd"
-        description="Soy un FullStack Frontend Developer con experiencia usando el stack MERN y Typescript, utilizo Figma para diseñar y Jira para manejar SCRUM, mi experiencia viene de proyectos personales y de Platzi Master, un bootcamp que capacita a 0.1% estudiantes de Platzi durante 3 meses en Frontend / Backend o Data Science"
+        description="Web UI Developer - Globant, tengo experiencia usando el stack MERN y Typescript, utilizo Figma para diseñar y Jira para manejar SCRUM, mi experiencia viene de proyectos personales y de Platzi Master, un bootcamp que capacita a 0.1% estudiantes de Platzi durante 3 meses en Frontend / Backend o Data Science"
         image="https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2Fv2%2FUlises%20Antonio%20Samano%20Galvan%20Full%20Stack%20Developer.png?alt=media&token=27ce101b-0901-4f75-917d-46276a3f0d89"
         imageAlt="Ulises Antonio Samano Galvan photo"
         keywords="Full Stack Developer, Frontend Developer, Gists, MERN, Typescript, Platzi Master"
