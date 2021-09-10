@@ -11,7 +11,7 @@ function AboutMe(): JSX.Element {
       <Container>
         <Img
           alt="Ulises Antonio Sámano Galván"
-          src="https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2FSEO%2Fulises5G.jfif?alt=media&token=bbe0eb8b-ee31-4ef1-a444-452691ca8f67"
+          src="https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2Fv2%2FUlises%20Antonio%20Samano%20Galvan.jpg?alt=media&token=67d05c1b-f0c5-49df-9138-59a68072e9f4"
         />
         <DescriptionStyles>
           <p>Web UI Developer - Globant</p>

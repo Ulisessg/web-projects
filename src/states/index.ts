@@ -11,7 +11,7 @@ export const footerPaths: Array<Path> = [
     label: 'Curriculum',
     text: 'Curriculum',
     path:
-      'https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2Fv2%2FFull%20Stack%20-%20Ulises%20Antonio%20Samano%20Galvan.pdf?alt=media&token=433c6049-d994-492e-be35-5ce5ce582495',
+      'https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2Fv2%2FWeb%20UI%20Developer%20-%20Ulises%20Antonio%20Samano%20Galvan.pdf?alt=media&token=59de2731-f505-42b6-91cd-6fa6439183f5',
   },
   {
     label: 'Perfil de Hacker Rank',
@@ -21,6 +21,19 @@ export const footerPaths: Array<Path> = [
 ];
 
 export const experiencesInfo: Array<SectionProps> = [
+  {
+    id: 13,
+    title: 'Globant - Web UI Developer',
+    name: 'https://www.linkedin.com/in/ulisessg/',
+
+    description:
+      'Actualmente trabajo aquí',
+    image: {
+      alt: 'Globant logo',
+      src:
+        'https://brand.globant.com/assets/images/logo-2.jpg',
+    },
+  },
   {
     id: 12,
     title: 'UCA - Platzi Master Jam',
