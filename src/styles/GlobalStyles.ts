@@ -11,7 +11,7 @@ const GlobalStyles = createGlobalStyle`
     list-style: none;
     text-decoration: none;
     outline: none;
-    font-family: Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
   }
 
   html {
