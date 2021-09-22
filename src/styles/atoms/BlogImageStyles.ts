@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const BlogImageStyles = styled.img`
-  max-width: 800px;
+  width: 70%;
   margin: 10px auto;
 `;
 
