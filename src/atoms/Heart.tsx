@@ -8,7 +8,7 @@ function Heart({ url, name }: {
   const [isLiked, setIsLiked] = useState<string | undefined>(typeof window !== 'undefined' && window.localStorage.getItem(name));
   const [clicksCounter, setClicksCounter] = useState<number>(0);
 
-  function updateLike(): void {
+  const updateLike = (): any => {
     setClicksCounter(clicksCounter + 1);
 
     // Void lot of clicks
@@ -29,7 +29,7 @@ function Heart({ url, name }: {
         setIsLiked('false');
       });
     }
-  }
+  };
 
   return (
     <>

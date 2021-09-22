@@ -10,9 +10,9 @@ import {
 function ImageSlider({ images }: imageSliderProps): JSX.Element {
   const [imageIndex, setImageIndex] = useState<number>(0);
 
-  function test(e) {
+  const test = (e) => {
     setImageIndex(e);
-  }
+  };
 
   let x = -1;
 
