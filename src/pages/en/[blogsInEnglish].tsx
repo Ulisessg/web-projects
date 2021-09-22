@@ -11,6 +11,7 @@ import ShareMedia from '../../organisms/ShareMedia';
 import AddBlogVisit from '../../atoms/AddBlogVisit';
 import FacebookComments from '../../molecules/FacebookComments';
 import { BlogEntryRaw } from '../../interfaces_and_types/globalPropsAndProperties';
+import createBlogsStructuredData from '../../utils/createBlogsStructuredData';
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const blog = context.params.blogsInEnglish;
@@ -44,6 +45,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export default function Post({ data }: { data: BlogEntryRaw; }): JSX.Element {
+  const structuredData = createBlogsStructuredData(data);
   return (
     <>
       <Head
@@ -58,6 +60,7 @@ export default function Post({ data }: { data: BlogEntryRaw; }): JSX.Element {
       >
         <meta property="article:published_time" content={data.publicationDate} />
         <meta name="publish_date" property="og:publish_date" content={data.publicationDate} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: structuredData.structuredData }} />
       </Head>
 
       <BlogPostStyles />
@@ -72,7 +75,9 @@ export default function Post({ data }: { data: BlogEntryRaw; }): JSX.Element {
             />
 
             <div id="blog" dangerouslySetInnerHTML={{ __html: data.content }} />
-
+            <p>
+              {`Post publicado el ${structuredData.date}`}
+            </p>
             {typeof window !== 'undefined'
               && <FacebookComments path={`https://ulisessg.com/en/${data.name}`} />}
 

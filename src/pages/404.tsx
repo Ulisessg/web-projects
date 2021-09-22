@@ -3,6 +3,7 @@ import Styles404 from '../styles/pages/404Styles';
 import ErrorTemplate from '../templates/Error';
 import Layout from '../organisms/Layout';
 import Head from '../molecules/Head';
+import DogFrame from '../atoms/DogIFrame';
 
 export default function Error(): JSX.Element {
   return (
@@ -20,6 +21,8 @@ export default function Error(): JSX.Element {
         />
         <Styles404 id="main">
           <ErrorTemplate />
+
+          <DogFrame />
         </Styles404>
       </Layout>
     </>

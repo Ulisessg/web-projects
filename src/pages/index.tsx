@@ -1,6 +1,7 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
 import { GetStaticProps } from 'next';
+import Script from 'next/dist/client/script';
 import Layout from '../organisms/Layout';
 import { IndexSections } from '../states/index';
 import AboutMe from '../molecules/Description';
@@ -13,7 +14,7 @@ import TransformGistsResponse from '../utils/transformGistsResponse';
 import SectionProps from '../interfaces_and_types/organisms/SectionProps';
 import GetBlogs from '../utils/getBlogs';
 import TransformBlogsInfo from '../utils/tranformBlogInfo';
-
+import createIndexStructuredData from '../utils/createIndexStructuredData';
 /**
  *  English description:
  *  I'm a FullStack Frontend Developer with experience using MERN stack and Typescript,
@@ -39,7 +40,9 @@ export default function Index({ gistsInfo, blogs }:
         imageAlt="Ulises Antonio Samano Galvan photo"
         keywords="Full Stack Developer, Frontend Developer, Gists, MERN, Typescript, Platzi Master"
         locale="es_MX"
-      />
+      >
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: createIndexStructuredData() }} />
+      </Head>
       <Layout>
         <main role="main">
           <AboutMe />

@@ -1,7 +1,7 @@
 /* eslint-disable react/no-danger */
 import React from 'react';
 import NextHead from 'next/head';
-import FacebookPixelCode from '../utils/facebookPixel';
+
 import HeadProps from '../interfaces_and_types/atoms/HeadProps';
 
 function Head({
@@ -21,22 +21,6 @@ function Head({
       />
 
       {/* <!-- End PWA --> */}
-
-      {/* <!-- Facebook Pixel Code --> */}
-      <script dangerouslySetInnerHTML={{
-        __html: FacebookPixelCode,
-      }}
-      />
-      <noscript>
-        <img
-          height="1"
-          width="1"
-          alt=""
-          style={{ display: 'none' }}
-          src="https://www.facebook.com/tr?id=1205494516547352&ev=PageView&noscript=1"
-        />
-      </noscript>
-      {/* <!-- End Facebook Pixel Code --> */}
 
       {/* <!-- Basic SEO  --> */}
       <link rel="canonical" href={`https://ulisessg.com${canonicalUrl}`} />

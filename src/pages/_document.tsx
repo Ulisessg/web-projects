@@ -1,3 +1,4 @@
+/* eslint-disable no-underscore-dangle */
 /* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 /* eslint-disable react/react-in-jsx-scope */
 /* eslint-disable react/jsx-props-no-spreading */
@@ -5,6 +6,7 @@ import Document, {
   Head, Html, Main, NextScript, DocumentContext,
 } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
+import FacebookPixelCode from '../utils/facebookPixel';
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
@@ -33,12 +35,26 @@ export default class MyDocument extends Document {
   }
 
   render() {
-    const lang = this.props.dangerousAsPath.substring(0, 3);
     return (
       <>
-        <Html lang={lang === '/en' ? 'en' : 'es'} prefix="og: http://ogp.me/ns#">
+        <Html lang={this.props.__NEXT_DATA__.page === '/[blogsInSpanish]' ? 'es' : 'en'} prefix="og: http://ogp.me/ns#">
           <Head />
           <body>
+            {/* <!-- Facebook Pixel Code --> */}
+            <script dangerouslySetInnerHTML={{
+              __html: FacebookPixelCode,
+            }}
+            />
+            <noscript>
+              <img
+                height="1"
+                width="1"
+                alt=""
+                style={{ display: 'none' }}
+                src="https://www.facebook.com/tr?id=1205494516547352&ev=PageView&noscript=1"
+              />
+            </noscript>
+            {/* <!-- End Facebook Pixel Code --> */}
             <Main />
             <NextScript />
           </body>
