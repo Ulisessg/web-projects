@@ -11,6 +11,7 @@ import AddBlogVisit from '../atoms/AddBlogVisit';
 import FacebookComments from '../molecules/FacebookComments';
 import { BlogEntryRaw } from '../interfaces_and_types/globalPropsAndProperties';
 import createBlogsStructuredData from '../utils/createBlogsStructuredData';
+import BlogImageStyles from '../styles/atoms/BlogImageStyles';
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const blog = context.params.blogsInSpanish;
@@ -74,6 +75,7 @@ export default function Post({ data }: { data: BlogEntryRaw; }): JSX.Element {
               addLikePath="https://web-projects-api.vercel.app/api/blog/add-like"
               documentNameForLike={typeof window !== 'undefined' && window.location.pathname.split('/')[1]}
             />
+            <BlogImageStyles src={data.seoCardUrl} alt={data.title} />
             <div id="blog" dangerouslySetInnerHTML={{ __html: data.content }} />
             <p>
               {`Post publicado el ${structuredData.date}`}
