@@ -23,7 +23,7 @@ function En({ gistsInfo, blogs }:
       <Head
         canonicalUrl="/en"
         description="Web UI Developer - Globant, I have experience using MERN stack and Typescript, I use Jira and my designs are made with Figma, my experience came from personal projects and Platzi Master what is a  bootcamp that trains 0.1% Platzi students for 3 months in Frontend / Backend or Data Science skills"
-        image="https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2Fv2%2Fcovers%2FUlises%20Antonio%20Samano%20Galvan%20Full%20Stack%20Developer.png?alt=media&token=dcbeb020-7d93-4502-ac7f-e5fd0fb2e298"
+        image="https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2Fv2%2FUlises%20Antonio%20Samano%20Galvan%20Web%20UI%20Developer.png?alt=media&token=4fa85fa5-d3c3-4a2e-a0bc-b2af15ef5bd6"
         title="Ulises Antonio | FullStack Developer | Student at Platzi Master | Nerd"
         imageAlt="Ulises Antonio Samano Galvan photo"
         keywords="Full Stack Developer, Frontend Developer, Gists, MERN, Typescript, Platzi Master"
