@@ -15,7 +15,7 @@ function Loading({ heightExternal }: { heightExternal?: string; }): JSX.Element 
           heightExternal ? { height: `${heightExternal}` } : { height: '100vh' }
         }
       >
-        <LoadingSpinner className="loading-spinner" />
+        <LoadingSpinner />
       </LoadingContainer>
     </>
   );
