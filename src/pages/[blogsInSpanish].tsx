@@ -12,6 +12,8 @@ import FacebookComments from '../molecules/FacebookComments';
 import { BlogEntryRaw } from '../interfaces_and_types/globalPropsAndProperties';
 import createBlogsStructuredData from '../utils/createBlogsStructuredData';
 import BlogImageStyles from '../styles/atoms/BlogImageStyles';
+import BlogAuthorCard from '../molecules/BlogAuthorCard';
+import BlogPresentation from '../molecules/BlogPresentation';
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const blog = context.params.blogsInSpanish;
@@ -46,6 +48,12 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export default function Post({ data }: { data: BlogEntryRaw; }): JSX.Element {
   const structuredData = createBlogsStructuredData(data);
+  const dateSplitted: Array<string> = data.publicationDate?.split('-');
+  const blogDate: Date = new Date(
+    parseInt(dateSplitted[0], 10),
+    parseInt(dateSplitted[1], 10),
+    parseInt(dateSplitted[2], 10),
+  );
 
   return (
     <>
@@ -75,11 +83,12 @@ export default function Post({ data }: { data: BlogEntryRaw; }): JSX.Element {
               addLikePath="https://web-projects-api.vercel.app/api/blog/add-like"
               documentNameForLike={typeof window !== 'undefined' && window.location.pathname.split('/')[1]}
             />
-            <BlogImageStyles src={data.seoCardUrl} alt={data.title} />
+            <div>
+              <BlogPresentation title={data.title} description={data.metaDescription} />
+              <BlogImageStyles src={data.seoCardUrl} alt={data.title} />
+            </div>
             <div id="blog" dangerouslySetInnerHTML={{ __html: data.content }} />
-            <p>
-              {`Post publicado el ${structuredData.date}`}
-            </p>
+            <BlogAuthorCard publishDate={structuredData.date} />
             {typeof window !== 'undefined'
               && <FacebookComments path={`https://ulisessg.com/${data.name}`} />}
           </section>
