@@ -22,7 +22,7 @@ function LinkedInBadge({ classN }: { classN?: string; }): JSX.Element {
         <LinkedInBadgeBackground>
           <LazyImage
             src="https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2FSEO%2Fulises5G.jfif?alt=media&token=bbe0eb8b-ee31-4ef1-a444-452691ca8f67"
-            alt="Ulises Antonio Sámano Galván"
+            alt="Ulises Antonio Samano Galvsn"
             classN="linkedin-badge--image"
           />
         </LinkedInBadgeBackground>
@@ -31,7 +31,7 @@ function LinkedInBadge({ classN }: { classN?: string; }): JSX.Element {
           href="https://mx.linkedin.com/in/ulisessg?trk=profile-badge"
         >
           <strong>
-            <LinkedInBadgeName>Ulises Antonio Sámano Galván</LinkedInBadgeName>
+            <LinkedInBadgeName>Ulises Antonio Samano Galvan</LinkedInBadgeName>
           </strong>
         </a>
 
