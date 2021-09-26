@@ -5,6 +5,7 @@ interface ImageRoundedProps {
   widthLaptop: string;
   widthDesktop: string;
   src: string;
+  alt: string;
 }
 
 export default ImageRoundedProps;

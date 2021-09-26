@@ -9,6 +9,7 @@ function RoundedImage({
   widthMobile,
   widthTablet,
   bottom,
+  alt,
 }: ImageProps): JSX.Element {
   return (
     <>
@@ -20,6 +21,7 @@ function RoundedImage({
         widthLaptop={widthLaptop}
         widthDesktop={widthDesktop}
         bottom={bottom}
+        alt={alt}
       />
     </>
   );
