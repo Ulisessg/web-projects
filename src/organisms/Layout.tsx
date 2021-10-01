@@ -5,11 +5,12 @@ import Footer from './Footer';
 import GlobalStyles from '../styles/GlobalStyles';
 
 const theme = {
-  buttonDarkColor: '#134ead',
-  boxShadowColor: '#bcbdb0',
-  backgroundDark: '#012661',
-  backgroundColor: '#fafafafa',
-  backgroundLight: '#176085',
+  textLight: '#FFFFFF',
+  textDark: '#000000',
+  textDark2: '#263238',
+  backgroundLight: '#8FDAF7',
+  backgroundLight2: '#F7A8B8',
+  backgroundDark: '#6C99AB',
 };
 
 function Layout({ children }: { children: ReactElement<any>; }): JSX.Element {
