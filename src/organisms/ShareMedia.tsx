@@ -26,7 +26,7 @@ function ShareMedia({
       {/* Close Facebook share script */}
       {/* Twitter Share script */}
 
-      <Script strategy="lazyOnload">
+      <Script strategy="lazyOnload" id="Share-media">
         {`window.twttr = (function (d, s, id) {
           let js; const fjs = d.getElementsByTagName(s)[0];
           const t = window.twttr || {};

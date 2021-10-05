@@ -4,7 +4,7 @@ import Script from 'next/script';
 function AddBlogVisit(): JSX.Element {
   return (
     <>
-      <Script>
+      <Script id="add_blog_visit">
         {`'use strict';
 
 var urlLength = window.location.pathname.split('/').length;

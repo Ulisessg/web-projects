@@ -1,5 +1,4 @@
 /* eslint-disable no-underscore-dangle */
-/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 /* eslint-disable react/react-in-jsx-scope */
 /* eslint-disable react/jsx-props-no-spreading */
 import Document, {
