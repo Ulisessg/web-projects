@@ -4,7 +4,6 @@ import { LinkProps } from '../../types/props';
 const width: string = '150px';
 const height: string = '50px';
 
-
 const LinkStyles = styled.a<Pick<LinkProps, 'background' | 'ct' | 'bgh' | 'cth' | 'cn'>>`
   display: grid;
   width: ${width};
@@ -12,6 +11,9 @@ const LinkStyles = styled.a<Pick<LinkProps, 'background' | 'ct' | 'bgh' | 'cth' 
   justify-content: center;
   align-items: center;
   border-radius: 15px;
+  transition: background-color ease-in 0.2s;
+  -webkit-transition: background-color ease-in 0.2s;
+  -o-transition: background-color ease-in 0.2s;
   background-color: ${({ theme, background }) => theme[background]};
   color: ${({ theme, ct }) => theme[ct]};
   &:hover, &:focus {
