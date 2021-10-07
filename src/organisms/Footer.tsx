@@ -82,7 +82,7 @@ function Footer(): JSX.Element {
                 href={path.path}
                 linkSize="medium"
                 text={path.text}
-
+                noShadow={true}
               />;
             })}
           </OtherLinks>

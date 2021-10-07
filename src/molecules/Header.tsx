@@ -3,8 +3,10 @@ import React from 'react';
 import LinkProps from '../interfaces_and_types/atoms/LinkProps';
 import { HeaderContainer, NavStyles } from '../styles/molecules/HeaderStyles';
 import Link from '../atoms/Link';
+import { useRouter } from 'next/router';
 
 function Header(): JSX.Element {
+  const router = useRouter();
   const headerPaths: Array<LinkProps> = [
     {
       text: 'About',
@@ -47,6 +49,8 @@ function Header(): JSX.Element {
                     linkSize="small"
                     href={element.path}
                     text={element.text}
+                    noShadow={true}
+                    noSpinner={router.pathname === element.path}
                   />
                 </li>;
               })
