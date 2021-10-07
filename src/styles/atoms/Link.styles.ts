@@ -4,6 +4,7 @@ import { LinkProps } from '../../types/props';
 const LinkStyles = styled.a<Pick<LinkProps, 'background' | 'ct' | 'bgh' | 'cth' | 'cn' | 'linkSize'>>`
   display: grid;
   width: ${({ linkSize, theme }) => { return theme['buttonSizes'][linkSize].width; }};
+  max-width: 90%;
   height: ${({ linkSize, theme }) => { return theme['buttonSizes'][linkSize].height; }};
   justify-content: center;
   align-items: center;
@@ -14,7 +15,7 @@ const LinkStyles = styled.a<Pick<LinkProps, 'background' | 'ct' | 'bgh' | 'cth' 
   text-align: center;
   color: ${({ theme, ct }) => theme[ct]};
 
-  /* background transition */
+  /* transitions */
   transition: background-color ease-in 0.15s, transform ease-in 0.1s, color ease-out 0.15s;
 
   &:focus, &:hover {
