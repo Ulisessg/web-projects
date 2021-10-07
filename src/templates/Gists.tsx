@@ -16,6 +16,7 @@ function Gists({ gists, isPageOrSection }: GistsProps): JSX.Element {
         <SectionContainer>
           {gists.map((gist) => (
             <SectionNoModal
+              linkSize="large"
               loadingLabel="Cargando Gist"
               key={gist.name}
               description={gist.description}

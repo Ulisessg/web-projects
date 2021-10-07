@@ -47,7 +47,6 @@ export default function Index({ gistsInfo, blogs }:
       <Layout>
         <main role="main">
           <AboutMe />
-          <Link cn="Texto_de_prueba" background="backgroundLight2" ct="textDark2" bgh="backgroundLight" cth="textDark2" text="La Vaca lola" href="#" />
           <PageNav paths={IndexSections} />
           <Experience />
           <Blogs isPageOrSection="section" blogEntries={blogs} />

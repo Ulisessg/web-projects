@@ -19,11 +19,27 @@ export interface LinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
   href: string;
   text: string;
   cn: string;
-  size: 'small' | 'medium' | 'large' | 'xl';
+  linkSize: 'small' | 'medium' | 'large' | 'xl';
   ariaLabel: string;
 }
 
 
 export interface LoadingProps extends HTMLAttributes<HTMLDivElement> {
   heightExternal?: string;
+}
+
+export interface imgProps extends HTMLAttributes<HTMLImageElement> {
+  src: string;
+  alt: string;
+  classN?: string;
+}
+
+export interface SectionProps extends Pick<LinkProps, 'linkSize'> {
+  id: number | string;
+  title: string;
+  description: string;
+  name: string;
+  image: imgProps;
+  path?: string;
+  loadingLabel: string;
 }

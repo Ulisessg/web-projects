@@ -1,12 +1,10 @@
 import styled from 'styled-components';
 import { LinkProps } from '../../types/props';
 
-const height: string = '70px';
-
-const LinkStyles = styled.a<Pick<LinkProps, 'background' | 'ct' | 'bgh' | 'cth' | 'cn' | 'size'>>`
+const LinkStyles = styled.a<Pick<LinkProps, 'background' | 'ct' | 'bgh' | 'cth' | 'cn' | 'linkSize'>>`
   display: grid;
-  width: ${({ size, theme }) => theme.buttonSizes[size]};
-  height: ${height};
+  width: ${({ linkSize, theme }) => { return theme['buttonSizes'][linkSize].width; }};
+  height: ${({ linkSize, theme }) => { return theme['buttonSizes'][linkSize].height; }};
   justify-content: center;
   align-items: center;
   border-radius: 15px;
@@ -15,18 +13,10 @@ const LinkStyles = styled.a<Pick<LinkProps, 'background' | 'ct' | 'bgh' | 'cth' 
   background-color: ${({ theme, background }) => theme[background]};
   text-align: center;
   color: ${({ theme, ct }) => theme[ct]};
+
   /* background transition */
-  transition: background-color ease-in 0.2s;
-  -webkit-transition: background-color ease-in 0.2s;
-  -o-transition: background-color ease-in 0.2s;
-  /* color transition */
-  transition: color ease-out 0.1s;
-  -webkit-transition: color ease-out 0.1s;
-  -o-transition: color ease-out 0.1s;
-  /* Press link transition */
-  transition: transform ease-in 0.1s;
-  -webkit-transition: transform ease-in 0.1s;
-  -o-transition: transform ease-in 0.1s;
+  transition: background-color ease-in 0.15s, transform ease-in 0.1s, color ease-out 0.15s;
+
   &:hover, &:focus {
     background-color: ${({ theme, bgh }) => theme[bgh]};
     color: ${({ theme, cth }) => theme[cth]};

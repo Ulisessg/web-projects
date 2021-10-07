@@ -18,6 +18,7 @@ function Experience(): JSX.Element {
           <SectionContainer>
             {experiencesInfo.map((experience) => (
               <SectionNoModal
+                linkSize="large"
                 loadingLabel="Cargando experiencia"
                 title={experience.title}
                 description={experience.description}

@@ -25,6 +25,7 @@ function Blog({ blogEntries, isPageOrSection }:
 
                 {blogEntries.map((blog) => (
                   <SectionNoModal
+                    linkSize="large"
                     loadingLabel="Cargando blog"
                     id={blog.name}
                     image={blog.image}
@@ -48,6 +49,7 @@ function Blog({ blogEntries, isPageOrSection }:
 
                 {otherBlogs.map((blog) => (
                   <SectionNoModal
+                    linkSize="large"
                     loadingLabel="Cargando blog"
                     id={blog.name}
                     image={blog.image}

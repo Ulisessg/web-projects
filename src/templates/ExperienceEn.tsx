@@ -17,6 +17,7 @@ function ExperienceEn(): JSX.Element {
           <SectionContainer>
             {experiencesInfoEnglish.map((experience) => (
               <SectionNoModal
+                linkSize="large"
                 loadingLabel="Loading experience"
                 title={experience.title}
                 description={experience.description}

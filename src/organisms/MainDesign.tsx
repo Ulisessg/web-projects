@@ -60,6 +60,7 @@ function MainDesign({
       <SectionsContainer>
         {sections.map((section) => (
           <SectionWithNoModal
+            linkSize="large"
             loadingLabel="Cargando elemento"
             title={section.title}
             description={section.description}

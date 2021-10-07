@@ -9,10 +9,22 @@ declare module "styled-components" {
     backgroundLight2: string;
     backgroundDark: string;
     buttonSizes: {
-      small: string;
-      medium: string;
-      large: string;
-      xl: string;
+      small: {
+        width: string,
+        height: string,
+      },
+      medium: {
+        width: string,
+        height: string,
+      },
+      large: {
+        width: string,
+        height: string,
+      },
+      xl: {
+        width: string,
+        height: string,
+      },
     };
   }
 }
@@ -25,9 +37,21 @@ export const theme: DefaultTheme = {
   backgroundLight2: '#F7A8B8',
   backgroundDark: '#6C99AB',
   buttonSizes: {
-    small: '100px',
-    medium: '200px',
-    large: '300px',
-    xl: '400px',
+    small: {
+      width: '100px',
+      height: '50px',
+    },
+    medium: {
+      width: '200px',
+      height: '60px',
+    },
+    large: {
+      width: '350px',
+      height: '70px',
+    },
+    xl: {
+      width: '400px',
+      height: '80px',
+    },
   }
 };
