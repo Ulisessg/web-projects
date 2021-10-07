@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import { LinkProps } from '../../types/props';
 
-const width: string = '214px';
 const height: string = '70px';
 
 const LinkStyles = styled.a<Pick<LinkProps, 'background' | 'ct' | 'bgh' | 'cth' | 'cn' | 'size'>>`
@@ -24,10 +23,16 @@ const LinkStyles = styled.a<Pick<LinkProps, 'background' | 'ct' | 'bgh' | 'cth' 
   transition: color ease-out 0.1s;
   -webkit-transition: color ease-out 0.1s;
   -o-transition: color ease-out 0.1s;
-
+  /* Press link transition */
+  transition: transform ease-in 0.1s;
+  -webkit-transition: transform ease-in 0.1s;
+  -o-transition: transform ease-in 0.1s;
   &:hover, &:focus {
     background-color: ${({ theme, bgh }) => theme[bgh]};
     color: ${({ theme, cth }) => theme[cth]};
+  }
+  &:active {
+    transform: scale(0.9);
   }
 `;
 
