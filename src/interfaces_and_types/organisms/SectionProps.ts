@@ -7,6 +7,7 @@ interface sectionProps {
   name: string;
   image: imgProps;
   path?: string;
+  loadingLabel: string;
 }
 
 export default sectionProps;

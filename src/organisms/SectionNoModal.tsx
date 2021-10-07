@@ -10,7 +10,7 @@ import {
 import SectionProps from '../interfaces_and_types/organisms/SectionProps';
 
 function SectionNoModal({
-  image, name, description, title, id, path,
+  image, name, description, title, id, path, loadingLabel
 }: SectionProps): JSX.Element {
   return (
     <>
@@ -41,6 +41,7 @@ function SectionNoModal({
           ct="textDark2"
           cth="textLight"
           size="large"
+          ariaLabel={loadingLabel}
         />
       </SectionContainer>
     </>

@@ -4,18 +4,17 @@ import {
   LoadingContainer,
   LoadingSpinner,
 } from '../styles/atoms/LoadingStyles';
+import { LoadingProps } from '../types/props';
 
-function Loading({ heightExternal }: { heightExternal?: string; }): JSX.Element {
-  //
-
+function Loading(props: LoadingProps): JSX.Element {
   return (
     <>
       <LoadingContainer
         style={
-          heightExternal ? { height: `${heightExternal}` } : { height: '100vh' }
+          props.heightExternal ? { height: `${props.heightExternal}` } : { height: '100vh' }
         }
       >
-        <LoadingSpinner />
+        <LoadingSpinner {...props} />
       </LoadingContainer>
     </>
   );

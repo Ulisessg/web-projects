@@ -1,4 +1,4 @@
-import { DetailedHTMLProps, AnchorHTMLAttributes } from 'react';
+import { AnchorHTMLAttributes, HTMLAttributes } from 'react';
 
 
 /**
@@ -20,4 +20,10 @@ export interface LinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
   text: string;
   cn: string;
   size: 'small' | 'medium' | 'large' | 'xl';
+  ariaLabel: string;
+}
+
+
+export interface LoadingProps extends HTMLAttributes<HTMLDivElement> {
+  heightExternal?: string;
 }
