@@ -21,6 +21,7 @@ export interface LinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
   cn: string;
   linkSize: 'small' | 'medium' | 'large' | 'xl';
   ariaLabel: string;
+  noSpinner?: boolean;
 }
 
 
