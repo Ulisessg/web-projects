@@ -38,19 +38,22 @@ export default function Index({ gistsInfo, blogs }:
           <IndexNav>
             <ul className="index_nav">
               {IndexSections.map((section) => {
-                return <Link
-                  key={section.label}
-                  ariaLabel={`Ir a ${section.path}`}
-                  background="backgroundLight"
-                  bgh="backgroundLight2"
-                  cn="a"
-                  ct="textDark2"
-                  cth="textDark2"
-                  href={section.path}
-                  linkSize="medium"
-                  text={section.text}
-                  noSpinner={true}
-                />;
+                return (
+                  <li key={section.label}>
+                    <Link
+                      ariaLabel={`Ir a ${section.path}`}
+                      background="backgroundLight"
+                      bgh="backgroundLight2"
+                      cn="a"
+                      ct="textDark2"
+                      cth="textDark2"
+                      href={section.path}
+                      linkSize="medium"
+                      text={section.text}
+                      noSpinner={true}
+                    />
+                  </li>
+                );
               })}
             </ul>
           </IndexNav>

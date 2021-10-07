@@ -6,6 +6,7 @@ export const IndexNav = styled.nav`
     display: flex;
     display: -webkit-flex;
     display: -ms-flexbox;
+    justify-content: space-around;
     @media screen and (max-width: 690px){
       flex-direction: column;
     }
