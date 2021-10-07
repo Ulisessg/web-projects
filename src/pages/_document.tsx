@@ -36,7 +36,7 @@ export default class MyDocument extends Document {
   render() {
     return (
       <>
-        <Html lang={this.props.__NEXT_DATA__.page === '/[blogsInSpanish]' ? 'es' : 'en'} prefix="og: http://ogp.me/ns#">
+        <Html lang={this.props.__NEXT_DATA__.page === '/en/[blogsInEnglish]' ? 'en' : 'es'} prefix="og: http://ogp.me/ns#">
           <Head />
           <body>
             {/* <!-- Facebook Pixel Code --> */}
