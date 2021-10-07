@@ -1,4 +1,3 @@
-/* eslint-disable react/require-default-props */
 import React from 'react';
 import LazyImage from './Img';
 import {
@@ -8,6 +7,7 @@ import {
   LinkedInBadgeDescription,
   LinkedInBadgeGoProfileContiner,
 } from '../styles/molecules/LinkedinBadgeStyles';
+import Link from '../atoms/Link';
 
 // Background image https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2Fv2%2Flinkedin%20cover.jpeg?alt=media&token=7af29779-027c-4d39-b97e-819707fac55c
 
@@ -40,9 +40,17 @@ function LinkedInBadge({ classN }: { classN?: string; }): JSX.Element {
         </LinkedInBadgeDescription>
 
         <LinkedInBadgeGoProfileContiner className="linkedin-badge--go-profile">
-          <a href="https://mx.linkedin.com/in/ulisessg?trk=profile-badge">
-            Ver perfil
-          </a>
+          <Link
+            ariaLabel=""
+            background="backgroundLight"
+            bgh="backgroundLight2"
+            ct="textDark"
+            cn=""
+            cth="textDark"
+            href=""
+            linkSize="medium"
+            text="Ver perfil de LinkedIn"
+          />
         </LinkedInBadgeGoProfileContiner>
         <LazyImage
           classN=""

@@ -3,7 +3,7 @@ import { backgroundLight } from '../variables';
 
 export const LinkedInBadgeContainer = styled.section`
   width: 100%;
-  height: 400px;
+  height: 500px;
   margin-top: 50px;
   display: flex;
   display: -webkit-flex;
@@ -30,13 +30,13 @@ export const LinkedInBadgeBackground = styled.div`
   }
 `;
 
-export const LinkedInBadgeName = styled.h3`
+export const LinkedInBadgeName = styled.p`
   color: black;
   &:hover,
   &:focus {
-    color: ${backgroundLight};
+    color: gray;
   }
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   padding: 0 10px;
 `;
 
@@ -45,7 +45,6 @@ export const LinkedInBadgeDescription = styled.p`
 `;
 
 export const LinkedInBadgeGoProfileContiner = styled.div`
-  border: 1px solid ${backgroundLight};
   padding: 3px;
 `;
 
