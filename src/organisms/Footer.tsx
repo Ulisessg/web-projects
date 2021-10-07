@@ -2,7 +2,6 @@ import React from 'react';
 import LinkedInBadge from '../molecules/LinkedInBadge';
 import LazyImage from '../molecules/Img';
 import { footerPaths } from '../states/index';
-import NavLightBlank from '../molecules/NavLightBlank';
 import {
   FooterElement,
   FooterContainer,
@@ -10,9 +9,10 @@ import {
   FollowMe,
   SocialMediaContainer,
   OtherLinks,
-  CoffeQuote,
+  CoffeeQuote,
   CssStyles,
 } from '../styles/organisms/FooterStyles';
+import Link from '../atoms/Link';
 
 function Footer(): JSX.Element {
   return (
@@ -70,13 +70,27 @@ function Footer(): JSX.Element {
           <LinkedInBadge classN="foooter-linkedin-badge" />
 
           <OtherLinks className="footer__other-links">
-            <NavLightBlank dir="column" paths={footerPaths} />
+            {footerPaths.map((path) => {
+              return <Link
+                key={path.label}
+                ariaLabel=""
+                background="backgroundDark"
+                bgh="backgroundLight2"
+                cn="footer_links"
+                ct="textDark"
+                cth="textDark"
+                href={path.path}
+                linkSize="medium"
+                text={path.text}
+
+              />;
+            })}
           </OtherLinks>
           {/* </div> */}
 
-          <CoffeQuote className="coffe-quote">
+          <CoffeeQuote className="coffe-quote">
             Hecho con amor, café y amor al café 💚
-          </CoffeQuote>
+          </CoffeeQuote>
         </FooterContainer>
       </FooterElement>
     </>

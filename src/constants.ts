@@ -8,6 +8,7 @@ declare module "styled-components" {
     backgroundLight: string;
     backgroundLight2: string;
     backgroundDark: string;
+    boxShadow: string;
     buttonSizes: {
       small: {
         width: string,
@@ -36,6 +37,7 @@ export const theme: DefaultTheme = {
   backgroundLight: '#8FDAF7',
   backgroundLight2: '#F7A8B8',
   backgroundDark: '#6C99AB',
+  boxShadow: '#e0e0e0',
   buttonSizes: {
     small: {
       width: '80px',

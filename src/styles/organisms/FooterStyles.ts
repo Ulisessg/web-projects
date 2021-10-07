@@ -1,11 +1,10 @@
 import styled, { createGlobalStyle } from 'styled-components';
-import { backgroundDark, boxShadowColor } from '../variables';
 
 export const FooterElement = styled.footer`
   height: auto;
-  background-color: ${backgroundDark};
+  background-color: ${({ theme }) => theme.backgroundLight};
   width: 100vw;
-  box-shadow: 0px -3px 10px 0px ${boxShadowColor};
+  box-shadow: 0px -3px 10px 0px ${({ theme }) => theme.boxShadow};
 `;
 
 export const FooterContainer = styled.div`
@@ -58,7 +57,7 @@ export const FooterContainer = styled.div`
 `;
 
 export const Quote = styled.h3`
-  color: white;
+  color: ${({ theme }) => theme.textDark};
   text-align: center;
   margin: 40px 0 10px 0;
   padding: 17px;
@@ -66,7 +65,7 @@ export const Quote = styled.h3`
 `;
 
 export const FollowMe = styled.h3`
-  color: white;
+  color: ${({ theme }) => theme.textDark};
   text-align: center;
   margin: 40px 0 10px 0;
   padding: 17px;
@@ -93,8 +92,8 @@ export const OtherLinks = styled.div`
   margin-top: 30px;
 `;
 
-export const CoffeQuote = styled.h3`
-  color: white;
+export const CoffeeQuote = styled.h3`
+  color: ${({ theme }) => theme.textDark2};
   text-align: center;
   margin: 40px 0 10px 0;
   padding: 17px;
