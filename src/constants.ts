@@ -38,8 +38,8 @@ export const theme: DefaultTheme = {
   backgroundDark: '#6C99AB',
   buttonSizes: {
     small: {
-      width: '100px',
-      height: '50px',
+      width: '80px',
+      height: '40px',
     },
     medium: {
       width: '200px',

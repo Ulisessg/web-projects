@@ -1,14 +1,14 @@
-import styled, { createGlobalStyle } from 'styled-components';
-import { backgroundDark, boxShadowColor } from '../variables';
+import styled from 'styled-components';
 
 export const HeaderContainer = styled.header`
   width: 100vw;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
+  align-items: center;
   height: 10vh;
-  background-color: ${backgroundDark};
-  box-shadow: 0px 3px 6px 0px ${boxShadowColor};
+  background-color: ${({ theme }) => theme.backgroundLight};
+  box-shadow: 0px 3px 6px 0px #e0e0e0;
 
   & ul {
     height: 100%;
@@ -18,23 +18,11 @@ export const HeaderContainer = styled.header`
   }
 `;
 
-export const HeaderClassesStyles = createGlobalStyle`
-  .header-link {
-    align-self: center;
-  }
-
-  header img {
-    height: 40px;
-    width: 40px;
-    align-self: center;
-    margin-left: 10px;
-  }
-  header nav ul li p a {
+export const NavStyles = styled.nav`
+  width: 100vw;
+  .header-list {
     display: flex;
-    font-size: 1rem !important;
-
-    @media screen and (max-width: 450px) {
-      padding: 4px 10px !important;
-    }
   }
 `;
+
+

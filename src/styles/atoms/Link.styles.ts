@@ -17,7 +17,7 @@ const LinkStyles = styled.a<Pick<LinkProps, 'background' | 'ct' | 'bgh' | 'cth' 
   /* background transition */
   transition: background-color ease-in 0.15s, transform ease-in 0.1s, color ease-out 0.15s;
 
-  &:hover, &:focus {
+  &:focus, &:hover {
     background-color: ${({ theme, bgh }) => theme[bgh]};
     color: ${({ theme, cth }) => theme[cth]};
   }

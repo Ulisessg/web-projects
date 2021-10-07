@@ -1,10 +1,8 @@
 import React from 'react';
 // import SkipLink from '../atoms/SkipLink';
-import Img from './Img';
-import Nav from './NavDarkNoBlank';
-import Link from 'next/link';
 import LinkProps from '../interfaces_and_types/atoms/LinkProps';
-import { HeaderContainer, HeaderClassesStyles } from '../styles/molecules/HeaderStyles';
+import { HeaderContainer, NavStyles } from '../styles/molecules/HeaderStyles';
+import Link from '../atoms/Link';
 
 function Header(): JSX.Element {
   const headerPaths: Array<LinkProps> = [
@@ -32,19 +30,29 @@ function Header(): JSX.Element {
 
   return (
     <>
-      <HeaderClassesStyles />
       {/* <SkipLink /> */}
       <HeaderContainer>
-        <Link href="/">
-          <a className="header-link">
-            <Img
-              alt="Logo"
-              src="https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2Fv2%2Flogo-192x192.png?alt=media&token=1a4aa1ca-1846-41b3-9005-9c4dc5c4d888"
-            />
-          </a>
-        </Link>
-
-        <Nav dir="row" paths={headerPaths} />
+        <NavStyles >
+          <ul className="header-list">
+            {
+              headerPaths.map((element) => {
+                return <li key={`${element.path}`}>
+                  <Link
+                    cn="as"
+                    ariaLabel={`Cargando ${element.text}`}
+                    background="backgroundLight"
+                    bgh="backgroundLight2"
+                    ct="textDark"
+                    cth="textDark"
+                    linkSize="small"
+                    href={element.path}
+                    text={element.text}
+                  />
+                </li>;
+              })
+            }
+          </ul>
+        </NavStyles>
       </HeaderContainer>
     </>
   );
