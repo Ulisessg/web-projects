@@ -41,7 +41,7 @@ function LinkedInBadge({ classN }: { classN?: string; }): JSX.Element {
 
         <LinkedInBadgeGoProfileContiner className="linkedin-badge--go-profile">
           <Link
-            ariaLabel=""
+            ariaLabel="Cargando perfilde LinkedIn"
             background="backgroundLight"
             bgh="backgroundLight2"
             ct="textDark"

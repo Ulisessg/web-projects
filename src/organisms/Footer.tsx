@@ -73,7 +73,7 @@ function Footer(): JSX.Element {
             {footerPaths.map((path) => {
               return <Link
                 key={path.label}
-                ariaLabel=""
+                ariaLabel={`Cargando ${path.text}`}
                 background="backgroundDark"
                 bgh="backgroundLight2"
                 cn="footer_links"
