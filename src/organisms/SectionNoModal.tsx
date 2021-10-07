@@ -1,6 +1,6 @@
 import React from 'react';
 import ImageExpand from '../molecules/ImageExpand';
-import LinkDarkNoBlank from '../atoms/LinkDarkNoBlank';
+import Link from '../atoms/Link';
 import {
   SectionContainer,
   ImageContainer,
@@ -32,10 +32,15 @@ function SectionNoModal({
           {description}
         </Description>
 
-        <LinkDarkNoBlank
-          path={path || name}
+        <Link
+          href={path || name}
           text={`Ver más sobre ${title}`}
-          label={`Leer más sobre ${name}`}
+          background="backgroundLight"
+          bgh="backgroundLight2"
+          cn="some"
+          ct="textDark2"
+          cth="textLight"
+          size="large"
         />
       </SectionContainer>
     </>

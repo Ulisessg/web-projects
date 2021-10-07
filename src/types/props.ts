@@ -19,4 +19,5 @@ export interface LinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
   href: string;
   text: string;
   cn: string;
+  size: 'small' | 'medium' | 'large' | 'xl';
 }
