@@ -1,7 +1,5 @@
 import React from 'react';
-import dynamic from 'next/dynamic';
 import { GetStaticProps } from 'next';
-import Script from 'next/dist/client/script';
 import Layout from '../organisms/Layout';
 import { IndexSections } from '../states/index';
 import AboutMe from '../molecules/Description';
@@ -16,17 +14,7 @@ import GetBlogs from '../utils/getBlogs';
 import TransformBlogsInfo from '../utils/tranformBlogInfo';
 import createIndexStructuredData from '../utils/createIndexStructuredData';
 import Link from '../atoms/Link';
-/**
- *  English description:
- *  I'm a FullStack Frontend Developer with experience using MERN stack and Typescript,
- *  I use Jira and my * designs are made with Figma,
- *  my experience came from personal projects and Platzi Master
- *  what is a  bootcamp that trains 0.1%
- *  Platzi students for 3 months in Frontend / Backend or Data Science skills
- *
- */
-
-const PageNav = dynamic(() => import('../organisms/DynamicNav'), { ssr: false });
+import { IndexNav } from '../styles/pages/IndexStyles';
 
 export default function Index({ gistsInfo, blogs }:
   { gistsInfo: Array<SectionProps>; blogs: Array<SectionProps>; }): JSX.Element {
@@ -47,7 +35,25 @@ export default function Index({ gistsInfo, blogs }:
       <Layout>
         <main role="main">
           <AboutMe />
-          <PageNav paths={IndexSections} />
+          <IndexNav>
+            <ul className="index_nav">
+              {IndexSections.map((section) => {
+                return <Link
+                  key={section.label}
+                  ariaLabel={`Ir a ${section.path}`}
+                  background="backgroundLight"
+                  bgh="backgroundLight2"
+                  cn="a"
+                  ct="textDark2"
+                  cth="textDark2"
+                  href={section.path}
+                  linkSize="medium"
+                  text={section.text}
+                  noSpinner={true}
+                />;
+              })}
+            </ul>
+          </IndexNav>
           <Experience />
           <Blogs isPageOrSection="section" blogEntries={blogs} />
           <Gists isPageOrSection="section" gists={gistsInfo} />
