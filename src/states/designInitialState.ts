@@ -1,7 +1,10 @@
 /* eslint-disable import/prefer-default-export */
-export const sections = [
+import { SectionProps } from '../types/props';
+export const sections: SectionProps[] = [
   {
     id: 1,
+    linkSize: 'large',
+    loadingLabel: '',
     title: 'Flujo',
     name: '/flujo',
     description: 'Metodologias y procedimientos para crear el producto',
@@ -15,6 +18,8 @@ export const sections = [
     id: 2,
     title: 'Reglas',
     name: '/reglas',
+    linkSize: 'large',
+    loadingLabel: '',
     description:
       'Todas las caracteristicas obligatorias que debe cumplir el producto',
     image: {
@@ -26,6 +31,8 @@ export const sections = [
   {
     id: 3,
     title: 'Componentes',
+    linkSize: 'large',
+    loadingLabel: '',
     name: '/componentes',
     description:
       'Un listado de todos los componentes que utilizo además de su lógica',
@@ -39,6 +46,8 @@ export const sections = [
     id: 4,
     title: 'Documentación',
     name: '/documentacion',
+    linkSize: 'large',
+    loadingLabel: '',
     description:
       'Una descripción detallada de cómo ha sido creado cada producto',
     image: {

@@ -1,8 +1,6 @@
 import React from 'react';
 
 import { sections } from '../states/designInitialState';
-//  Styles
-// import '../styles/templates/design-styles.styl';
 
 //  Components
 import Layout from '../organisms/Layout';

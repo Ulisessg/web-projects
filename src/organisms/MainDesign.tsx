@@ -2,7 +2,7 @@ import React from 'react';
 
 import SectionWithNoModal from './SectionNoModal';
 import SectionsContainer from '../styles/molecules/SectionContainer';
-import SectionProps from '../interfaces_and_types/organisms/SectionProps';
+import { SectionProps } from '../types/props';
 
 interface MainDesignProps {
   sections: Array<SectionProps>;

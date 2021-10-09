@@ -9,9 +9,9 @@ import Head from '../../molecules/Head';
 import ShareMedia from '../../organisms/ShareMedia';
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const request = await axios.get(`https://web-projects-api.vercel.app/api/gist?name=${context.params.gistsTemplate}`);
-
+  const request: any = await axios.get(`https://web-projects-api.vercel.app/api/gist?name=${context.params.gistsTemplate}`);
   const data = request.data.message[0];
+
 
   return {
     props: {
@@ -23,7 +23,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const request = await axios.get('https://web-projects-api.vercel.app/api/gist?limit=100');
+  const request: any = await axios.get('https://web-projects-api.vercel.app/api/gist?limit=100');
   const gists = request.data.message;
 
   const paths = [];

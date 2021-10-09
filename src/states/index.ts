@@ -25,7 +25,6 @@ export const experiencesInfo: Array<SectionProps> = [
     id: 13,
     title: 'Globant - Web UI Developer',
     name: 'https://www.linkedin.com/in/ulisessg/',
-
     description:
       'Actualmente trabajo aquí',
     image: {
@@ -33,12 +32,13 @@ export const experiencesInfo: Array<SectionProps> = [
       src:
         'https://brand.globant.com/assets/images/logo-2.jpg',
     },
+    loadingLabel: 'Cargando: mi experiencia en Globant',
   },
   {
     id: 12,
     title: 'UCA - Platzi Master Jam',
     name: 'https://github.com/Platzi-MasterJam/UCA',
-
+    loadingLabel: 'Cargando: UCA - Platzi Master Jam',
     description:
       'La aplicación UCA tiene como objetivo mostrar información en tiempo real sobre cómo está la contaminación en la ciudad que quieres visitar o vivir. Utilizamos datos de múltiples organismos mundiales que recogen esta información.',
     image: {
@@ -51,7 +51,7 @@ export const experiencesInfo: Array<SectionProps> = [
     id: 1,
     title: 'Finders - Findme',
     name: 'https://github.com/Finders-Master/finders-FE',
-
+    loadingLabel: 'Cargando: Finders',
     description:
       'Finders es un sitio web enfocado en ayudar a localizar personas con alguna enfermedad mental o discapacidad mediante el uso de códigos QR',
     image: {
@@ -64,6 +64,7 @@ export const experiencesInfo: Array<SectionProps> = [
     id: 7,
     title: 'Platzi stack',
     name: '/como-los-datos-me-ayudaron',
+    loadingLabel: 'Cargando: Cómo los datos me ayudaron',
     description:
       'En Platzi Stack analicé las vacantes de Backend Developer que ofrece Platzi Master para analizar cuál sería el proximo lenguaje de programación que aprendería y con que Framworks / tecnologias.',
     image: {
@@ -76,6 +77,7 @@ export const experiencesInfo: Array<SectionProps> = [
     id: 2,
     title: 'Learningator - Hackathon Platzi Master',
     name: 'https://github.com/Learningator/learning-200-frontend',
+    loadingLabel: 'Cargando: Learningator',
     description:
       'Learningator es un generador de learning paths automatizado enfocado en l@s coaches de Platzi Master que generalmente pasan 6 horas generando un nuevo Learning Path o incluso más si el coach no tiene conocimientos sobre el campo de estudio del estudiante, además la ruta de aprendizaje puede cambiar durante el programa.',
     image: {
@@ -88,6 +90,7 @@ export const experiencesInfo: Array<SectionProps> = [
     id: 3,
     title: 'Always update - Proyecto final Platzi Master',
     name: 'https://github.com/Proyecto-Noticias/Frontend',
+    loadingLabel: 'Cargando: Always Update',
     description:
       'Always Update es una plataforma que recopila noticias de México, Argentina, Colombia y Venezuela, recolectando más de 200 noticias todos los días y realizando un análisis sentimental de cada una mostrando el resultado con un siticker en la portada.',
     image: {
@@ -100,6 +103,7 @@ export const experiencesInfo: Array<SectionProps> = [
     id: 4,
     title: 'UD',
     name: 'https://github.com/Ulisessg/web-projects',
+    loadingLabel: 'Cargando: UD',
     description:
       'UD es un sitio web enfocado principalmente en compartir conocimiento de tecnologia, además de contener mis proyectos personales, este sitio está creado usando el stack MERN y Typescript.',
     image: {
@@ -112,10 +116,23 @@ export const experiencesInfo: Array<SectionProps> = [
 
 export const experiencesInfoEnglish: Array<SectionProps> = [
   {
+    id: 13,
+    title: 'Globant - Web UI Developer',
+    name: 'https://www.linkedin.com/in/ulisessg/',
+    description:
+      'My current job',
+    image: {
+      alt: 'Globant logo',
+      src:
+        'https://brand.globant.com/assets/images/logo-2.jpg',
+    },
+    loadingLabel: 'Loading: my experience in Globant',
+  },
+  {
     id: 12,
     title: 'UCA - Platzi Master Jam',
     name: 'https://github.com/Platzi-MasterJam/UCA',
-
+    loadingLabel: 'Loading: UCA - Platzi Master Jam',
     description:
       'The UCA application aims to show real-time information about how the pollution is in the city you want to visit or live. We use data from multiple global organizations that collect this information.',
     image: {
@@ -128,7 +145,7 @@ export const experiencesInfoEnglish: Array<SectionProps> = [
     id: 1,
     title: 'Finders - Findme',
     name: 'https://github.com/Finders-Master/finders-FE',
-
+    loadingLabel: 'Loading: Finders - Findme',
     description:
       'Finders is a website focused on helping to locate people with a mental illness or disability usin QR codes',
     image: {
@@ -141,6 +158,7 @@ export const experiencesInfoEnglish: Array<SectionProps> = [
     id: 7,
     title: 'Platzi stack',
     name: '/como-los-datos-me-ayudaron',
+    loadingLabel: 'Loading: Platzi Stack',
     description:
       'In Platzi Stack I analyzed the Backend Developer vacancies offered by Platzi Master to analyze what would be the next programming language that I would learn and with which Framworks / technologies.',
     image: {
@@ -153,6 +171,7 @@ export const experiencesInfoEnglish: Array<SectionProps> = [
     id: 2,
     title: 'Learningator - Hackathon Platzi Master',
     name: 'https://github.com/Learningator/learning-200-frontend',
+    loadingLabel: 'Loading: Learningator',
     description:
       'Learningator is an automatized learning path generator focused in coaches of Platzi Master who generally pass 6 hours to generate a new learning path or more if the coach don\'t have knwoldege about the field of the student, besides the learnign path can change durring the programm.',
     image: {
@@ -163,8 +182,9 @@ export const experiencesInfoEnglish: Array<SectionProps> = [
   },
   {
     id: 3,
-    title: 'Always update - Proyecto final Platzi Master',
+    title: 'Always update - Final project Platzi Master',
     name: 'https://github.com/Proyecto-Noticias/Frontend',
+    loadingLabel: 'Loading: Always update',
     description:
       'Always Update is a newspaper platform who scrapping news of Mexico, Argentina, Colombia and Venezuela, collecting more than 200 news every day and realizing a sentimental analysis showing the result with a sticker in the cover page.',
     image: {
@@ -177,6 +197,7 @@ export const experiencesInfoEnglish: Array<SectionProps> = [
     id: 4,
     title: 'UD',
     name: 'https://github.com/Ulisessg/web-projects',
+    loadingLabel: 'Loading: UD',
     description:
       'UD is a website that focused on sharing knowledge, mainly about technology and contain my latest projects.',
     image: {
