@@ -47,7 +47,7 @@ function LinkedInBadge({ classN }: { classN?: string; }): JSX.Element {
             ct="textDark"
             cn=""
             cth="textDark"
-            href=""
+            href="https://www.linkedin.com/in/ulisessg/"
             linkSize="medium"
             text="Ver perfil de LinkedIn"
           />
