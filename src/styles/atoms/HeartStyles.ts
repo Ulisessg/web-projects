@@ -1,14 +1,14 @@
-import styled, { createGlobalStyle } from 'styled-components';
-import { backgroundLight } from '../variables';
+import styled, { createGlobalStyle } from "styled-components";
+import { backgroundLight } from "../variables";
 
-const HeartStyles = styled.button`
+const HeartStyles = styled.button<{ className: string }>`
   appearance: auto;
   width: 60px;
   height: 70px;
   border-radius: 15px;
   border: 1px solid grey;
   &::before {
-    content: '❤';
+    content: "❤";
     font-size: 2.8rem;
     color: tomato;
     text-align: center;
