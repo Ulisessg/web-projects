@@ -1,4 +1,5 @@
-import styled from 'styled-components';
+import styled from "styled-components";
+import { slice } from "../keyframes";
 
 const Container = styled.div`
   width: 90vw;
@@ -7,6 +8,7 @@ const Container = styled.div`
   display: -ms-grid;
   justify-items: center;
   margin: 50px auto;
+  animation: ${slice} 0.8s;
 `;
 
 export default Container;

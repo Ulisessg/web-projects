@@ -1,5 +1,6 @@
-import styled from 'styled-components';
-import { boxShadowColor } from '../variables';
+import styled from "styled-components";
+import { boxShadowColor } from "../variables";
+import { slice } from "../keyframes";
 
 export const Container = styled.div`
   display: grid;
@@ -8,6 +9,7 @@ export const Container = styled.div`
   justify-items: center;
   margin-top: 5vh;
   text-align: center;
+  animation: ${slice} 0.8s;
   & img {
     width: 150px;
     border-radius: 50%;
@@ -28,5 +30,5 @@ export const DescriptionStyles = styled.h1`
   display: -ms-grid;
   margin-top: 20px;
   font-size: 2rem;
+  animation: ${slice} 0.8s;
 `;
-// export default Container;

@@ -1,7 +1,9 @@
 import styled from 'styled-components';
+import { slice } from '../keyframes';
 
 export const IndexNav = styled.nav`
   margin: 40px 0;
+  animation: ${slice} 0.8s;
   .index_nav {
     display: flex;
     display: -webkit-flex;

@@ -1,28 +1,35 @@
-import React from 'react';
-import SectionContainer from '../styles/molecules/SectionContainer';
-import SectionNoModal from '../organisms/SectionNoModal';
-import SectionProps from '../interfaces_and_types/organisms/SectionProps';
-import H2 from '../atoms/H2';
-import otherBlogs from '../states/blogsState';
+import React from "react";
+import SectionContainer from "../styles/molecules/SectionContainer";
+import SectionNoModal from "../organisms/SectionNoModal";
+import SectionProps from "../interfaces_and_types/organisms/SectionProps";
+import H2 from "../atoms/H2";
+import otherBlogs from "../states/blogsState";
+import { BlogContainer } from "../styles/templates/BlogStyles";
 
-function Blog({ blogEntries, isPageOrSection }:
-  { blogEntries: Array<SectionProps>; isPageOrSection: 'page' | 'section'; }): JSX.Element {
+function Blog({
+  blogEntries,
+  isPageOrSection,
+}: {
+  blogEntries: Array<SectionProps>;
+  isPageOrSection: "page" | "section";
+}): JSX.Element {
   return (
     <>
-      <div style={{ margin: '0 auto', width: '90vw' }}>
+      <BlogContainer>
         <div>
-          {isPageOrSection === 'page' ? (
-            <h1 style={{ textAlign: 'center', marginTop: '50px' }}>
+          {isPageOrSection === "page" ? (
+            <h1 style={{ textAlign: "center", marginTop: "50px" }}>
               Ultimos posts
             </h1>
           ) : (
-            <H2 style={{ textAlign: 'center', marginTop: '50px' }} text="Ultimos posts" />
+            <H2
+              style={{ textAlign: "center", marginTop: "50px" }}
+              text="Ultimos posts"
+            />
           )}
           <div id="posts">
             <section className="sections">
-
               <SectionContainer>
-
                 {blogEntries.map((blog) => (
                   <SectionNoModal
                     linkSize="large"
@@ -37,16 +44,13 @@ function Blog({ blogEntries, isPageOrSection }:
                   />
                 ))}
               </SectionContainer>
-
             </section>
           </div>
 
           <H2 text="Otros posts" />
           <div id="posts">
             <section className="sections">
-
               <SectionContainer>
-
                 {otherBlogs.map((blog) => (
                   <SectionNoModal
                     linkSize="large"
@@ -61,11 +65,10 @@ function Blog({ blogEntries, isPageOrSection }:
                   />
                 ))}
               </SectionContainer>
-
             </section>
           </div>
         </div>
-      </div>
+      </BlogContainer>
     </>
   );
 }
