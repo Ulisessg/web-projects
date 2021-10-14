@@ -74,7 +74,7 @@ function GistsTemplate({
           </section>
           <h2>Codigo</h2>
           <section id="code">
-            <ReactGist id={githubCode} file={null} />
+            <ReactGist id={githubCode} file={undefined} />
           </section>
           <div
             style={{ width: "100%", display: "grid", justifyItems: "center" }}
