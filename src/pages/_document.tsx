@@ -1,11 +1,16 @@
+/* eslint-disable @next/next/no-img-element */
 /* eslint-disable no-underscore-dangle */
 /* eslint-disable react/react-in-jsx-scope */
 /* eslint-disable react/jsx-props-no-spreading */
 import Document, {
-  Head, Html, Main, NextScript, DocumentContext,
-} from 'next/document';
-import { ServerStyleSheet } from 'styled-components';
-import FacebookPixelCode from '../utils/facebookPixel';
+  Head,
+  Html,
+  Main,
+  NextScript,
+  DocumentContext,
+} from "next/document";
+import { ServerStyleSheet } from "styled-components";
+import FacebookPixelCode from "../utils/facebookPixel";
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
@@ -13,9 +18,11 @@ export default class MyDocument extends Document {
     const originalRenderPage = ctx.renderPage;
 
     try {
-      ctx.renderPage = () => originalRenderPage({
-        enhanceApp: (App) => (props) => sheet.collectStyles(<App {...props} />),
-      });
+      ctx.renderPage = () =>
+        originalRenderPage({
+          enhanceApp: (App) => (props) =>
+            sheet.collectStyles(<App {...props} />),
+        });
 
       const initialProps = await Document.getInitialProps(ctx);
 
@@ -36,20 +43,28 @@ export default class MyDocument extends Document {
   render() {
     return (
       <>
-        <Html lang={this.props.__NEXT_DATA__.page === '/en/[blogsInEnglish]' ? 'en' : 'es'} prefix="og: http://ogp.me/ns#">
+        <Html
+          lang={
+            this.props.__NEXT_DATA__.page === "/en/[blogsInEnglish]"
+              ? "en"
+              : "es"
+          }
+          prefix="og: http://ogp.me/ns#"
+        >
           <Head />
           <body>
             {/* <!-- Facebook Pixel Code --> */}
-            <script dangerouslySetInnerHTML={{
-              __html: FacebookPixelCode,
-            }}
+            <script
+              dangerouslySetInnerHTML={{
+                __html: FacebookPixelCode,
+              }}
             />
             <noscript>
               <img
                 height="1"
                 width="1"
                 alt=""
-                style={{ display: 'none' }}
+                style={{ display: "none" }}
                 src="https://www.facebook.com/tr?id=1205494516547352&ev=PageView&noscript=1"
               />
             </noscript>

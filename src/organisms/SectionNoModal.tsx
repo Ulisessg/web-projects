@@ -1,25 +1,30 @@
-import React from 'react';
-import ImageExpand from '../molecules/ImageExpand';
-import Link from '../atoms/Link';
+/* eslint-disable @next/next/no-img-element */
+import React from "react";
+import Link from "../atoms/Link";
 import {
   SectionContainer,
   ImageContainer,
   Title,
   Description,
-} from '../styles/organisms/SectionStyles';
-import { SectionProps } from '../types/props';
+} from "../styles/organisms/SectionStyles";
+import { SectionProps } from "../types/props";
 function SectionNoModal({
-  image, name, description, title, id, path, loadingLabel, linkSize
+  image,
+  name,
+  description,
+  title,
+  id,
+  path,
+  loadingLabel,
+  linkSize,
 }: SectionProps): JSX.Element {
   return (
     <>
-      <SectionContainer
-        className="section--container"
-        key={id}
-      >
+      <SectionContainer className="section--container" key={id}>
         <ImageContainer className="section-img-container">
-          <ImageExpand
-            classN="section--img"
+          <img
+            loading="lazy"
+            className="section--img"
             src={image.src}
             alt={image.alt}
           />
