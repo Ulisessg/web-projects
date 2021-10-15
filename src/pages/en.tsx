@@ -1,23 +1,27 @@
-import React from 'react';
-import dynamic from 'next/dynamic';
-import { GetStaticProps } from 'next';
-import Head from '../molecules/Head';
-import Layout from '../organisms/Layout';
-import AboutMe from '../molecules/Description';
-import { IndexSectionsEnglish } from '../states/index';
-import ExperienceEn from '../templates/ExperienceEn';
-import Blog from '../templates/Blog';
-import Gists from '../templates/Gists';
-import GetBlogs from '../utils/getBlogs';
-import GetGists from '../utils/getGists';
-import SectionProps from '../interfaces_and_types/organisms/SectionProps';
-import TransformGistsResponse from '../utils/transformGistsResponse';
-import TransformBlogsInfo from '../utils/tranformBlogInfo';
+import React from "react";
+import { GetStaticProps } from "next";
+import Head from "../molecules/Head";
+import Layout from "../organisms/Layout";
+import AboutMe from "../molecules/Description";
+import { IndexSectionsEnglish } from "../states/index";
+import ExperienceEn from "../templates/ExperienceEn";
+import Blog from "../templates/Blog";
+import Gists from "../templates/Gists";
+import GetBlogs from "../utils/getBlogs";
+import GetGists from "../utils/getGists";
+import SectionProps from "../interfaces_and_types/organisms/SectionProps";
+import TransformGistsResponse from "../utils/transformGistsResponse";
+import TransformBlogsInfo from "../utils/tranformBlogInfo";
+import { IndexNav } from "../styles/pages/IndexStyles";
+import Link from "../atoms/Link";
 
-const PageNav = dynamic(() => import('../organisms/DynamicNav'), { ssr: false });
-
-function En({ gistsInfo, blogs }:
-  { gistsInfo: Array<SectionProps>; blogs: Array<SectionProps>; }): JSX.Element {
+function En({
+  gistsInfo,
+  blogs,
+}: {
+  gistsInfo: Array<SectionProps>;
+  blogs: Array<SectionProps>;
+}): JSX.Element {
   return (
     <>
       <Head
@@ -33,7 +37,28 @@ function En({ gistsInfo, blogs }:
       <Layout>
         <main role="main">
           <AboutMe />
-          <PageNav paths={IndexSectionsEnglish} />
+          <IndexNav>
+            <ul className="index_nav">
+              {IndexSectionsEnglish.map((section) => {
+                return (
+                  <li key={section.label}>
+                    <Link
+                      ariaLabel={`Ir a ${section.path}`}
+                      background="backgroundLight"
+                      bgh="backgroundLight2"
+                      cn="a"
+                      ct="textDark2"
+                      cth="textDark2"
+                      href={section.path}
+                      linkSize="medium"
+                      text={section.text}
+                      noSpinner={true}
+                    />
+                  </li>
+                );
+              })}
+            </ul>
+          </IndexNav>
           <ExperienceEn />
           <Blog blogEntries={blogs} isPageOrSection="section" />
           <Gists gists={gistsInfo} isPageOrSection="section" />
@@ -53,6 +78,5 @@ export const getStaticProps: GetStaticProps = async () => {
 
   return {
     props: { gistsInfo, blogs: blogsInfo },
-
   };
 };
