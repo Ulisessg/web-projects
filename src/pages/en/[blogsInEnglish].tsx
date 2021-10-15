@@ -55,14 +55,21 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export default function Post({ data }: { data: BlogEntryRaw }): JSX.Element {
   const structuredData = createBlogsStructuredData(data);
-  const dateSplitted: Array<string> = data.publicationDate?.split(
-    "-"
-  ) as unknown as any;
-  const blogDate: Date = new Date(
-    parseInt(dateSplitted[0], 10),
-    parseInt(dateSplitted[1], 10),
-    parseInt(dateSplitted[2], 10)
-  );
+
+  // Last update date
+  let lastUpdatedBlogDate: string = "";
+
+  if (data.lastUpdate) {
+    let dateSplitted: Array<string> = data.lastUpdate?.split("-") as any;
+    lastUpdatedBlogDate = new Date(
+      parseInt(dateSplitted[0], 10),
+      parseInt(dateSplitted[1], 10),
+      parseInt(dateSplitted[2], 10)
+    )
+      .toJSON()
+      .slice(0, 10);
+  }
+
   return (
     <>
       <Head
@@ -84,6 +91,12 @@ export default function Post({ data }: { data: BlogEntryRaw }): JSX.Element {
           property="og:publish_date"
           content={data.publicationDate}
         />
+        {data.lastUpdate && (
+          <meta
+            property="article:modified_time"
+            content={lastUpdatedBlogDate || ""}
+          />
+        )}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: structuredData.structuredData }}
