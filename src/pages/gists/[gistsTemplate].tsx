@@ -1,12 +1,12 @@
-import React from "react";
-import ReactGist from "react-gist";
-import axios from "axios";
-import { GetStaticProps, GetStaticPaths } from "next";
-import Layout from "../../organisms/Layout";
-import { GistsClassesStyles } from "../../styles/templates/GistsPagesStyles";
-import LinkDarkNoBlank from "../../atoms/LinkDarkNoBlank";
-import Head from "../../molecules/Head";
-import ShareMedia from "../../organisms/ShareMedia";
+import React from 'react';
+import ReactGist from 'react-gist';
+import axios from 'axios';
+import { GetStaticProps, GetStaticPaths } from 'next';
+import Layout from '../../organisms/Layout';
+import { GistsClassesStyles } from '../../styles/templates/GistsPagesStyles';
+import Link from '../../atoms/Link';
+import Head from '../../molecules/Head';
+import ShareMedia from '../../organisms/ShareMedia';
 
 export const getStaticProps: GetStaticProps = async (context: any) => {
   const request: any = await axios.get(
@@ -17,14 +17,14 @@ export const getStaticProps: GetStaticProps = async (context: any) => {
   return {
     props: {
       data,
-      githubCode: data.githubLink.split("/")[4],
+      githubCode: data.githubLink.split('/')[4],
     },
   };
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const request: any = await axios.get(
-    "https://web-projects-api.vercel.app/api/gist?limit=100"
+    'https://web-projects-api.vercel.app/api/gist?limit=100'
   );
   const gists = request.data.message;
 
@@ -55,17 +55,17 @@ function GistsTemplate({
         image={data.image}
         imageAlt={`Portada del gist: ${data.title}`}
         keywords={`${data.subjects}`}
-        locale="es_MX"
-        type="article"
+        locale='es_MX'
+        type='article'
       />
       <Layout>
         <main>
           <ShareMedia
             path={`/gists/${data.name}`}
-            addLikePath="https://web-projects-api.vercel.app/api/gist/add-like"
+            addLikePath='https://web-projects-api.vercel.app/api/gist/add-like'
             documentNameForLike={
-              typeof window !== "undefined" &&
-              window.location.pathname.split("/")[2]
+              typeof window !== 'undefined' &&
+              window.location.pathname.split('/')[2]
             }
           />
           <h1>{data.title}</h1>
@@ -73,16 +73,22 @@ function GistsTemplate({
             <p>{data.description}</p>
           </section>
           <h2>Codigo</h2>
-          <section id="code">
+          <section id='code'>
             <ReactGist id={githubCode} file={undefined} />
           </section>
           <div
-            style={{ width: "100%", display: "grid", justifyItems: "center" }}
+            style={{ width: '100%', display: 'grid', justifyItems: 'center' }}
           >
-            <LinkDarkNoBlank
-              path="/gist"
-              text="Ver más códigos"
-              label="Ver más códigos"
+            <Link
+              cn=''
+              ariaLabel='Cargando página de gists'
+              background='backgroundLight2'
+              bgh='backgroundLight'
+              ct='textDark'
+              cth='textDark'
+              linkSize='large'
+              href='/gist'
+              text='Ver más códigos'
             />
           </div>
         </main>

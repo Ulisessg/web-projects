@@ -32,7 +32,7 @@ function En({
         imageAlt="Ulises Antonio Samano Galvan photo"
         keywords="Full Stack Developer, Frontend Developer, Gists, MERN, Typescript, Platzi Master"
         locale="en_US"
-        type="website"
+        type="profile"
       />
       <Layout>
         <main role="main">
