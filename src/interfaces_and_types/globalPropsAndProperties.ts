@@ -32,6 +32,7 @@ export interface BlogEntryRaw {
   language: 'es' | 'en';
   likes: number;
   publicationDate?: string;
+  lastUpdate?: string;
 }
 
 export interface LinkProps extends React.HtmlHTMLAttributes<HTMLAnchorElement> {
@@ -41,19 +42,17 @@ export interface LinkProps extends React.HtmlHTMLAttributes<HTMLAnchorElement> {
 }
 
 export interface GistResponse {
-  error: boolean,
-  message: Array<
-    {
-      subjects: Array<string>;
-      image: string;
-      description: string;
-      title: string;
-      githubLink: string;
-      id: number;
-      name: string;
-      likes: number;
-    }
-  >;
+  error: boolean;
+  message: Array<{
+    subjects: Array<string>;
+    image: string;
+    description: string;
+    title: string;
+    githubLink: string;
+    id: number;
+    name: string;
+    likes: number;
+  }>;
 }
 
 export interface gistTransformed {
