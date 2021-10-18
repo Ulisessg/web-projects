@@ -1,6 +1,12 @@
 import { createGlobalStyle } from 'styled-components';
 
 const BlogPostsStyles = createGlobalStyle`
+
+h1, h2, h3, h4, h5 {
+  text-align: center;
+}
+
+
 .blog-wrapper {
   display: grid;
   display: -ms-grid;
@@ -50,11 +56,15 @@ const BlogPostsStyles = createGlobalStyle`
 h1 {
   margin-bottom: 10vh;
   font-size: 1.8rem;
+  color: #020400;
+  text-align: center;
+  margin-top: 20vh;
 }
 
-h2 {
-  text-align: center
+.blog-presentation-container {
+  display: grid;
 }
+
 blockquote {
   font-size: 1.2rem;
   font-style: italic;
@@ -79,13 +89,15 @@ pre {
   border-left: 3px solid #007db3;
   color: #666;
   display: inline-block;
-  width: 100%;
   line-height: 1.6;
   margin-bottom: 1.6em;
-  max-width: 100%;
+  width: 100%;
   overflow: auto;
   padding: 1em 1.5em;
   height: 20vh;
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
 }
 
 pre,
@@ -95,13 +107,6 @@ samp {
   font-size: 0.98em;
 }
 
-pre {
-  height: auto;
-  width: 100%;
-  white-space: pre;
-  white-space: pre-wrap;
-  word-wrap: break-word;
-}
 
 b,
 strong {
@@ -167,11 +172,7 @@ td {
   }
 }
 
-h1 {
-  color: #020400;
-  text-align: center;
-  margin-top: 20vh;
-}
+
 .link {
   text-decoration: underline;
   text-decoration-color: #020400;
@@ -180,17 +181,18 @@ main {
   margin-bottom: 10vh;
 }
 
-#blog li {
-  text-align: left;
-}
 
 #blog li > p {
   text-align: left;
   display: inline;
 }
 
-#blog li {
+ul > li {
   list-style: inside;
+}
+
+ol > li {
+  list-style: decimal;
 }
 
 footer {

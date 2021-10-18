@@ -124,7 +124,7 @@ export default function Post({ data }: { data: BlogEntryRaw }): JSX.Element {
                 window.location.pathname.split('/')[1]
               }
             />
-            <div>
+            <div className='blog-presentation-container'>
               <BlogPresentation
                 title={data.title}
                 description={data.metaDescription}
