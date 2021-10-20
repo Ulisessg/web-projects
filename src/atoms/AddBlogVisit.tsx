@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 import Script from 'next/script';
 
-function AddBlogVisit(): JSX.Element {
+const AddBlogVisit: FunctionComponent = () => {
   return (
     <>
       <Script strategy='lazyOnload' id='add_blog_visit'>
@@ -21,6 +21,6 @@ request.send(raw);`}
       </Script>
     </>
   );
-}
+};
 
 export default AddBlogVisit;

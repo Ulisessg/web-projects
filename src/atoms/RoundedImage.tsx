@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 import RoundedImageStyles from '../styles/atoms/RoundedImageStyles';
 import ImageProps from '../interfaces_and_types/atoms/ImageProps';
 
-function RoundedImage({
+const RoundedImage: FunctionComponent<ImageProps> = ({
   src,
   widthDesktop,
   widthLaptop,
@@ -10,11 +10,11 @@ function RoundedImage({
   widthTablet,
   bottom,
   alt,
-}: ImageProps): JSX.Element {
+}: ImageProps) => {
   return (
     <>
       <RoundedImageStyles
-        loading="lazy"
+        loading='lazy'
         src={src}
         widthMobile={widthMobile}
         widthTablet={widthTablet}
@@ -25,6 +25,6 @@ function RoundedImage({
       />
     </>
   );
-}
+};
 
 export default RoundedImage;
