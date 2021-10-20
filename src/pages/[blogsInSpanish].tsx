@@ -116,14 +116,7 @@ export default function Post({ data }: { data: BlogEntryRaw }): JSX.Element {
         <main id='main'>
           <section className='blog-wrapper' id='blogWraper'>
             {/* Share and likes */}
-            <ShareMedia
-              path={`/${data.name}`}
-              addLikePath='https://web-projects-api.vercel.app/api/blog/add-like'
-              documentNameForLike={
-                typeof window !== 'undefined' &&
-                window.location.pathname.split('/')[1]
-              }
-            />
+
             <div className='blog-presentation-container'>
               <BlogPresentation
                 title={data.title}
@@ -132,7 +125,18 @@ export default function Post({ data }: { data: BlogEntryRaw }): JSX.Element {
               <BlogImageStyles src={data.seoCardUrl} alt={data.title} />
             </div>
             <div id='blog' dangerouslySetInnerHTML={{ __html: data.content }} />
-            <BlogAuthorCard publishDate={structuredData.date} />
+            <BlogAuthorCard
+              dateTime={data.publicationDate}
+              publishDate={structuredData.date}
+            />
+            <ShareMedia
+              path={`/${data.name}`}
+              addLikePath='https://web-projects-api.vercel.app/api/blog/add-like'
+              documentNameForLike={
+                typeof window !== 'undefined' &&
+                window.location.pathname.split('/')[1]
+              }
+            />
             {typeof window !== 'undefined' && (
               <FacebookComments path={`https://ulisessg.com/${data.name}`} />
             )}

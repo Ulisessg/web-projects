@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const BlogAuthorCardStyles = styled.section`
   width: 90%;
   display: grid;
-  margin: 0 auto;
+  margin-top: 20px;
   justify-content: space-around;
   & > img {
     justify-self: center;
