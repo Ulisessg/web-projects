@@ -1,6 +1,6 @@
-import { DefaultTheme } from "styled-components";
+import { DefaultTheme } from 'styled-components';
 
-declare module "styled-components" {
+declare module 'styled-components' {
   export interface DefaultTheme {
     textLight: string;
     textDark: string;
@@ -9,23 +9,24 @@ declare module "styled-components" {
     backgroundLight2: string;
     backgroundDark: string;
     boxShadow: string;
+    linkColor: string;
     buttonSizes: {
       small: {
-        width: string,
-        height: string,
-      },
+        width: string;
+        height: string;
+      };
       medium: {
-        width: string,
-        height: string,
-      },
+        width: string;
+        height: string;
+      };
       large: {
-        width: string,
-        height: string,
-      },
+        width: string;
+        height: string;
+      };
       xl: {
-        width: string,
-        height: string,
-      },
+        width: string;
+        height: string;
+      };
     };
   }
 }
@@ -38,6 +39,7 @@ export const theme: DefaultTheme = {
   backgroundLight2: '#F7A8B8',
   backgroundDark: '#6C99AB',
   boxShadow: '#e0e0e0',
+  linkColor: '#0062FF',
   buttonSizes: {
     small: {
       width: '80px',
@@ -55,5 +57,5 @@ export const theme: DefaultTheme = {
       width: '400px',
       height: '80px',
     },
-  }
+  },
 };

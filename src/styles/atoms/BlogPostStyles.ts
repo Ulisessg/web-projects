@@ -39,13 +39,13 @@ const BlogPostsStyles = styled.main`
   }
 
   #blog a {
-    /* color: ${({ theme }) => theme.backgroundLight2}; */
-    color: inherit;
+    color: ${({ theme }) => theme['linkColor']};
   }
 
   #blog a:focus,
   #blog a:hover {
-    color: ${({ theme }) => theme.textDark2};
+    text-decoration: underline;
+    text-decoration-color: ${({ theme }) => theme['textDark']};
   }
   h1 {
     margin-bottom: 10vh;
@@ -170,10 +170,6 @@ const BlogPostsStyles = styled.main`
     }
   }
 
-  .link {
-    text-decoration: underline;
-    text-decoration-color: #020400;
-  }
   main {
     margin-bottom: 10vh;
   }

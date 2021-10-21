@@ -2,7 +2,8 @@ import styled, { createGlobalStyle } from 'styled-components';
 
 export const FooterElement = styled.footer`
   height: auto;
-  background-color: ${({ theme }) => theme.backgroundLight};
+  /* background-color: ${({ theme }) => theme.boxShadow}; */
+  background-color: #8080;
   width: 100vw;
   box-shadow: 0px -3px 10px 0px ${({ theme }) => theme.boxShadow};
 `;

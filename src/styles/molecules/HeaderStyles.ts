@@ -7,7 +7,8 @@ export const HeaderContainer = styled.header`
   display: flex;
   align-items: center;
   height: 10vh;
-  background-color: ${({ theme }) => theme.backgroundLight};
+  /* background-color: ${({ theme }) => theme.textLight}; */
+  background-color: #8080;
   box-shadow: 0px 3px 6px 0px #e0e0e0;
 
   & ul {
@@ -24,5 +25,3 @@ export const NavStyles = styled.nav`
     display: flex;
   }
 `;
-
-
