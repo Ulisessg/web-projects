@@ -103,9 +103,8 @@ export default function Post({ data }: { data: BlogEntryRaw }): JSX.Element {
         />
       </Head>
 
-      <BlogPostStyles />
       <Layout>
-        <main id='main'>
+        <BlogPostStyles role='main' id='main'>
           <section className='blog-wrapper' id='blogWraper'>
             {/* Share and likes */}
             <ShareMedia
@@ -132,7 +131,7 @@ export default function Post({ data }: { data: BlogEntryRaw }): JSX.Element {
               <FacebookComments path={`https://ulisessg.com/en/${data.name}`} />
             )}
           </section>
-        </main>
+        </BlogPostStyles>
       </Layout>
       {process.env.NODE_ENV !== 'development' && <AddBlogVisit />}
     </>
