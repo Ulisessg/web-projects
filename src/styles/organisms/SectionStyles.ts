@@ -15,7 +15,7 @@ export const SectionContainer = styled.section`
   box-shadow: 0px 2.3px 4px 0px ${boxShadowColor};
 `;
 
-export const ImageContainer = styled.div`
+export const ImageContainer = styled.figure`
   padding: 15px;
   width: 100%;
   height: auto;
@@ -29,7 +29,7 @@ export const ImageContainer = styled.div`
   }
 `;
 
-export const Title = styled.h3`
+export const Title = styled.caption`
   text-align: center;
   text-align: -webkit-center;
   margin: 15px 0px;

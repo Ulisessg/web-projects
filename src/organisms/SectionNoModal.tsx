@@ -21,15 +21,18 @@ function SectionNoModal({
   return (
     <>
       <SectionContainer className='section--container' key={id}>
-        <ImageContainer className='section-img-container'>
-          <a tabIndex={-1} href={`${path || name}`}>
-            <img
-              loading='lazy'
-              className='section--img'
-              src={image.src}
-              alt={image.alt}
-            />
-          </a>
+        <ImageContainer
+          aria-label={image.alt}
+          title={image.alt}
+          className='section-img-container'
+        >
+          <img
+            role='presentation'
+            loading='lazy'
+            className='section--img'
+            src={image.src}
+            alt=''
+          />
         </ImageContainer>
 
         <Title className='section--title'>{title}</Title>

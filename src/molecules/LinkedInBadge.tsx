@@ -1,13 +1,13 @@
 /* eslint-disable @next/next/no-img-element */
-import React from "react";
+import React from 'react';
 import {
   LinkedInBadgeContainer,
   LinkedInBadgeBackground,
   LinkedInBadgeName,
   LinkedInBadgeDescription,
   LinkedInBadgeGoProfileContiner,
-} from "../styles/molecules/LinkedinBadgeStyles";
-import Link from "../atoms/Link";
+} from '../styles/molecules/LinkedinBadgeStyles';
+import Link from '../atoms/Link';
 
 // Background image https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2Fv2%2Flinkedin%20cover.jpeg?alt=media&token=7af29779-027c-4d39-b97e-819707fac55c
 
@@ -17,47 +17,55 @@ function LinkedInBadge({ classN }: { classN?: string }): JSX.Element {
   return (
     <>
       <LinkedInBadgeContainer
-        className={classN ? `linkedin-badge ${classN}` : "linkedin-badge"}
+        className={classN ? `linkedin-badge ${classN}` : 'linkedin-badge'}
       >
         <LinkedInBadgeBackground>
-          <img
-            loading="lazy"
-            src="https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2Fv2%2FUlises%20Antonio%20Samano%20Galvan.jpg?alt=media&token=67d05c1b-f0c5-49df-9138-59a68072e9f4"
-            alt="Ulises Antonio Samano Galvan"
-            className="linkedin-badge--image"
-          />
+          <figure aria-label='Ulises Antonio Samano Galvan'>
+            <img
+              role='presentation'
+              loading='lazy'
+              src='https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2Fv2%2FUlises%20Antonio%20Samano%20Galvan.jpg?alt=media&token=67d05c1b-f0c5-49df-9138-59a68072e9f4'
+              alt=''
+              className='linkedin-badge--image'
+            />
+          </figure>
         </LinkedInBadgeBackground>
-        <a
-          className="linkedin-badge--name"
-          href="https://mx.linkedin.com/in/ulisessg?trk=profile-badge"
-        >
-          <strong>
-            <LinkedInBadgeName>Ulises Antonio Samano Galvan</LinkedInBadgeName>
-          </strong>
-        </a>
-
-        <LinkedInBadgeDescription className="linkedin-badge--description">
+        <Link
+          ariaLabel='Cargando perfil de LinkedIn'
+          background='backgroundLight'
+          bgh='backgroundLight2'
+          ct='textDark'
+          cn=''
+          cth='textDark'
+          href='https://www.linkedin.com/in/ulisessg/'
+          linkSize='medium'
+          text='Ulises Antonio Samano Galvan'
+        />
+        <LinkedInBadgeDescription className='linkedin-badge--description'>
           Full Stack Developer / Nerd / Student at Platzi Master.
         </LinkedInBadgeDescription>
 
-        <LinkedInBadgeGoProfileContiner className="linkedin-badge--go-profile">
+        <LinkedInBadgeGoProfileContiner className='linkedin-badge--go-profile'>
           <Link
-            ariaLabel="Cargando perfilde LinkedIn"
-            background="backgroundLight"
-            bgh="backgroundLight2"
-            ct="textDark"
-            cn=""
-            cth="textDark"
-            href="https://www.linkedin.com/in/ulisessg/"
-            linkSize="medium"
-            text="Ver perfil de LinkedIn"
+            ariaLabel='Cargando perfil de LinkedIn'
+            background='backgroundLight'
+            bgh='backgroundLight2'
+            ct='textDark'
+            cn=''
+            cth='textDark'
+            href='https://www.linkedin.com/in/ulisessg/'
+            linkSize='medium'
+            text='Ver perfil de LinkedIn'
           />
         </LinkedInBadgeGoProfileContiner>
-        <img
-          loading="lazy"
-          alt="LinkedIn Logo"
-          src="https://static-exp1.licdn.com/scds/common/u/images/logos/linkedin/logo_linkedin_93x21_v2.png"
-        />
+        <figure aria-label='LinkedIn Logo'>
+          <img
+            role='presentation'
+            loading='lazy'
+            alt=''
+            src='https://static-exp1.licdn.com/scds/common/u/images/logos/linkedin/logo_linkedin_93x21_v2.png'
+          />
+        </figure>
       </LinkedInBadgeContainer>
     </>
   );

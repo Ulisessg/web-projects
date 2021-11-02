@@ -20,12 +20,15 @@ function Footer(): JSX.Element {
       <CssStyles />
       <FooterElement id='contact'>
         <FooterContainer>
-          <img
-            loading='lazy'
-            alt='Ulises Antonio Samano Galvan'
-            className='logo-footer'
-            src='https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2Fv2%2Flogo-192x192.png?alt=media&token=1a4aa1ca-1846-41b3-9005-9c4dc5c4d888'
-          />
+          <figure aria-label='Mi logo'>
+            <img
+              role='presentation'
+              loading='lazy'
+              alt=''
+              className='logo-footer'
+              src='https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2Fv2%2Flogo-192x192.png?alt=media&token=1a4aa1ca-1846-41b3-9005-9c4dc5c4d888'
+            />
+          </figure>
           <Quote className='footer__quote'>
             Si puedes imaginarlo puedes programarlo 💚
           </Quote>
