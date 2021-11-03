@@ -8,7 +8,7 @@ import {
 function AboutMe(): JSX.Element {
   return (
     <>
-      <Container>
+      <Container aria-label='Sobre mi'>
         <figure aria-label='Ulises Antonio Samano Galvan - Web UI Developer - Globant'>
           <img
             role='presentation'

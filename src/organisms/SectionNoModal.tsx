@@ -20,7 +20,11 @@ function SectionNoModal({
 }: SectionProps): JSX.Element {
   return (
     <>
-      <SectionContainer className='section--container' key={id}>
+      <SectionContainer
+        aria-labelledby={description}
+        className='section--container'
+        key={id}
+      >
         <ImageContainer
           aria-label={image.alt}
           title={image.alt}
@@ -35,7 +39,9 @@ function SectionNoModal({
           />
         </ImageContainer>
 
-        <Title className='section--title'>{title}</Title>
+        <Title id={path || name} className='section--title'>
+          {title}
+        </Title>
 
         <Description className='section--description'>
           {description}

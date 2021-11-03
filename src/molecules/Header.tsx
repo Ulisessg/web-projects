@@ -34,27 +34,27 @@ function Header(): JSX.Element {
     <>
       {/* <SkipLink /> */}
       <HeaderContainer>
-        <NavStyles >
-          <ul className="header-list">
-            {
-              headerPaths.map((element) => {
-                return <li key={`${element.path}`}>
+        <NavStyles role='navigation' aria-label='Páginas de interés'>
+          <ul className='header-list'>
+            {headerPaths.map((element) => {
+              return (
+                <li key={`${element.path}`}>
                   <Link
-                    cn="as"
+                    cn='as'
                     ariaLabel={`Cargando ${element.text}`}
-                    background="backgroundLight"
-                    bgh="backgroundLight2"
-                    ct="textDark"
-                    cth="textDark"
-                    linkSize="small"
+                    background='backgroundLight'
+                    bgh='backgroundLight2'
+                    ct='textDark'
+                    cth='textDark'
+                    linkSize='small'
                     href={element.path}
                     text={element.text}
                     noShadow={true}
                     noSpinner={router.pathname === element.path}
                   />
-                </li>;
-              })
-            }
+                </li>
+              );
+            })}
           </ul>
         </NavStyles>
       </HeaderContainer>

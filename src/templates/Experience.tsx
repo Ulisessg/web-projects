@@ -1,9 +1,5 @@
 import React from 'react';
-import {
-  experiencesInfo,
-} from '../states/index';
-
-// import SectionWithModal from './SectionWithModal';
+import { experiencesInfo } from '../states/index';
 import SectionNoModal from '../organisms/SectionNoModal';
 import Container from '../styles/templates/ExperienceStyles';
 import SectionContainer from '../styles/molecules/SectionContainer';
@@ -12,14 +8,14 @@ import H2 from '../atoms/H2';
 function Experience(): JSX.Element {
   return (
     <>
-      <Container>
-        <H2 text="Experiencia" />
-        <div id="experience">
+      <Container aria-label='Mi experiencia laboral'>
+        <H2 text='Experiencia' />
+        <div id='experience'>
           <SectionContainer>
             {experiencesInfo.map((experience) => (
               <SectionNoModal
-                linkSize="large"
-                loadingLabel="Cargando experiencia"
+                linkSize='large'
+                loadingLabel='Cargando experiencia'
                 title={experience.title}
                 description={experience.description}
                 id={experience.title}

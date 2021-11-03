@@ -51,7 +51,7 @@ export default function Index({
       <Layout>
         <main role='main'>
           <AboutMe />
-          <IndexNav>
+          <IndexNav role='navigation'>
             <ul className='index_nav'>
               {IndexSections.map((section) => {
                 return (

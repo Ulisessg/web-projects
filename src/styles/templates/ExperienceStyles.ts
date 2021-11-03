@@ -1,7 +1,7 @@
-import styled from "styled-components";
-import { slice } from "../keyframes";
+import styled from 'styled-components';
+import { slice } from '../keyframes';
 
-const Container = styled.div`
+const Container = styled.section`
   width: 90vw;
   display: grid;
   display: -moz-grid;

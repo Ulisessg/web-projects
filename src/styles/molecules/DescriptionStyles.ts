@@ -1,8 +1,8 @@
-import styled from "styled-components";
-import { boxShadowColor } from "../variables";
-import { slice } from "../keyframes";
+import styled from 'styled-components';
+import { boxShadowColor } from '../variables';
+import { slice } from '../keyframes';
 
-export const Container = styled.div`
+export const Container = styled.section`
   display: grid;
   display: -moz-grid;
   display: -ms-grid;
