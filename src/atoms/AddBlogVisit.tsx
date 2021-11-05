@@ -6,6 +6,9 @@ const AddBlogVisit: FunctionComponent = () => {
     <>
       <Script strategy='lazyOnload' id='add_blog_visit'>
         {`'use strict';
+if(window.location.hostname !== 'ulisessg.com'){
+  return
+}
 
 var urlLength = window.location.pathname.split('/').length;
 
