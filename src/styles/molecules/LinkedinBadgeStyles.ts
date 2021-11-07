@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { backgroundLight } from '../variables';
 
 export const LinkedInBadgeContainer = styled.section`
-  width: 100%;
+  width: 250px;
   height: 500px;
   margin-top: 50px;
   display: flex;
