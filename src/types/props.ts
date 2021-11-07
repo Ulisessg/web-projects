@@ -110,3 +110,8 @@ export type BlogProps = {
   blogEntries: Array<SectionProps>;
   isPageOrSection: 'page' | 'section';
 };
+
+export type GistsProps = {
+  gists: Array<SectionProps>;
+  isPageOrSection: 'page' | 'section';
+};

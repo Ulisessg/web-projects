@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 
 import { sections } from '../states/designInitialState';
 
@@ -6,16 +6,16 @@ import { sections } from '../states/designInitialState';
 import Layout from '../organisms/Layout';
 import MainDesign from '../organisms/MainDesign';
 
-function Design(): JSX.Element {
+const Design: FunctionComponent = (): JSX.Element => {
   return (
     <>
       <Layout>
-        <div className="wrapper">
+        <div className='wrapper'>
           <MainDesign sections={sections} />
         </div>
       </Layout>
     </>
   );
-}
+};
 
 export default Design;

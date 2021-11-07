@@ -1,12 +1,11 @@
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 import { experiencesInfoEnglish } from '../states/index';
-
 import Section from '../organisms/Section';
 import Container from '../styles/templates/ExperienceStyles';
 import SectionContainer from '../styles/molecules/SectionContainer';
 import H2 from '../atoms/H2';
 
-function ExperienceEn(): JSX.Element {
+const ExperienceEn: FunctionComponent = (): JSX.Element => {
   return (
     <>
       <Container>
@@ -30,6 +29,6 @@ function ExperienceEn(): JSX.Element {
       </Container>
     </>
   );
-}
+};
 
 export default ExperienceEn;

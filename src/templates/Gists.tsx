@@ -1,18 +1,20 @@
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 import Section from '../organisms/Section';
-import GistsProps from '../interfaces_and_types/templates/GistsProps';
+import { GistsProps } from '../types/props';
 import H2 from '../atoms/H2';
 import SectionContainer from '../styles/molecules/SectionContainer';
 import { GitsContainer } from '../styles/templates/GistStyles';
 
-function Gists({ gists, isPageOrSection }: GistsProps): JSX.Element {
+const Gists: FunctionComponent<GistsProps> = (
+  props: GistsProps
+): JSX.Element => {
   return (
     <>
       <GitsContainer
         aria-label='Gists'
         style={{ width: '90vw', margin: '0 auto' }}
       >
-        {isPageOrSection === 'page' ? (
+        {props.isPageOrSection === 'page' ? (
           <h1 style={{ textAlign: 'center', marginTop: '50px' }}>
             Últimos Gists
           </h1>
@@ -20,7 +22,7 @@ function Gists({ gists, isPageOrSection }: GistsProps): JSX.Element {
           <H2 text='Últimos Gists' />
         )}
         <SectionContainer>
-          {gists.map((gist) => (
+          {props.gists.map((gist) => (
             <Section
               linkSize='large'
               loadingLabel='Cargando Gist'
@@ -36,6 +38,6 @@ function Gists({ gists, isPageOrSection }: GistsProps): JSX.Element {
       </GitsContainer>
     </>
   );
-}
+};
 
 export default Gists;

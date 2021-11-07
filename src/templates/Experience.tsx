@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 import { experiencesInfo } from '../states/index';
 import Section from '../organisms/Section';
 import Container from '../styles/templates/ExperienceStyles';
 import SectionContainer from '../styles/molecules/SectionContainer';
 import H2 from '../atoms/H2';
 
-function Experience(): JSX.Element {
+const Experience: FunctionComponent = (): JSX.Element => {
   return (
     <>
       <Container aria-label='Mi experiencia laboral'>
@@ -29,6 +29,6 @@ function Experience(): JSX.Element {
       </Container>
     </>
   );
-}
+};
 
 export default Experience;
