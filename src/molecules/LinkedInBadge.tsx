@@ -1,11 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 import {
   LinkedInBadgeContainer,
   LinkedInBadgeBackground,
-  LinkedInBadgeName,
   LinkedInBadgeDescription,
-  LinkedInBadgeGoProfileContiner,
+  LinkedInBadgeGoProfileContainer,
 } from '../styles/molecules/LinkedinBadgeStyles';
 import Link from '../atoms/Link';
 
@@ -13,12 +12,10 @@ import Link from '../atoms/Link';
 
 // LinkedIn logo https://static-exp1.licdn.com/scds/common/u/images/logos/linkedin/logo_linkedin_93x21_v2.png
 
-function LinkedInBadge({ classN }: { classN?: string }): JSX.Element {
+const LinkedInBadge: FunctionComponent = (): JSX.Element => {
   return (
     <>
-      <LinkedInBadgeContainer
-        className={classN ? `linkedin-badge ${classN}` : 'linkedin-badge'}
-      >
+      <LinkedInBadgeContainer>
         <LinkedInBadgeBackground>
           <figure aria-label='Ulises Antonio Samano Galvan'>
             <img
@@ -45,7 +42,7 @@ function LinkedInBadge({ classN }: { classN?: string }): JSX.Element {
           Full Stack Developer / Nerd / Student at Platzi Master.
         </LinkedInBadgeDescription>
 
-        <LinkedInBadgeGoProfileContiner className='linkedin-badge--go-profile'>
+        <LinkedInBadgeGoProfileContainer className='linkedin-badge--go-profile'>
           <Link
             ariaLabel='Cargando perfil de LinkedIn'
             background='backgroundLight'
@@ -57,7 +54,7 @@ function LinkedInBadge({ classN }: { classN?: string }): JSX.Element {
             linkSize='medium'
             text='Ver perfil de LinkedIn'
           />
-        </LinkedInBadgeGoProfileContiner>
+        </LinkedInBadgeGoProfileContainer>
         <figure aria-label='LinkedIn Logo'>
           <img
             role='presentation'
@@ -69,6 +66,6 @@ function LinkedInBadge({ classN }: { classN?: string }): JSX.Element {
       </LinkedInBadgeContainer>
     </>
   );
-}
+};
 
 export default LinkedInBadge;

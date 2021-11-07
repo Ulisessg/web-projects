@@ -33,21 +33,11 @@ export const LinkedInBadgeBackground = styled.div`
   }
 `;
 
-export const LinkedInBadgeName = styled.p`
-  color: black;
-  &:hover,
-  &:focus {
-    color: gray;
-  }
-  font-size: 1.5rem;
-  padding: 0 10px;
-`;
-
 export const LinkedInBadgeDescription = styled.p`
   padding: 10px;
 `;
 
-export const LinkedInBadgeGoProfileContiner = styled.div`
+export const LinkedInBadgeGoProfileContainer = styled.div`
   padding: 3px;
 `;
 
