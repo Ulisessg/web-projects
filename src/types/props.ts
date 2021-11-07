@@ -85,3 +85,8 @@ export type HeadProps = {
   imageAlt: string;
   children?: ReactNode;
 };
+
+export type HeaderProps = {};
+
+export interface LinkData
+  extends Pick<LinkProps, 'text' | 'href' | 'ariaLabel'> {}

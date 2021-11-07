@@ -1,32 +1,32 @@
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 // import SkipLink from '../atoms/SkipLink';
-import LinkProps from '../interfaces_and_types/atoms/LinkProps';
+import { LinkData } from '../types/props';
 import { HeaderContainer, NavStyles } from '../styles/molecules/HeaderStyles';
 import Link from '../atoms/Link';
 import { useRouter } from 'next/router';
 
-function Header(): JSX.Element {
+const Header: FunctionComponent = () => {
   const router = useRouter();
-  const headerPaths: Array<LinkProps> = [
+  const headerPaths: Array<LinkData> = [
     {
       text: 'About',
-      label: 'Sobre mí',
-      path: '/',
+      ariaLabel: 'Sobre mí',
+      href: '/',
     },
     {
       text: 'Blog',
-      label: 'Blog sobre tecnología',
-      path: '/blog',
+      ariaLabel: 'Blog sobre tecnología',
+      href: '/blog',
     },
     {
       text: 'GitHub',
-      label: 'Mi cuenta en GitHub',
-      path: 'https://github.com/Ulisessg',
+      ariaLabel: 'Mi cuenta en GitHub',
+      href: 'https://github.com/Ulisessg',
     },
     {
       text: 'Gists',
-      label: 'Piezas de código que comparto',
-      path: '/gist',
+      ariaLabel: 'Piezas de código que comparto',
+      href: '/gist',
     },
   ];
 
@@ -38,7 +38,7 @@ function Header(): JSX.Element {
           <ul className='header-list'>
             {headerPaths.map((element) => {
               return (
-                <li key={`${element.path}`}>
+                <li key={`${element.href}`}>
                   <Link
                     cn='as'
                     ariaLabel={`Cargando ${element.text}`}
@@ -47,10 +47,10 @@ function Header(): JSX.Element {
                     ct='textDark'
                     cth='textDark'
                     linkSize='small'
-                    href={element.path}
+                    href={element.href}
                     text={element.text}
                     noShadow={true}
-                    noSpinner={router.pathname === element.path}
+                    noSpinner={router.pathname === element.href}
                   />
                 </li>
               );
@@ -60,6 +60,6 @@ function Header(): JSX.Element {
       </HeaderContainer>
     </>
   );
-}
+};
 
 export default Header;
