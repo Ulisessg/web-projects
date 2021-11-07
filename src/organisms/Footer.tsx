@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 import LinkedInBadge from '../molecules/LinkedInBadge';
 import { footerPaths } from '../states/index';
 import {
@@ -14,7 +14,7 @@ import {
 } from '../styles/organisms/FooterStyles';
 import Link from '../atoms/Link';
 
-function Footer(): JSX.Element {
+const Footer: FunctionComponent = (): JSX.Element => {
   return (
     <>
       <CssStyles />
@@ -74,7 +74,7 @@ function Footer(): JSX.Element {
           {/* Contact and info */}
 
           {/* <div style={{ justifySelf: 'center' }}> */}
-          <LinkedInBadge classN='foooter-linkedin-badge' />
+          <LinkedInBadge />
 
           <OtherLinks className='footer__other-links'>
             {footerPaths.map((path) => {
@@ -104,6 +104,6 @@ function Footer(): JSX.Element {
       </FooterElement>
     </>
   );
-}
+};
 
 export default Footer;
