@@ -1,29 +1,44 @@
-import React from 'react';
+import React, { FunctionComponent } from 'react';
+import {
+  SkipLinkContainer,
+  LinkContainer,
+} from '../styles/molecules/SkipLinkStyles';
+import Link from '../atoms/Link';
 
-import '../styles/atoms/skipLink.styl';
-
-const SkipLink: React.FC = () => (
+const SkipLink: FunctionComponent = () => (
   <>
-    <div className="skip-link">
-      <span className="skip-link--p">
-        <a
-          aria-label="Contenido principal"
-          className="skip-link--link"
-          href="#main"
-        >
-          Contenido principal
-        </a>
-      </span>
-      <span className="skip-link--p">
-        <a
-          aria-label="Otras páginas"
-          className="skip-link--link"
-          href="#secciones"
+    <SkipLinkContainer>
+      <LinkContainer>
+        <Link
+          ariaLabel='Contenido principal'
+          className='skip-link--link'
+          href='#main'
+          background='backgroundLight'
+          bgh='backgroundLight2'
+          ct='textDark2'
+          cth='textDark2'
+          text='Contenido principal'
+          linkSize='medium'
+          cn=''
+        />
+      </LinkContainer>
+      <LinkContainer>
+        <Link
+          ariaLabel='Otras páginas'
+          className='skip-link--link'
+          background='backgroundLight'
+          bgh='backgroundLight2'
+          ct='textDark2'
+          cth='textDark2'
+          text='Contenido principal'
+          linkSize='medium'
+          cn=''
+          href='#secciones'
         >
           Otras páginas
-        </a>
-      </span>
-    </div>
+        </Link>
+      </LinkContainer>
+    </SkipLinkContainer>
   </>
 );
 
