@@ -71,3 +71,5 @@ export type BlogPresentationProps = {
   title: string;
   description: string;
 };
+
+export type FacebookCommentsProps = { path: string };
