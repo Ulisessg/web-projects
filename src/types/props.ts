@@ -1,4 +1,4 @@
-import { AnchorHTMLAttributes, HTMLAttributes } from 'react';
+import { AnchorHTMLAttributes, HTMLAttributes, ReactNode } from 'react';
 
 /**
  * @param background: Background color
@@ -73,3 +73,15 @@ export type BlogPresentationProps = {
 };
 
 export type FacebookCommentsProps = { path: string };
+
+export type HeadProps = {
+  canonicalUrl: string;
+  description: string;
+  keywords: string;
+  title: string;
+  image: string;
+  type: 'article' | 'website' | 'profile';
+  locale: 'es_MX' | 'en_US';
+  imageAlt: string;
+  children?: ReactNode;
+};
