@@ -1,5 +1,5 @@
 import React from 'react';
-import SectionNoModal from '../organisms/SectionNoModal';
+import Section from '../organisms/Section';
 import GistsProps from '../interfaces_and_types/templates/GistsProps';
 import H2 from '../atoms/H2';
 import SectionContainer from '../styles/molecules/SectionContainer';
@@ -21,7 +21,7 @@ function Gists({ gists, isPageOrSection }: GistsProps): JSX.Element {
         )}
         <SectionContainer>
           {gists.map((gist) => (
-            <SectionNoModal
+            <Section
               linkSize='large'
               loadingLabel='Cargando Gist'
               key={gist.name}

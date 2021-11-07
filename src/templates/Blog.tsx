@@ -1,6 +1,6 @@
 import React from 'react';
 import SectionContainer from '../styles/molecules/SectionContainer';
-import SectionNoModal from '../organisms/SectionNoModal';
+import Section from '../organisms/Section';
 import SectionProps from '../interfaces_and_types/organisms/SectionProps';
 import H2 from '../atoms/H2';
 import otherBlogs from '../states/blogsState';
@@ -31,7 +31,7 @@ function Blog({
             <section className='sections'>
               <SectionContainer>
                 {blogEntries.map((blog) => (
-                  <SectionNoModal
+                  <Section
                     linkSize='large'
                     loadingLabel='Cargando blog'
                     id={blog.name}
@@ -52,7 +52,7 @@ function Blog({
             <section className='sections'>
               <SectionContainer>
                 {otherBlogs.map((blog) => (
-                  <SectionNoModal
+                  <Section
                     linkSize='large'
                     loadingLabel='Cargando blog'
                     id={blog.name}
