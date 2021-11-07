@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 import ReactGist from 'react-gist';
 import axios from 'axios';
 import { GetStaticProps, GetStaticPaths } from 'next';
@@ -7,6 +7,7 @@ import { GistsClassesStyles } from '../../styles/templates/GistsPagesStyles';
 import Link from '../../atoms/Link';
 import Head from '../../molecules/Head';
 import ShareMedia from '../../organisms/ShareMedia';
+import { GistsTemaplateProps } from '../../types/props';
 
 export const getStaticProps: GetStaticProps = async (context: any) => {
   const request: any = await axios.get(
@@ -38,43 +39,39 @@ export const getStaticPaths: GetStaticPaths = async () => {
   };
 };
 
-function GistsTemplate({
-  data,
-  githubCode,
-}: {
-  data: any;
-  githubCode: any;
-}): JSX.Element {
+const GistsTemplate: FunctionComponent<GistsTemaplateProps> = (
+  props: GistsTemaplateProps
+): JSX.Element => {
   return (
     <>
       <GistsClassesStyles />
       <Head
-        title={`${data.title} | UlisesSG FullStack Developer`}
-        canonicalUrl={`/gists/${data.name}`}
-        description={data.description}
-        image={data.image}
-        imageAlt={`Portada del gist: ${data.title}`}
-        keywords={`${data.subjects}`}
+        title={`${props.data.title} | UlisesSG FullStack Developer`}
+        canonicalUrl={`/gists/${props.data.name}`}
+        description={props.data.description}
+        image={props.data.image}
+        imageAlt={`Portada del gist: ${props.data.title}`}
+        keywords={`${props.data.subjects}`}
         locale='es_MX'
         type='article'
       />
       <Layout>
         <main>
           <ShareMedia
-            path={`/gists/${data.name}`}
+            path={`/gists/${props.data.name}`}
             addLikePath='https://web-projects-api.vercel.app/api/gist/add-like'
             documentNameForLike={
               typeof window !== 'undefined' &&
               window.location.pathname.split('/')[2]
             }
           />
-          <h1>{data.title}</h1>
+          <h1>{props.data.title}</h1>
           <section>
-            <p>{data.description}</p>
+            <p>{props.data.description}</p>
           </section>
           <h2>Codigo</h2>
           <section id='code'>
-            <ReactGist id={githubCode} file={undefined} />
+            <ReactGist id={props.githubCode} file={undefined} />
           </section>
           <div
             style={{ width: '100%', display: 'grid', justifyItems: 'center' }}
@@ -95,6 +92,6 @@ function GistsTemplate({
       </Layout>
     </>
   );
-}
+};
 
 export default GistsTemplate;

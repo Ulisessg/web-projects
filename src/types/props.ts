@@ -115,3 +115,5 @@ export type GistsProps = {
   gists: Array<SectionProps>;
   isPageOrSection: 'page' | 'section';
 };
+
+export type GistsTemaplateProps = { data: any; githubCode: any };
