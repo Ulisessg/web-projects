@@ -2,19 +2,13 @@
 import React, { FunctionComponent } from 'react';
 import RoundedImage from '../atoms/RoundedImage';
 import BlogAuthorCardStyles from '../styles/molecules/BlogAuthorCardStyles';
+import { BlogAuthorCardProps } from '../types/props';
 
 const width = '80px';
 
-const BlogAuthorCard: FunctionComponent<{
-  publishDate: string;
-  dateTime: string | undefined;
-}> = ({
-  publishDate,
-  dateTime,
-}: {
-  publishDate: string;
-  dateTime: string | undefined;
-}) => (
+const BlogAuthorCard: FunctionComponent<BlogAuthorCardProps> = (
+  props: BlogAuthorCardProps
+) => (
   <>
     <BlogAuthorCardStyles>
       <RoundedImage
@@ -29,7 +23,7 @@ const BlogAuthorCard: FunctionComponent<{
         Creado por&nbsp;
         <strong>Ulises Samano</strong>
       </p>
-      <time dateTime={dateTime}>{publishDate}</time>
+      <time dateTime={props.dateTime}>{props.publishDate}</time>
       <section className='blog-author-card'>
         <a
           target='_blank'

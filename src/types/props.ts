@@ -61,3 +61,8 @@ export interface RoundedImageProps extends imgProps {
   widthLaptop: string;
   widthDesktop: string;
 }
+
+export type BlogAuthorCardProps = {
+  publishDate: string;
+  dateTime: string | undefined;
+};
