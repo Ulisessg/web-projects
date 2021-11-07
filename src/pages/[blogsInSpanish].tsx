@@ -4,12 +4,14 @@ import React from 'react';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import dynamic from 'next/dynamic';
 import axios from 'axios';
-import BlogPostStyles from '../styles/atoms/BlogPostStyles';
+import BlogPostStyles from '@/atoms/BlogPostStyles';
 import { BlogEntryRaw } from '../interfaces_and_types/globalPropsAndProperties';
 import createBlogsStructuredData from '../utils/createBlogsStructuredData';
-import BlogImageStyles from '../styles/atoms/BlogImageStyles';
+import BlogImageStyles from '@/atoms/BlogImage/BlogImageStyles';
 
-const AddBlogVisit = dynamic(() => import('../atoms/AddBlogVisit'));
+const AddBlogVisit = dynamic(
+  () => import('../atoms/AddBlogVisit/AddBlogVisit')
+);
 const Layout = dynamic(() => import('../organisms/Layout'), { ssr: true });
 const Head = dynamic(() => import('../molecules/Head'), { ssr: true });
 const ShareMedia = dynamic(() => import('../organisms/ShareMedia'), {

@@ -2,12 +2,12 @@ import React, { FunctionComponent } from 'react';
 import ReactGist from 'react-gist';
 import axios from 'axios';
 import { GetStaticProps, GetStaticPaths } from 'next';
-import Layout from '../../organisms/Layout';
-import { GistsClassesStyles } from '../../styles/templates/GistsPagesStyles';
-import Link from '../../atoms/Link';
-import Head from '../../molecules/Head';
-import ShareMedia from '../../organisms/ShareMedia';
-import { GistsTemaplateProps } from '../../types/props';
+import Layout from '@/organisms/Layout';
+import Link from '@/atoms/Link';
+import Head from '@/molecules/Head';
+import ShareMedia from '@/organisms/ShareMedia';
+import { GistsClassesStyles } from '../../pagesStyles/GistsPagesStyles';
+import { GistsTemaplateProps } from '@/props';
 
 export const getStaticProps: GetStaticProps = async (context: any) => {
   const request: any = await axios.get(

@@ -3,7 +3,7 @@ import dynamic from 'next/dynamic';
 import { GetStaticProps } from 'next';
 import GetBlog from '../utils/getBlogs';
 import tranformBlogInfo from '../utils/tranformBlogInfo';
-import SectionProps from '../interfaces_and_types/organisms/SectionProps';
+import { SectionProps } from '@/props';
 
 const Layout = dynamic(() => import('../organisms/Layout'), { ssr: true });
 const Blog = dynamic(() => import('../templates/Blog'), { ssr: true });

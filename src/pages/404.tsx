@@ -1,9 +1,8 @@
 import React from 'react';
-import Styles404 from '../styles/pages/404Styles';
-import Layout from '../organisms/Layout';
-import Head from '../molecules/Head';
-import DogFrame from '../atoms/DogIFrame';
-import Link from '../atoms/Link';
+import Styles404 from 'pagesStyles/404Styles';
+import Layout from '@/organisms/Layout';
+import Head from '@/molecules/Head';
+import Link from '@/atoms/Link';
 
 export default function Error(): JSX.Element {
   return (

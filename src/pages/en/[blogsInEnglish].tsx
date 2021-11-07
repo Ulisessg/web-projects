@@ -5,18 +5,20 @@ import axios from 'axios';
 import React from 'react';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import Layout from '../../organisms/Layout';
-import BlogPostStyles from '../../styles/atoms/BlogPostStyles';
+import BlogPostStyles from '@/atoms/BlogPostStyles';
 import Head from '../../molecules/Head';
 import ShareMedia from '../../organisms/ShareMedia';
 import FacebookComments from '../../molecules/FacebookComments';
 import { BlogEntryRaw } from '../../interfaces_and_types/globalPropsAndProperties';
 import createBlogsStructuredData from '../../utils/createBlogsStructuredData';
-import BlogImageStyles from '../../styles/atoms/BlogImageStyles';
+import BlogImageStyles from '@/atoms/BlogImage/BlogImageStyles';
 import BlogAuthorCard from '../../molecules/BlogAuthorCard';
 import BlogPresentation from '../../molecules/BlogPresentation';
 import dynamic from 'next/dynamic';
 
-const AddBlogVisit = dynamic(() => import('../../atoms/AddBlogVisit'));
+const AddBlogVisit = dynamic(
+  () => import('../../atoms/AddBlogVisit/AddBlogVisit')
+);
 
 export const getStaticProps: GetStaticProps = async (context: any) => {
   const blog: any = context.params.blogsInEnglish;

@@ -3,11 +3,11 @@ import dynamic from 'next/dynamic';
 import { GetStaticProps } from 'next';
 import GetGists from '../utils/getGists';
 import TransformGistsResponse from '../utils/transformGistsResponse';
-import SectionProps from '../interfaces_and_types/organisms/SectionProps';
+import { SectionProps } from '@/props';
 
-const Head = dynamic(() => import('../molecules/Head'), { ssr: true });
-const Layout = dynamic(() => import('../organisms/Layout'), { ssr: true });
-const Gists = dynamic(() => import('../templates/Gists'), { ssr: true });
+const Head = dynamic(() => import('@/molecules/Head'), { ssr: true });
+const Layout = dynamic(() => import('@/organisms/Layout'), { ssr: true });
+const Gists = dynamic(() => import('@/templates/Gists'), { ssr: true });
 
 export default function Gist({
   gistsInfo,

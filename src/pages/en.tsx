@@ -4,24 +4,24 @@ import { GetStaticProps } from 'next';
 import { IndexSectionsEnglish } from '../states/index';
 import GetBlogs from '../utils/getBlogs';
 import GetGists from '../utils/getGists';
-import SectionProps from '../interfaces_and_types/organisms/SectionProps';
 import TransformGistsResponse from '../utils/transformGistsResponse';
 import TransformBlogsInfo from '../utils/tranformBlogInfo';
-import { IndexNav } from '../styles/pages/IndexStyles';
+import { IndexNav } from '../pagesStyles/IndexStyles';
+import { SectionProps } from '@/props';
 
-const Link = dynamic(() => import('../atoms/Link'), { ssr: true });
-const Layout = dynamic(() => import('../organisms/Layout'), { ssr: true });
-const AboutMe = dynamic(() => import('../molecules/Description'), {
+const Link = dynamic(() => import('@/atoms/Link'), { ssr: true });
+const Layout = dynamic(() => import('@/organisms/Layout'), { ssr: true });
+const AboutMe = dynamic(() => import('@/molecules/Description'), {
   ssr: true,
 });
-const Blog = dynamic(() => import('../templates/Blog'), { ssr: true });
-const ExperienceEn = dynamic(() => import('../templates/ExperienceEn'), {
+const Blog = dynamic(() => import('@/templates/Blog'), { ssr: true });
+const ExperienceEn = dynamic(() => import('@/templates/ExperienceEn'), {
   ssr: true,
 });
-const Gists = dynamic(() => import('../templates/Gists'), {
+const Gists = dynamic(() => import('@/templates/Gists'), {
   ssr: true,
 });
-const Head = dynamic(() => import('../molecules/Head'), { ssr: true });
+const Head = dynamic(() => import('@/molecules/Head'), { ssr: true });
 
 function En({
   gistsInfo,
