@@ -1,6 +1,5 @@
 import { AnchorHTMLAttributes, HTMLAttributes } from 'react';
 
-
 /**
  * @param background: Background color
  * @param ct: Color text
@@ -25,7 +24,6 @@ export interface LinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
   noShadow?: boolean;
 }
 
-
 export interface LoadingProps extends HTMLAttributes<HTMLDivElement> {
   heightExternal?: string;
 }
@@ -44,4 +42,9 @@ export interface SectionProps extends Pick<LinkProps, 'linkSize'> {
   image: imgProps;
   path?: string;
   loadingLabel: string;
+}
+
+export interface H2Props extends HTMLAttributes<HTMLHeadingElement> {
+  text: string;
+  className?: string;
 }
