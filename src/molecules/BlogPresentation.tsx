@@ -1,14 +1,13 @@
 import React, { FunctionComponent } from 'react';
 
-type Props = {
-  title: string;
-  description: string;
-};
+import { BlogPresentationProps } from '../types/props';
 
-const BlogPresentation: FunctionComponent<Props> = ({ title, description }: Props) => (
+const BlogPresentation: FunctionComponent<BlogPresentationProps> = (
+  props: BlogPresentationProps
+) => (
   <>
-    <h1>{title}</h1>
-    <h2>{description}</h2>
+    <h1>{props.title}</h1>
+    <h2>{props.description}</h2>
   </>
 );
 

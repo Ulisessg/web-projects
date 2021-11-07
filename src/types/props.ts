@@ -66,3 +66,8 @@ export type BlogAuthorCardProps = {
   publishDate: string;
   dateTime: string | undefined;
 };
+
+export type BlogPresentationProps = {
+  title: string;
+  description: string;
+};
