@@ -99,3 +99,9 @@ export interface LinkData
 export type LayoutProps = { children: ReactElement<any> };
 
 export type MainDesignProps = { sections: Array<SectionProps> };
+
+export type ShareMediaProps = {
+  path: string;
+  addLikePath: string;
+  documentNameForLike: any;
+};
