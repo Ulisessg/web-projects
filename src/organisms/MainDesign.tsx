@@ -1,14 +1,11 @@
-import React from 'react';
-
-import SectionWithNoModal from './Section';
+import React, { FunctionComponent } from 'react';
 import SectionsContainer from '../styles/molecules/SectionContainer';
-import { SectionProps } from '../types/props';
+import Section from './Section';
+import { MainDesignProps } from '../types/props';
 
-interface MainDesignProps {
-  sections: Array<SectionProps>;
-}
-
-function MainDesign({ sections }: MainDesignProps): JSX.Element {
+const MainDesign: FunctionComponent<MainDesignProps> = (
+  props: MainDesignProps
+): JSX.Element => {
   return (
     <main className='main' id='main'>
       <section>
@@ -56,8 +53,8 @@ function MainDesign({ sections }: MainDesignProps): JSX.Element {
       <h2 className='main__introduction'>Secciones del sistema de diseño</h2>
 
       <SectionsContainer>
-        {sections.map((section) => (
-          <SectionWithNoModal
+        {props.sections.map((section) => (
+          <Section
             linkSize='large'
             loadingLabel='Cargando elemento'
             title={section.title}
@@ -71,6 +68,6 @@ function MainDesign({ sections }: MainDesignProps): JSX.Element {
       </SectionsContainer>
     </main>
   );
-}
+};
 
 export default MainDesign;

@@ -97,3 +97,5 @@ export interface LinkData
   extends Pick<LinkProps, 'text' | 'href' | 'ariaLabel'> {}
 
 export type LayoutProps = { children: ReactElement<any> };
+
+export type MainDesignProps = { sections: Array<SectionProps> };
