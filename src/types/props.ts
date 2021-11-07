@@ -1,4 +1,9 @@
-import { AnchorHTMLAttributes, HTMLAttributes, ReactNode } from 'react';
+import {
+  AnchorHTMLAttributes,
+  HTMLAttributes,
+  ReactNode,
+  ReactElement,
+} from 'react';
 
 /**
  * @param background: Background color
@@ -90,3 +95,5 @@ export type HeaderProps = {};
 
 export interface LinkData
   extends Pick<LinkProps, 'text' | 'href' | 'ariaLabel'> {}
+
+export type LayoutProps = { children: ReactElement<any> };

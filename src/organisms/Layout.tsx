@@ -1,21 +1,24 @@
-import React, { ReactElement } from 'react';
+import React, { FunctionComponent } from 'react';
 import { ThemeProvider } from 'styled-components';
 import Header from '../molecules/Header';
 import Footer from './Footer';
 import GlobalStyles from '../styles/GlobalStyles';
 import { theme } from '../constants';
+import { LayoutProps } from '../types/props';
 
-function Layout({ children }: { children: ReactElement<any>; }): JSX.Element {
+const Layout: FunctionComponent<LayoutProps> = (
+  props: LayoutProps
+): JSX.Element => {
   return (
     <>
       <GlobalStyles />
       <ThemeProvider theme={theme}>
         <Header />
-        {children}
+        {props.children}
         <Footer />
       </ThemeProvider>
     </>
   );
-}
+};
 
 export default Layout;
