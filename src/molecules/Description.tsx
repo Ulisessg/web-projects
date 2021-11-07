@@ -1,11 +1,11 @@
 /* eslint-disable @next/next/no-img-element */
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 import {
   Container,
   DescriptionStyles,
 } from '../styles/molecules/DescriptionStyles';
 
-function AboutMe(): JSX.Element {
+const Description: FunctionComponent = () => {
   return (
     <>
       <Container aria-label='Sobre mi'>
@@ -27,6 +27,6 @@ function AboutMe(): JSX.Element {
       </Container>
     </>
   );
-}
+};
 
-export default AboutMe;
+export default Description;
