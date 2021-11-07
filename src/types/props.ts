@@ -48,3 +48,8 @@ export interface H2Props extends HTMLAttributes<HTMLHeadingElement> {
   text: string;
   className?: string;
 }
+
+export interface HeartProps {
+  url: string;
+  name: string | any;
+}

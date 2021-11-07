@@ -1,12 +1,8 @@
 import React, { useState, FunctionComponent } from 'react';
 import { HeartStyles, OtherStyles } from '../styles/atoms/HeartStyles';
+import { HeartProps } from '../types/props';
 
-type Props = {
-  url: string;
-  name: string | any;
-};
-
-const Heart: FunctionComponent<Props> = ({ url, name }: Props) => {
+const Heart: FunctionComponent<HeartProps> = ({ url, name }: HeartProps) => {
   const [isLiked, setIsLiked] = useState<any>(
     typeof window !== 'undefined' && window.localStorage.getItem(name)
   );
