@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 import Link from '../atoms/Link';
 import {
   SectionContainer,
@@ -8,59 +8,53 @@ import {
   Description,
 } from '../styles/organisms/SectionStyles';
 import { SectionProps } from '../types/props';
-function SectionNoModal({
-  image,
-  name,
-  description,
-  title,
-  id,
-  path,
-  loadingLabel,
-  linkSize,
-}: SectionProps): JSX.Element {
+
+const SectionNoModal: FunctionComponent<SectionProps> = (
+  props: SectionProps
+): JSX.Element => {
   return (
     <>
       <SectionContainer
-        aria-labelledby={description}
+        aria-labelledby={props.description}
         className='section--container'
-        key={id}
+        key={props.id}
       >
         <ImageContainer
-          aria-label={image.alt}
-          title={image.alt}
+          aria-label={props.image.alt}
+          title={props.image.alt}
           className='section-img-container'
         >
           <img
             role='presentation'
             loading='lazy'
             className='section--img'
-            src={image.src}
+            src={props.image.src}
             alt=''
           />
         </ImageContainer>
 
-        <Title id={path || name} className='section--title'>
-          {title}
+        <Title id={props.path || props.name} className='section--title'>
+          {props.title}
         </Title>
 
         <Description className='section--description'>
-          {description}
+          {props.description}
         </Description>
 
         <Link
-          href={path || name}
-          text={`Ver más sobre ${title}`}
+          href={props.path || props.name}
+          text={`Ver más sobre ${props.title}`}
           background='backgroundLight'
           bgh='backgroundLight2'
           cn='some'
           ct='textDark'
           cth='textDark2'
-          linkSize={linkSize}
-          ariaLabel={loadingLabel}
+          linkSize={props.linkSize}
+          ariaLabel={props.loadingLabel}
         />
       </SectionContainer>
     </>
   );
-}
+};
 
 export default SectionNoModal;
