@@ -105,3 +105,8 @@ export type ShareMediaProps = {
   addLikePath: string;
   documentNameForLike: any;
 };
+
+export type BlogProps = {
+  blogEntries: Array<SectionProps>;
+  isPageOrSection: 'page' | 'section';
+};

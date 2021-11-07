@@ -1,23 +1,17 @@
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 import SectionContainer from '../styles/molecules/SectionContainer';
 import Section from '../organisms/Section';
-import SectionProps from '../interfaces_and_types/organisms/SectionProps';
 import H2 from '../atoms/H2';
 import otherBlogs from '../states/blogsState';
 import { BlogContainer } from '../styles/templates/BlogStyles';
+import { BlogProps } from '../types/props';
 
-function Blog({
-  blogEntries,
-  isPageOrSection,
-}: {
-  blogEntries: Array<SectionProps>;
-  isPageOrSection: 'page' | 'section';
-}): JSX.Element {
+const Blog: FunctionComponent<BlogProps> = (props: BlogProps): JSX.Element => {
   return (
     <>
       <BlogContainer aria-label='Mis posts publicados'>
         <div>
-          {isPageOrSection === 'page' ? (
+          {props.isPageOrSection === 'page' ? (
             <h1 style={{ textAlign: 'center', marginTop: '50px' }}>
               Ultimos posts
             </h1>
@@ -30,7 +24,7 @@ function Blog({
           <div id='posts'>
             <section className='sections'>
               <SectionContainer>
-                {blogEntries.map((blog) => (
+                {props.blogEntries.map((blog) => (
                   <Section
                     linkSize='large'
                     loadingLabel='Cargando blog'
@@ -71,6 +65,6 @@ function Blog({
       </BlogContainer>
     </>
   );
-}
+};
 
 export default Blog;
