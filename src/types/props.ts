@@ -53,3 +53,11 @@ export interface HeartProps {
   url: string;
   name: string | any;
 }
+
+export interface RoundedImageProps extends imgProps {
+  bottom?: string;
+  widthMobile: string;
+  widthTablet: string;
+  widthLaptop: string;
+  widthDesktop: string;
+}

@@ -1,28 +1,13 @@
 import React, { FunctionComponent } from 'react';
 import RoundedImageStyles from '../styles/atoms/RoundedImageStyles';
-import ImageProps from '../interfaces_and_types/atoms/ImageProps';
+import { RoundedImageProps } from '../types/props';
 
-const RoundedImage: FunctionComponent<ImageProps> = ({
-  src,
-  widthDesktop,
-  widthLaptop,
-  widthMobile,
-  widthTablet,
-  bottom,
-  alt,
-}: ImageProps) => {
+const RoundedImage: FunctionComponent<RoundedImageProps> = (
+  props: RoundedImageProps
+) => {
   return (
     <>
-      <RoundedImageStyles
-        loading='lazy'
-        src={src}
-        widthMobile={widthMobile}
-        widthTablet={widthTablet}
-        widthLaptop={widthLaptop}
-        widthDesktop={widthDesktop}
-        bottom={bottom}
-        alt={alt}
-      />
+      <RoundedImageStyles loading='lazy' bottom={props.bottom} {...props} />
     </>
   );
 };
