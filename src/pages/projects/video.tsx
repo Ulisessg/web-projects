@@ -1,6 +1,7 @@
 import React, { FunctionComponent } from 'react';
 import Layout from '@/organisms/Layout';
 import Head from '@/molecules/Head';
+import VideoComponent from '@/atoms/Video';
 
 const Video: FunctionComponent = () => {
   return (
@@ -16,7 +17,11 @@ const Video: FunctionComponent = () => {
         type='website'
       />
       <Layout>
-        <h1>Hello!</h1>
+        <>
+          <main>
+            <VideoComponent />
+          </main>
+        </>
       </Layout>
     </>
   );
