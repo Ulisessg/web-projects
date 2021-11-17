@@ -44,6 +44,9 @@
       "@/props": [
         "./types/props"
       ],
+      "@/projects_utils/*": [
+        "./utils/projects/*"
+      ],
     }
   },
   "include": [
