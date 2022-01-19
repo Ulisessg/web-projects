@@ -6,7 +6,7 @@ import GetBlogs from '../utils/getBlogs';
 import GetGists from '../utils/getGists';
 import TransformGistsResponse from '../utils/transformGistsResponse';
 import TransformBlogsInfo from '../utils/tranformBlogInfo';
-import { IndexNav } from '../pagesStyles/IndexStyles';
+import { IndexNav } from '../pages/index';
 import { SectionProps } from '@/props';
 
 const Link = dynamic(() => import('@/atoms/Link'), { ssr: true });

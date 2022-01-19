@@ -1,9 +1,36 @@
 import React, { FunctionComponent } from 'react';
 // import SkipLink from '../atoms/SkipLink';
 import { LinkData } from '@/props';
-import { HeaderContainer, NavStyles } from './HeaderStyles';
 import Link from '@/atoms/Link';
 import { useRouter } from 'next/router';
+
+import styled from 'styled-components';
+
+const HeaderContainer = styled.header`
+  width: 100vw;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  height: 10vh;
+  /* background-color: ${({ theme }) => theme.textLight}; */
+  background-color: #8080;
+  box-shadow: 0px 3px 6px 0px #e0e0e0;
+
+  & ul {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+`;
+
+const NavStyles = styled.nav`
+  width: 100vw;
+  .header-list {
+    display: flex;
+  }
+`;
 
 const Header: FunctionComponent = () => {
   const router = useRouter();

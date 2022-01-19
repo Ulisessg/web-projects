@@ -3,7 +3,12 @@ import Section from '@/organisms/Section';
 import { GistsProps } from '@/props';
 import H2 from '@/atoms/H2';
 import SectionContainer from '@/molecules/SectionContainer';
-import { GitsContainer } from './GistStyles';
+import styled from 'styled-components';
+import { slice } from 'styles/keyframes';
+
+const GitsContainer = styled.section`
+  animation: ${slice} 0.8s;
+`;
 
 const Gists: FunctionComponent<GistsProps> = (
   props: GistsProps

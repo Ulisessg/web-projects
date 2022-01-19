@@ -2,9 +2,16 @@ import React, { FunctionComponent } from 'react';
 import SectionContainer from '@/molecules/SectionContainer';
 import Section from '@/organisms/Section';
 import H2 from '@/atoms/H2';
-import { BlogContainer } from './BlogStyles';
 import otherBlogs from '../../states/blogsState';
 import { BlogProps } from '@/props';
+import styled from 'styled-components';
+import { slice } from 'styles/keyframes';
+
+export const BlogContainer = styled.section`
+  width: 90vw;
+  margin: 0 auto;
+  animation: ${slice} 0.8s;
+`;
 
 const Blog: FunctionComponent<BlogProps> = (props: BlogProps): JSX.Element => {
   return (

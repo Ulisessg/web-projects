@@ -52,7 +52,6 @@ export default function createBlogsStructuredData(
     },
   };
   const structuredDataJson = JSON.stringify(structuredData);
-  // console.log(structuredDataJson);
 
   return {
     date,

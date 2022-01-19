@@ -6,8 +6,16 @@ import Layout from '@/organisms/Layout';
 import Link from '@/atoms/Link';
 import Head from '@/molecules/Head';
 import ShareMedia from '@/organisms/ShareMedia';
-import { GistsClassesStyles } from '../../pagesStyles/GistsPagesStyles';
 import { GistsTemaplateProps } from '@/props';
+import styled, { createGlobalStyle } from 'styled-components';
+
+const GistsClassesStyles = createGlobalStyle`
+  h1, h2, h3, h4 {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 15px;
+  }
+`;
 
 export const getStaticProps: GetStaticProps = async (context: any) => {
   const request: any = await axios.get(

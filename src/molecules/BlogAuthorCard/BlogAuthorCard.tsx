@@ -1,8 +1,29 @@
 /* eslint-disable @next/next/no-img-element */
 import React, { FunctionComponent } from 'react';
 import RoundedImage from '@/atoms/RoundedImage';
-import BlogAuthorCardStyles from './BlogAuthorCardStyles';
 import { BlogAuthorCardProps } from '@/props';
+import styled from 'styled-components';
+
+const BlogAuthorCardStyles = styled.section`
+  width: 90%;
+  display: grid;
+  margin-top: 20px;
+  justify-content: space-around;
+  & > img {
+    justify-self: center;
+  }
+  .blog-author-card-images-image {
+    width: 50px;
+    cursor: pointer;
+  }
+  .blog-author-card-images-link {
+    width: 50px;
+  }
+  .blog-author-card {
+    display: flex;
+    justify-content: space-between;
+  }
+`;
 
 const width = '80px';
 

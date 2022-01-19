@@ -1,5 +1,10 @@
 import React, { FunctionComponent } from 'react';
-import DogIframeStyles from './DogIframeStyles';
+import styled from 'styled-components';
+
+const DogIframeStyles = styled.iframe`
+  width: 560px;
+  height: 315px;
+`;
 
 const DogIFrame: FunctionComponent = () => {
   return (

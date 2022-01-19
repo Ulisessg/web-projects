@@ -1,8 +1,17 @@
 import React from 'react';
-import Styles404 from 'pagesStyles/404Styles';
 import Layout from '@/organisms/Layout';
 import Head from '@/molecules/Head';
 import Link from '@/atoms/Link';
+import styled from 'styled-components';
+
+const Styles404 = styled.main`
+  display: grid;
+  display: -ms-grid;
+  display: -moz-grid;
+  justify-items: center;
+  height: 85vh;
+  align-items: center;
+`;
 
 export default function Error(): JSX.Element {
   return (

@@ -1,7 +1,7 @@
 import React, { FunctionComponent } from 'react';
 import { experiencesInfoEnglish } from '../../states/index';
 import Section from '@/organisms/Section';
-import Container from '@/templates/Experience/ExperienceStyles';
+import Container from '@/templates/Experience';
 import SectionContainer from '@/molecules/SectionContainer';
 import H2 from '@/atoms/H2';
 

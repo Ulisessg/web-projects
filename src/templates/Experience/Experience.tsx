@@ -1,9 +1,20 @@
 import React, { FunctionComponent } from 'react';
 import { experiencesInfo } from '../../states';
 import Section from '@/organisms/Section';
-import Container from './ExperienceStyles';
 import SectionContainer from '@/molecules/SectionContainer';
 import H2 from '@/atoms/H2';
+import styled from 'styled-components';
+import { slice } from 'styles/keyframes';
+
+export const Container = styled.section`
+  width: 90vw;
+  display: grid;
+  display: -moz-grid;
+  display: -ms-grid;
+  justify-items: center;
+  margin: 50px auto;
+  animation: ${slice} 0.8s;
+`;
 
 const Experience: FunctionComponent = (): JSX.Element => {
   return (

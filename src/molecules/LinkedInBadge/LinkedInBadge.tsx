@@ -1,16 +1,48 @@
 /* eslint-disable @next/next/no-img-element */
 import React, { FunctionComponent } from 'react';
-import {
-  LinkedInBadgeContainer,
-  LinkedInBadgeBackground,
-  LinkedInBadgeDescription,
-  LinkedInBadgeGoProfileContainer,
-} from './LinkedinBadgeStyles';
 import Link from '@/atoms/Link';
+import styled from 'styled-components';
+import { backgroundLight } from 'styles/variables';
 
-// Background image https://firebasestorage.googleapis.com/v0/b/web-projects-50e7e.appspot.com/o/images%2Fv2%2Flinkedin%20cover.jpeg?alt=media&token=7af29779-027c-4d39-b97e-819707fac55c
+const LinkedInBadgeContainer = styled.section`
+  width: 250px;
+  height: 500px;
+  margin-top: 50px;
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+  background-color: aliceblue;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+  padding-bottom: 15px;
 
-// LinkedIn logo https://static-exp1.licdn.com/scds/common/u/images/logos/linkedin/logo_linkedin_93x21_v2.png
+  border-radius: 20px;
+  border: 1px solid black;
+`;
+
+const LinkedInBadgeBackground = styled.div`
+  width: 100%;
+  display: flex;
+  padding: 15px;
+  justify-content: center;
+  figure {
+    & img {
+      border-radius: 100%;
+      width: 100px;
+      margin: 0 auto;
+      border: 4px solid white;
+    }
+  }
+`;
+
+const LinkedInBadgeDescription = styled.p`
+  padding: 10px;
+`;
+
+const LinkedInBadgeGoProfileContainer = styled.div`
+  padding: 3px;
+`;
 
 const LinkedInBadge: FunctionComponent = (): JSX.Element => {
   return (

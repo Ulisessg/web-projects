@@ -7,8 +7,23 @@ import TransformGistsResponse from '../utils/transformGistsResponse';
 import GetBlogs from '../utils/getBlogs';
 import TransformBlogsInfo from '../utils/tranformBlogInfo';
 import createIndexStructuredData from '../utils/createIndexStructuredData';
-import { IndexNav } from '../pagesStyles/IndexStyles';
 import { SectionProps } from '../types/props';
+import styled from 'styled-components';
+import { slice } from '../styles/keyframes';
+
+export const IndexNav = styled.nav`
+  margin: 40px 0;
+  animation: ${slice} 0.8s;
+  .index_nav {
+    display: flex;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    justify-content: space-around;
+    @media screen and (max-width: 690px) {
+      flex-direction: column;
+    }
+  }
+`;
 
 const Link = dynamic(() => import('@/atoms/Link'), { ssr: true });
 const Layout = dynamic(() => import('@/organisms/Layout'), { ssr: true });
