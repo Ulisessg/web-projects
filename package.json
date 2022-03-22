@@ -3,17 +3,10 @@
   "version": "1.0.0",
   "description": "All my personal projects",
   "scripts": {
-    "lint": "next lint",
-    "prepare": "husky install",
-    "dev": "next ./src/",
-    "build": "rm -r ./src/out && next build ./src/ && next export ./src/ && npm run generate-sitemap && npm run generate-manifest && npm run robots-gen",
-    "deploy": "npm run build && firebase deploy",
-    "generate-sitemap": "node ./src/postbuild/sitemap-generator",
-    "generate-manifest": "node ./src/postbuild/manifest-generator",
-    "robots-gen": "node ./src/postbuild/robots-txt-generator",
-    "start": "next start ./src/",
-    "test-watch": "jest --watch",
-    "test": "jest --coverage"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "repository": {
     "type": "git",
@@ -25,29 +18,14 @@
     "url": "https://github.com/Ulisessg/web-projects/issues"
   },
   "homepage": "https://github.com/Ulisessg/web-projects#readme",
-  "devDependencies": {
-    "@babel/preset-typescript": "7.16.0",
-    "@testing-library/jest-dom": "5.15.0",
-    "@testing-library/react": "12.1.2",
-    "@types/react": "17.0.34",
-    "@types/react-dom": "17.0.11",
-    "@types/styled-components": "5.1.15",
-    "babel-jest": "27.3.1",
-    "eslint": "^7.32.0",
-    "eslint-config-next": "12.0.2",
-    "eslint-plugin-react": "7.26.1",
-    "husky": "7.0.4",
-    "jest": "27.3.1",
-    "react-test-renderer": "17.0.2",
-    "typescript": "4.4.4"
-  },
   "dependencies": {
-    "axios": "0.24.0",
-    "intersection-observer": "0.12.0",
-    "next": "12.0.2",
+    "next": "12.1.0",
     "react": "17.0.2",
-    "react-dom": "17.0.2",
-    "react-gist": "1.2.4",
-    "styled-components": "5.3.3"
+    "react-dom": "17.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "17.0.22",
+    "@types/react": "17.0.41",
+    "typescript": "4.6.2"
   }
 }
